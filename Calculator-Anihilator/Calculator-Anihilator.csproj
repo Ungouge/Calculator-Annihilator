@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="MainWindow\Calc_Actions.cs" />
+    <Compile Include="MainWindow\Values.cs" />
+    <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,12 +67,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MainWindow\Equals_Actions.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainWindow\Calc_Buttons.cs" />
+    <Compile Include="MainWindow\Number_Buttons.cs" />
+    <Compile Include="Numerical_System_Signs.cs" />
+    <Compile Include="MainWindow\Parser.cs" />
+    <Compile Include="MainWindow\Switch_Calc_Class.cs" />
+    <Compile Include="MainWindow\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
