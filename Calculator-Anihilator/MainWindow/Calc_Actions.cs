@@ -8,7 +8,6 @@ namespace Calculator_Anihilator
 {
 	public partial class MainWindow
 	{
-
 		private void Action_Button(char sign)
 		{
 			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))

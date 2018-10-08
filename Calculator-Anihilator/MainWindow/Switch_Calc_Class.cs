@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator_Anihilator
 {
-	public partial class MainWindow // Main Actions sack
+	public partial class MainWindow
 	{
 		public double Calc_Action_Selector(char sign, double number1, double number2)
 		{

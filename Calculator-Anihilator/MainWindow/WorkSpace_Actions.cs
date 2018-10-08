@@ -3,15 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Calculator_Anihilator
 {
 	public partial class MainWindow
 	{
-		private void Insert_To_WorkSpace(string sign)
+		private void Insert_To_WorkSpace(char sign)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
-			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition++, sign);
+			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition++, sign.ToString());
+			WorkSpace.CaretIndex = CaretPosition;
+			WorkSpace.Focus();
+		}
+
+		private void Insert_To_WorkSpace(string signs)
+		{
+			int CaretPosition = WorkSpace.CaretIndex;
+			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition, signs);
+			CaretPosition += signs.Length;
 			WorkSpace.CaretIndex = CaretPosition;
 			WorkSpace.Focus();
 		}
@@ -35,14 +53,9 @@ namespace Calculator_Anihilator
 			WorkSpace.Focus();
 		}
 
-		private void WorkSpace_PreviewKeyDown(object sender, KeyEventArgs e) // To elaborate
+		private void WorkSpace_PreviewKeyDown(object sender, KeyEventArgs e)
 		{
-			e.Handled = !Is_Key_Allowed(e.Key);
-		}
-
-		private bool Is_Key_Allowed(Key key)  // To elaborate like about
-		{
-			return !numerical_System_Signs.Equals(key);
+			;
 		}
 	}
 }

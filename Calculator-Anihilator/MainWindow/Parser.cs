@@ -4,27 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Calculator_Anihilator
 {
 	public partial class MainWindow
 	{
-		private double Parser(string workText)
+		public static double Parser(string workText)
 		{
 			char[] workCharArr = workText.ToCharArray();
-			int commaPosition = workCharArr.Length;
 
-			for (int i = 0; i < commaPosition; i++)
-			{
-				switch (workCharArr[i])
-				{
-					case ',':
-					case '.':
-					case '٫':
-						commaPosition = i;
-						break;
-				}
-			}
+			int commaPosition = Commaposition(workCharArr);
 
 			double parsedOutput = 0;
 
@@ -36,7 +33,7 @@ namespace Calculator_Anihilator
 				}
 				catch (Exception ex)
 				{
-					parsedOutput = parsedOutput * Math.Pow(Numeral_System, i - commaPosition );
+					parsedOutput = parsedOutput * Math.Pow(Numeral_System, i - commaPosition);
 					MessageBox.Show(ex.Message + $", {workText} parsed as {parsedOutput}.");
 					return parsedOutput;
 				}
@@ -57,7 +54,24 @@ namespace Calculator_Anihilator
 			return parsedOutput;
 		}
 
-		private double DigitParse(char digit)
+		private static int Commaposition(char[] workCharArr)
+		{
+
+			for (int i = 0; i < workCharArr.Length; i++)
+			{
+				switch (workCharArr[i])
+				{
+					case ',':
+					case '.':
+					case '٫':
+						return i;
+				}
+			}
+
+			return workCharArr.Length;
+		}
+
+		public static double DigitParse(char digit)
 		{
 			if (digit > (char)47 && digit < (char)58 && digit < Numeral_System + 48)
 				return (sbyte)(digit - 48);

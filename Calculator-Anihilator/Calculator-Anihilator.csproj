@@ -57,6 +57,12 @@
     </ApplicationDefinition>
     <Compile Include="Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />
+    <Compile Include="Equation_String\Element_Selector.cs" />
+    <Compile Include="Equation_String\Equation_Mapper.cs" />
+    <Compile Include="Equation_String\Equation_String.cs" />
+    <Compile Include="Equation_String\IElement.cs" />
+    <Compile Include="Equation_String\IElementToString.cs" />
+    <Compile Include="Equation_String\Operand.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Page Include="MainWindow.xaml">

@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Calculator_Anihilator
 {
@@ -24,7 +33,7 @@ namespace Calculator_Anihilator
 				for (int i = 0; i < ns; i++)
 				{
 					if (i < 10)
-						System_Symbol.Add(Convert.ToChar(i));
+						System_Symbol.Add((Char)(i+48));
 					else if (i < 35)
 						System_Symbol.Add((char)(i + 55));
 					else

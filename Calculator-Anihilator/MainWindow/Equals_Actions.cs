@@ -28,7 +28,5 @@ namespace Calculator_Anihilator
 				Clear_WorkSpace();
 			}
 		}
-
-		private void Equals_Complex() {; }
 	}
 }
