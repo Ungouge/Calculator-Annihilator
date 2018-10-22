@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Calculator_Anihilator
+namespace Calculator_Annihilator
 {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml

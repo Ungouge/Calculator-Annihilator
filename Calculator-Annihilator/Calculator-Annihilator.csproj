@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Calculator_Anihilator.App</StartupObject>
+    <StartupObject>Calculator_Annihilator.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Calculator_Anihilator
+namespace Calculator_Annihilator
 {
 	public partial class MainWindow //Number buttons sack
 	{

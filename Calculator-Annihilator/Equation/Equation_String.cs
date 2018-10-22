@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 
-namespace Calculator_Anihilator
+namespace Calculator_Annihilator
 {
 	partial class Equation
 	{

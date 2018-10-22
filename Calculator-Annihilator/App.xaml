@@ -1,7 +1,7 @@
-﻿<Application x:Class="Calculator_Anihilator.App"
+﻿<Application x:Class="Calculator_Annihilator.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Calculator_Anihilator"
+             xmlns:local="clr-namespace:Calculator_Annihilator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

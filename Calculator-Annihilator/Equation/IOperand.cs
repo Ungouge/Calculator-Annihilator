@@ -1,4 +1,4 @@
-﻿namespace Calculator_Anihilator
+﻿namespace Calculator_Annihilator
 {
 	public interface IOperand
 	{

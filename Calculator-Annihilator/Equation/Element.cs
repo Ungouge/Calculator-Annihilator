@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator_Anihilator
+namespace Calculator_Annihilator
 {
 	partial class Equation
 	{

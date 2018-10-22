@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calculator_Anihilator"
-        xmlns:Properties="clr-namespace:Calculator_Anihilator.Properties" x:Class="Calculator_Anihilator.MainWindow"
+        xmlns:local="clr-namespace:Calculator_Annihilator"
+        xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties" x:Class="Calculator_Annihilator.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
