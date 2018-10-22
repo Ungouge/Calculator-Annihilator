@@ -55,14 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Equation\Equation.cs" />
+    <Compile Include="Equation\Equation_Elements.cs" />
+    <Compile Include="Equation\IOperand.cs" />
+    <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
+    <Compile Include="Equation\Reset.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />
-    <Compile Include="Equation_String\Element_Selector.cs" />
-    <Compile Include="Equation_String\Equation_Mapper.cs" />
-    <Compile Include="Equation_String\Equation_String.cs" />
-    <Compile Include="Equation_String\IElement.cs" />
-    <Compile Include="Equation_String\IElementToString.cs" />
-    <Compile Include="Equation_String\Operand.cs" />
+    <Compile Include="Equation\Element_Selector.cs" />
+    <Compile Include="Equation\Equation_Mapper.cs" />
+    <Compile Include="Equation\Equation_String.cs" />
+    <Compile Include="Equation\IElement.cs" />
+    <Compile Include="Equation\IElement_ToString.cs" />
+    <Compile Include="Equation\Element.cs" />
+    <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Page Include="MainWindow.xaml">

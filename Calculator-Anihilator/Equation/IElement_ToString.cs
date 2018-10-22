@@ -2,7 +2,7 @@
 {
 	partial class Equation
 	{
-		public interface IElementToString : IElement
+		public interface IElement_ToString : IElement
 		{
 			string ToString();
 		}

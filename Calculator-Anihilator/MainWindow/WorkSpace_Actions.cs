@@ -20,7 +20,15 @@ namespace Calculator_Anihilator
 		private void Insert_To_WorkSpace(char sign)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
-			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition++, sign.ToString());
+
+			if (WorkSpace.SelectionLength == 0)
+				WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition++, sign.ToString());
+			else
+			{
+				WorkSpace.Text = WorkSpace.Text.Remove(CaretPosition, WorkSpace.SelectionLength);
+				WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition++, sign.ToString());
+			}
+
 			WorkSpace.CaretIndex = CaretPosition;
 			WorkSpace.Focus();
 		}
@@ -51,11 +59,6 @@ namespace Calculator_Anihilator
 			WorkSpace.Text = "";
 			WorkSpace.CaretIndex = 0;
 			WorkSpace.Focus();
-		}
-
-		private void WorkSpace_PreviewKeyDown(object sender, KeyEventArgs e)
-		{
-			;
 		}
 	}
 }

@@ -31,8 +31,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="WorkSpace" FontSize="40" Grid.Row="0" Grid.ColumnSpan="4"  Margin="5,1,5,1" TextWrapping="Wrap" Text="" Height="Auto"
-                 Cursor="IBeam" AcceptsReturn="false" PreviewKeyDown="WorkSpace_PreviewKeyDown" />
+        <TextBox x:Name="WorkSpace" FontSize="40" Grid.Row="0" Grid.ColumnSpan="4"  Margin="5,1,5,1" TextWrapping="Wrap" Height="Auto"
+                 Cursor="IBeam" AcceptsReturn="false" />
         <TextBox x:Name="ResultSpace" FontSize="40" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  Margin="5,1,5,1" TextWrapping="Wrap" Text=""
                  Height="Auto" Cursor="IBeam" IsReadOnly="True" />
 

@@ -12,19 +12,21 @@ namespace Calculator_Anihilator
 		{
 			switch (sign)
 			{
+				case '^':
+					return Math.Pow(number1,number2);
+				case '*':
+					return number1 * number2;
+				case '/':
+					{
+						if (number2 == 0)
+							throw new DivideByZeroException();
+						else
+							return number1 / number2;
+					}
 				case '+':
 					return number1 + number2;
 				case '-':
 					return number1 - number2;
-				case '*':
-					return number1 * number2;
-				case '/':
-				{
-					if (number2 == 0)
-						throw new DivideByZeroException();
-					else
-						return number1 / number2;
-				}
 				default:
 					throw new NoActionAsigned();
 			}

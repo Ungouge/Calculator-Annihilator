@@ -11,16 +11,9 @@ namespace Calculator_Anihilator
 		private void Action_Button(char sign)
 		{
 			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
-				try
-				{
-					Basic_Calculation_Single(sign);
-				}
-				catch (Exception)
-				{
-
-				}
+				Basic_Calculation_Single(sign);
 			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
-				Insert_To_WorkSpace(sign.ToString());
+				Insert_To_WorkSpace(sign);
 		}
 
 		private void Basic_Calculation_Single(char symbol)

@@ -17,7 +17,6 @@ namespace Calculator_Anihilator
 {
 	partial class Equation
 	{
-
 		private void Element_Selector(string equation)
 		{
 			for (int i = 0; i < equation.Length; i++)
@@ -49,13 +48,13 @@ namespace Calculator_Anihilator
 		{
 			if (sign == '(')
 			{
-				new Open_Bracket();
+				Elements_Colection.Add( new Open_Bracket());
 				return true;
 			}
 
 			if (sign == ')')
 			{
-				new Close_Bracket();
+				Elements_Colection.Add( new Close_Bracket());
 				return true;
 			}
 
@@ -68,7 +67,7 @@ namespace Calculator_Anihilator
 				for (int k = 0; k < MainWindow.action_Sings[i].Length; k++)
 					if (MainWindow.action_Sings[i][k] == sign)
 					{
-						new Operand(sign, i);
+						Elements_Colection.Add( new Operand(sign, i));
 						return true;
 					}
 
@@ -83,14 +82,14 @@ namespace Calculator_Anihilator
 
 			if (first_Sign_Position == sign_Position)
 			{
-				MessageBox.Show($" Not parsed {equation[sign_Position]}");
+				//MessageBox.Show($" Not parsed {equation[sign_Position]}");
 				return sign_Position;
 			}
 			else
 			{
 				double d = MainWindow.Parser(equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position));
-				MessageBox.Show($"Parsed {d.ToString()}");
-				new Number(d);
+				//MessageBox.Show($"Parsed {d.ToString()}");
+				Elements_Colection.Add( new Number(d));
 				return sign_Position;
 			}
 		}

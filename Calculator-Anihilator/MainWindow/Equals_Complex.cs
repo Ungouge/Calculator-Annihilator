@@ -19,8 +19,8 @@ namespace Calculator_Anihilator
 	{
 		private double Equals_Complex(string equation)
 		{
-			Equation eq = new Equation(equation);
-			return 0e0; //Equals_No_Brackets(equation);
+			Equation Eq = new Equation(equation);
+			return Eq.Result; //Equals_No_Brackets(equation);
 		}
 
 	//	private double Equals_No_Brackets (string equation)

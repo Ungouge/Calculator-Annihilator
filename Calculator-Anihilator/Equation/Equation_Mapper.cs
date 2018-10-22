@@ -20,34 +20,32 @@ namespace Calculator_Anihilator
 		private void Equation_Mapper()
 		{
 			Equal_Number_Of_Brackets();
-
 			Bracket_Pairer();
-
 		}
 
 		private void Bracket_Pairer()
 		{
-			foreach (Bracket bracket in Bracket.bracket_List)
+			foreach (IElement bracket_Candidate in Elements_Colection)
 			{
-				if (bracket is Open_Bracket OB && OB.Pair == null)
+				if (bracket_Candidate is Open_Bracket OB && OB.Pair == null)
 					Search_for_Close_Bracket(OB);
 
-				if (bracket is Close_Bracket CB && CB.Pair == null)
-					Search_for_Open_Bracket(Bracket.bracket_List.IndexOf(CB));
+				if (bracket_Candidate is Close_Bracket CB && CB.Pair == null)
+					Search_for_Open_Bracket(Elements_Colection.IndexOf(CB));
 			}
 		}
 
 		private void Search_for_Close_Bracket(Open_Bracket OB)
 		{
-			int bracket_Index = Bracket.bracket_List.IndexOf(OB);
+			int bracket_Index = Elements_Colection.IndexOf(OB);
 			int bracket_Level = 0;
 
-			for (int i = bracket_Index; i < Bracket.bracket_List.Count; i++)
+			for (int i = bracket_Index; i < Elements_Colection.Count; i++)
 			{
-				if (Bracket.bracket_List[i] is Open_Bracket)
+				if (Elements_Colection[i] is Open_Bracket)
 					bracket_Level++;
 
-				if (Bracket.bracket_List[i] is Close_Bracket CB)
+				if (Elements_Colection[i] is Close_Bracket CB)
 					if (--bracket_Level == 0)
 						Bracket.Pair_brackets(OB, CB);
 			}
@@ -58,10 +56,11 @@ namespace Calculator_Anihilator
 			throw new NotImplementedException();
 		}
 
-		private static void Equal_Number_Of_Brackets()
+		private void Equal_Number_Of_Brackets()
 		{
 			int bracket_Level = 0;
-			foreach (Bracket br in Bracket.bracket_List)
+			
+			foreach (Element br in Elements_Colection)
 			{
 				if (br is Open_Bracket)
 					bracket_Level++;
@@ -73,13 +72,13 @@ namespace Calculator_Anihilator
 			{
 				if (bracket_Level < 0)
 				{
-					Open_Bracket.Emergent_Addition_of_Open_Bracket();
+					Open_Bracket.Emergent_Addition_of_Open_Bracket(this);
 					bracket_Level++;
 					MessageBox.Show("(");
 				}
 				else if (bracket_Level > 0)
 				{
-					new Close_Bracket();
+					Elements_Colection.Add( new Close_Bracket());
 					bracket_Level--;
 					MessageBox.Show(")");
 				}

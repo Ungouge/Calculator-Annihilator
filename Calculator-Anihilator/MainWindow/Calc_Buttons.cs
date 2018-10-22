@@ -45,7 +45,7 @@ namespace Calculator_Anihilator
 			}
 			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
 			{
-				Equals_Complex(WorkSpace.Text);
+				ResultSpace.Text = Equals_Complex(WorkSpace.Text).ToString();
 			}
 		}
 
