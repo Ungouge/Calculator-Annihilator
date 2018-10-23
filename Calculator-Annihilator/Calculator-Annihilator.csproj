@@ -59,18 +59,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Equation\Equation.cs" />
-    <Compile Include="Equation\Equation_Elements.cs" />
-    <Compile Include="Equation\IOperand.cs" />
+    <Compile Include="Equation\Elements\Equation_Elements.cs" />
+    <Compile Include="Equation\Elements\IOperand.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
     <Compile Include="Equation\Reset.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />
-    <Compile Include="Equation\Element_Selector.cs" />
+    <Compile Include="Equation\Elements\Element_Selector.cs" />
     <Compile Include="Equation\Equation_Mapper.cs" />
     <Compile Include="Equation\Equation_String.cs" />
-    <Compile Include="Equation\IElement.cs" />
-    <Compile Include="Equation\IElement_ToString.cs" />
-    <Compile Include="Equation\Element.cs" />
+    <Compile Include="Equation\Elements\IElement.cs" />
+    <Compile Include="Equation\Elements\IElement_ToString.cs" />
+    <Compile Include="Equation\Elements\Element.cs" />
     <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
@@ -82,7 +82,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow\Equals_Actions.cs" />
+    <Compile Include="MainWindow\Equals_Single.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,7 +93,7 @@
     <Compile Include="MainWindow\Number_Buttons.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System_Signs.cs" />
     <Compile Include="MainWindow\Parser.cs" />
-    <Compile Include="MainWindow\Switch_Calc_Class.cs" />
+    <Compile Include="MainWindow\Calc_Action_Selector.cs" />
     <Compile Include="MainWindow\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

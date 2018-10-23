@@ -12,6 +12,20 @@ namespace Calculator_Annihilator
 		string the_Equation;
 		Equation_Elements Elements_Colection = new Equation_Elements();
 
+		public double Result
+		{
+			get
+			{
+				string str = "";
+				foreach (IElement element in Elements_Colection)
+				{
+					if (element is Number nmb)
+						str += nmb.ToString();
+				}
+				return Double.Parse(str);
+			}
+		}
+
 		public Equation(string eq)
 		{
 			try

@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 		{
 			char[] workCharArr = workText.ToCharArray();
 
-			int commaPosition = Commaposition(workCharArr);
+			int commaPosition = Comma_Position(workCharArr);
 
 			double parsedOutput = 0;
 
@@ -54,7 +54,7 @@ namespace Calculator_Annihilator
 			return parsedOutput;
 		}
 
-		private static int Commaposition(char[] workCharArr)
+		private static int Comma_Position(char[] workCharArr)
 		{
 
 			for (int i = 0; i < workCharArr.Length; i++)
