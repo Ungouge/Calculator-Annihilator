@@ -73,7 +73,7 @@
     <Compile Include="Equation\Elements\IElement.cs" />
     <Compile Include="Equation\Elements\IElement_ToString.cs" />
     <Compile Include="Equation\Elements\Element.cs" />
-    <Compile Include="MainWindow\Calc_Actions\Calc_Actions_Sack.cs" />
+    <Compile Include="Calc\Calc_Actions_Sack.cs" />
     <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
@@ -96,7 +96,7 @@
     <Compile Include="MainWindow\Number_Buttons.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System_Signs.cs" />
     <Compile Include="MainWindow\Parser.cs" />
-    <Compile Include="MainWindow\Calc_Actions\Calc_Action_Selector.cs" />
+    <Compile Include="Calc\Calc_Action_Selector.cs" />
     <Compile Include="MainWindow\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -122,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainWindow\Calc_Actions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

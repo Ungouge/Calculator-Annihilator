@@ -28,7 +28,7 @@ namespace Calculator_Annihilator
 				try
 				{
 					first_Number_In_Equation_Single = 
-						Calc_Action_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+						Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 					ResultSpace.Text = first_Number_In_Equation_Single.ToString();
 				}
 				catch (DivideByZeroException)

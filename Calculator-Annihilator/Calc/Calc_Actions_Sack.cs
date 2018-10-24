@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	partial class Calc
 	{
 		private static double Exponentation(double number1, double number2)
 		{

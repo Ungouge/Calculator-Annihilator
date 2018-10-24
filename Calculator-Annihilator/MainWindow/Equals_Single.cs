@@ -13,7 +13,7 @@ namespace Calculator_Annihilator
 		{
 			try
 			{
-				double calculation_Result = Calc_Action_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+				double calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 				ResultSpace.Text = calculation_Result.ToString();
 			}
 			catch (DivideByZeroException)

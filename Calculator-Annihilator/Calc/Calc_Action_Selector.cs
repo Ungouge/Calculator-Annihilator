@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	public static partial class Calc
 	{
 		// Returns result of operation type as sign
 		// Exceptios: DivideByZeroException, NoActionAsigned
-		public static double Calc_Action_Selector(char sign, double number1, double number2)
+		public static double Operand_Selector(char operand_Sign, double number1, double number2)
 		{
-			switch (sign)
+			switch (operand_Sign)
 			{
 				case '+':
 					return Addition(number1, number2);
