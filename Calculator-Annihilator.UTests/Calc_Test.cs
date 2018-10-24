@@ -12,7 +12,10 @@ namespace Calculator_Annihilator.UTests
 	{
 		[Theory]
 		[InlineData(2, 3, 5)]
-		public void Addition_SouldCaculate(double x, double y, double expected)
+		[InlineData(5e-1, 3e0, 35e-1)]
+		[InlineData(0.11111, 0.22222, 0.33333)]
+		[InlineData(Double.MaxValue, 116515e15, Double.MaxValue)]
+		public void Addition_ShouldCaculate(double x, double y, double expected)
 		{
 			// Act
 			double actual = Calc.Operand_Selector('+', x, y);
