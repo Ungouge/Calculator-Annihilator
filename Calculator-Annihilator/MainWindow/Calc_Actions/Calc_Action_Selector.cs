@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
 				case '*':
 					return Multiplication(number1, number2);
 				case '/':
-						return Divition(number1, number2);
+					return Divition(number1, number2);
 				case '+':
 					return Addition(number1, number2);
 				case '-':
