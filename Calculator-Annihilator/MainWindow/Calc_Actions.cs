@@ -21,14 +21,34 @@ namespace Calculator_Annihilator
 			if (no_Calculation_Sign_Single == true)
 			{
 				First_Number_In_Equation_Single = Parse_WorkSpace();
-				ResultSpace.Text = first_Number_In_Equation_Single.ToString(); // experimental code
+				ResultSpace.Text = first_Number_In_Equation_Single.ToString() + symbol;
 			}
-			else
+			else if (WorkSpace.Text != default(string) || WorkSpace.Text != "")
 			{
-				first_Number_In_Equation_Single = Calc_Action_Selector(Calculation_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				ResultSpace.Text = first_Number_In_Equation_Single.ToString();
+				try
+				{
+					first_Number_In_Equation_Single = 
+						Calc_Action_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+					ResultSpace.Text = first_Number_In_Equation_Single.ToString();
+				}
+				catch (DivideByZeroException)
+				{
+					ResultSpace.Text = "Dividing by zero is not allowed";
+					no_Calculation_Sign_Single = true;
+					no_First_Number_In_Equation_Single = true;
+				}
+				catch
+				{
+					ResultSpace.Text = default(string);
+					symbol = default(char);
+				}
+				finally
+				{
+					Clear_WorkSpace();
+				}
 			}
-			Calculation_Sign_Single = symbol;
+
+			Operand_Sign_Single = symbol;
 			Clear_WorkSpace();
 		}
 	}

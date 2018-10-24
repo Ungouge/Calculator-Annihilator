@@ -42,7 +42,7 @@ namespace Calculator_Annihilator
 				newWorkSpaceText += First_Number_In_Equation_Single.ToString();
 
 			if (no_Calculation_Sign_Single == false)
-				newWorkSpaceText += Calculation_Sign_Single.ToString();
+				newWorkSpaceText += Operand_Sign_Single.ToString();
 
 			newWorkSpaceText += WorkSpace.Text;
 

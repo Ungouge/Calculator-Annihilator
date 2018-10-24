@@ -13,18 +13,21 @@ namespace Calculator_Annihilator
 		{
 			try
 			{
-				double calculation_Result = Calc_Action_Selector(Calculation_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				no_Calculation_Sign_Single = true;
-				no_First_Number_In_Equation_Single = true;
+				double calculation_Result = Calc_Action_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 				ResultSpace.Text = calculation_Result.ToString();
 			}
 			catch (DivideByZeroException)
 			{
-				ResultSpace.Clear();
 				ResultSpace.Text = "Dividing by zero is not allowed";
+			}
+			catch
+			{
+				ResultSpace.Text = default(string);
 			}
 			finally
 			{
+				no_Calculation_Sign_Single = true;
+				no_First_Number_In_Equation_Single = true;
 				Clear_WorkSpace();
 			}
 		}

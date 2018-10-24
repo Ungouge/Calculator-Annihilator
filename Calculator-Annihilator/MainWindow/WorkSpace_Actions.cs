@@ -17,6 +17,14 @@ namespace Calculator_Annihilator
 {
 	public partial class MainWindow
 	{
+		private void Reset_WorkSpace_Text(string newWorkSpaceText)
+		{
+			WorkSpace.Clear();
+			WorkSpace.Text = newWorkSpaceText;
+
+			WorkSpace.CaretIndex = WorkSpace.Text.Length;
+			WorkSpace.Focus();
+		}
 		private void Insert_To_WorkSpace(char sign)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
@@ -33,11 +41,12 @@ namespace Calculator_Annihilator
 			WorkSpace.Focus();
 		}
 
-		private void Insert_To_WorkSpace(string signs)
+		private void Insert_To_WorkSpace(string str)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
-			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition, signs);
-			CaretPosition += signs.Length;
+			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition, str);
+			CaretPosition += str.Length;
+
 			WorkSpace.CaretIndex = CaretPosition;
 			WorkSpace.Focus();
 		}
@@ -56,7 +65,8 @@ namespace Calculator_Annihilator
 
 		private void Clear_WorkSpace()
 		{
-			WorkSpace.Text = "";
+			//WorkSpace.Text = "";
+			WorkSpace.Clear(); // for test?
 			WorkSpace.CaretIndex = 0;
 			WorkSpace.Focus();
 		}

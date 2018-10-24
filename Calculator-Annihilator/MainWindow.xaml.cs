@@ -29,12 +29,5 @@ namespace Calculator_Annihilator
 			//WorkSpace.Text = "(58, 53 + 57) - 54, 2 * 25";
 
 		}
-
-		private void Reset_WorkSpace_Text(string newWorkSpaceText)
-		{
-			Clear_WorkSpace();
-
-			Insert_To_WorkSpace(newWorkSpaceText);
-		}
 	}
 }
