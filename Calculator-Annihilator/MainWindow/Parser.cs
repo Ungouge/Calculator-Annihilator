@@ -17,7 +17,7 @@ namespace Calculator_Annihilator
 {
 	public partial class MainWindow
 	{
-		public static double Parser(string workText)
+		public double Parser(string workText)
 		{
 			char[] workCharArr = workText.ToCharArray();
 
@@ -71,7 +71,7 @@ namespace Calculator_Annihilator
 			return workCharArr.Length;
 		}
 
-		public static double DigitParse(char digit)
+		public sbyte DigitParse(char digit)
 		{
 			if (digit > (char)47 && digit < (char)58 && digit < Numeral_System + 48)
 				return (sbyte)(digit - 48);

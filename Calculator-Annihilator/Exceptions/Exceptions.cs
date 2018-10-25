@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-
 	public class WorkSpaceParsingException : Exception
 	{
 		public WorkSpaceParsingException()
@@ -22,6 +21,7 @@ namespace Calculator_Annihilator
 
 		}
 	}
+
 	public class ParsingCharacterIsNoDigitException : Exception
 	{
 		public ParsingCharacterIsNoDigitException()

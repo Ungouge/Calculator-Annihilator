@@ -25,10 +25,24 @@ namespace Calculator_Annihilator
 		};
 
 		public static readonly char[] CommasType = { ',', '.', '٫' }; // if not in someverelse that Parser - to delete
-		public static sbyte Numeral_System { get; private set; } // value is base of numericalc system, while -3 is balanced ternary //Spagheti value
 
-		Numerical_System_Signs Current_Numerical_System;
-		public static char[] Numerical_System_Signs { get; private set; }
+		public Numerical_System Current_Numerical_System { get; private set; }
+
+		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
+		{
+			get
+			{
+				return Current_Numerical_System.System_Type;
+			}
+		}
+
+		public char[] Numerical_System_Signs
+		{
+			get
+			{
+				return Current_Numerical_System.System_Digits;
+			}
+		}
 
 		private double first_Number_In_Equation_Single; //Psedonullable double container for single
 		private double First_Number_In_Equation_Single

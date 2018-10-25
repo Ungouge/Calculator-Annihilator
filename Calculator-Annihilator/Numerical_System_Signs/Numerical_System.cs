@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	public class Numerical_System_Signs
+	public class Numerical_System
 	{
 		public char[] System_Digits { get; private set; }
-		public int System_Type { get; private set;}
+		public sbyte System_Type { get; private set;}
 
 		readonly Exception NoSuchNumericalSystem = null;
 
-		public Numerical_System_Signs(int ns)
+		public Numerical_System(sbyte ns)
 		{
 			List<char> System_Symbol = new List<char>();
 

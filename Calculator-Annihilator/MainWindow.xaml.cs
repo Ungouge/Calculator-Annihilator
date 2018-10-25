@@ -20,14 +20,11 @@ namespace Calculator_Annihilator
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		public MainWindow()
+		public  MainWindow()
 		{
 			InitializeComponent();
-			Numeral_System = 10;
-			Current_Numerical_System = new Numerical_System_Signs(Numeral_System);
-			Numerical_System_Signs = Current_Numerical_System.System_Digits;
-			//WorkSpace.Text = "(58, 53 + 57) - 54, 2 * 25";
-
+			Current_Numerical_System = new Numerical_System(10);
+			//WorkSpace.Text = "(58, 53 + 57) - 54, 2 * 25"; // xyz
 		}
 	}
 }
