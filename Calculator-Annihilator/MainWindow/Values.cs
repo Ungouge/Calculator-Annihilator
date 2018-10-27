@@ -19,15 +19,6 @@ namespace Calculator_Annihilator
 	{
 		private Parser parser = new Parser();
 
-		public static readonly char[][] action_Sings = new char[][]
-		{ 
-			new char [] { '^' },
-			new char [] { '-', '+' },
-			new char [] { '/', '*' }
-		};
-
-		public static readonly char[] CommasType = { ',', '.', '٫' }; // if not in someverelse that Parser - to delete
-
 		public Numerical_System Current_Numerical_System { get; private set; }
 
 		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system

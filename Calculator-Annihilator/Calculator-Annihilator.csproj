@@ -82,6 +82,7 @@
     <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
+    <Compile Include="Signs_Library\Signs_Library.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,7 +101,7 @@
     <Compile Include="MainWindow\Calc_Buttons.cs" />
     <Compile Include="MainWindow\Number_Buttons.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
-    <Compile Include="MainWindow\Parser.cs" />
+    <Compile Include="Parser\Parser.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
     <Compile Include="MainWindow\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
