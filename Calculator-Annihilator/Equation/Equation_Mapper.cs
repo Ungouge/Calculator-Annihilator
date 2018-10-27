@@ -74,13 +74,13 @@ namespace Calculator_Annihilator
 				{
 					Open_Bracket.Emergent_Addition_of_Open_Bracket(this);
 					bracket_Level++;
-					MessageBox.Show("(");
+					//MessageBox.Show("(");
 				}
 				else if (bracket_Level > 0)
 				{
 					Elements_Colection.Add( new Close_Bracket());
 					bracket_Level--;
-					MessageBox.Show(")");
+					//MessageBox.Show(")");
 				}
 			}
 		}

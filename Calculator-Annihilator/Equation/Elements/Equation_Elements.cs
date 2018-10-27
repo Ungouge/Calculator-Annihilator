@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		class Equation_Elements : IEnumerable
+		private class Equation_Elements : IEnumerable
 		{
 			static public List<IElement> Elements_List;
 

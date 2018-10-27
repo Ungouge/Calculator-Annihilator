@@ -11,13 +11,11 @@ namespace Calculator_Annihilator
 	{
 		public string the_Equation;
 
-		Numerical_System numerical_System;
-
-
-		Equation_Elements Elements_Colection = new Equation_Elements();
-
+		private Numerical_System numerical_System;
 
 		private Parser parser = new Parser();
+
+		private Equation_Elements Elements_Colection = new Equation_Elements();
 
 		public double Result
 		{
@@ -44,7 +42,7 @@ namespace Calculator_Annihilator
 				Element_Selector(eq);
 				Equation_Mapper();
 
-				MessageBox.Show(Recreate_Equation());
+				//MessageBox.Show(Recreate_Equation());
 			}
 			catch (Exception ex)
 			{
@@ -52,9 +50,11 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public Equation()// porzez podanie listy
+		public Equation()
 		{
-			;
+			 //the_Equation = "";
+			 //numerical_System = new Numerical_System(10);
+			 //parser = new Parser();
 		}
 	}
 }
