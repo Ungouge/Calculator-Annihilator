@@ -63,9 +63,9 @@ namespace Calculator_Annihilator
 
 		private bool Is_Operand(char sign)
 		{
-			for (int i = 0; i < Signs_Library.action_Sings.Length; i++)
-				for (int k = 0; k < Signs_Library.action_Sings[i].Length; k++)
-					if (Signs_Library.action_Sings[i][k] == sign)
+			for (int i = 0; i < Signs_Lib.operand_Sings.Length; i++)
+				for (int k = 0; k < Signs_Lib.operand_Sings[i].Length; k++)
+					if (Signs_Lib.operand_Sings[i][k] == sign)
 					{
 						Elements_Colection.Add( new Operand(sign, i));
 						return true;
@@ -117,7 +117,7 @@ namespace Calculator_Annihilator
 
 		private bool Is_Comma(char sign)
 		{
-			foreach (char comma in Signs_Library.CommasType)
+			foreach (char comma in Signs_Lib.CommasType)
 				if (sign == comma)
 					return true;
 

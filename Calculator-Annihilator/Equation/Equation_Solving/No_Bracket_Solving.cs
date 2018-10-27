@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
 		{
 			int[] Current_Level_Operands;
 
-			for (int i = 0; i < MainWindow.action_Sings.Length; i++)
+			for (int i = 0; i < Signs_Lib.operand_Sings.Length; i++)
 			{
 				Current_Level_Operands = Enlist_Current_Operand_Level(begining, end, i);
 				Solve_Current_Operand_Level(begining, end, Current_Level_Operands);
@@ -47,7 +47,7 @@ namespace Calculator_Annihilator
 			List<int> Current_Operand_Level_Position_List = new List<int>();
 
 			for (int i = begining; i < end; i++)
-				foreach (char operand in MainWindow.action_Sings[level])
+				foreach (char operand in Signs_Lib.operand_Sings[level])
 					if (Elements_Colection[i] is Operand equational_Operand)
 						if (equational_Operand.sign == operand)
 							Current_Operand_Level_Position_List.Add(i);

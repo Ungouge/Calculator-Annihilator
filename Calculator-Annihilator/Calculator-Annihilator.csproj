@@ -82,7 +82,7 @@
     <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
-    <Compile Include="Signs_Library\Signs_Library.cs" />
+    <Compile Include="Signs_Lib\Signs_Lib.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

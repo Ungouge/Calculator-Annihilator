@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	static class Signs_Library
+	static class Signs_Lib
 	{
-		public static readonly char[][] action_Sings = new char[][]
+		public static readonly char[][] operand_Sings = new char[][]
 		{
 			new char [] { '^' },
 			new char [] { '-', '+' },
