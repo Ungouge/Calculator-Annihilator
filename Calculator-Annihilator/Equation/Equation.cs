@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-	partial class Equation
+	public partial class Equation
 	{
 		MainWindow MainWindow_Ptr = (MainWindow) System.Windows.Application.Current.MainWindow;
 		string the_Equation;
