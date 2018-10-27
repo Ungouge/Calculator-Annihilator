@@ -78,6 +78,7 @@
     <Compile Include="Equation\Elements\Element.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
     <Compile Include="MainWindow\Numerical_system\Numerical_System_Sack.cs" />
+    <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />

@@ -10,7 +10,7 @@ namespace Calculator_Annihilator.UTests
 {
 	public class Equation_Tests
 	{
-		private Equation _equation ;
+		/*private Equation _equation ;
 
 		public Equation_Tests()
 		{
@@ -18,7 +18,7 @@ namespace Calculator_Annihilator.UTests
 		}
 
 		[Fact]
-		public 
+		public */
 
 	}
 }

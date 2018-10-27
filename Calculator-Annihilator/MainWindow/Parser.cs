@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	public class Parser
 	{
-		public double Parser(string workText)
+		public double Parse(string workText, sbyte Numeral_System)
 		{
 			char[] workCharArr = workText.ToCharArray();
 
@@ -29,7 +29,7 @@ namespace Calculator_Annihilator
 			{
 				try
 				{
-					parsedOutput += DigitParse(workCharArr[i]) * Math.Pow(Numeral_System, commaPosition - i - 1);
+					parsedOutput += DigitParse(workCharArr[i], Numeral_System) * Math.Pow(Numeral_System, commaPosition - i - 1);
 				}
 				catch (Exception ex)
 				{
@@ -43,7 +43,7 @@ namespace Calculator_Annihilator
 			{
 				try
 				{
-					parsedOutput += DigitParse(workCharArr[i]) * Math.Pow(Numeral_System, commaPosition - i);
+					parsedOutput += DigitParse(workCharArr[i], Numeral_System) * Math.Pow(Numeral_System, commaPosition - i);
 				}
 				catch (Exception ex)
 				{
@@ -71,7 +71,7 @@ namespace Calculator_Annihilator
 			return workCharArr.Length;
 		}
 
-		public sbyte DigitParse(char digit)
+		public sbyte DigitParse(char digit, sbyte Numeral_System)
 		{
 			if (digit > (char)47 && digit < (char)58 && digit < Numeral_System + 48)
 				return (sbyte)(digit - 48);
@@ -81,11 +81,6 @@ namespace Calculator_Annihilator
 				return (sbyte)(digit - 51); // 'a' = 36 - 'x' =59 
 			else
 				throw new ParsingCharacterIsNoDigitException($"{digit} is not a digit");
-		}
-
-		private double Parse_WorkSpace()
-		{
-			return Parser(WorkSpace.Text);
 		}
 	}
 }

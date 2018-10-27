@@ -27,4 +27,6 @@ namespace Calculator_Annihilator
 			//WorkSpace.Text = "(58, 53 + 57) - 54, 2 * 25"; // xyz
 		}
 	}
+
+	//  Main Window Instance Pointer = (MainWindow)System.Windows.Application.Current.MainWindow; 
 }

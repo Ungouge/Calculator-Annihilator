@@ -9,9 +9,15 @@ namespace Calculator_Annihilator
 {
 	public partial class Equation
 	{
-		MainWindow MainWindow_Ptr = (MainWindow) System.Windows.Application.Current.MainWindow;
 		public string the_Equation;
+
+		Numerical_System numerical_System;
+
+
 		Equation_Elements Elements_Colection = new Equation_Elements();
+
+
+		private Parser parser = new Parser();
 
 		public double Result
 		{
@@ -27,12 +33,14 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public Equation(string eq)
+		public Equation(string eq, Numerical_System ns)
 		{
 			try
 			{
 				Reset();
 				the_Equation = eq;
+				numerical_System = ns;
+
 				Element_Selector(eq);
 				Equation_Mapper();
 

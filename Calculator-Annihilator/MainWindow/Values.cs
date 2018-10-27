@@ -17,6 +17,8 @@ namespace Calculator_Annihilator
 {
 	public partial class MainWindow
 	{
+		private Parser parser = new Parser();
+
 		public static readonly char[][] action_Sings = new char[][]
 		{ 
 			new char [] { '^' },
