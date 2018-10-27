@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
 	public partial class Equation
 	{
 		MainWindow MainWindow_Ptr = (MainWindow) System.Windows.Application.Current.MainWindow;
-		string the_Equation;
+		public string the_Equation;
 		Equation_Elements Elements_Colection = new Equation_Elements();
 
 		public double Result
