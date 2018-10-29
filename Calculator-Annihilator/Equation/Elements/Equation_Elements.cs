@@ -55,8 +55,8 @@ namespace Calculator_Annihilator
 
 			public void ReplaceRange ( int index, int count, Number Result_Number)
 			{
-				Elements_List.RemoveRange(index, count);
 				Elements_List.Insert(index, Result_Number);
+				Elements_List.RemoveRange(index , count);
 			}
 
 			public void Clear()

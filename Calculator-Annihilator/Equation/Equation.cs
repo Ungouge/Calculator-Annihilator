@@ -18,6 +18,8 @@ namespace Calculator_Annihilator
 
 		private Equation_Elements Elements_Colection = new Equation_Elements();
 
+		private bool Does_Solved = false;
+
 		public double Solved_Value
 		{
 			get
@@ -32,7 +34,6 @@ namespace Calculator_Annihilator
 				Solved_Value = value;
 			}
 		}
-		private bool Does_Solved = false;
 
 		public Equation ( string eq, Numerical_System ns )
 		{

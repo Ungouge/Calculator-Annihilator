@@ -22,7 +22,11 @@ namespace Calculator_Annihilator
 				Does_Solved = true;
 			}
 			else
-				throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
+			//throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it is no longer needed
+			{
+				Solved_Value = 0e0;
+				Does_Solved = true;
+			}
 		}
 	}
 }

@@ -36,7 +36,8 @@ namespace Calculator_Annihilator
 			if (elements.Count == 1 && elements[0] is Number Result) // hopefully temporery
 				return Result;
 			else
-				throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
+				return new Number(0);
+				//throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
 		}
 
 		// return new object Number as result of operation 
