@@ -34,9 +34,9 @@ namespace Calculator_Annihilator
 				}
 			}
 			if (elements.Count == 1 && elements[0] is INumber Result)
-				return	Result;
+				return Result;
 			else
-				throw 
+				throw new EquationNotSolvedProperlyException();
 		}
 
 		// return new object Number as result of operation 
