@@ -27,7 +27,7 @@ namespace Calculator_Annihilator
 		{
 			_equation = new Equation(str, new Numerical_System(10));
 
-			_equation.Equation_Solving();
+			_equation.Solver();
 
 			double actual = _equation.Solved_Value;
 

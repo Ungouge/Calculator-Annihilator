@@ -68,6 +68,7 @@
     <Compile Include="Equation\Elements\Equation_Elements.cs" />
     <Compile Include="Equation\Elements\IOperand.cs" />
     <Compile Include="Equation\Equation_Solving\Equation_Solving.cs" />
+    <Compile Include="Equation\Equation_Solving\Exchange_Solved_Range_to_Calculated_Value.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
     <Compile Include="Equation\Reset.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
