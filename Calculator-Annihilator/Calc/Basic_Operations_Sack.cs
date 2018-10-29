@@ -8,22 +8,22 @@ namespace Calculator_Annihilator
 {
 	partial class Calc
 	{
-		private static double Exponentation(double number1, double number2)
+		private double Exponentation(double number1, double number2)
 		{
 			return Math.Pow(number1, number2);
 		}
 
-		private static double Subtraction(double number1, double number2)
+		private double Subtraction(double number1, double number2)
 		{
 			return number1 - number2;
 		}
 
-		private static double Addition(double number1, double number2)
+		private double Addition(double number1, double number2)
 		{
 			return number1 + number2;
 		}
 
-		private static double Divition(double number1, double number2)
+		private double Divition(double number1, double number2)
 		{
 			if (number2 == 0)
 				throw new DivideByZeroException();
@@ -31,7 +31,7 @@ namespace Calculator_Annihilator
 				return number1 / number2;
 		}
 
-		private static double Multiplication(double number1, double number2)
+		private double Multiplication(double number1, double number2)
 		{
 			return number1 * number2;
 		}

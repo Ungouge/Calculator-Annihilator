@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow //Number buttons sack
+	partial class MainWindow //Number buttons sack
 	{
 		private void Button_0_Click(object sender, RoutedEventArgs e)
 		{

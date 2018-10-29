@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
 	{
 		public void Equation_Solving()
 		{
-			//No_Bracket_Solving(0, Elements_Colection.Count);
+			No_Bracket_Solving(Elements_Colection.);
 			solved = true;
 		}
 
@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 			get
 			{
 				//if (solved == false)
-					//No_Bracket_Solving(0, Elements_Colection.Count);
+					No_Bracket_Solving(0, Elements_Colection.Count);
 
 				return ( Elements_Colection[0] is INumber number) ? number.Value : 0 ; // xyz
 			}

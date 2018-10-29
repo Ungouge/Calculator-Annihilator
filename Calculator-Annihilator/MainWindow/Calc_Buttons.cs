@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow // Function buttons sack
+	partial class MainWindow // Function buttons sack
 	{
 		private void Button_PlusSign_Click(object sender, RoutedEventArgs e)
 		{

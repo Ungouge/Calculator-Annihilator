@@ -14,6 +14,7 @@ namespace Calculator_Annihilator
 		private Numerical_System numerical_System;
 
 		private Parser parser = new Parser();
+		private Calc calc = new Calc();
 
 		private Equation_Elements Elements_Colection = new Equation_Elements();
 

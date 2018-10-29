@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	partial class MainWindow
 	{
-
 		private void Equals_Single( )
 		{
 			try
 			{
-				double calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+				double calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 				ResultSpace.Text = calculation_Result.ToString();
 			}
 			catch (DivideByZeroException)

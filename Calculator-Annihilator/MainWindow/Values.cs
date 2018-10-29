@@ -15,9 +15,10 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	partial class MainWindow
 	{
 		private Parser parser = new Parser();
+		private Calc calc = new Calc();
 
 		public Numerical_System Current_Numerical_System { get; private set; }
 
