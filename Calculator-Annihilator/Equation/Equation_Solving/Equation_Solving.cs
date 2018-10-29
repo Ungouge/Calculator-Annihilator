@@ -11,9 +11,10 @@ namespace Calculator_Annihilator
 		public void Solver()
 		{
 			// TBA Between_Brackets_Solver
-			No_Bracket_Solver(Elements_Colection.GetRange(0,Elements_Colection.Count));
 
-			Exchange_Solved_Range_to_Calculated_Value(elements, operand_index, Result_Number)
+			INumber Result_Number = No_Bracket_Solver(Elements_Colection.GetRange(0,Elements_Colection.Count));
+
+			Exchange_Solved_Range_to_Calculated_Value(Elements_Colection, 0, Elements_Colection.Count, Result_Number);
 			solved = true;
 		}
 

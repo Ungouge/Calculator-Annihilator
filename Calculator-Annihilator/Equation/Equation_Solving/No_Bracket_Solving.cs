@@ -27,7 +27,7 @@ namespace Calculator_Annihilator
 
 								Number Result_Number = Simple_Solve(First_Number, Equation_Operand, Seccond_Number);
 
-								Exchange_Solved_Range_to_Calculated_Value(elements, operand_index, Result_Number);
+								Exchange_Solved_to_Simple_Calculated_Value(elements, operand_index, Result_Number);
 							}
 						}
 					}

@@ -10,6 +10,7 @@ namespace Calculator_Annihilator.UTests
 {
 	public class Calc_Test
 	{
+		Calc calc = new Calc();
 		[Theory]
 
 		[InlineData(2, 3, 5)]
@@ -20,7 +21,7 @@ namespace Calculator_Annihilator.UTests
 		public void Addition_ShouldCaculate(double x, double y, double expected)
 		{
 			// Act
-			double actual = Calc.Operand_Selector('+', x, y);
+			double actual = calc.Operand_Selector('+', x, y);
 
 			// Assert
 			Assert.Equal(expected, actual);
@@ -35,7 +36,7 @@ namespace Calculator_Annihilator.UTests
 		public void Subtraction_SouldCaculate(double x, double y, double expected)
 		{
 			// Act
-			double actual = Calc.Operand_Selector('-', x, y);
+			double actual = calc.Operand_Selector('-', x, y);
 
 			// Assert
 			Assert.Equal(expected, actual);
@@ -51,7 +52,7 @@ namespace Calculator_Annihilator.UTests
 		public void Multiplication_SouldCaculate(double x, double y, double expected)
 		{
 			// Act
-			double actual = Calc.Operand_Selector('*', x, y);
+			double actual = calc.Operand_Selector('*', x, y);
 
 			// Assert
 			Assert.Equal(expected, actual);
@@ -68,7 +69,7 @@ namespace Calculator_Annihilator.UTests
 		public void Divition_SouldCaculate(double x, double y, double expected)
 		{
 			// Act
-			double actual = Calc.Operand_Selector('/', x, y);
+			double actual = calc.Operand_Selector('/', x, y);
 
 			// Assert
 			Assert.Equal(expected, actual);
@@ -82,7 +83,7 @@ namespace Calculator_Annihilator.UTests
 		public void Divition_By_Zero_Exception_SouldCaculate(double x)
 		{
 			// Assert
-			Assert.Throws<DivideByZeroException>( () => Calc.Operand_Selector('/', x, 0));
+			Assert.Throws<DivideByZeroException>( () => calc.Operand_Selector('/', x, 0));
 		}
 
 		[Theory]
@@ -95,7 +96,7 @@ namespace Calculator_Annihilator.UTests
 		public void Exponentation_SouldCaculate(double x, double y, double expected)
 		{
 			// Act
-			double actual = Calc.Operand_Selector('^', x, y);
+			double actual = calc.Operand_Selector('^', x, y);
 
 			// Assert
 			Assert.Equal(expected, actual);
