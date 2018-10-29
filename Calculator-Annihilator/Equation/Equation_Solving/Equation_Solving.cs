@@ -12,6 +12,8 @@ namespace Calculator_Annihilator
 		{
 			// TBA Between_Brackets_Solver
 			No_Bracket_Solver(Elements_Colection.GetRange(0,Elements_Colection.Count));
+
+			Exchange_Solved_Range_to_Calculated_Value(elements, operand_index, Result_Number)
 			solved = true;
 		}
 

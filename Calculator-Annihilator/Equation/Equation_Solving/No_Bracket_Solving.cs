@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void No_Bracket_Solver(List<IElement> elements )
+		private INumber No_Bracket_Solver(List<IElement> elements )
 		{
 			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
@@ -27,12 +27,16 @@ namespace Calculator_Annihilator
 
 								Number Result_Number = Simple_Solve(First_Number, Equation_Operand, Seccond_Number);
 
-								Execute_Simple_Solve_in_List(elements, operand_index, Result_Number);
+								Exchange_Solved_Range_to_Calculated_Value(elements, operand_index, Result_Number);
 							}
 						}
 					}
 				}
 			}
+			if (elements.Count == 1 && elements[0] is INumber Result)
+				return	Result;
+			else
+				throw 
 		}
 
 		// return new object Number as result of operation 
@@ -42,23 +46,5 @@ namespace Calculator_Annihilator
 
 			return new Number(value);
 		}
-
-		/*private void Solve_Current_Operand_Level(int begining, int end, int[] current_Level_Operands)
-		{
-			throw new NotImplementedException();
-		}
-
-		private int[] Enlist_Current_Operand_Level(int begining, int end, int level)
-		{
-			List<int> Current_Operand_Level_Position_List = new List<int>();
-
-			for (int i = begining; i < end; i++)
-				foreach (char operand in Signs_Lib.operand_Sings[level])
-					if (Elements_Colection[i] is Operand equational_Operand)
-						if (equational_Operand.sign == operand)
-							Current_Operand_Level_Position_List.Add(i);
-
-			return Current_Operand_Level_Position_List.ToArray();
-		}*/
 	}
 }

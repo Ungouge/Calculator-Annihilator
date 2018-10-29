@@ -52,6 +52,7 @@ namespace Calculator_Annihilator
 
 		}
 	}
+
 	public class NoActionAsigned : Exception
 	{
 		public NoActionAsigned()
@@ -63,6 +64,22 @@ namespace Calculator_Annihilator
 
 		}
 		public NoActionAsigned(string message, Exception inner) : base(message, inner)
+		{
+
+		}
+	}
+
+	public class EquationNotSolvedProperlyException : Exception
+	{
+		public EquationNotSolvedProperlyException()
+		{
+
+		}
+		public EquationNotSolvedProperlyException(string message) : base(message)
+		{
+
+		}
+		public EquationNotSolvedProperlyException(string message, Exception inner) : base(message, inner)
 		{
 
 		}
