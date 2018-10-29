@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private INumber No_Bracket_Solver(List<IElement> elements )
+		private INumber No_Bracket_Solver(Equation_Elements elements )
 		{
 			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
@@ -33,10 +33,10 @@ namespace Calculator_Annihilator
 					}
 				}
 			}
-			if (elements.Count == 1 && elements[0] is INumber Result)
+			if (elements.Count == 1 && elements[0] is INumber Result) // hopefully temporery
 				return Result;
 			else
-				throw new EquationNotSolvedProperlyException();
+				throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
 		}
 
 		// return new object Number as result of operation 

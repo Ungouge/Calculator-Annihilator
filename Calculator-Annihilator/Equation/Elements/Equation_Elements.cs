@@ -18,6 +18,11 @@ namespace Calculator_Annihilator
 				Elements_List = new List<IElement>();
 			}
 
+			public Equation_Elements(List<IElement> el)
+			{
+				Elements_List = el;
+			}
+
 			public void Add(IElement element)
 			{
 				Elements_List.Add(element);
