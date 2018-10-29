@@ -8,10 +8,10 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void Reset()
+		/*private void Reset() ///xyz: Propable not needed
 		{
 			Elements_Colection = new Equation_Elements();
 			the_Equation = "";
-		}
+		}*/
 	}
 }

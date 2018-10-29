@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private INumber No_Bracket_Solver(Equation_Elements elements )
+		private Number No_Bracket_Solver(Equation_Elements elements )
 		{
 			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
@@ -22,8 +22,8 @@ namespace Calculator_Annihilator
 							{
 								int operand_index = elements.IndexOf((IElement) Equation_Operand);
 
-								Number First_Number = (elements[operand_index - 1] is Number fn) ? fn : new Number(0); // xyz: propably to remove ?!
-								Number Seccond_Number = (elements[operand_index + 1] is Number sn) ? sn : new Number(0);
+								Number First_Number = (elements[operand_index - 1] is Number fn) ? fn : new Number(1); // xyz: propably to remove ?!
+								Number Seccond_Number = (elements[operand_index + 1] is Number sn) ? sn : new Number(1);
 
 								Number Result_Number = Simple_Solve(First_Number, Equation_Operand, Seccond_Number);
 
@@ -33,7 +33,7 @@ namespace Calculator_Annihilator
 					}
 				}
 			}
-			if (elements.Count == 1 && elements[0] is INumber Result) // hopefully temporery
+			if (elements.Count == 1 && elements[0] is Number Result) // hopefully temporery
 				return Result;
 			else
 				throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
@@ -42,7 +42,7 @@ namespace Calculator_Annihilator
 		// return new object Number as result of operation 
 		private Number Simple_Solve (INumber first_Number, IOperand operand, INumber seccond_Number)
 		{
-			double value = calc.Operand_Selector(operand.Sign, first_Number.Value, seccond_Number.Value);
+			double value = _Calc.Operand_Selector(operand.Sign, first_Number.Value, seccond_Number.Value);
 
 			return new Number(value);
 		}

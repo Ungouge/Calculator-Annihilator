@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	partial class MainWindow
 	{
 		private double Equals_Complex(string equation)
 		{
-			Equation Eq = new Equation(equation, Current_Numerical_System);
-			return Eq.Result; //Equals_No_Brackets(equation);
+			Equation _Equation = new Equation(equation, Current_Numerical_System);
+			return _Equation.Solved_Value; //Equals_No_Brackets(equation);
 		}
 	}
 }

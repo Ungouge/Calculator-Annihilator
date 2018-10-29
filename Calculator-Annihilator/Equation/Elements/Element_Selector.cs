@@ -87,7 +87,7 @@ namespace Calculator_Annihilator
 			}
 			else
 			{
-				double d = parser.Parse(equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), numerical_System.System_Type);
+				double d = _Parser.Parse(equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), _Numerical_System.System_Type);
 				//MessageBox.Show($"Parsed {d.ToString()}");
 				Elements_Colection.Add( new Number(d));
 				return sign_Position;
@@ -126,7 +126,7 @@ namespace Calculator_Annihilator
 
 		private bool Is_Digit(char sign)
 		{
-			foreach (char digit in numerical_System.System_Digits)
+			foreach (char digit in _Numerical_System.System_Digits)
 				if (sign == digit)
 					return true;
 

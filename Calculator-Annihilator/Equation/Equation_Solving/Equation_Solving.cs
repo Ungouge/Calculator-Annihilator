@@ -12,21 +12,17 @@ namespace Calculator_Annihilator
 		{
 			// TBA Between_Brackets_Solver
 
-			INumber Result_Number = No_Bracket_Solver (new Equation_Elements(Elements_Colection.GetRange ( 0 ,Elements_Colection.Count)), );
+			Number Result_Number = No_Bracket_Solver (new Equation_Elements(Elements_Colection.GetRange ( 0 ,Elements_Colection.Count - 1)));
 
-			Exchange_Solved_Range_to_Calculated_Value(Elements_Colection, 0, Elements_Colection.Count, Result_Number);
-			solved = true;
-		}
+			Exchange_Solved_Range_to_Calculated_Value(Elements_Colection, 0, Elements_Colection.Count - 1, Result_Number);
 
-		public double Solved_Value
-		{
-			get
+			if (Elements_Colection.Count == 1 && Elements_Colection[0] is Number Result) // hopefully temporery
 			{
-				if (solved == false)
-					No_Bracket_Solver(Elements_Colection.GetRange(0, Elements_Colection.Count));
-
-				return ( Elements_Colection[0] is INumber number) ? number.Value : 0 ; // xyz
+				Solved_Value = Result.Value;
+				Does_Solved = true;
 			}
+			else
+				throw new EquationNotSolvedProperlyException(); // don't forget to remove exception if it no longer needed
 		}
 	}
 }

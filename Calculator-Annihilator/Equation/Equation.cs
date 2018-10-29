@@ -11,43 +11,38 @@ namespace Calculator_Annihilator
 	{
 		public string the_Equation;
 
-		private Numerical_System numerical_System;
+		private Numerical_System _Numerical_System;
 
-		private Parser parser = new Parser();
-		private Calc calc = new Calc();
+		private Parser _Parser = new Parser();
+		private Calc _Calc = new Calc();
 
 		private Equation_Elements Elements_Colection = new Equation_Elements();
 
-		private bool solved = false;
-
-		//private Calc calc = new Calc();
-
-		public double Result
+		public double Solved_Value
 		{
 			get
 			{
-				string str = "";
-				foreach (IElement element in Elements_Colection)
-				{
-					if (element is Number nmb)
-						str += nmb.ToString();
-				}
-				return Double.Parse(str);
+				if (Does_Solved == false)
+					Solver();
+
+				return Solved_Value;
+			}
+			private set
+			{
+				Solved_Value = value;
 			}
 		}
+		private bool Does_Solved = false;
 
-		public Equation(string eq, Numerical_System ns)
+		public Equation ( string eq, Numerical_System ns )
 		{
 			try
 			{
-				Reset();
 				the_Equation = eq;
-				numerical_System = ns;
+				_Numerical_System = ns;
 
 				Element_Selector(eq);
 				Equation_Mapper();
-
-				//MessageBox.Show(Recreate_Equation());
 			}
 			catch (Exception ex)
 			{
@@ -59,7 +54,6 @@ namespace Calculator_Annihilator
 		{
 			 //the_Equation = "";
 			 //numerical_System = new Numerical_System(10);
-			 //parser = new Parser();
 		}
 	}
 }
