@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
 	{
 		private class Equation_Elements : IEnumerable
 		{
-			static public List<IElement> Elements_List;
+			private List<IElement> Elements_List;
 
 			public Equation_Elements()
 			{
@@ -46,6 +46,12 @@ namespace Calculator_Annihilator
 			public List<IElement> GetRange(int index, int count)
 			{
 				return Elements_List.GetRange(index, count);
+			}
+
+			public void ReplaceRange ( int index, int count, Number Result_Number)
+			{
+				Elements_List.RemoveRange(index, count);
+				Elements_List.Insert(index, Result_Number);
 			}
 
 			public void Clear()
