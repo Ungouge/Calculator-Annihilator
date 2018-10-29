@@ -67,7 +67,7 @@ namespace Calculator_Annihilator
 				for (int k = 0; k < Signs_Lib.operand_Sings[i].Length; k++)
 					if (Signs_Lib.operand_Sings[i][k] == sign)
 					{
-						Elements_Colection.Add( new Operand(sign, i));
+						Elements_Colection.Add( new Operand(sign));
 						return true;
 					}
 

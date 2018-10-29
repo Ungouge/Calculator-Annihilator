@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Calculator_Annihilator;
 
-namespace Calculator_Annihilator.UTests
+namespace Calculator_Annihilator
 {
 	public class Equation_Tests
 	{

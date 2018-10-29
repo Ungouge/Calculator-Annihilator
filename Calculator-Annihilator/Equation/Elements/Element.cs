@@ -21,18 +21,16 @@ namespace Calculator_Annihilator
 
 		public class Operand : Element, IElement, IElement_ToString, IOperand
 		{
-			public char sign;
-			public int level;
+			public char Sign { get; private set; }
 
-			public Operand (char s, int l) : base()
+			public Operand (char s) : base()
 			{
-				sign = s;
-				level = l;
+				Sign = s;
 			}
 
 			public override string ToString()
 			{
-				return sign.ToString();
+				return Sign.ToString();
 			}
 		}
 
@@ -77,9 +75,9 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Number : Element, IElement_ToString
+		public class Number : Element, IElement_ToString, INumber
 		{
-			public double Value { get; set; }
+			public double Value { get; private set; }
 			
 			public Number(double v) : base()
 			{

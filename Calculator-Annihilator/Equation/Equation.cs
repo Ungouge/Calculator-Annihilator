@@ -17,6 +17,10 @@ namespace Calculator_Annihilator
 
 		private Equation_Elements Elements_Colection = new Equation_Elements();
 
+		private bool solved = false;
+
+		//private Calc calc = new Calc();
+
 		public double Result
 		{
 			get

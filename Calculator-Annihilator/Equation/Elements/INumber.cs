@@ -2,9 +2,9 @@
 {
 	partial class Equation
 	{
-		interface IOperand
+		interface INumber
 		{
-			char Sign { get; }
+			double Value { get; }
 		}
 	}
 }

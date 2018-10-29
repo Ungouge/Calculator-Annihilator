@@ -8,36 +8,50 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void No_Bracket_Solving(int begining, int end)
+		private IElement equation_Operand;
+
+		private void No_Bracket_Solving(List<IElement> elements )
 		{
-			int[] Current_Level_Operands;
-
-			for (int i = 0; i < Signs_Lib.operand_Sings.Length; i++)
+			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
-				Current_Level_Operands = Enlist_Current_Operand_Level(begining, end, i);
-				Solve_Current_Operand_Level(begining, end, Current_Level_Operands);
-			}
-
-			/*foreach (char[] vs in MainWindow.action_Sings)
-			{
-				foreach (char operand in vs)
+				foreach (Element Equation_Element in elements)
 				{
-					for (int i = begining; i < end; i++)
+					if (Equation_Element is IOperand Eqation_Operand)
 					{
-						if (Element.Elements_List[i] is Operand equational_Operand)
+						foreach (char operand_of_Level in operand_Level)
 						{
-							if (equational_Operand.sign == operand)
+							if (operand_of_Level == Eqation_Operand.Sign)
 							{
+								int operand_index = elements.IndexOf(equation_Operand);
 
+								Number First_Number = (elements[operand_index - 1] is Number fn) ? fn : new Number(0); // xyz: propably to remove ?!
+								Number Seccond_Number = (elements[operand_index + 1] is Number sn) ? sn : new Number(0);
+
+								Number Result_Number = Simple_Solve(First_Number, Eqation_Operand, Seccond_Number);
+
+								Execute_Simple_Solve_in_List(elements, operand_index, Result_Number);
 							}
 						}
 					}
 				}
-
-			}*/
+			}
 		}
 
-		private void Solve_Current_Operand_Level(int begining, int end, int[] current_Level_Operands)
+		private void Execute_Simple_Solve_in_List(List<IElement> elements, int operand_index, Number Result_Number)
+		{
+			elements.Insert(operand_index - 1, Result_Number);
+			elements.RemoveRange(operand_index, 3);
+		}
+
+		// return new object Number as result of operation 
+		private Number Simple_Solve (INumber first_Number, IOperand operand, INumber seccond_Number)
+		{
+			double value = Calc.Operand_Selector(operand.Sign, first_Number.Value, seccond_Number.Value);
+
+			return new Number(value);
+		}
+
+		/*private void Solve_Current_Operand_Level(int begining, int end, int[] current_Level_Operands)
 		{
 			throw new NotImplementedException();
 		}
@@ -53,6 +67,6 @@ namespace Calculator_Annihilator
 							Current_Operand_Level_Position_List.Add(i);
 
 			return Current_Operand_Level_Position_List.ToArray();
-		}
+		}*/
 	}
 }

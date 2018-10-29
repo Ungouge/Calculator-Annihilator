@@ -63,9 +63,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Equation\Elements\INumber.cs" />
     <Compile Include="Equation\Equation.cs" />
     <Compile Include="Equation\Elements\Equation_Elements.cs" />
     <Compile Include="Equation\Elements\IOperand.cs" />
+    <Compile Include="Equation\Equation_Solving\Equation_Solving.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
     <Compile Include="Equation\Reset.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
