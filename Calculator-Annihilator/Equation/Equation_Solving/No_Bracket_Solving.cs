@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void No_Bracket_Solver(List<IElement> elements )
+		private void No_Bracket_Solving(List<IElement> elements )
 		{
 			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
@@ -33,6 +33,12 @@ namespace Calculator_Annihilator
 					}
 				}
 			}
+		}
+
+		private void Execute_Simple_Solve_in_List(List<IElement> elements, int operand_index, Number Result_Number)
+		{
+			elements.Insert(operand_index - 1, Result_Number);
+			elements.RemoveRange(operand_index, 3);
 		}
 
 		// return new object Number as result of operation 

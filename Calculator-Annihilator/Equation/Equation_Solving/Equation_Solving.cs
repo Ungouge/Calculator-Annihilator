@@ -8,10 +8,9 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		public void Solver()
+		public void Equation_Solving()
 		{
-			// TBA Between_Brackets_Solver
-			No_Bracket_Solver(Elements_Colection.GetRange(0,Elements_Colection.Count));
+			No_Bracket_Solving(Elements_Colection.GetRange(0,Elements_Colection.Count));
 			solved = true;
 		}
 
@@ -20,7 +19,7 @@ namespace Calculator_Annihilator
 			get
 			{
 				if (solved == false)
-					No_Bracket_Solver(Elements_Colection.GetRange(0, Elements_Colection.Count));
+					No_Bracket_Solving(Elements_Colection.GetRange(0, Elements_Colection.Count));
 
 				return ( Elements_Colection[0] is INumber number) ? number.Value : 0 ; // xyz
 			}
