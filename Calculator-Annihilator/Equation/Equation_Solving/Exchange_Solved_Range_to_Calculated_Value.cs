@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void Exchange_Solved_Range_to_Calculated_Value(List<IElement> elements, int operand_index, Number Result_Number)
+		private void Execute_Simple_Solve_in_List(List<IElement> elements, int operand_index, Number Result_Number)
 		{
 			elements.Insert(operand_index - 1, Result_Number);
 			elements.RemoveRange(operand_index, 3);
