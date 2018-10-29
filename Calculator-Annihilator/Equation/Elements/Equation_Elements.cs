@@ -43,6 +43,11 @@ namespace Calculator_Annihilator
 				return Elements_List.IndexOf(element);
 			}
 
+			public List<IElement> GetRange(int index, int count)
+			{
+				return Elements_List.GetRange(index, count);
+			}
+
 			public void Clear()
 			{
 				Elements_List.Clear();
