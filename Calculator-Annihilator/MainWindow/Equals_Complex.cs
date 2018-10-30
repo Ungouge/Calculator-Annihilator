@@ -20,6 +20,7 @@ namespace Calculator_Annihilator
 		private double Equals_Complex(string equation)
 		{
 			Equation _Equation = new Equation(equation, Current_Numerical_System);
+			_Equation.Solver();
 			return _Equation.Solved_Value; //Equals_No_Brackets(equation);
 		}
 	}
