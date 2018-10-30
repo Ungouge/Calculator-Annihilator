@@ -98,18 +98,15 @@ namespace Calculator_Annihilator
 		{
 			for (int i = sign_Position; i < equation.Length; i++)
 			{
-				if (Is_Comma(equation[sign_Position]) == true)
-				{
-					sign_Position++;
-				}
-				else if (Is_Digit(equation[sign_Position]) == true)
-				{
-					sign_Position++;
-				}
+				if (Is_Comma(equation[i]) == true)
+					continue;
+				else if (Is_Digit(equation[i]) == true)
+					continue;
 				else
-					return sign_Position;
+					return i;
 			}
-			return sign_Position; ;
+
+			return equation.Length;
 		}
 
 		private bool Is_Comma(char sign)
