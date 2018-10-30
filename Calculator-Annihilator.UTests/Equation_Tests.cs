@@ -21,6 +21,7 @@ namespace Calculator_Annihilator
 		[InlineData("5+2")]
 		[InlineData("5*2")]
 		[InlineData("5^2")]
+		[InlineData("5+2*8")]
 		[InlineData("(5,55615+2,1601)")]
 		[InlineData("(5+2)*((74934/4535*345+4357)/(34^(5,433)))")]
 

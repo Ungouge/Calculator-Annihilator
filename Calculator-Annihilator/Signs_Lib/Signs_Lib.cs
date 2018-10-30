@@ -11,8 +11,8 @@ namespace Calculator_Annihilator
 		public static readonly char[][] operand_Sings = new char[][]
 		{
 			new char [] { '^' },
-			new char [] { '-', '+' },
-			new char [] { '/', '*' }
+			new char [] { '/', '*' },
+			new char [] { '-', '+' }
 		};
 
 		public static readonly char[] CommasType = { ',', '.', '٫' }; // if not in someverelse that Parser - to delete

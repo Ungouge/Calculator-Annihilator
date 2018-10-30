@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
 		private bool Does_Solved = false;
 
 		public double Solved_Value
-		{
+		/*{
 			get
 			{
 				if (Does_Solved == false)
@@ -28,10 +28,10 @@ namespace Calculator_Annihilator
 
 				return Solved_Value;
 			}
-			private set
+			set
 			{
 				Solved_Value = value;
 			}
-		}
+		}*/;
 	}
 }

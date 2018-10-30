@@ -101,16 +101,13 @@ namespace Calculator_Annihilator
 				if (Is_Comma(equation[sign_Position]) == true)
 				{
 					sign_Position++;
-
 				}
-
-				if (Is_Digit(equation[sign_Position]) == true)
+				else if (Is_Digit(equation[sign_Position]) == true)
 				{
 					sign_Position++;
 				}
 				else
-					return sign_Position; ;
-
+					return sign_Position;
 			}
 			return sign_Position; ;
 		}
