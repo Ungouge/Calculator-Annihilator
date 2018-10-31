@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 			if (no_Calculation_Sign_Single == true)
 			{
 				First_Number_In_Equation_Single = Parse_WorkSpace();
-				ResultSpace.Text = first_Number_In_Equation_Single.ToString() + symbol;
+				Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol);
 			}
 			else if (WorkSpace.Text != default(string) || WorkSpace.Text != "")
 			{
@@ -29,17 +29,17 @@ namespace Calculator_Annihilator
 				{
 					first_Number_In_Equation_Single = 
 						calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-					ResultSpace.Text = first_Number_In_Equation_Single.ToString();
+					Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString());
 				}
 				catch (DivideByZeroException)
 				{
-					ResultSpace.Text = "Dividing by zero is not allowed";
+					Reset_ResultSpace_Text("Dividing by zero is not allowed");
 					no_Calculation_Sign_Single = true;
 					no_First_Number_In_Equation_Single = true;
 				}
 				catch
 				{
-					ResultSpace.Text = default(string);
+					Reset_ResultSpace_Text(default(string));
 					symbol = default(char);
 				}
 				finally

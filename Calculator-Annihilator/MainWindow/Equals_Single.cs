@@ -13,15 +13,15 @@ namespace Calculator_Annihilator
 			try
 			{
 				double calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				ResultSpace.Text = calculation_Result.ToString();
+				Reset_ResultSpace_Text(calculation_Result.ToString());
 			}
 			catch (DivideByZeroException)
 			{
-				ResultSpace.Text = "Dividing by zero is not allowed";
+				Reset_ResultSpace_Text("Dividing by zero is not allowed");
 			}
 			catch
 			{
-				ResultSpace.Text = default(string);
+				Reset_ResultSpace_Text(default(string));
 			}
 			finally
 			{

@@ -19,8 +19,8 @@ namespace Calculator_Annihilator
 	{
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
+			ResultSpace.Text = Equals_Complex(WorkSpace.Text).ToString();// Bring Back when Complex is coplete
 			Clear_WorkSpace();
-			ResultSpace.Text = ""; //Equals_Complex(WorkSpace.Text).ToString(); Bring Back when Complex is coplete
 
 			no_Calculation_Sign_Single = true;
 			no_First_Number_In_Equation_Single = true;
