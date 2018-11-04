@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Calculator_Annihilator;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator.UTests
 {
 	public class Equation_Solving_Test
 	{
@@ -18,8 +18,8 @@ namespace Calculator_Annihilator
 		}
 
 		[Theory]
-		//[InlineData("5+2", 7)]
-		//[InlineData("5+2*8", 21)]
+		[InlineData("5+2", 7)]
+		[InlineData("5+2*8", 21)]
 		[InlineData("5^2/12,5", 2)]
 
 		public void No_Bracket_Solving_Should_Work ( string str, double expected )

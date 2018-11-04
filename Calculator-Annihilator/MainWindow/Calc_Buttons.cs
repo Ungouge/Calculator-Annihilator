@@ -45,7 +45,11 @@ namespace Calculator_Annihilator
 			}
 			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
 			{
-				Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString());
+				//Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString()); // xyz temporally returns checke equation
+
+				Equation _Equation = new Equation(WorkSpace.Text, Current_Numerical_System);
+
+				Reset_ResultSpace_Text(_Equation.Recreate_Equation());
 			}
 		}
 
@@ -66,10 +70,10 @@ namespace Calculator_Annihilator
 
 		private void Button_Clear_Click(object sender, RoutedEventArgs e)
 		{
-			no_Calculation_Sign_Single = true;
+			no_operand_Sign_Single = true;
 			no_First_Number_In_Equation_Single = true;
 			Clear_WorkSpace();
-			ResultSpace.Clear();
+			Clear_ResultSpace();
 		}
 	}
 }

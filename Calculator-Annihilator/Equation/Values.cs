@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 
 		private bool Does_Solved = false;
 
-		public double Solved_Value
+		public double Solved_Value // xyz does needed to restor
 		/*{
 			get
 			{

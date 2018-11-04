@@ -18,7 +18,7 @@ namespace Calculator_Annihilator
 
 		private void Basic_Calculation_Single(char symbol)
 		{
-			if (no_Calculation_Sign_Single == true)
+			if (no_operand_Sign_Single == true)
 			{
 				First_Number_In_Equation_Single = Parse_WorkSpace();
 				Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol);
@@ -34,7 +34,7 @@ namespace Calculator_Annihilator
 				catch (DivideByZeroException)
 				{
 					Reset_ResultSpace_Text("Dividing by zero is not allowed");
-					no_Calculation_Sign_Single = true;
+					no_operand_Sign_Single = true;
 					no_First_Number_In_Equation_Single = true;
 				}
 				catch

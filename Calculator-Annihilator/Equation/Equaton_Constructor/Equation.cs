@@ -17,6 +17,7 @@ namespace Calculator_Annihilator
 				_Numerical_System = ns;
 
 				Element_Selector(eq);
+				Integrity_Check(Elements_Colection);
 				Equation_Mapper();
 			}
 			catch (Exception ex)

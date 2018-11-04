@@ -24,7 +24,6 @@ namespace Calculator_Annihilator
 		{
 			InitializeComponent();
 			Current_Numerical_System = new Numerical_System(10);
-			//WorkSpace.Text = "(58, 53 + 57) - 54, 2 * 25"; // xyz
 		}
 	}
 

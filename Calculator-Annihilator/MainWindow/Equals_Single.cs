@@ -25,7 +25,7 @@ namespace Calculator_Annihilator
 			}
 			finally
 			{
-				no_Calculation_Sign_Single = true;
+				no_operand_Sign_Single = true;
 				no_First_Number_In_Equation_Single = true;
 				Clear_WorkSpace();
 			}

@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		public class Element : IElement, IElement_ToString
+		public abstract class Element : IElement, IElement_ToString
 		{
 			public Element() { ; }
 
@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Operand : Element, IElement, IElement_ToString, IOperand
+		public class Operand : Element, IElement, IElement_ToString, IOperand, INot_Outside_Of_Equation
 		{
 			public char Sign { get; private set; }
 
@@ -46,17 +46,10 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Open_Bracket : Bracket, IElement_ToString
+		public class Open_Bracket : Bracket, IElement_ToString, INot_Outside_The_Close_Bracket, INot_At_The_End, IBracket_Pair
 		{
-			public Close_Bracket Pair { get; set; }
+			public IBracket_Pair Pair {  get; set; }
 			public Open_Bracket() : base() {; }
-
-			public static void Emergent_Addition_of_Open_Bracket(Equation Eq)
-			{
-				Open_Bracket X = new Open_Bracket();
-
-				Eq.Elements_Colection.Insert(0, X);
-			}
 
 			public override string ToString()
 			{
@@ -64,9 +57,9 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Close_Bracket : Bracket, IElement_ToString
+		public class Close_Bracket : Bracket, IElement_ToString, INot_Outside_The_Open_Bracket, INot_At_the_Begining, IBracket_Pair
 		{
-			public Open_Bracket Pair { get; set; }
+			public IBracket_Pair Pair { get; set; }
 			public Close_Bracket() : base() {; }
 
 			public override string ToString()
@@ -75,7 +68,7 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Number : Element, IElement_ToString, INumber
+		public class Number : Element, IElement_ToString, INumber, INot_Outside_The_Bracket
 		{
 			public double Value { get; private set; }
 			

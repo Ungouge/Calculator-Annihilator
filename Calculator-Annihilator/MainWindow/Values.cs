@@ -55,17 +55,17 @@ namespace Calculator_Annihilator
 		}
 		private bool no_First_Number_In_Equation_Single = true;
 
-		private char calculation_Sign_Single;
+		private char operand_Sign_Single;
 		private char Operand_Sign_Single
 		{
-			get { return no_Calculation_Sign_Single == false ? calculation_Sign_Single : Convert.ToChar(0); ; }
+			get { return no_operand_Sign_Single == false ? operand_Sign_Single : Convert.ToChar(0); ; }
 			set
 			{
-				calculation_Sign_Single = value;
-				no_Calculation_Sign_Single = false;
+				operand_Sign_Single = value;
+				no_operand_Sign_Single = false;
 			}
 		}
-		private bool no_Calculation_Sign_Single = true;
+		private bool no_operand_Sign_Single = true;
 
 	}
 }

@@ -17,6 +17,7 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
+		// xyz: check does return type is better.
 		private void Element_Selector(string equation)
 		{
 			for (int i = 0; i < equation.Length; i++)

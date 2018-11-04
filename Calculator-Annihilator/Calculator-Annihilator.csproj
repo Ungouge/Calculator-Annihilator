@@ -63,19 +63,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Equation\Elements\IBracket_Pair.cs" />
+    <Compile Include="Equation\Elements\INot_At_The_Beging.cs" />
+    <Compile Include="Equation\Elements\INot_Outside_The_Bracket.cs" />
     <Compile Include="Equation\Elements\INumber.cs" />
-    <Compile Include="Equation\Equation.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Equation.cs" />
     <Compile Include="Equation\Elements\Equation_Elements.cs" />
     <Compile Include="Equation\Elements\IOperand.cs" />
     <Compile Include="Equation\Equation_Solving\Solver.cs" />
     <Compile Include="Equation\Equation_Solving\Exchange_Solved_Range_to_Calculated_Value.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Check_Integrity_Of_Current_Element.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Integrity_Check.cs" />
+    <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Equation\Reset.cs" />
+    <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />
-    <Compile Include="Equation\Elements\Element_Selector.cs" />
-    <Compile Include="Equation\Equation_Mapper.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Equation_Mapper.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
     <Compile Include="Equation\Elements\IElement.cs" />
     <Compile Include="Equation\Elements\IElement_ToString.cs" />

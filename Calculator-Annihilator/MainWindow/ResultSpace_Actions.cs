@@ -14,7 +14,7 @@ namespace Calculator_Annihilator
 			ResultSpace.Text = new_ResultSpace_Text;
 		}
 
-		private void Insert_To_ResultSpace(char _char)
+		private void Insert_To_ResultSpace(char _char) // xyz: so far not used - remove if not needed
 		{
 			Insert_To_ResultSpace(_char.ToString());
 		}

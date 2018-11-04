@@ -59,6 +59,17 @@ namespace Calculator_Annihilator
 				Elements_List.Insert(index, Result_Number);
 			}
 
+			public bool Remove(IElement Item)
+			{
+				int item_Index = Elements_List.IndexOf(Item);
+				Elements_List.Remove(Item);
+
+				if (item_Index < Elements_List.Count)
+					return false;
+				else
+					return true;
+			}
+
 			public void Clear()
 			{
 				Elements_List.Clear();
@@ -70,12 +81,13 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		class Elements_Colections : IEnumerator
+		class Elements_Enumerator : IEnumerator
 		{
-			int rator;
 			private Equation_Elements Coletion;
 
-			public Elements_Colections(Equation_Elements EE)
+			public int Current_Index { get; private set; }
+
+			public Elements_Enumerator(Equation_Elements EE)
 			{
 				Coletion = EE;
 				Reset();
@@ -85,21 +97,29 @@ namespace Calculator_Annihilator
 			{
 				get
 				{
-					if (rator >= Coletion.Count || rator < 0)
-						return default(Equation_Elements);
+					return Current_Element;
+				}
+			}
+
+			public IElement Current_Element
+			{
+				get
+				{
+					if (Current_Index >= Coletion.Count || Current_Index < 0)
+						return default(Element);
 					else
-						return Coletion[rator];
+						return Coletion[Current_Index];
 				}
 			}
 
 			public bool MoveNext()
 			{
-				return ++rator >= Coletion.Count;
+				return ++Current_Index >= Coletion.Count;
 			}
 
 			public void Reset()
 			{
-				rator = -1;
+				Current_Index = -1;
 			}
 		}
 	}
