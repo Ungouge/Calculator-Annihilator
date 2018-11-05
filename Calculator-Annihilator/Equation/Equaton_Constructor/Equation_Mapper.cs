@@ -20,11 +20,13 @@ namespace Calculator_Annihilator
 		private void Equation_Mapper()
 		{
 			Bracket_Pairer();
-			Equal_Number_Of_Brackets2();
+			Equal_Number_Of_Brackets();
 		}
 
 		private void Bracket_Pairer()
 		{
+			Bracket_Pair Current_Externall_Bracket = null;
+
 			foreach (IElement bracket_Candidate in Elements_Colection)
 			{
 				if (bracket_Candidate is Open_Bracket OB && OB.Pair == null)
@@ -46,8 +48,9 @@ namespace Calculator_Annihilator
 					bracket_Level++;
 
 				if (Elements_Colection[i] is Close_Bracket CB)
-					if (--bracket_Level == 0) {
-						Bracket.Pair_brackets(OB, CB);
+					if (--bracket_Level == 0)
+					{
+						Bracket_Pair bracket_Pair = new Bracket_Pair(OB, CB);
 						return;
 					}
 			}
@@ -62,7 +65,7 @@ namespace Calculator_Annihilator
 			{
 				if (Elements_Colection[i] is Open_Bracket OB)
 					if (++bracket_Level == 0) {
-						Bracket.Pair_brackets(OB, CB);
+						Bracket_Pair bracket_Pair = new Bracket_Pair(OB, CB);
 						return;
 					}
 
@@ -71,23 +74,23 @@ namespace Calculator_Annihilator
 			}
 		}
 		
-		private void Equal_Number_Of_Brackets2()
+		private void Equal_Number_Of_Brackets()
 		{
 			for (int i = 0; i < Elements_Colection.Count; i++)
 			{
-				if (Elements_Colection[i] is IBracket_Pair BP && BP.Pair == null)
-				{
+				if (Elements_Colection[i] is Bracket BP && BP.Pair == null)
+				{ 
 					if (BP is Open_Bracket OB)
 					{
 						Close_Bracket new_CB = new Close_Bracket();
 						Elements_Colection.Add(new_CB);
-						Bracket.Pair_brackets(OB, new_CB);
+						Bracket_Pair bracket_Pair = new Bracket_Pair(OB, new_CB);
 					}
 					else if (BP is Close_Bracket CB )
 					{
 						Open_Bracket new_OB = new Open_Bracket();
 						Elements_Colection.Insert(0, new_OB);
-						Bracket.Pair_brackets(new_OB, CB);
+						Bracket_Pair bracket_Pair = new Bracket_Pair(new_OB, CB);
 					}
 				}
 			}

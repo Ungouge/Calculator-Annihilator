@@ -63,7 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Equation\Elements\IBracket_Pair.cs" />
+    <Compile Include="Equation\Elements\Bracket_Pair.cs" />
     <Compile Include="Equation\Elements\INot_At_The_Beging.cs" />
     <Compile Include="Equation\Elements\INot_Outside_The_Bracket.cs" />
     <Compile Include="Equation\Elements\INumber.cs" />

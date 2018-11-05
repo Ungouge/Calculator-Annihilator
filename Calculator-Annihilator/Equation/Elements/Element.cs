@@ -36,19 +36,13 @@ namespace Calculator_Annihilator
 
 		public class Bracket : Element
 		{
+			public Bracket_Pair Pair { get; set; }
 
 			public Bracket() : base() {; }
-
-			public static void Pair_brackets(Open_Bracket open_Bracket, Close_Bracket close_Bracket)
-			{
-				open_Bracket.Pair = close_Bracket;
-				close_Bracket.Pair = open_Bracket;
-			}
 		}
 
-		public class Open_Bracket : Bracket, IElement_ToString, INot_Outside_The_Close_Bracket, INot_At_The_End, IBracket_Pair
+		public class Open_Bracket : Bracket, IElement_ToString, INot_Outside_The_Close_Bracket, INot_At_The_End
 		{
-			public IBracket_Pair Pair {  get; set; }
 			public Open_Bracket() : base() {; }
 
 			public override string ToString()
@@ -57,9 +51,8 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		public class Close_Bracket : Bracket, IElement_ToString, INot_Outside_The_Open_Bracket, INot_At_the_Begining, IBracket_Pair
+		public class Close_Bracket : Bracket, IElement_ToString, INot_Outside_The_Open_Bracket, INot_At_the_Begining
 		{
-			public IBracket_Pair Pair { get; set; }
 			public Close_Bracket() : base() {; }
 
 			public override string ToString()
