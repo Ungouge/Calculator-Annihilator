@@ -18,18 +18,37 @@ namespace Calculator_Annihilator
 
 				Element_Selector(eq);
 				Integrity_Check(Elements_Colection);
-				Equation_Mapper();
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
+
+			Bracket_Pairer();
 		}
 
-		public Equation()
+		// xyz: to remove with unit test, with Pair.x
+		public bool Check_Pairity()
 		{
-			 //the_Equation = "";
-			 //numerical_System = new Numerical_System(10);
+			bool doh = true;
+
+			Stack<int> a = new Stack<int>();
+
+			foreach (var item in Elements_Colection)
+			{
+
+				if (item is Open_Bracket OB)
+				{
+					a.Push(OB.Pair.x);
+				}
+				else if (item is Close_Bracket CB)
+				{
+					if (CB.Pair.x != a.Pop())
+						doh = false;
+				}
+			}
+
+			return doh;
 		}
 	}
 }

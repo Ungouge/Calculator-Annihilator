@@ -55,15 +55,32 @@ namespace Calculator_Annihilator.UTests
 		[InlineData("5,55615+2,1601)", "(5,55615+2,1601)")]
 		[InlineData("5+2)*((7/4)-(3*7)", "(5+2)*((7/4)-(3*7))")]
 		[InlineData("(5+2)*((7/4*3+7)/(4^(5,3)", "(5+2)*((7/4*3+7)/(4^(5,3)))")]
+		[InlineData("(4^(5+3", "(4^(5+3))")]
+		[InlineData("5*((5+2)*(4^(5,3)", "5*((5+2)*(4^(5,3)))")]
 
 
-		public void Recreate_Equation_Should_Restore_Missing_Bracts(string str, string expected)
+		public void Recreate_Equation_Should_Restore_Missing_Brackets(string str, string expected)
 		{
 			_equation = new Equation(str, new Numerical_System(10));
 
 			string actual = _equation.Recreate_Equation();
 
 			Assert.Equal(expected, actual);
+		}
+
+		[Theory]
+		[InlineData("(5,55615+2,1601")]
+		[InlineData("5+2)*((7/4)-(3*7)")]
+		[InlineData("(5+2)*((7/4*3+7)/(4^(5,3)")]
+		[InlineData("(4^(5+3")]
+		[InlineData("5*((5+2)*(4^(5,3)")]
+
+
+		public void Recreate_Equation_Should_Restore_And_Properly_Pair_Brackets(string str)
+		{
+			_equation = new Equation(str, new Numerical_System(10));
+
+			Assert.True(_equation.Check_Pairity());
 		}
 
 	}

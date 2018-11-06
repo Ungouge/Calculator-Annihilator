@@ -82,7 +82,7 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Equation_Mapper.cs" />
+    <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
     <Compile Include="Equation\Elements\IElement.cs" />
     <Compile Include="Equation\Elements\IElement_ToString.cs" />
