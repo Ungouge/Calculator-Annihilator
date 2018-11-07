@@ -26,29 +26,5 @@ namespace Calculator_Annihilator
 
 			Bracket_Pairer();
 		}
-
-		// xyz: to remove with unit test, with Pair.x
-		public bool Check_Pairity()
-		{
-			bool doh = true;
-
-			Stack<int> a = new Stack<int>();
-
-			foreach (var item in Elements_Colection)
-			{
-
-				if (item is Open_Bracket OB)
-				{
-					a.Push(OB.Pair.x);
-				}
-				else if (item is Close_Bracket CB)
-				{
-					if (CB.Pair.x != a.Pop())
-						doh = false;
-				}
-			}
-
-			return doh;
-		}
 	}
 }

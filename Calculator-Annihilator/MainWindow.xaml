@@ -54,12 +54,12 @@
         <Button x:Name="Button_PlusSign" Content="+" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="3" VerticalAlignment="Top" 
                 Width="200" Height="80" Click="Button_PlusSign_Click" Margin="1,1,1,1" />
 
-        <Button x:Name="Button_4" Content="4" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" 
-                Width="200" Height="80" Click="Button_4_Click" Margin="1,1,1,1" />
+        <Button x:Name="Button_6" Content="6" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" 
+                Width="200" Height="80" Click="Button_6_Click" Margin="1,1,1,1" />
         <Button x:Name="Button_5" Content="5" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" 
                 Width="200" Height="80" Click="Button_5_Click" Margin="1,1,1,1" />
-        <Button x:Name="Button_6" Content="6" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" 
-                Width="200" Height="80" Click="Button_6_Click"  Margin="1,1,1,1" />
+        <Button x:Name="Button_4" Content="4" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" 
+                Width="200" Height="80" Click="Button_4_Click"  Margin="1,1,1,1" />
         <Button x:Name="Button_MinuSing" Content="-" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="3" VerticalAlignment="Top" 
                 Width="200" Height="80" Click="Button_MinuSing_Click" Margin="1,1,1,1" />
 

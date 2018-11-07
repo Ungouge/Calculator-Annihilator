@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 	{
 		private void Bracket_Pairer()
 		{
-			Bracket_Pair Current_Externall_Bracket = null;
+			Bracket_Pair Current_Externall_Bracket = Bracket_Map_Root;
 
 			for (int i = 0; i < Elements_Colection.Count; i++)
 			{

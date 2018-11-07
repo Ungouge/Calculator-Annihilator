@@ -65,8 +65,7 @@ namespace Calculator_Annihilator
 
 		private void Clear_WorkSpace()
 		{
-			//WorkSpace.Text = "";
-			WorkSpace.Clear(); // for test?
+			WorkSpace.Clear();
 			WorkSpace.CaretIndex = 0;
 			WorkSpace.Focus();
 		}

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Calculator_Annihilator
+{
+	partial class Equation
+	{
+		private Number Inner_Brackets_Solver(Equation_Elements elements, Bracket_Pair Current_Bracket_Pair)
+		{
+			foreach (Bracket_Pair Inner_Bracket_pair in Current_Bracket_Pair.Inner_Brackets)
+			{
+				int Index_Of_Open_Bracket = elements.IndexOf(Inner_Bracket_pair._Open_Bracket);
+				int Lenght_Of_Current_Bracket =
+					elements.IndexOf(Inner_Bracket_pair._Close_Bracket) - Index_Of_Open_Bracket + 1;
+
+				Number Solved_Inner_Bracket = Inner_Brackets_Solver
+					(new Equation_Elements(elements.GetRange
+					(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)), Inner_Bracket_pair);
+
+				Exchange_Solved_Range_to_Calculated_Value
+					(elements, Index_Of_Open_Bracket, Lenght_Of_Current_Bracket, Solved_Inner_Bracket);
+			}
+
+			Number Result_Of_Current_Bracket = No_Bracket_Solver(elements);
+
+			//Current_Bracket_Pair.Inner_Brackets.Clear();
+
+			return Result_Of_Current_Bracket;
+		}
+	}
+}

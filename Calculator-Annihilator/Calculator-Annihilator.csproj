@@ -67,6 +67,7 @@
     <Compile Include="Equation\Elements\INot_At_The_Beging.cs" />
     <Compile Include="Equation\Elements\INot_Outside_The_Bracket.cs" />
     <Compile Include="Equation\Elements\INumber.cs" />
+    <Compile Include="Equation\Equation_Solving\Inner_Brackets_Solver.cs" />
     <Compile Include="Equation\Equaton_Constructor\Equation.cs" />
     <Compile Include="Equation\Elements\Equation_Elements.cs" />
     <Compile Include="Equation\Elements\IOperand.cs" />

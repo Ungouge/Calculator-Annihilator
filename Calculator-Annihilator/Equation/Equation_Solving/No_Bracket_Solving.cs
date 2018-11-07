@@ -13,7 +13,6 @@ namespace Calculator_Annihilator
 			foreach (char[] operand_Level in Signs_Lib.operand_Sings)
 			{
 				for (int operand_index = 0; operand_index < elements.Count; operand_index++)
-				//foreach (Element Equation_Element in elements)
 				{
 					if (elements[operand_index] is IOperand Equation_Operand)
 					{
@@ -21,8 +20,6 @@ namespace Calculator_Annihilator
 						{
 							if (operand_of_Level == Equation_Operand.Sign)
 							{
-								//int operand_index = elements.IndexOf((IElement) Equation_Operand);
-
 								Number First_Number = (elements[operand_index - 1] is Number fn) ? fn : new Number(1); // xyz: propably to remove ?!
 								Number Seccond_Number = (elements[operand_index + 1] is Number sn) ? sn : new Number(1);
 

@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 		{
 			Equation _Equation = new Equation(equation, Current_Numerical_System);
 			_Equation.Solver();
-			return _Equation.Solved_Value; //Equals_No_Brackets(equation);
+			return _Equation.Solved_Value.Value;
 		}
 	}
 }

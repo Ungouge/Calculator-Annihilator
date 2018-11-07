@@ -45,11 +45,7 @@ namespace Calculator_Annihilator
 			}
 			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
 			{
-				//Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString()); // xyz temporally returns checke equation
-
-				Equation _Equation = new Equation(WorkSpace.Text, Current_Numerical_System);
-
-				Reset_ResultSpace_Text(_Equation.Recreate_Equation());
+				Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString());
 			}
 		}
 

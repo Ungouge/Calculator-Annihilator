@@ -10,6 +10,8 @@ namespace Calculator_Annihilator
 	{
 		public string the_Equation;
 
+		Bracket_Pair Bracket_Map_Root = new Bracket_Pair();
+
 		private Numerical_System _Numerical_System;
 
 		private Parser _Parser = new Parser();
@@ -19,7 +21,7 @@ namespace Calculator_Annihilator
 
 		private bool Does_Solved = false;
 
-		public double Solved_Value // xyz does needed to restor
+		public Number Solved_Value // xyz does needed to restor
 		/*{
 			get
 			{
