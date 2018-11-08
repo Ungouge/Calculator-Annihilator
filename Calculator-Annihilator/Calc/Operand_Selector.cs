@@ -8,8 +8,14 @@ namespace Calculator_Annihilator
 {
 	public partial class Calc
 	{
-		// Returns result of operation type as sign
-		// Exceptios: DivideByZeroException, NoActionAsigned
+		/// <summary>
+		/// Returns result of operation type as operand_Sign
+		/// </summary>
+		/// <param name="operand_Sign">Whanted operation passed as character</param>
+		/// <param name="number1">First number in operation</param>
+		/// <param name="number2">Seccond number in operation</param>
+		/// <exception cref="DivideByZeroException"></exception>
+		/// <exception cref="NoActionAsigned"></exception>
 		public double Operand_Selector(char operand_Sign, double number1, double number2)
 		{
 			switch (operand_Sign)

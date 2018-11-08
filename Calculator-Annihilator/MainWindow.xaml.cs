@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		public  MainWindow()
+		public  MainWindow() //Initialize Part
 		{
 			InitializeComponent();
 			Current_Numerical_System = new Numerical_System(10);

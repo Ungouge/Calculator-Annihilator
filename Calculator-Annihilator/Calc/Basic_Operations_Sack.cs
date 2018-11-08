@@ -6,34 +6,53 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
+	/// <summary>
+	/// Class with methods for single calculations
+	/// </summary>
 	partial class Calc
 	{
-		private double Exponentation(double number1, double number2)
+		/// <summary>
+		/// Calculates and returns result of power 
+		/// </summary>
+		private double Exponentation(double base_, double exponent)
 		{
-			return Math.Pow(number1, number2);
+			return Math.Pow(base_, exponent);
 		}
 
-		private double Subtraction(double number1, double number2)
+		/// <summary>
+		/// Calculates and returns result of divition 
+		/// </summary>
+		/// <exception cref="DivideByZeroException"></exception>
+		private double Divition(double divident, double divition)
 		{
-			return number1 - number2;
-		}
-
-		private double Addition(double number1, double number2)
-		{
-			return number1 + number2;
-		}
-
-		private double Divition(double number1, double number2)
-		{
-			if (number2 == 0)
+			if (divition == 0)
 				throw new DivideByZeroException();
 			else
-				return number1 / number2;
+				return divident / divition;
 		}
 
-		private double Multiplication(double number1, double number2)
+		/// <summary>
+		/// Calculates and returns result of multiplication 
+		/// </summary>
+		private double Multiplication(double factor1, double factor2)
 		{
-			return number1 * number2;
+			return factor1 * factor2;
+		}
+
+		/// <summary>
+		/// Calculates and returns result of subtraction 
+		/// </summary>
+		private double Subtraction(double minuend, double subtrahend)
+		{
+			return minuend - subtrahend;
+		}
+
+		/// <summary>
+		/// Calculates and returns result of addition 
+		/// </summary>
+		private double Addition(double summand1, double summand2)
+		{
+			return summand1 + summand2;
 		}
 	}
 }
