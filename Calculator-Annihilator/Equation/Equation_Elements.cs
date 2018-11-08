@@ -53,9 +53,9 @@ namespace Calculator_Annihilator
 				return Elements_List.GetRange(index, count);
 			}
 
-			public void ReplaceRange ( int index, int count, Number Result_Number)
+			public void ReplaceRange(int index, int count, Number Result_Number)
 			{
-				Elements_List.RemoveRange(index , count);
+				Elements_List.RemoveRange(index, count);
 				Elements_List.Insert(index, Result_Number);
 			}
 
@@ -81,7 +81,7 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		class Elements_Enumerator : IEnumerator
+		private class Elements_Enumerator : IEnumerator
 		{
 			private Equation_Elements Coletion;
 

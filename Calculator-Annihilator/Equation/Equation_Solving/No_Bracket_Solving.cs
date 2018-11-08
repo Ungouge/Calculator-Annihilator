@@ -41,9 +41,7 @@ namespace Calculator_Annihilator
 		// return new object Number as result of operation 
 		private Number Simple_Solve (INumber first_Number, IOperand operand, INumber seccond_Number)
 		{
-			double value = _Calc.Operand_Selector(operand.Sign, first_Number.Value, seccond_Number.Value);
-
-			return new Number(value);
+			return _Calc.Operand_Selector(operand, first_Number, seccond_Number);
 		}
 	}
 }

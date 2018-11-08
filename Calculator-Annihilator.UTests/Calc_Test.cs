@@ -20,11 +20,17 @@ namespace Calculator_Annihilator.UTests
 
 		public void Addition_ShouldCaculate(double x, double y, double expected)
 		{
+			// Arrange
+			Number Expected = new Number(expected);
+			Operand _Operand = new Operand('+');
+
 			// Act
 			double actual = calc.Operand_Selector('+', x, y);
+			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
 
 			// Assert
 			Assert.Equal(expected, actual);
+			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
 		[Theory]
@@ -35,11 +41,17 @@ namespace Calculator_Annihilator.UTests
 
 		public void Subtraction_SouldCaculate(double x, double y, double expected)
 		{
+			// Arrange
+			Number Expected = new Number(expected);
+			Operand _Operand = new Operand('-');
+
 			// Act
 			double actual = calc.Operand_Selector('-', x, y);
+			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
 
 			// Assert
 			Assert.Equal(expected, actual);
+			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
 		[Theory]
@@ -51,11 +63,17 @@ namespace Calculator_Annihilator.UTests
 
 		public void Multiplication_SouldCaculate(double x, double y, double expected)
 		{
+			// Arrange
+			Number Expected = new Number(expected);
+			Operand _Operand = new Operand('*');
+
 			// Act
 			double actual = calc.Operand_Selector('*', x, y);
+			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
 
 			// Assert
 			Assert.Equal(expected, actual);
+			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
 		[Theory]
@@ -68,14 +86,22 @@ namespace Calculator_Annihilator.UTests
 
 		public void Divition_SouldCaculate(double x, double y, double expected)
 		{
+			// Arrange
+			Number Expected = new Number(expected);
+			Operand _Operand = new Operand('/');
+
+
 			// Act
 			double actual = calc.Operand_Selector('/', x, y);
+			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
 
 			// Assert
 			Assert.Equal(expected, actual);
+			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
 		[Theory]
+
 		[InlineData(0)]
 		[InlineData(1)]
 		[InlineData(Double.MaxValue)]
@@ -83,7 +109,8 @@ namespace Calculator_Annihilator.UTests
 		public void Divition_By_Zero_Exception_SouldCaculate(double x)
 		{
 			// Assert
-			Assert.Throws<DivideByZeroException>( () => calc.Operand_Selector('/', x, 0));
+			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector('/', x, 0));
+			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector(new Operand('/'), new Number(x), new Number(0)));
 		}
 
 		[Theory]
@@ -95,11 +122,17 @@ namespace Calculator_Annihilator.UTests
 
 		public void Exponentation_SouldCaculate(double x, double y, double expected)
 		{
+			// Arrange
+			Number Expected = new Number(expected);
+			Operand _Operand = new Operand('^');
+
 			// Act
 			double actual = calc.Operand_Selector('^', x, y);
+			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
 
 			// Assert
 			Assert.Equal(expected, actual);
+			Assert.Equal(Expected.Value, Actual.Value);
 		}
 	}
 }
