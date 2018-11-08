@@ -9,6 +9,9 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
+		/// <summary>
+		/// Custom Container for element in Equation class.
+		/// </summary>
 		private class Equation_Elements : IEnumerable
 		{
 			private List<IElement> Elements_List;
@@ -81,6 +84,9 @@ namespace Calculator_Annihilator
 			}
 		}
 
+		/// <summary>
+		/// Custom enumerator for Equation_Elements
+		/// </summary>
 		private class Elements_Enumerator : IEnumerator
 		{
 			private Equation_Elements Coletion;

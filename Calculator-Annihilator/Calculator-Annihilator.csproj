@@ -80,7 +80,6 @@
     <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Integrity_Check.cs" />
     <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
     <Compile Include="Equation\Values.cs" />
-    <Compile Include="Equation\Reset.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="MainWindow\Calc_Actions.cs" />

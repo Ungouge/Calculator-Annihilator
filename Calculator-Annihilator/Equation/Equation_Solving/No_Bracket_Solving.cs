@@ -8,6 +8,11 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
+		/// <summary>
+		/// Solves given equation elements returns solved number as result.
+		/// </summary>
+		/// <param name="elements">Equation elements sorce list.</param>
+		/// <returns></returns>
 		private Number No_Bracket_Solver(Equation_Elements elements )
 		{
 			foreach (IOperand[] operand_Level in Signs_Lib.Operands)

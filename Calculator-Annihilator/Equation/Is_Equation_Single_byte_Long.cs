@@ -8,9 +8,12 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		// returns -1 when equation is too long
-		// returns 0 when empty
-		// reurns number between 1 and 3 when equation is single or part of single equation
+		/// <summary>
+		/// Checks is current simple calculation data may be convert to complex calculation while switching methods.
+		/// </summary>
+		/// <return>
+		/// Returns number of elements to convert (1-3), 4 when data is too long, -1 when something is wrong or 0 when data are empty.
+		/// </return>
 		public sbyte Is_Equation_Single_byte_Long()
 		{
 			if (Elements_Colection.Count > 3)
@@ -46,11 +49,13 @@ namespace Calculator_Annihilator
 			}
 		}
 
+		/// <summary>
+		/// Returns first number of single equation.
+		/// </summary>
 		public double To_Single_First_Number
 		{
 			get
 			{
-
 				if (Elements_Colection[0] is Number number)
 					return number.Value;
 				else
@@ -58,6 +63,9 @@ namespace Calculator_Annihilator
 			}
 		}
 
+		/// <summary>
+		/// Returns operand of single equation.
+		/// </summary>
 		public char To_Single_Sign
 		{
 			get
@@ -69,6 +77,9 @@ namespace Calculator_Annihilator
 			}
 		}
 
+		/// <summary>
+		/// Returns seccond number of single equation.
+		/// </summary>
 		public double To_Single_Seccond_Number
 		{
 			get

@@ -9,6 +9,12 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
+		/// <summary>
+		/// Solves given bracket and returns solved number as result.
+		/// </summary>
+		/// <param name="elements">Equation elements sorce list.</param>
+		/// <param name="Current_Bracket_Pair">Pairs of brackets that inner equation is to be solved.</param>
+		/// <returns></returns>
 		private Number Inner_Brackets_Solver(Equation_Elements elements, Bracket_Pair Current_Bracket_Pair)
 		{
 			foreach (Bracket_Pair Inner_Bracket_pair in Current_Bracket_Pair.Inner_Brackets)
