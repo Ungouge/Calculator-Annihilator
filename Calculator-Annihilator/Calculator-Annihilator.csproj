@@ -64,13 +64,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Elements\Bracket_Pair.cs" />
-    <Compile Include="Elements\INot_At_The_Beging.cs" />
-    <Compile Include="Elements\INot_Outside_The_Bracket.cs" />
-    <Compile Include="Elements\INumber.cs" />
+    <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
+    <Compile Include="Elements\Interfaces\INot_Outside_The_Bracket.cs" />
+    <Compile Include="Elements\Interfaces\INumber.cs" />
     <Compile Include="Equation\Equation_Solving\Inner_Brackets_Solver.cs" />
     <Compile Include="Equation\Equaton_Constructor\Equation.cs" />
     <Compile Include="Equation\Equation_Elements.cs" />
-    <Compile Include="Elements\IOperand.cs" />
+    <Compile Include="Elements\Interfaces\IOperand.cs" />
     <Compile Include="Equation\Equation_Solving\Solver.cs" />
     <Compile Include="Equation\Equation_Solving\Exchange_Solved_Range_to_Calculated_Value.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
@@ -85,8 +85,8 @@
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
     <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
-    <Compile Include="Elements\IElement.cs" />
-    <Compile Include="Elements\IElement_ToString.cs" />
+    <Compile Include="Elements\Interfaces\IElement.cs" />
+    <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
     <Compile Include="MainWindow\Numerical_system\Numerical_System_Sack.cs" />

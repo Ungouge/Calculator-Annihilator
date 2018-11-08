@@ -106,7 +106,7 @@ namespace Calculator_Annihilator
 				get
 				{
 					if (Current_Index >= Coletion.Count || Current_Index < 0)
-						return default(Element);
+						return default(IElement);
 					else
 						return Coletion[Current_Index];
 				}

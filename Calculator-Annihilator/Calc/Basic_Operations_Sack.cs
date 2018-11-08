@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Calculator_Annihilator
 {
 	/// <summary>
-	/// Class with methods for single calculations
+	/// Class with methods for single calculations.
 	/// </summary>
 	partial class Calc
 	{
 		/// <summary>
-		/// Calculates and returns result of power 
+		/// Calculates and returns result of power. 
 		/// </summary>
 		private double Exponentation(double base_, double exponent)
 		{
@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Calculates and returns result of divition 
+		/// Calculates and returns result of divition.
 		/// </summary>
 		/// <exception cref="DivideByZeroException"></exception>
 		private double Divition(double divident, double divition)
@@ -32,7 +32,7 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Calculates and returns result of multiplication 
+		/// Calculates and returns result of multiplication.
 		/// </summary>
 		private double Multiplication(double factor1, double factor2)
 		{
@@ -40,7 +40,7 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Calculates and returns result of subtraction 
+		/// Calculates and returns result of subtraction.
 		/// </summary>
 		private double Subtraction(double minuend, double subtrahend)
 		{
@@ -48,7 +48,7 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Calculates and returns result of addition 
+		/// Calculates and returns result of addition.
 		/// </summary>
 		private double Addition(double summand1, double summand2)
 		{

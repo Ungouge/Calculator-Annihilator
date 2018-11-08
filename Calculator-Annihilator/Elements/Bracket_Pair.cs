@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
+	/// <summary>
+	/// Pairs up two brackets with in the Equation, should pairs matching bbrackets insted it may give bad result or errors.
+	/// </summary>
 	public class Bracket_Pair
 	{
 		public Open_Bracket _Open_Bracket { get; private set; }
@@ -13,12 +16,12 @@ namespace Calculator_Annihilator
 		public Bracket_Pair Root_Bracket_Pair;
 		public List<Bracket_Pair> Inner_Brackets;
 
-		public Bracket_Pair() // only for root of bracket map
+		public Bracket_Pair() // Only for root of bracket map
 		{
 			Inner_Brackets = new List<Bracket_Pair>();
 			Root_Bracket_Pair = null;
 		}
-
+		
 		public Bracket_Pair(Open_Bracket OB, Close_Bracket CB, Bracket_Pair RBP)
 		{
 			_Open_Bracket = OB;
