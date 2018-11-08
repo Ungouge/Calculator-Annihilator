@@ -22,7 +22,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Operand('+');
+			Operand _Operand = new Addition();
 
 			// Act
 			double actual = calc.Operand_Selector('+', x, y);
@@ -43,7 +43,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Operand('-');
+			Operand _Operand = new Subtraction();
 
 			// Act
 			double actual = calc.Operand_Selector('-', x, y);
@@ -65,7 +65,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Operand('*');
+			Operand _Operand = new Multiplication();
 
 			// Act
 			double actual = calc.Operand_Selector('*', x, y);
@@ -88,7 +88,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Operand('/');
+			Operand _Operand = new Division();
 
 
 			// Act
@@ -110,7 +110,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Assert
 			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector('/', x, 0));
-			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector(new Operand('/'), new Number(x), new Number(0)));
+			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector(new Division(), new Number(x), new Number(0)));
 		}
 
 		[Theory]
@@ -124,7 +124,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Operand('^');
+			Operand _Operand = new Expontent();
 
 			// Act
 			double actual = calc.Operand_Selector('^', x, y);

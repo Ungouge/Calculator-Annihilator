@@ -23,7 +23,7 @@ namespace Calculator_Annihilator
 				{
 					if (Elements_Colection.Count > 1)
 					{
-						if (Elements_Colection[1] is Operand)
+						if (Elements_Colection[1] is IOperand)
 						{
 							if (Elements_Colection.Count == 3)
 							{
@@ -62,8 +62,8 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				if (Elements_Colection[1] is Operand operand)
-					return operand.Sign;
+				if (Elements_Colection[1] is IOperand _Operand)
+					return _Operand.ToString()[0];
 				else
 					return default(char);
 			}

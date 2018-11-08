@@ -58,7 +58,7 @@ namespace Calculator_Annihilator
 			Clear_WorkSpace();
 		}
 
-		private void Whole_Single_Equation_In_WorkSpace(double number1, char sign, double number2)
+		private void Whole_Single_Equation_In_WorkSpace(double number1, char operand_Sign, double number2)
 		{
 			no_First_Number_In_Equation_Single = false;
 			First_Number_In_Equation_Single = number1;
@@ -66,7 +66,7 @@ namespace Calculator_Annihilator
 			Reset_ResultSpace_Text(First_Number_In_Equation_Single.ToString());
 
 			no_operand_Sign_Single = true;
-			operand_Sign_Single = sign;
+			operand_Sign_Single = operand_Sign;
 
 			Insert_To_ResultSpace(operand_Sign_Single.ToString());
 

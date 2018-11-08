@@ -8,44 +8,13 @@ using System.Threading.Tasks;
 namespace Calculator_Annihilator
 {
 	/// <summary>
-	/// 
-	/// </summary>
-	public abstract class Element : IElement, IElement_ToString
-	{
-		public Element() { ; }
-
-		public override string ToString()
-		{
-			return "";
-		}
-	}
-
-	/// <summary>
-	/// Class containg type of operation in equation. Containg Sings should match up with "Signs_Lib.operand_Sings".
-	/// </summary>
-	public class Operand : Element, IElement, IElement_ToString, IOperand, INot_Outside_Of_Equation
-	{
-		public char Sign { get; private set; }
-
-		public Operand (char s) : base()
-		{
-			Sign = s;
-		}
-
-		public override string ToString()
-		{
-			return Sign.ToString();
-		}
-	}
-
-	/// <summary>
 	/// Base Class for Open_Bracket and Close_bracket.
 	/// </summary>
-	public class Bracket : Element
+	public class Bracket
 	{
 		public Bracket_Pair Pair { get; set; }
 
-		public Bracket() : base() {; }
+		public Bracket() {; }
 	}
 
 	/// <summary>
@@ -77,11 +46,11 @@ namespace Calculator_Annihilator
 	/// <summary>
 	/// Contains given value as double type.
 	/// </summary>
-	public class Number : Element, IElement_ToString, INumber, INot_Outside_The_Bracket
+	public class Number : IElement_ToString, INumber, INot_Outside_The_Bracket
 	{
 		public double Value { get; private set; }
 			
-		public Number(double v) : base()
+		public Number(double v)
 		{
 			Value = v;
 		}

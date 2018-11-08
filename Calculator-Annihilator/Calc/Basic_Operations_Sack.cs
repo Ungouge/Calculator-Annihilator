@@ -20,10 +20,10 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Calculates and returns result of divition.
+		/// Calculates and returns result of division.
 		/// </summary>
 		/// <exception cref="DivideByZeroException"></exception>
-		private double Divition(double divident, double divition)
+		private double Division(double divident, double divition)
 		{
 			if (divition == 0)
 				throw new DivideByZeroException();

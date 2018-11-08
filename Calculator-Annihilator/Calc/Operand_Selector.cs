@@ -27,7 +27,7 @@ namespace Calculator_Annihilator
 				case '*':
 					return Multiplication(number1, number2);
 				case '/':
-					return Divition(number1, number2);
+					return Division(number1, number2);
 				case '^':
 					return Exponentation(number1, number2);
 				default:
@@ -45,17 +45,17 @@ namespace Calculator_Annihilator
 		/// <exception cref="NoActionAsigned"></exception>
 		public Number Operand_Selector(IOperand _Operand, INumber Number1, INumber Number2)
 		{
-			switch (_Operand.Sign)
+			switch (_Operand)
 			{
-				case '+':
+				case Addition Add:
 					return new Number (Addition(Number1.Value, Number2.Value));
-				case '-':
+				case Subtraction Sub:
 					return new Number(Subtraction(Number1.Value, Number2.Value));
-				case '*':
+				case Multiplication Mult:
 					return new Number(Multiplication(Number1.Value, Number2.Value));
-				case '/':
-					return new Number(Divition(Number1.Value, Number2.Value));
-				case '^':
+				case Division Div:
+					return new Number(Division(Number1.Value, Number2.Value));
+				case Expontent Exp:
 					return new Number(Exponentation(Number1.Value, Number2.Value));
 				default:
 					throw new NoActionAsigned();

@@ -39,7 +39,7 @@ namespace Calculator_Annihilator
 
 			if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
 			{
-				_Equation_Elements.Insert(Equation_Rator.Current_Index, new Operand('*'));
+				_Equation_Elements.Insert(Equation_Rator.Current_Index, new Multiplication());
 				return false;
 			}
 
@@ -48,7 +48,7 @@ namespace Calculator_Annihilator
 
 		private static IElement Insert_Missing_Multiplication_InFront_Of_Bracket(Equation_Elements _Equation_Elements, Elements_Enumerator Equation_Rator)
 		{
-			IElement New_Element = new Operand('*');
+			IElement New_Element = new Multiplication();
 
 			_Equation_Elements.Insert(Equation_Rator.Current_Index, New_Element);
 

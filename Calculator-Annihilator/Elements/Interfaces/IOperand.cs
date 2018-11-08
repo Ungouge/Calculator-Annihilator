@@ -3,8 +3,7 @@
 	/// <summary>
 	/// Interface for operands and returnig sign. 
 	/// </summary>
-	public interface IOperand
+	public interface IOperand : IElement
 	{
-		char Sign { get; }
 	}
 }
