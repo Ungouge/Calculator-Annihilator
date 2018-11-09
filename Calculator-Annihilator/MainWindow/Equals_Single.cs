@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
 		{
 			try
 			{
-				double calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+				Number calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 				Reset_ResultSpace_Text(calculation_Result.ToString());
 			}
 			catch (DivideByZeroException)

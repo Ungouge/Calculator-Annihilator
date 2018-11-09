@@ -26,7 +26,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		/// <param name="work_Text">String to convert</param>
 		/// <param name="_Numeral_System">Convert to this numeral system</param>
-		public double Parse(string work_Text, Numeral_System _Numeral_System)
+		public Number Parse(string work_Text, Numeral_System _Numeral_System)
 		{
 			int commaPosition = Comma_Position(work_Text);
 
@@ -42,7 +42,7 @@ namespace Calculator_Annihilator
 				{
 					parsedOutput = parsedOutput * Math.Pow(_Numeral_System.System_Type, i - commaPosition);
 					MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsedOutput}.");
-					return parsedOutput;
+					return new Number(parsedOutput);
 				}
 			}
 
@@ -58,7 +58,7 @@ namespace Calculator_Annihilator
 				}
 			}
 
-			return parsedOutput;
+			return new Number (parsedOutput);
 		}
 
 		/// <summary>

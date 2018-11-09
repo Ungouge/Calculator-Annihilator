@@ -11,9 +11,14 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Parses current Text in workspace to number according to current numerical system. 
 		/// </summary>
-		private double Parse_WorkSpace()
+
+		private Number Parse_WorkSpace()
 		{
 			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
 		}
+		/*private double Parse_WorkSpace()
+		{
+			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
+		}*/
 	}
 }

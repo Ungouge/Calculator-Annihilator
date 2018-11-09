@@ -40,14 +40,14 @@ namespace Calculator_Annihilator
 			}
 		}
 
-		private double first_Number_In_Equation_Single; //Psedonullable double container for single
-		private double First_Number_In_Equation_Single
+		private INumber first_Number_In_Equation_Single; //Psedonullable double container for single
+		private INumber First_Number_In_Equation_Single
 		{
 			get
 			{
 				bool doGet = no_First_Number_In_Equation_Single;
 				no_First_Number_In_Equation_Single = true;
-				return !doGet ? first_Number_In_Equation_Single : 0e0;
+				return !doGet ? first_Number_In_Equation_Single : new Number(0);
 			}
 			set
 			{
@@ -57,10 +57,10 @@ namespace Calculator_Annihilator
 		}
 		private bool no_First_Number_In_Equation_Single = true;
 
-		private char operand_Sign_Single;
-		private char Operand_Sign_Single
+		private IOperand operand_Sign_Single;
+		private IOperand Operand_Sign_Single
 		{
-			get { return no_operand_Sign_Single == false ? operand_Sign_Single : Convert.ToChar(0); ; }
+			get { return no_operand_Sign_Single == false ? operand_Sign_Single : null; ; }
 			set
 			{
 				operand_Sign_Single = value;

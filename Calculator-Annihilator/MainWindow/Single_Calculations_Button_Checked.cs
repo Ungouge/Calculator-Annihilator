@@ -73,7 +73,7 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Switching calculator to single calculation mode while in workspace is whole single equation.
 		/// </summary>
-		private void Whole_Single_Equation_In_WorkSpace(double number1, char operand_Sign, double number2)
+		private void Whole_Single_Equation_In_WorkSpace(INumber number1, IOperand operand_Sign, INumber number2)
 		{
 			no_First_Number_In_Equation_Single = false;
 			First_Number_In_Equation_Single = number1;
@@ -91,7 +91,7 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Switching calculator to single calculation mode while in workspace is number and operator.
 		/// </summary>
-		private void Number_And_operand_In_WorkSpace_To_Single(double number1, char sign)
+		private void Number_And_operand_In_WorkSpace_To_Single(INumber number1, IOperand sign)
 		{
 			no_First_Number_In_Equation_Single = false;
 			First_Number_In_Equation_Single = number1;
@@ -109,9 +109,9 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Switching calculator to single calculation mode while in workspace is only one number.
 		/// </summary>
-		private void Only_Number_In_WorkSPace_To_single(double number1)
+		private void Only_Number_In_WorkSPace_To_single(INumber Number1)
 		{
-			First_Number_In_Equation_Single = number1;
+			First_Number_In_Equation_Single = Number1;
 			no_First_Number_In_Equation_Single = false;
 
 			Reset_ResultSpace_Text(First_Number_In_Equation_Single.ToString());

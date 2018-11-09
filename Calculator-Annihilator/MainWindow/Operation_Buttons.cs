@@ -19,22 +19,22 @@ namespace Calculator_Annihilator
 	{
 		private void Button_PlusSign_Click(object sender, RoutedEventArgs e)
 		{
-			Operation_Button('+');
+			Operation_Button(new Addition());
 		}
 
 		private void Button_MinuSing_Click(object sender, RoutedEventArgs e)
 		{
-			Operation_Button('-');
+			Operation_Button(new Subtraction());
 		}
 
 		private void Button_MultiplicationSing_Click(object sender, RoutedEventArgs e)
 		{
-			Operation_Button('*');
+			Operation_Button(new Multiplication());
 		}
 
 		private void Button_DivisionSign_Click(object sender, RoutedEventArgs e)
 		{
-			Operation_Button('/');
+			Operation_Button(new Division());
 		}
 
 		/// <summary>

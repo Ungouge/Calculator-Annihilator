@@ -11,20 +11,20 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Controls perfomance of action buttons according to calculation options setup.
 		/// </summary>
-		/// <param name="sign"></param>
-		private void Operation_Button(char sign)
+		/// <param name="_Operand"></param>
+		private void Operation_Button(IOperand _Operand)
 		{
 			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
-				Basic_Calculation_Single(sign);
+				Basic_Calculation_Single(_Operand);
 			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
-				Insert_To_WorkSpace(sign);
+				Insert_To_WorkSpace(_Operand.ToString());
 		}
 
 		/// <summary>
 		/// Controls proper perfoming of operation button according to whether some operation were perfomed ealier.
 		/// </summary>
 		/// <param name="symbol"></param>
-		private void Basic_Calculation_Single(char symbol)
+		private void Basic_Calculation_Single(IOperand symbol)
 		{
 			if (no_operand_Sign_Single == true)
 			{
@@ -48,7 +48,7 @@ namespace Calculator_Annihilator
 				catch
 				{
 					Reset_ResultSpace_Text(default(string));
-					symbol = default(char);
+					symbol = default(IOperand);
 				}
 				finally
 				{

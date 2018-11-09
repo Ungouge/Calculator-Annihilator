@@ -52,42 +52,42 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Returns first number of single equation.
 		/// </summary>
-		public double To_Single_First_Number
+		public Number To_Single_First_Number
 		{
 			get
 			{
-				if (Elements_Colection[0] is Number number)
-					return number.Value;
+				if (Elements_Colection[0] is Number First_Number)
+					return First_Number;
 				else
-					return 0e0;
+					return new Number(0e0);
 			}
 		}
 
 		/// <summary>
 		/// Returns operand of single equation.
 		/// </summary>
-		public char To_Single_Sign
+		public IOperand To_Single_Sign
 		{
 			get
 			{
 				if (Elements_Colection[1] is IOperand _Operand)
-					return _Operand.ToString()[0];
+					return _Operand;
 				else
-					return default(char);
+					return default(IOperand);
 			}
 		}
 
 		/// <summary>
 		/// Returns seccond number of single equation.
 		/// </summary>
-		public double To_Single_Seccond_Number
+		public INumber To_Single_Seccond_Number
 		{
 			get
 			{
-				if (Elements_Colection[2] is Number number)
-					return number.Value;
+				if (Elements_Colection[2] is Number Seccond_Number)
+					return Seccond_Number;
 				else
-					return 0e0;
+					return new Number(0e0);
 			}
 		}
 	}
