@@ -16,19 +16,23 @@ using System.Windows.Shapes;
 namespace Calculator_Annihilator
 {
 	/// <summary>
-	/// Contains data data of numerical systems
+	/// Contains data of numeral systems based on encoded number:
+	///  <para>from 2 to 60 for positional systems base on number,</para>
+	/// 1 for bijective system, -2 negabinary system, balanced ternary system.
 	/// </summary>
-	/// <exception cref="NoSuchNumericalSystemException">Thrown when is given wrong code number of numerical system</exception>
-	public class Numerical_System
+	/// <exception cref="NoSuchNumericalSystemException">Thrown when is given wrong code number of numeral system</exception>
+	public class Numeral_System
 	{
 		public char[] System_Digits { get; private set; }
 		public sbyte System_Type { get; private set;}
 
 		/// <summary>
-		/// Constructs new numerical system based on encoded number.
+		/// Constructs new numeral system based on encoded number:
+		/// <para>from 2 to 60 for positional systems base on number,</para>
+		/// 1 for bijective system, -2 negabinary system, balanced ternary system.
 		/// </summary>
 		/// <param name="system_Base_Code">Base of new numeral system or encoded number for exotic numeral system</param>
-		public Numerical_System(sbyte system_Base_Code)
+		public Numeral_System(sbyte system_Base_Code)
 		{
 			List<char> System_Symbol = new List<char>();
 
@@ -82,6 +86,6 @@ namespace Calculator_Annihilator
 			return new char[] { '-', '0', '+' };
 		}
 
-		///thera are implenetation in wikepedia of some systems :)
+		///there are C# implenetation in wikepedia of some systems :)
 	}
 }

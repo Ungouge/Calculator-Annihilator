@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
 
 		Bracket_Pair Bracket_Map_Root = new Bracket_Pair();
 
-		private Numerical_System _Numerical_System;
+		private Numeral_System _Numerical_System;
 
 		private Parser _Parser = new Parser();
 		private Calc _Calc = new Calc();

@@ -22,7 +22,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private double Equals_Complex(string equation)
 		{
-			Current_Complex_Equation = new Equation(equation, Current_Numerical_System);
+			Current_Complex_Equation = new Equation(equation, Current_Numeral_System);
 			Current_Complex_Equation.Solver();
 			return Current_Complex_Equation.Solved_Value.Value;
 		}

@@ -27,7 +27,7 @@ namespace Calculator_Annihilator.UTests
 
 		public void Recreate_Equation_Should_Work(string str)
 		{
-			_equation = new Equation(str, new Numerical_System(10));
+			_equation = new Equation(str, new Numeral_System(10));
 
 			string actual = _equation.Recreate_Equation();
 
@@ -44,7 +44,7 @@ namespace Calculator_Annihilator.UTests
 
 		public void Recreate_Equation_Should_Integrity_Check_Works(string str, string expected)
 		{
-			_equation = new Equation(str, new Numerical_System(10));
+			_equation = new Equation(str, new Numeral_System(10));
 
 			string actual = _equation.Recreate_Equation();
 
@@ -61,7 +61,7 @@ namespace Calculator_Annihilator.UTests
 
 		public void Recreate_Equation_Should_Restore_Missing_Brackets(string str, string expected)
 		{
-			_equation = new Equation(str, new Numerical_System(10));
+			_equation = new Equation(str, new Numeral_System(10));
 
 			string actual = _equation.Recreate_Equation();
 

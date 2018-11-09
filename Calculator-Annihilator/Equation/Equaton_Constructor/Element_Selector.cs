@@ -109,7 +109,7 @@ namespace Calculator_Annihilator
 			}
 			else
 			{
-				double d = _Parser.Parse(the_Equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), _Numerical_System.System_Type);
+				double d = _Parser.Parse(the_Equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), _Numerical_System);
 				Elements_Colection.Add( new Number(d));
 				return sign_Position;
 			}

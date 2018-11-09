@@ -24,7 +24,7 @@ namespace Calculator_Annihilator.UTests
 
 		public void No_Bracket_Solving_Should_Work ( string str, double expected )
 		{
-			_equation = new Equation(str, new Numerical_System(10));
+			_equation = new Equation(str, new Numeral_System(10));
 
 			_equation.Solver();
 
@@ -42,7 +42,7 @@ namespace Calculator_Annihilator.UTests
 
 		public void With_Bracket_Solving_Should_Work(string str, double expected)
 		{
-			_equation = new Equation(str, new Numerical_System(10));
+			_equation = new Equation(str, new Numeral_System(10));
 
 			_equation.Solver();
 

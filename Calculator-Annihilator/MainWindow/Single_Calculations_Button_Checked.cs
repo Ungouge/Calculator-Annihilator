@@ -32,7 +32,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Complex_To_Single()
 		{
-			Current_Complex_Equation = new Equation(WorkSpace.Text, Current_Numerical_System);
+			Current_Complex_Equation = new Equation(WorkSpace.Text, Current_Numeral_System);
 
 			sbyte length_Of_Single_Equation = Current_Complex_Equation.Is_Equation_Single_byte_Long();
 

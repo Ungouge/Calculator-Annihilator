@@ -15,13 +15,20 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
+	/// <summary>
+	/// Class for parsing text to number or digits in current numeral system
+	/// </summary>
 	public class Parser
 	{
-		public double Parse(string workText, sbyte Numeral_System)
+		/// <summary>
+		/// Converts the string representation of a number in given numeral system to its
+		/// double-precision floating-point number equivalent.
+		/// </summary>
+		/// <param name="work_Text">String to convert</param>
+		/// <param name="_Numeral_System">Convert to this numeral system</param>
+		public double Parse(string work_Text, Numeral_System _Numeral_System)
 		{
-			char[] workCharArr = workText.ToCharArray();
-
-			int commaPosition = Comma_Position(workCharArr);
+			int commaPosition = Comma_Position(work_Text);
 
 			double parsedOutput = 0;
 
@@ -29,56 +36,61 @@ namespace Calculator_Annihilator
 			{
 				try
 				{
-					parsedOutput += DigitParse(workCharArr[i], Numeral_System) * Math.Pow(Numeral_System, commaPosition - i - 1);
+					parsedOutput += DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i - 1);
 				}
 				catch (Exception ex)
 				{
-					parsedOutput = parsedOutput * Math.Pow(Numeral_System, i - commaPosition);
-					MessageBox.Show(ex.Message + $", {workText} parsed as {parsedOutput}.");
+					parsedOutput = parsedOutput * Math.Pow(_Numeral_System.System_Type, i - commaPosition);
+					MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsedOutput}.");
 					return parsedOutput;
 				}
 			}
 
-			for (int i = commaPosition + 1; i < workCharArr.Length; i++) //parsing numbers lower than zero
+			for (int i = commaPosition + 1; i < work_Text.Length; i++) //parsing numbers lower than zero
 			{
 				try
 				{
-					parsedOutput += DigitParse(workCharArr[i], Numeral_System) * Math.Pow(Numeral_System, commaPosition - i);
+					parsedOutput += DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i);
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show(ex.Message + $", {workText} parsed as {parsedOutput}.");
+					MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsedOutput}.");
 				}
 			}
 
 			return parsedOutput;
 		}
 
-		private static int Comma_Position(char[] workCharArr)
+		/// <summary>
+		/// Cheks does comma ocurs in converting string, returns its position (if there is none in string return length
+		/// of string that corresponds to dummy position of comma in number).
+		/// </summary>
+		private static int Comma_Position(string work_Text)
 		{
-
-			for (int i = 0; i < workCharArr.Length; i++)
-			{
-				switch (workCharArr[i])
-				{
-					case ',':
-					case '.':
-					case '٫':
+			for (int i = 0; i < work_Text.Length; i++)
+				foreach (char comma in Signs_Lib.CommasType)
+					if (comma == work_Text[i])
 						return i;
-				}
-			}
 
-			return workCharArr.Length;
+			return work_Text.Length;
 		}
 
-		public sbyte DigitParse(char digit, sbyte Numeral_System)
+		/// <summary>
+		/// Converts the character representation of a number in given numeral system to its
+		/// signed byte number equivalent.
+		/// </summary>
+		/// <exception cref="ParsingCharacterIsNoDigitException">
+		/// The Exception that is thrown when character that is to be parsed to digit is corresponding
+		///  no digit from current numerical system.
+		/// </exception>
+		public sbyte DigitParse(char digit, Numeral_System _Numeral_System)
 		{
-			if (digit > (char)47 && digit < (char)58 && digit < Numeral_System + 48)
+			if (digit > (char)47 && digit < (char)58 && digit < _Numeral_System.System_Type + 48)
 				return (sbyte)(digit - 48);
-			else if (digit > (char)64 && digit < (char)91 && digit < Numeral_System + 55) // not tested from this point
+			else if (digit > (char)64 && digit < (char)91 && digit < _Numeral_System.System_Type + 55) // not tested from this point
 				return (sbyte)(digit - 55); // 'A' = 10 - 'Z' 35
-			else if (digit > (char)96 && digit < (char)121 && digit < Numeral_System + 51)
-				return (sbyte)(digit - 51); // 'a' = 36 - 'x' =59 
+			else if (digit > (char)96 && digit < (char)121 && digit < _Numeral_System.System_Type + 51)
+				return (sbyte)(digit - 51); // 'a' = 36 - 'x' = 59 
 			else
 				throw new ParsingCharacterIsNoDigitException($"{digit} is not a digit");
 		}

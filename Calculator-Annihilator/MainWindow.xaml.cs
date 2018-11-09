@@ -23,7 +23,7 @@ namespace Calculator_Annihilator
 		public  MainWindow() //Initialize Part
 		{
 			InitializeComponent();
-			Current_Numerical_System = new Numerical_System(10);
+			Current_Numeral_System = new Numeral_System(10);
 		}
 	}
 

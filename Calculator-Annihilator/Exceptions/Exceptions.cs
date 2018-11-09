@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 namespace Calculator_Annihilator
 {
 	/// <summary>
-	/// 
+	/// The Exception that is thrown when character that is to be parsed to digit is corresponding
+	/// no digit from current numerical system.
 	/// </summary>
 	public class ParsingCharacterIsNoDigitException : Exception
 	{
-		/// <summary>
-		/// The Exception that is thrown when character that is to be parsed to digit is corresponding no digit from current numerical system.
-		/// </summary>
 		public ParsingCharacterIsNoDigitException()
 		{
 
@@ -64,24 +62,24 @@ namespace Calculator_Annihilator
 		{
 
 		}
+	}
 
-		/// <summary>
-		/// The exception that is thrown when in given wrong code number of numerical system.
-		/// </summary>
-		public class NoSuchNumericalSystemException : Exception
+	/// <summary>
+	/// The exception that is thrown when is given wrong code number of numerical system.
+	/// </summary>
+	public class NoSuchNumericalSystemException : Exception
+	{
+		public NoSuchNumericalSystemException()
 		{
-			public NoSuchNumericalSystemException()
-			{
 
-			}
-			public NoSuchNumericalSystemException(string message) : base(message)
-			{
+		}
+		public NoSuchNumericalSystemException(string message) : base(message)
+		{
 
-			}
-			public NoSuchNumericalSystemException(string message, Exception inner) : base(message, inner)
-			{
+		}
+		public NoSuchNumericalSystemException(string message, Exception inner) : base(message, inner)
+		{
 
-			}
 		}
 	}
 }

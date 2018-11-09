@@ -22,13 +22,13 @@ namespace Calculator_Annihilator
 
 		private Equation Current_Complex_Equation;
 
-		private Numerical_System Current_Numerical_System;
+		private Numeral_System Current_Numeral_System;
 
 		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
 		{
 			get
 			{
-				return Current_Numerical_System.System_Type;
+				return Current_Numeral_System.System_Type;
 			}
 		}
 
@@ -36,7 +36,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				return Current_Numerical_System.System_Digits;
+				return Current_Numeral_System.System_Digits;
 			}
 		}
 

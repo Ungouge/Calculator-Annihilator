@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 {
 	public partial class Equation
 	{
-		public Equation ( string eq, Numerical_System ns )
+		public Equation ( string eq, Numeral_System ns )
 		{
 			try
 			{

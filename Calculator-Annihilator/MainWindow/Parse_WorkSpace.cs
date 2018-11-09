@@ -13,7 +13,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private double Parse_WorkSpace()
 		{
-			return parser.Parse(WorkSpace.Text, Numeral_System);
+			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
 		}
 	}
 }
