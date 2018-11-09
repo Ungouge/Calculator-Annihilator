@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Interface for getting number value.
 	/// </summary>
-	public interface INumber
+	public interface INumber : IElement
 	{
 		double Value { get; }
 	}

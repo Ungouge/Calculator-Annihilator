@@ -48,11 +48,14 @@ namespace Calculator_Annihilator.UTests
 		[Theory] 
 
 		[InlineData(")+2)*(7/4*3+7)", "(2)*(7/4*3+7)")] // wrong signs in the beging of equaton
+		[InlineData("(7/4*3+7)*(/(+(-(*(-(*", "(7/4*3+7)")] // wrong signs at the end of equaton
 		[InlineData("(5+2)(7/4*3+7)", "(5+2)*(7/4*3+7)")] // missing multiplication symbol between brackets
-		[InlineData("2(7/4*3+7)", "2*(7/4*3+7)")] // missing multiplication symbol between bracket an number
+		[InlineData("2(7/4*3+7)", "2*(7/4*3+7)")] // missing multiplication symbol between bracket and number
 		[InlineData("5+()2", "5+2")] // empty bracket
 		[InlineData("5+()/2", "5+2")] // empty bracket and naother operand
+		[InlineData("6-6--658", "-658")] // few operand in row
 
+		[InlineData("(78+9)))", "(((78+9)))")] // test
 
 		public void Recreate_Equation_Should_Integrity_Check_Works(string str, string expected)
 		{
