@@ -15,50 +15,73 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
+	/// <summary>
+	/// Contains data data of numerical systems
+	/// </summary>
+	/// <exception cref="NoSuchNumericalSystemException">Thrown when is given wrong code number of numerical system</exception>
 	public class Numerical_System
 	{
 		public char[] System_Digits { get; private set; }
 		public sbyte System_Type { get; private set;}
 
-		readonly Exception NoSuchNumericalSystem = null;
-
-		public Numerical_System(sbyte ns)
+		/// <summary>
+		/// Constructs new numerical system based on encoded number.
+		/// </summary>
+		/// <param name="system_Base_Code">Base of new numeral system or encoded number for exotic numeral system</param>
+		public Numerical_System(sbyte system_Base_Code)
 		{
 			List<char> System_Symbol = new List<char>();
 
-			System_Type = ns;
+			System_Type = system_Base_Code;
 
-			if (ns > 1 && ns < 61)
+			if (system_Base_Code > 1 && system_Base_Code < 61)
 			{
-				for (int i = 0; i < ns; i++)
+				for (int i = 0; i < system_Base_Code; i++)
 				{
 					if (i < 10)
-						System_Symbol.Add((Char)(i+48));
+						System_Symbol.Add((Char)(i + 48));
 					else if (i < 35)
 						System_Symbol.Add((char)(i + 55));
 					else
 						System_Symbol.Add((char)(i + 62));
 				}
-			}
-			else if (ns == 1)
-			{
-				System_Symbol.Add('1');
-			}
-			else if (ns == -2)
-			{
-				System_Symbol.Add('0');
-				System_Symbol.Add('1');
-			}
-			else if (ns == -3)
-			{
-				System_Symbol.Add('+');
-				System_Symbol.Add('0');
-				System_Symbol.Add('-');
+
+				System_Digits = System_Symbol.ToArray();
 			}
 			else
-				throw NoSuchNumericalSystem;
-
-			System_Digits = System_Symbol.ToArray();
+			{
+				switch (system_Base_Code)
+				{
+					case 1:
+						System_Digits = Bijective_System();
+						break;
+					case -2:
+						System_Digits = Negabinary_System();
+						break;
+					case -3:
+						System_Digits = Balanced_ternary_System();
+						break;
+					default:
+						throw new NoSuchNumericalSystemException();
+				}
+			}
 		}
+
+		private char[] Bijective_System()
+		{
+			return new char[] { '1'};
+		}
+
+		private char[] Negabinary_System()
+		{
+			return new char[] { '0', '1' };
+		}
+
+		private char[] Balanced_ternary_System()
+		{
+			return new char[] { '-', '0', '+' };
+		}
+
+		///thera are implenetation in wikepedia of some systems :)
 	}
 }
