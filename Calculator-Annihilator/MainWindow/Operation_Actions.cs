@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	public partial class MainWindow //Operation_Actions
 	{
-		private void Action_Button(char sign)
+		/// <summary>
+		/// Controls perfomance of action buttons according to calculation options setup.
+		/// </summary>
+		/// <param name="sign"></param>
+		private void Operation_Button(char sign)
 		{
 			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
 				Basic_Calculation_Single(sign);
@@ -16,6 +20,10 @@ namespace Calculator_Annihilator
 				Insert_To_WorkSpace(sign);
 		}
 
+		/// <summary>
+		/// Controls proper perfoming of operation button according to whether some operation were perfomed ealier.
+		/// </summary>
+		/// <param name="symbol"></param>
 		private void Basic_Calculation_Single(char symbol)
 		{
 			if (no_operand_Sign_Single == true)

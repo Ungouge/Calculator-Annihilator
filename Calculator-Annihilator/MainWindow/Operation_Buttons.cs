@@ -15,29 +15,32 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-	partial class MainWindow // Function buttons sack
+	partial class MainWindow // Operation buttons sack
 	{
 		private void Button_PlusSign_Click(object sender, RoutedEventArgs e)
 		{
-			Action_Button('+');
+			Operation_Button('+');
 		}
 
 		private void Button_MinuSing_Click(object sender, RoutedEventArgs e)
 		{
-			Action_Button('-');
+			Operation_Button('-');
 		}
 
 		private void Button_MultiplicationSing_Click(object sender, RoutedEventArgs e)
 		{
-			Action_Button('*');
+			Operation_Button('*');
 		}
 
 		private void Button_DivisionSign_Click(object sender, RoutedEventArgs e)
 		{
-			Action_Button('/');
+			Operation_Button('/');
 		}
 
-		private void Button_EqualsSing_Click(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Controls perfomance of equals button according to calculation options setup.
+		/// </summary>
+		private void Button_Equals_Click(object sender, RoutedEventArgs e)
 		{
 			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
 			{
@@ -64,12 +67,24 @@ namespace Calculator_Annihilator
 			BackSpace_WorkSpace();
 		}
 
+		/// <summary>
+		/// Controls perfomance of clear button according to calculation options setup.
+		/// </summary>
 		private void Button_Clear_Click(object sender, RoutedEventArgs e)
 		{
-			no_operand_Sign_Single = true;
-			no_First_Number_In_Equation_Single = true;
 			Clear_WorkSpace();
 			Clear_ResultSpace();
+
+			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
+			{
+				no_operand_Sign_Single = true;
+				no_First_Number_In_Equation_Single = true;
+			}
+			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
+			{
+				Current_Complex_Equation = null;
+			}
+
 		}
 	}
 }

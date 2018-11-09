@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	partial class MainWindow
+	partial class MainWindow //Equals_Single
 	{
+		/// <summary>
+		/// Controlls action after pressing equals button when option for single calculations is on.
+		/// </summary>
 		private void Equals_Single( )
 		{
 			try

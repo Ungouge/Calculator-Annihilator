@@ -17,6 +17,10 @@ namespace Calculator_Annihilator
 {
 	public partial class MainWindow
 	{
+		/// <summary>
+		/// Clears current text in workspace and adds given text.
+		/// </summary>
+		/// <param name="newWorkSpaceText"></param>
 		private void Reset_WorkSpace_Text(string newWorkSpaceText)
 		{
 			WorkSpace.Clear();
@@ -25,6 +29,10 @@ namespace Calculator_Annihilator
 			WorkSpace.CaretIndex = WorkSpace.Text.Length;
 			WorkSpace.Focus();
 		}
+
+		/// <summary>
+		/// Adds to current text in workspace given character in caret position.
+		/// </summary>
 		private void Insert_To_WorkSpace(char sign)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
@@ -41,6 +49,9 @@ namespace Calculator_Annihilator
 			WorkSpace.Focus();
 		}
 
+		/// <summary>
+		/// Adds to current text in workspace given string in caret position.
+		/// </summary>
 		private void Insert_To_WorkSpace(string str)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
@@ -51,6 +62,9 @@ namespace Calculator_Annihilator
 			WorkSpace.Focus();
 		}
 
+		/// <summary>
+		/// Removes character preceding caret in workspace.
+		/// </summary>
 		private void BackSpace_WorkSpace()
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
@@ -63,6 +77,9 @@ namespace Calculator_Annihilator
 			WorkSpace.Focus();
 		}
 
+		/// <summary>
+		/// Clears whole text in workspace.
+		/// </summary>
 		private void Clear_WorkSpace()
 		{
 			WorkSpace.Clear();

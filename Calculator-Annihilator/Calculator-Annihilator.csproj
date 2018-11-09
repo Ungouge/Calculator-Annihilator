@@ -80,9 +80,9 @@
     <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Integrity_Check.cs" />
     <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
     <Compile Include="Equation\Values.cs" />
-    <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
-    <Compile Include="MainWindow\Calc_Actions.cs" />
+    <Compile Include="MainWindow\Complex_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
     <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
@@ -90,10 +90,10 @@
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
-    <Compile Include="MainWindow\Numerical_system\Numerical_System_Sack.cs" />
+    <Compile Include="MainWindow\Set_Current_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
-    <Compile Include="MainWindow\Switch_Calc_Methods.cs" />
+    <Compile Include="MainWindow\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
@@ -112,7 +112,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow\Calc_Buttons.cs" />
+    <Compile Include="MainWindow\Operation_Buttons.cs" />
     <Compile Include="MainWindow\Number_Buttons.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
     <Compile Include="Parser\Parser.cs" />

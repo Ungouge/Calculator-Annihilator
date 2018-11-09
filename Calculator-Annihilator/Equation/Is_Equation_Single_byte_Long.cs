@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
 		/// Checks is current simple calculation data may be convert to complex calculation while switching methods.
 		/// </summary>
 		/// <return>
-		/// Returns number of elements to convert (1-3), 4 when data is too long, -1 when something is wrong or 0 when data are empty.
+		/// Returns number of elements to convert (1-3), 4 when data is too long or 0 when data are empty.
 		/// </return>
 		public sbyte Is_Equation_Single_byte_Long()
 		{
@@ -33,19 +33,19 @@ namespace Calculator_Annihilator
 								if (Elements_Colection[2] is Number)
 									return 3;
 								else
-									return -1;
+									return 2;
 							}
 							else
 								return 2;
 						}
 						else
-							return -1;
+							return 1;
 					}
 					else
 						return 1;
 				}
 				else
-					return -1;
+					return 0;
 			}
 		}
 

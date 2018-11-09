@@ -17,6 +17,9 @@ namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
+		/// <summary>
+		/// Switches calculator to single calculation mode.
+		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
 			Complex_To_Single();
@@ -24,11 +27,14 @@ namespace Calculator_Annihilator
 			Disable_Complex_Buttons();
 		}
 
+		/// <summary>
+		/// Take text from workspace and converts it as it would be inserted in single calculation mode.
+		/// </summary>
 		private void Complex_To_Single()
 		{
-			Equation _Equation = new Equation(WorkSpace.Text, Current_Numerical_System);
+			Current_Complex_Equation = new Equation(WorkSpace.Text, Current_Numerical_System);
 
-			sbyte length_Of_Single_Equation = _Equation.Is_Equation_Single_byte_Long();
+			sbyte length_Of_Single_Equation = Current_Complex_Equation.Is_Equation_Single_byte_Long();
 
 			switch (length_Of_Single_Equation)
 			{
@@ -36,28 +42,37 @@ namespace Calculator_Annihilator
 					Empty_WorkSpace_ToSingle();
 					break;
 				case 1:
-					Only_Number_In_WorkSPace_To_single(_Equation.To_Single_First_Number);
+					Only_Number_In_WorkSPace_To_single(Current_Complex_Equation.To_Single_First_Number);
 					break;
 				case 2:
-					Number_And_operand_In_WorkSpace_To_Single(_Equation.To_Single_First_Number, _Equation.To_Single_Sign);
+					Number_And_operand_In_WorkSpace_To_Single
+						(Current_Complex_Equation.To_Single_First_Number, Current_Complex_Equation.To_Single_Sign);
 					break;
 				case 3:
-					Whole_Single_Equation_In_WorkSpace(_Equation.To_Single_First_Number, _Equation.To_Single_Sign, _Equation.To_Single_Seccond_Number);
+					Whole_Single_Equation_In_WorkSpace
+						(Current_Complex_Equation.To_Single_First_Number, Current_Complex_Equation.To_Single_Sign,
+							Current_Complex_Equation.To_Single_Seccond_Number);
 					break;
 				case 4:
-					Complex_Equation_To_Solve_In_WorsSpace(_Equation);
+					Complex_Equation_To_Solve_In_WorsSpace();
 					break;
 			}
 		}
 
-		private void Complex_Equation_To_Solve_In_WorsSpace(Equation _Equation)
+		/// <summary>
+		/// Switching calculator to single calculation mode while in workspace is complex equation.
+		/// </summary>
+		private void Complex_Equation_To_Solve_In_WorsSpace()
 		{
-			_Equation.Solver();
-			Reset_ResultSpace_Text(_Equation.Solved_Value.ToString());
+			Current_Complex_Equation.Solver();
+			Reset_ResultSpace_Text(Current_Complex_Equation.Solved_Value.ToString());
 
 			Clear_WorkSpace();
 		}
 
+		/// <summary>
+		/// Switching calculator to single calculation mode while in workspace is whole single equation.
+		/// </summary>
 		private void Whole_Single_Equation_In_WorkSpace(double number1, char operand_Sign, double number2)
 		{
 			no_First_Number_In_Equation_Single = false;
@@ -73,6 +88,9 @@ namespace Calculator_Annihilator
 			Reset_WorkSpace_Text(number2.ToString());
 		}
 
+		/// <summary>
+		/// Switching calculator to single calculation mode while in workspace is number and operator.
+		/// </summary>
 		private void Number_And_operand_In_WorkSpace_To_Single(double number1, char sign)
 		{
 			no_First_Number_In_Equation_Single = false;
@@ -88,6 +106,9 @@ namespace Calculator_Annihilator
 			Clear_WorkSpace();
 		}
 
+		/// <summary>
+		/// Switching calculator to single calculation mode while in workspace is only one number.
+		/// </summary>
 		private void Only_Number_In_WorkSPace_To_single(double number1)
 		{
 			First_Number_In_Equation_Single = number1;
@@ -98,6 +119,9 @@ namespace Calculator_Annihilator
 			Clear_WorkSpace();
 		}
 
+		/// <summary>
+		/// Switching calculator to single calculation mode while in workspace is empty.
+		/// </summary>
 		private void Empty_WorkSpace_ToSingle()
 		{
 			Clear_ResultSpace();
@@ -107,36 +131,13 @@ namespace Calculator_Annihilator
 			no_First_Number_In_Equation_Single = true;
 		}
 
+		/// <summary>
+		/// Dissables buttons that have no use in single calculations.
+		/// </summary>
 		private void Disable_Complex_Buttons()
 		{
 			Button_Open_Bracket.IsEnabled = false;
 			Button_Close_Bracket.IsEnabled = false;
-		}
-
-		private void Complex_Calculations_Button_Checked(object sender, RoutedEventArgs e)
-		{
-			string newWorkSpaceText = "";
-
-			if (no_First_Number_In_Equation_Single == false)
-				newWorkSpaceText += First_Number_In_Equation_Single.ToString();
-
-			if (no_operand_Sign_Single == false)
-				newWorkSpaceText += Operand_Sign_Single.ToString();
-
-			newWorkSpaceText += WorkSpace.Text;
-
-			Reset_WorkSpace_Text(newWorkSpaceText);
-
-			no_operand_Sign_Single = true;
-			no_First_Number_In_Equation_Single = true;
-
-			Enable_Complex_Buttons();
-		}
-
-		private void Enable_Complex_Buttons()
-		{
-			Button_Open_Bracket.IsEnabled = true;
-			Button_Close_Bracket.IsEnabled = true;
 		}
 	}
 }

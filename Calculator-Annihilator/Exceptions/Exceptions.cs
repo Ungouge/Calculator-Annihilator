@@ -6,24 +6,14 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public class WorkSpaceParsingException : Exception
-	{
-		public WorkSpaceParsingException()
-		{
-
-		}
-		public WorkSpaceParsingException(string message) : base (message)
-		{
-
-		}
-		public WorkSpaceParsingException(string message ,Exception inner) : base(message, inner)
-		{
-
-		}
-	}
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public class ParsingCharacterIsNoDigitException : Exception
 	{
+		/// <summary>
+		/// The Exception that is thrown when character that is to be parsed to digit is corresponding no digit from current numerical system.
+		/// </summary>
 		public ParsingCharacterIsNoDigitException()
 		{
 
@@ -37,38 +27,29 @@ namespace Calculator_Annihilator
 
 		}
 	}
-	public class ParsingStringIsNaNException : Exception
+
+	/// <summary>
+	/// The exception that is thrown when there is no operation assigned to given set of data to calculate.
+	/// </summary>
+	public class NoActionOperationException : Exception
 	{
-		public ParsingStringIsNaNException()
+		public NoActionOperationException()
 		{
 
 		}
-		public ParsingStringIsNaNException(string message) : base(message)
+		public NoActionOperationException(string message) : base(message)
 		{
 
 		}
-		public ParsingStringIsNaNException(string message, Exception inner) : base(message, inner)
+		public NoActionOperationException(string message, Exception inner) : base(message, inner)
 		{
 
 		}
 	}
 
-	public class NoActionAsigned : Exception
-	{
-		public NoActionAsigned()
-		{
-
-		}
-		public NoActionAsigned(string message) : base(message)
-		{
-
-		}
-		public NoActionAsigned(string message, Exception inner) : base(message, inner)
-		{
-
-		}
-	}
-
+	/// <summary>
+	/// The exception that is thrown when unknow error occurs durring solving an equation.
+	/// </summary>
 	public class EquationNotSolvedProperlyException : Exception
 	{
 		public EquationNotSolvedProperlyException()

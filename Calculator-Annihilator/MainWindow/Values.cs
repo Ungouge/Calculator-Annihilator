@@ -20,7 +20,9 @@ namespace Calculator_Annihilator
 		private Parser parser = new Parser();
 		private Calc calc = new Calc();
 
-		public Numerical_System Current_Numerical_System { get; private set; }
+		private Equation Current_Complex_Equation;
+
+		private Numerical_System Current_Numerical_System;
 
 		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
 		{
