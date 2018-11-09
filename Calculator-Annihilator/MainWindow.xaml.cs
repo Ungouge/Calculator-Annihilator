@@ -15,17 +15,20 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
+	//  Main Window Instance Pointer = (MainWindow)System.Windows.Application.Current.MainWindow; 
+
+
+
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class MainWindow : Window //Initialize Part
 	{
-		public  MainWindow() //Initialize Part
+		public  MainWindow() 
 		{
 			InitializeComponent();
 			Current_Numeral_System = new Numeral_System(10);
 		}
 	}
 
-	//  Main Window Instance Pointer = (MainWindow)System.Windows.Application.Current.MainWindow; 
 }

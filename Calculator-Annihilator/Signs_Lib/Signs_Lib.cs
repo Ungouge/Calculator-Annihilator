@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
+	/// <summary>
+	/// Static libraries of components for calculation.
+	/// </summary>
 	static class Signs_Lib
 	{
+		/// <summary>
+		/// Jagged array of operand classes on order of operatin.
+		/// </summary>
 		public static readonly IOperand[][] Operands = new IOperand[][]
 		{
 			new IOperand [] { new Expontent() },
@@ -15,6 +21,9 @@ namespace Calculator_Annihilator
 			new IOperand [] { new Subtraction(), new Addition() }
 		};
 
+		/// <summary>
+		/// Jagged array of operand characters on order of operatin.
+		/// </summary>
 		public static readonly char[][] operand_Sings = new char[][]
 		{
 			new char [] { '^' },
@@ -22,6 +31,9 @@ namespace Calculator_Annihilator
 			new char [] { '-', '+' }
 		};
 
+		/// <summary>
+		/// Array of possible to use commas.
+		/// </summary>
 		public static readonly char[] CommasType = { ',', '.', '٫' }; // if not in someverelse that Parser - to delete
 	}
 }
