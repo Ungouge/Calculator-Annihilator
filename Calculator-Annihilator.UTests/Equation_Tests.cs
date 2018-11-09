@@ -8,6 +8,10 @@ using Calculator_Annihilator;
 
 namespace Calculator_Annihilator.UTests
 {
+	/// <summary>
+	/// Test proper reading of text with equation by Equation class and tests does repairs of incorrectnesses
+	/// are done by class according to business logic via method Recreate_Equation(). 
+	/// </summary>
 	public class Equation_Tests
 	{
 		private Equation _equation;
@@ -17,7 +21,11 @@ namespace Calculator_Annihilator.UTests
 			_equation = null;
 		}
 
+		/// <summary>
+		/// Tests reading of text with equation of properly written equations.
+		/// </summary>
 		[Theory]
+
 		[InlineData("5+2")]
 		[InlineData("5*2")]
 		[InlineData("5^2")]
@@ -34,7 +42,11 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(actual, str);
 		}
 
-		[Theory] // Chceking integrity 
+		/// <summary>
+		/// Tests reading of text with equation with some mistakes made and check do they are repair according to business logic.
+		/// </summary>
+		[Theory] 
+
 		[InlineData(")+2)*(7/4*3+7)", "(2)*(7/4*3+7)")] // wrong signs in the beging of equaton
 		[InlineData("(5+2)(7/4*3+7)", "(5+2)*(7/4*3+7)")] // missing multiplication symbol between brackets
 		[InlineData("2(7/4*3+7)", "2*(7/4*3+7)")] // missing multiplication symbol between bracket an number
@@ -51,13 +63,17 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(expected, actual);
 		}
 
+		/// <summary>
+		/// Tests reading of text with equation which  missing brackets
+		/// and checks do brackets are added properly according to business logic.
+		/// </summary>
 		[Theory]
+
 		[InlineData("5,55615+2,1601)", "(5,55615+2,1601)")]
 		[InlineData("5+2)*((7/4)-(3*7)", "(5+2)*((7/4)-(3*7))")]
 		[InlineData("(5+2)*((7/4*3+7)/(4^(5,3)", "(5+2)*((7/4*3+7)/(4^(5,3)))")]
 		[InlineData("(4^(5+3", "(4^(5+3))")]
 		[InlineData("5*((5+2)*(4^(5,3)", "5*((5+2)*(4^(5,3)))")]
-
 
 		public void Recreate_Equation_Should_Restore_Missing_Brackets(string str, string expected)
 		{
@@ -67,16 +83,5 @@ namespace Calculator_Annihilator.UTests
 
 			Assert.Equal(expected, actual);
 		}
-
-		/*[Theory]
-		[InlineData("(5,55615+2,1601")]
-		[InlineData("5+2)*((7/4)-(3*7)")]
-		[InlineData("(5+2)*((7/4*3+7)/(4^(5,3)")]
-		[InlineData("(4^(5+3")]
-		[InlineData("5*((5+2)*(4^(5,3)")]
-
-
-		public void Recreate_Equation_Should_Restore_And_Properly_Pair_Brackets(string str)*/
-
 	}
 }

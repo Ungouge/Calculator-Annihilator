@@ -8,9 +8,16 @@ using Xunit;
 
 namespace Calculator_Annihilator.UTests
 {
+	/// <summary>
+	/// Tests for basic calculation from Calc class.
+	/// </summary>
 	public class Calc_Test
 	{
 		Calc calc = new Calc();
+
+		/// <summary>
+		/// Cheks does addition is done properly to business logic.
+		/// </summary>
 		[Theory]
 
 		[InlineData(2, 3, 5)]
@@ -33,6 +40,9 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
+		/// <summary>
+		/// Cheks does subtraction is done properly to business logic.
+		/// </summary>
 		[Theory]
 
 		[InlineData(2, -3, 5)]
@@ -54,6 +64,9 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
+		/// <summary>
+		/// Cheks does multiplication is done properly to business logic.
+		/// </summary>
 		[Theory]
 
 		[InlineData(3, 2, 6)]
@@ -76,6 +89,9 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
+		/// <summary>
+		/// Cheks does divition is done properly to business logic.
+		/// </summary>
 		[Theory]
 
 		[InlineData(6, 2, 3)]
@@ -100,6 +116,10 @@ namespace Calculator_Annihilator.UTests
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
+		/// <summary>
+		/// Cheks does divition throws DivideByZeroException while dividing by zero according to business logic.
+		/// </summary>
+
 		[Theory]
 
 		[InlineData(0)]
@@ -113,6 +133,9 @@ namespace Calculator_Annihilator.UTests
 			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector(new Division(), new Number(x), new Number(0)));
 		}
 
+		/// <summary>
+		/// Cheks does powers is done properly to business logic.
+		/// </summary>
 		[Theory]
 
 		[InlineData(2, 2, 4)]
