@@ -8,38 +8,89 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private void Integrity_Check(Equation_Elements _Equation_Elements) 
-		// xyz: If there would be no need for additional checks during run of the solver remove passing te _Eqation_Elements
+		private void Integrity_Check() 
 		{
-			Elements_Enumerator Equation_Rator = new Elements_Enumerator(_Equation_Elements);;
+			IElement Even_Preious_Element = null;
 
-			Equation_Rator.MoveNext();
+			Elements_Enumerator Equation_Rator = new Elements_Enumerator(Element_Colection);
 
-			IElement Previous_Element = Equation_Rator.Current_Element;
+			if (Equation_Rator.MoveNext() == true)
+				throw new EquationIsEmptyException("1");
 
 			// If equation begings by operand[s] - removes it[them]
-			while (Previous_Element is INot_At_the_Begining)
+			while (Equation_Rator.Current_Element is INot_At_the_Begining)
+				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index) == false)
+					throw new EquationIsEmptyException("2");
+
+			if (Equation_Rator.MoveNext() == false)
 			{
-				_Equation_Elements.Remove(Previous_Element);
-
-				Previous_Element = Equation_Rator.Current_Element;
-			}
-
-			while (Equation_Rator.MoveNext() == false)
-			{
-				bool do_MoveNext;
-
 				do
 				{
-					do_MoveNext = Check_Integrity_Of_Current_Element(_Equation_Elements, Equation_Rator, Previous_Element);
-				} while (do_MoveNext == false);
+					IElement Current_Element = Equation_Rator.Current_Element;
+					IElement Previous_Element = Equation_Rator.Previous_Element;
 
-				Previous_Element = Equation_Rator.Current_Element;
+					if (Even_Preious_Element is Bracket && Equation_Rator.Previous_Element is IOperand && Equation_Rator.Current_Element is Bracket)
+					{
+						if (Even_Preious_Element is Open_Bracket || Equation_Rator.Current_Element is Close_Bracket)
+						{
+							Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+							Equation_Rator--;
+							Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+							Integrity_Check();
+							break;
+						}
+					}
+					else if (Current_Element is Open_Bracket && Previous_Element is INot_Outside_The_Open_Bracket)
+					{
+						Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+						Equation_Rator--;
+					}
+					else if (Previous_Element is Operand && Current_Element is Operand)
+					{
+						Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+						Equation_Rator--;
+					}
+					else if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
+					{
+						Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+						Equation_Rator--;
+
+						Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+						Equation_Rator--;
+					}
+					else if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
+					{
+						Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+						Equation_Rator--;
+					}
+					else if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket)
+					{
+						Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+						Equation_Rator--;
+					}
+					else if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
+					{
+						Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1);
+
+						Equation_Rator--;
+					}
+
+					Even_Preious_Element = Equation_Rator.Previous_Element;
+
+				} while (Equation_Rator.MoveNext() == false);
 			}
 
-			while( _Equation_Elements[_Equation_Elements.Count - 1] is INot_At_The_End Last_Element)
+			if (Element_Colection.Count < 1)
+				throw new EquationIsEmptyException();
+
+			while (Element_Colection[Element_Colection.Count - 1] is INot_At_The_End)
 			{
-				_Equation_Elements.Remove(Last_Element);
+				Element_Colection.RemoveAt(Element_Colection.Count - 1);
+				if (Element_Colection.Count < 1)
+					throw new EquationIsEmptyException();
 			}
 		}
 	}

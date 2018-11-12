@@ -13,7 +13,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		public void Solver()
 		{
-			Number Result_Number = Inner_Brackets_Solver(Elements_Colection, Bracket_Map_Root);
+			Number Result_Number = Inner_Brackets_Solver(Element_Colection, Bracket_Map_Root);
 
 			Solved_Value = Result_Number;
 			Does_Solved = true;

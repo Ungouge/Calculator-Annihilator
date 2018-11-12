@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 				}
 			}*/
 			//  xyz: experimentally.
-			foreach (IElement_ToString String_Element in Elements_Colection)
+			foreach (IElement_ToString String_Element in Element_Colection)
 			{
 				recreated_Equation += String_Element.ToString();
 			}

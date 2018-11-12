@@ -16,21 +16,21 @@ namespace Calculator_Annihilator
 		/// </return>
 		public sbyte Is_Equation_Single_byte_Long()
 		{
-			if (Elements_Colection.Count > 3)
+			if (Element_Colection.Count > 3)
 				return 4;
-			else if (Elements_Colection.Count == 0)
+			else if (Element_Colection.Count == 0)
 				return 0;
 			else
 			{
-				if (Elements_Colection[0] is Number)
+				if (Element_Colection[0] is Number)
 				{
-					if (Elements_Colection.Count > 1)
+					if (Element_Colection.Count > 1)
 					{
-						if (Elements_Colection[1] is IOperand)
+						if (Element_Colection[1] is IOperand)
 						{
-							if (Elements_Colection.Count == 3)
+							if (Element_Colection.Count == 3)
 							{
-								if (Elements_Colection[2] is Number)
+								if (Element_Colection[2] is Number)
 									return 3;
 								else
 									return 2;
@@ -56,7 +56,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				if (Elements_Colection[0] is Number First_Number)
+				if (Element_Colection[0] is Number First_Number)
 					return First_Number;
 				else
 					return new Number(0e0);
@@ -70,7 +70,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				if (Elements_Colection[1] is IOperand _Operand)
+				if (Element_Colection[1] is IOperand _Operand)
 					return _Operand;
 				else
 					return default(IOperand);
@@ -84,7 +84,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				if (Elements_Colection[2] is Number Seccond_Number)
+				if (Element_Colection[2] is Number Seccond_Number)
 					return Seccond_Number;
 				else
 					return new Number(0e0);

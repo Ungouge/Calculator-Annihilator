@@ -46,25 +46,6 @@ namespace Calculator_Annihilator
 	}
 
 	/// <summary>
-	/// The exception that is thrown when unknow error occurs durring solving an equation.
-	/// </summary>
-	public class EquationNotSolvedProperlyException : Exception
-	{
-		public EquationNotSolvedProperlyException()
-		{
-
-		}
-		public EquationNotSolvedProperlyException(string message) : base(message)
-		{
-
-		}
-		public EquationNotSolvedProperlyException(string message, Exception inner) : base(message, inner)
-		{
-
-		}
-	}
-
-	/// <summary>
 	/// The exception that is thrown when is given wrong code number of numerical system.
 	/// </summary>
 	public class NoSuchNumericalSystemException : Exception

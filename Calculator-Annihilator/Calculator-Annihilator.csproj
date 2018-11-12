@@ -65,6 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="Elements\Bracket_Pair.cs" />
     <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
+    <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
     <Compile Include="Elements\Interfaces\INot_Outside_The_Bracket.cs" />
     <Compile Include="Elements\Interfaces\INumber.cs" />
     <Compile Include="Elements\Interfaces\IOperand_ToString.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
+    <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="MainWindow\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />

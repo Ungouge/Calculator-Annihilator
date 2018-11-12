@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
 		private Parser _Parser = new Parser();
 		private Calc _Calc = new Calc();
 
-		private Equation_Elements Elements_Colection = new Equation_Elements();
+		private Equation_Elements Element_Colection = new Equation_Elements();
 
 		private bool Does_Solved = false;
 

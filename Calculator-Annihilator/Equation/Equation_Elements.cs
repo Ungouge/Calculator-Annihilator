@@ -73,6 +73,18 @@ namespace Calculator_Annihilator
 					return true;
 			}
 
+			/// <summary>
+			/// Removes removes element whit passed number index
+			/// Returns true if everything true if removed element was not last element in coletion,
+			/// returns false when element was last in coletion. 
+			/// </summary>
+			public bool RemoveAt(int item_Index)
+			{
+				Elements_List.RemoveAt(item_Index);
+
+				return (item_Index < Elements_List.Count && 0 < Elements_List.Count);
+			}
+
 			public void Clear()
 			{
 				Elements_List.Clear();
@@ -116,6 +128,23 @@ namespace Calculator_Annihilator
 					else
 						return Coletion[Current_Index];
 				}
+			}
+
+			public IElement Previous_Element
+			{
+				get
+				{
+					if (Current_Index > Coletion.Count || Current_Index < 1)
+						return default(IElement);
+					else
+						return Coletion[Current_Index - 1];
+				}
+			}
+
+			public static Elements_Enumerator operator --(Elements_Enumerator EE)
+			{
+				EE.Current_Index--;
+				return EE;
 			}
 
 			public bool MoveNext()

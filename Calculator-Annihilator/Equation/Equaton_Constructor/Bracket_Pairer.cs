@@ -24,12 +24,12 @@ namespace Calculator_Annihilator
 		{
 			Bracket_Pair Current_Externall_Bracket = Bracket_Map_Root;
 
-			for (int i = 0; i < Elements_Colection.Count; i++)
+			for (int i = 0; i < Element_Colection.Count; i++)
 			{
-				if (Elements_Colection[i] is Open_Bracket OB && OB.Pair == null)
+				if (Element_Colection[i] is Open_Bracket OB && OB.Pair == null)
 					Current_Externall_Bracket = Search_for_Close_Bracket(OB, Current_Externall_Bracket);
 
-				if (Elements_Colection[i] is Close_Bracket CB)
+				if (Element_Colection[i] is Close_Bracket CB)
 				{
 					if (CB.Pair == null)
 						Add_Open_Bracket(CB, Current_Externall_Bracket);
@@ -47,21 +47,21 @@ namespace Calculator_Annihilator
 		/// <returns></returns>
 		private Bracket_Pair Search_for_Close_Bracket(Open_Bracket Opening_Bracket, Bracket_Pair Root_Bracket_Pair)
 		{
-			int bracket_Index = Elements_Colection.IndexOf(Opening_Bracket);
+			int bracket_Index = Element_Colection.IndexOf(Opening_Bracket);
 			int bracket_Level = 0;
 
-			for (int i = bracket_Index; i < Elements_Colection.Count; i++)
+			for (int i = bracket_Index; i < Element_Colection.Count; i++)
 			{
-				if (Elements_Colection[i] is Open_Bracket)
+				if (Element_Colection[i] is Open_Bracket)
 					bracket_Level++;
 
-				if (Elements_Colection[i] is Close_Bracket CB)
+				if (Element_Colection[i] is Close_Bracket CB)
 					if (--bracket_Level == 0)
 						return new Bracket_Pair(Opening_Bracket, CB, Root_Bracket_Pair);
 			}
 
 			while (--bracket_Level > 0)
-				Elements_Colection.Add(new Close_Bracket());
+				Element_Colection.Add(new Close_Bracket());
 
 			return Add_Close_Bracket(Opening_Bracket, Root_Bracket_Pair);
 		}
@@ -75,7 +75,7 @@ namespace Calculator_Annihilator
 		private Bracket_Pair Add_Close_Bracket(Open_Bracket _Open_Bracket, Bracket_Pair Root_Bracket_Pair)
 		{
 			Close_Bracket new_CB = new Close_Bracket();
-			Elements_Colection.Add(new_CB);
+			Element_Colection.Add(new_CB);
 			return new Bracket_Pair(_Open_Bracket, new_CB, Root_Bracket_Pair);
 		}
 
@@ -87,7 +87,7 @@ namespace Calculator_Annihilator
 		private void Add_Open_Bracket(Close_Bracket Closing_Bracket, Bracket_Pair Root_Bracket_Pair)
 		{
 			Open_Bracket new_OB = new Open_Bracket();
-			Elements_Colection.Insert(0, new_OB);
+			Element_Colection.Insert(0, new_OB);
 			Bracket_Pair bracket_Pair = new Bracket_Pair(new_OB, Closing_Bracket, Root_Bracket_Pair);
 		}
 	}

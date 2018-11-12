@@ -8,51 +8,76 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private bool Check_Integrity_Of_Current_Element(Equation_Elements _Equation_Elements, Elements_Enumerator Equation_Rator, IElement Previous_Element)
+		private bool Check_Integrity_Of_Current_Element(Elements_Enumerator Equation_Rator)
 		{
 			IElement Current_Element = Equation_Rator.Current_Element;
+			IElement Previous_Element = Equation_Rator.Previous_Element;
 
 			if (Current_Element is Open_Bracket && Previous_Element is INot_Outside_The_Open_Bracket)
 			{
-				Previous_Element = Insert_Missing_Multiplication_InFront_Of_Bracket(_Equation_Elements, Equation_Rator);
-				return false;
+				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+				return true;
 			}
 
 			if (Previous_Element is Operand && Current_Element is Operand)
 			{
-				if (_Equation_Elements.Remove(Current_Element))
+				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index) == true)
 					return true;
 				else
+				{
+					Equation_Rator--;
 					return false;
+				}
 			}
 
 			if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
 			{
-				_Equation_Elements.Remove(Previous_Element);
-				Equation_Rator.Reset();   // for now is ok - thing about something better
-				Equation_Rator.MoveNext();
-				if (_Equation_Elements.Remove(Current_Element))
-					return true;
-				else
-					return false;
+				bool is_Last = Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+				Equation_Rator--;
+
+				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+				Equation_Rator--;
+
+				return is_Last;
 			}
 
 			if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
 			{
-				_Equation_Elements.Insert(Equation_Rator.Current_Index, new Multiplication());
-				return false;
+				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+				return true;
 			}
 
-			return true;
-		}
+			if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket )
+			{
+				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index) == true)
+				{
+					Equation_Rator--;
+					return true;
+				}
+				else
+				{
+					Equation_Rator--;
+					return false;
+				}
+			}
 
-		private static IElement Insert_Missing_Multiplication_InFront_Of_Bracket(Equation_Elements _Equation_Elements, Elements_Enumerator Equation_Rator)
-		{
-			IElement New_Element = new Multiplication();
+			if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
+			{
+				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1) == true)
+				{
+					Equation_Rator--;
+					return true;
+				}
+				else
+				{
+					Equation_Rator--;
+					return false;
+				}
+			}
 
-			_Equation_Elements.Insert(Equation_Rator.Current_Index, New_Element);
-
-			return New_Element;
+			return false;
 		}
 	}
 }

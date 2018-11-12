@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 	/// <summary>
 	/// Class containg type of operation in equation. Containg Sings should match up with "Signs_Lib.operand_Sings".
 	/// </summary>
-	public abstract class Operand : IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public abstract class Operand : IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Operand() {; }
 
@@ -29,7 +29,7 @@ namespace Calculator_Annihilator
 		}
 	}
 
-	public class Addition : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public class Addition : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Addition() { ;}
 
@@ -39,7 +39,7 @@ namespace Calculator_Annihilator
 		}
 	}
 
-	public class Subtraction : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public class Subtraction : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Subtraction() {; }
 
@@ -49,7 +49,7 @@ namespace Calculator_Annihilator
 		}
 	}
 
-	public class Multiplication : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public class Multiplication : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Multiplication() {; }
 
@@ -59,7 +59,7 @@ namespace Calculator_Annihilator
 		}
 	}
 
-	public class Division : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public class Division : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Division() {; }
 
@@ -69,7 +69,7 @@ namespace Calculator_Annihilator
 		}
 	}
 
-	public class Expontent : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation
+	public class Expontent : Operand, IElement, IElement_ToString, IOperand, IOperand_ToString, INot_Outside_Of_Equation, INot_Intside_Bracket
 	{
 		public Expontent() {; }
 

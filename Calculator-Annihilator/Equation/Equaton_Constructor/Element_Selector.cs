@@ -61,13 +61,13 @@ namespace Calculator_Annihilator
 		{
 			if (sign == '(')
 			{
-				Elements_Colection.Add( new Open_Bracket());
+				Element_Colection.Add( new Open_Bracket());
 				return true;
 			}
 
 			if (sign == ')')
 			{
-				Elements_Colection.Add( new Close_Bracket());
+				Element_Colection.Add( new Close_Bracket());
 				return true;
 			}
 
@@ -85,7 +85,7 @@ namespace Calculator_Annihilator
 				for (int k = 0; k < Signs_Lib.operand_Sings[i].Length; k++)
 					if (Signs_Lib.operand_Sings[i][k] == sign)
 					{
-						Elements_Colection.Add( Signs_Lib.Operands[i][k]);
+						Element_Colection.Add( Signs_Lib.Operands[i][k]);
 						return true;
 					}
 
@@ -110,7 +110,7 @@ namespace Calculator_Annihilator
 			else
 			{
 				Number Parsed_Number = _Parser.Parse(the_Equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), _Numerical_System);
-				Elements_Colection.Add( Parsed_Number );
+				Element_Colection.Add( Parsed_Number );
 				return sign_Position;
 			}
 		}

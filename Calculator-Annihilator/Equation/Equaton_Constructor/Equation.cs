@@ -7,21 +7,21 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-	public partial class Equation
+	public partial class Equation //constructor
 	{
 		public Equation ( string eq, Numeral_System ns )
 		{
-			try
-			{
 				the_Equation = eq;
 				_Numerical_System = ns;
 
 				Element_Selector();
-				Integrity_Check(Elements_Colection);
+			try
+			{
+				Integrity_Check();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message);
+				MessageBox.Show(ex.Message + " " + the_Equation + " '" + Recreate_Equation()+ "' " + ex.Message);
 			}
 
 			Bracket_Pairer();
