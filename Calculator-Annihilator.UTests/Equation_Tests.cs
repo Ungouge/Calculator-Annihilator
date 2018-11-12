@@ -55,7 +55,7 @@ namespace Calculator_Annihilator.UTests
 		[InlineData("5+()2", "5+2")] // empty bracket
 		[InlineData("5+()/2", "5+2")] // empty bracket and naother operand
 		[InlineData("6-6--658", "6-6-658")] // few operands in row
-		[InlineData("(+)*)/)--)*)*", "")] // everything wrong
+		[InlineData("(+)*)/)--)*)*", "0")] // everything wrong
 
 
 		public void Recreate_Equation_Should_Integrity_Check_Works(string str, string expected)

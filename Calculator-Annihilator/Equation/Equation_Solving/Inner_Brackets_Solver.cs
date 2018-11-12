@@ -33,8 +33,6 @@ namespace Calculator_Annihilator
 
 			Number Result_Of_Current_Bracket = No_Bracket_Solver(elements);
 
-			//Current_Bracket_Pair.Inner_Brackets.Clear();
-
 			return Result_Of_Current_Bracket;
 		}
 	}

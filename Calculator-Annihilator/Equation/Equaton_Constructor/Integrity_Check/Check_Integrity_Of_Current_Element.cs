@@ -8,7 +8,11 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-
+		/// <summary>
+		/// Finds mistakes of given elements and correct them in custom way. 
+		/// </summary>
+		/// <param name="Equation_Rator">Enumerator of current list.</param>
+		/// <param name="Even_Preious_Element">elemnt </param>
 		private void Check_Integrity_Of_Current_Element(Elements_Enumerator Equation_Rator, IElement Even_Preious_Element)
 		{
 			IElement Current_Element = Equation_Rator.Current_Element;
@@ -42,11 +46,9 @@ namespace Calculator_Annihilator
 			else if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
-
 				Equation_Rator--;
 
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
-
 				Equation_Rator--;
 			}
 			else if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
@@ -57,13 +59,11 @@ namespace Calculator_Annihilator
 			else if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
-
 				Equation_Rator--;
 			}
 			else if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1);
-
 				Equation_Rator--;
 			}
 		}

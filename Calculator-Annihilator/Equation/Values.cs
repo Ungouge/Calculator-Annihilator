@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	/// <summary>
-	/// Construct given string to equation elements list and allows to solve.
-	/// </summary>
 	partial class Equation //Sack for values
 	{
 		public string the_Equation;
