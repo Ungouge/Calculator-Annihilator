@@ -8,76 +8,64 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		private bool Check_Integrity_Of_Current_Element(Elements_Enumerator Equation_Rator)
+
+		private void Check_Integrity_Of_Current_Element(Elements_Enumerator Equation_Rator, IElement Even_Preious_Element)
 		{
 			IElement Current_Element = Equation_Rator.Current_Element;
 			IElement Previous_Element = Equation_Rator.Previous_Element;
 
-			if (Current_Element is Open_Bracket && Previous_Element is INot_Outside_The_Open_Bracket)
+			if (Even_Preious_Element is Bracket && Equation_Rator.Previous_Element is IOperand && Equation_Rator.Current_Element is Bracket)
 			{
-				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
-				return true;
-			}
-
-			if (Previous_Element is Operand && Current_Element is Operand)
-			{
-				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index) == true)
-					return true;
-				else
+				if (Even_Preious_Element is Open_Bracket || Equation_Rator.Current_Element is Close_Bracket)
 				{
+					Element_Colection.RemoveAt(Equation_Rator.Current_Index);
 					Equation_Rator--;
-					return false;
+					Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
+					int removed_Element = Check_Integrity_Of_Equation_Begining(new Elements_Enumerator(Element_Colection));
+					for (int i = 0; i <= removed_Element; i++)
+					{
+						Equation_Rator--;
+					}
 				}
 			}
-
-			if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
+			else if (Current_Element is Open_Bracket && Previous_Element is INot_Outside_The_Open_Bracket)
 			{
-				bool is_Last = Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+				Equation_Rator--;
+			}
+			else if (Previous_Element is Operand && Current_Element is Operand)
+			{
+				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+				Equation_Rator--;
+			}
+			else if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
+			{
+				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
 
 				Equation_Rator--;
 
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
 
 				Equation_Rator--;
-
-				return is_Last;
 			}
-
-			if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
+			else if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
 			{
 				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
-				return true;
+				Equation_Rator--;
 			}
-
-			if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket )
+			else if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket)
 			{
-				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index) == true)
-				{
-					Equation_Rator--;
-					return true;
-				}
-				else
-				{
-					Equation_Rator--;
-					return false;
-				}
-			}
+				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
 
-			if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
+				Equation_Rator--;
+			}
+			else if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
 			{
-				if (Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1) == true)
-				{
-					Equation_Rator--;
-					return true;
-				}
-				else
-				{
-					Equation_Rator--;
-					return false;
-				}
-			}
+				Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1);
 
-			return false;
+				Equation_Rator--;
+			}
 		}
 	}
 }

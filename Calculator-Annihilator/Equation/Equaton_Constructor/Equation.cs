@@ -19,10 +19,12 @@ namespace Calculator_Annihilator
 			{
 				Integrity_Check();
 			}
+			catch (EquationIsEmptyException) { }
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message + " " + the_Equation + " '" + Recreate_Equation()+ "' " + ex.Message);
+				MessageBox.Show(ex.Message + " " + the_Equation + " '" + Recreate_Equation() + "' " + ex.Message);
 			}
+
 
 			Bracket_Pairer();
 		}
