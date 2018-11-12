@@ -10,67 +10,87 @@ namespace Calculator_Annihilator
 	partial class Equation
 	{
 		/// <summary>
-		/// Custom Container for element in Equation class.
+		/// Custom Container for elements in equation class.
 		/// </summary>
 		private class Equation_Elements : IEnumerable
 		{
 			private List<IElement> Elements_List;
 
+			/// <summary>
+			/// Constructor, that initialize empty element list for container.
+			/// </summary>
 			public Equation_Elements()
 			{
 				Elements_List = new List<IElement>();
 			}
 
-			public Equation_Elements(List<IElement> el)
+			/// <summary>
+			/// Constructor, that initialize element list of passed list for container.
+			/// </summary>
+			public Equation_Elements(List<IElement> _Element_List)
 			{
-				Elements_List = el;
+				Elements_List = _Element_List;
 			}
 
-			public void Add(IElement element)
+			/// <summary>
+			/// Adds new element to container list.
+			/// </summary>
+			public void Add(IElement _Element)
 			{
-				Elements_List.Add(element);
+				Elements_List.Add(_Element);
 			}
 
+			/// <summary>
+			/// Gets number of elements in colection.
+			/// </summary>
 			public int Count
 			{
 				get { return Elements_List.Count; }
 			}
 
+			/// <summary>
+			/// Gets element with given index.
+			/// </summary>
 			public IElement this[int index]
 			{
 				get { return Elements_List[index]; }
 			}
 
-			public void Insert(int index, IElement element)
+			/// <summary>
+			/// Inserts given element into given index position.
+			/// </summary>
+			/// <exception cref="ArgumentOutOfRangeException">
+			public void Insert(int index, IElement _Element)
 			{
-				Elements_List.Insert(index, element);
+				Elements_List.Insert(index, _Element);
 			}
 
-			public int IndexOf(IElement element)
+			/// <summary>
+			/// Returns index in coletion list of given element.
+			/// </summary>
+			public int IndexOf(IElement _Element)
 			{
-				return Elements_List.IndexOf(element);
+				return Elements_List.IndexOf(_Element);
 			}
 
+			/// <summary>
+			/// Returns new element list of elements in given range.
+			/// </summary>
+			/// <param name="index"></param>
+			/// <param name="count"></param>
+			/// <returns></returns>
 			public List<IElement> GetRange(int index, int count)
 			{
 				return Elements_List.GetRange(index, count);
 			}
 
-			public void ReplaceRange(int index, int count, Number Result_Number)
+			/// <summary>
+			/// Replaces given range in container list by given element
+			/// </summary>
+			public void ReplaceRange(int index, int count, IElement _Element)
 			{
 				Elements_List.RemoveRange(index, count);
-				Elements_List.Insert(index, Result_Number);
-			}
-
-			public bool Remove(IElement Item)
-			{
-				int item_Index = Elements_List.IndexOf(Item);
-				Elements_List.Remove(Item);
-
-				if (item_Index < Elements_List.Count)
-					return false;
-				else
-					return true;
+				Elements_List.Insert(index, _Element);
 			}
 
 			/// <summary>
@@ -85,11 +105,10 @@ namespace Calculator_Annihilator
 				return (item_Index < Elements_List.Count && 0 < Elements_List.Count);
 			}
 
-			public void Clear()
-			{
-				Elements_List.Clear();
-			}
-
+			/// <summary>
+			/// Returns enumerator of this container list.
+			/// </summary>
+			/// <returns></returns>
 			public IEnumerator GetEnumerator()
 			{
 				return ((IEnumerable)Elements_List).GetEnumerator();
@@ -97,7 +116,7 @@ namespace Calculator_Annihilator
 		}
 
 		/// <summary>
-		/// Custom enumerator for Equation_Elements
+		/// Custom enumerator for pointed Equation_Elements.
 		/// </summary>
 		private class Elements_Enumerator : IEnumerator
 		{
@@ -105,12 +124,18 @@ namespace Calculator_Annihilator
 
 			public int Current_Index { get; private set; }
 
-			public Elements_Enumerator(Equation_Elements EE)
+			/// <summary>
+			/// Constructs elements' enumerator of given coletion.
+			/// </summary>
+			public Elements_Enumerator(Equation_Elements Elements_Coletion)
 			{
-				Coletion = EE;
+				Coletion = Elements_Coletion;
 				Reset();
 			}
 
+			/// <summary>
+			/// Returns element pointed by current index as object for foreach loops.
+			/// </summary>
 			public object Current
 			{
 				get
@@ -119,6 +144,9 @@ namespace Calculator_Annihilator
 				}
 			}
 
+			/// <summary>
+			/// Returns element pointed by current index.
+			/// </summary>
 			public IElement Current_Element
 			{
 				get
@@ -130,6 +158,9 @@ namespace Calculator_Annihilator
 				}
 			}
 
+			/// <summary>
+			/// Returns element previous to element pointed by current index.
+			/// </summary>
 			public IElement Previous_Element
 			{
 				get
@@ -141,17 +172,27 @@ namespace Calculator_Annihilator
 				}
 			}
 
-			public static Elements_Enumerator operator --(Elements_Enumerator EE)
+			/// <summary>
+			/// Decrements value of current index pointer of this enumenrator but not lower than -1.
+			/// </summary>
+			public static Elements_Enumerator operator --(Elements_Enumerator _Elements_Enumerator)
 			{
-				EE.Current_Index--;
-				return EE;
+				if (_Elements_Enumerator.Current_Index > -2)
+					_Elements_Enumerator.Current_Index--;
+				return _Elements_Enumerator;
 			}
 
+			/// <summary>
+			/// Increments value of current index pointer of this enumenrator and returns true until index point 
+			/// </summary>
 			public bool MoveNext()
 			{
 				return ++Current_Index >= Coletion.Count;
 			}
 
+			/// <summary>
+			/// Resets this enumerator setting index pointer to value -1.
+			/// </summary>
 			public void Reset()
 			{
 				Current_Index = -1;

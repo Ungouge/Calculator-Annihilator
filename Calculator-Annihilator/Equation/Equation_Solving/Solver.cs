@@ -15,6 +15,7 @@ namespace Calculator_Annihilator
 		{
 			Number Result_Number = Inner_Brackets_Solver(Element_Colection, Bracket_Map_Root);
 
+			Bracket_Map_Root = null;
 			Solved_Value = Result_Number;
 			Does_Solved = true;
 		}
