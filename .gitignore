@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 *.lnk
+/Calculator-Annihilator/Window_Dynamic_Parameters

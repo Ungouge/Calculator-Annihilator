@@ -15,18 +15,14 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-
-
-
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window //Initialize Part
+    partial class MainWindow
 	{
-		public  MainWindow() 
+	/*	private void CurrentWindow_SizeChanged(object sender, MainWindow.UI.Core.WindowSizeChangedEventArgs e)
 		{
-			InitializeComponent();
-			Current_Numeral_System = new Numeral_System(10);
-		}
+			if (e.Size.Width > 640)
+				VisualStateManager.GoToState(this, "WideState", false);
+			else
+				VisualStateManager.GoToState(this, "DefaultState", false);
+		}*/
 	}
 }

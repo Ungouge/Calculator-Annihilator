@@ -16,9 +16,5 @@ namespace Calculator_Annihilator
 		{
 			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
 		}
-		/*private double Parse_WorkSpace()
-		{
-			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
-		}*/
 	}
 }
