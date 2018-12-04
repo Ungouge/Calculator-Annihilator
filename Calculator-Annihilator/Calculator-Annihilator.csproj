@@ -100,6 +100,8 @@
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
+    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Button_FontSize.cs" />
+    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\MainWindow_Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\OnPropertyChange.cs" />
     <Compile Include="Window_Dynamic_Parameters\Values.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
@@ -151,6 +153,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MainWindow\Resizible_Elements_Properties\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

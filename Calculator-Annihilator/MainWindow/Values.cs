@@ -24,6 +24,8 @@ namespace Calculator_Annihilator
 
 		private Numeral_System Current_Numeral_System;
 
+        private MainWindow_Dynamic_Parameters GUI_Dynamic_Parameters;
+
 		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
 		{
 			get

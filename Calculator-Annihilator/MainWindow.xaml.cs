@@ -20,10 +20,14 @@ namespace Calculator_Annihilator
 	/// </summary>
 	public partial class MainWindow : Window //Initialize Part
 	{
-		public  MainWindow() 
-		{
-			InitializeComponent();
-			Current_Numeral_System = new Numeral_System(10);
+		public  MainWindow()
+        {
+            GUI_Dynamic_Parameters = new MainWindow_Dynamic_Parameters();
+
+            InitializeComponent();
+            this.DataContext = GUI_Dynamic_Parameters;
+            GUI_Dynamic_Parameters.Window_Height = 502;
+            Current_Numeral_System = new Numeral_System(10);
 		}
 	}
 }
