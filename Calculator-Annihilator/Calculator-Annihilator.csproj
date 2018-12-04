@@ -100,8 +100,9 @@
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Font_Sizes.cs" />
     <Compile Include="Window_Dynamic_Parameters\OnPropertyChange.cs" />
+    <Compile Include="Window_Dynamic_Parameters\Values.cs" />
+    <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Size_Catcher.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

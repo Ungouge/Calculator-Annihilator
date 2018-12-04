@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-
-
-
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
