@@ -83,6 +83,8 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\OnResourceChange.cs" />
     <Compile Include="MainWindow\MainWIndow_Methods\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\MainWIndow_Methods\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
     <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Button_FontSize.cs" />
     <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\MainWindow_Dynamic_Parameters.cs" />
+    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\WorkSpace_FontSize.cs" />
     <Compile Include="Window_Dynamic_Parameters\OnPropertyChange.cs" />
     <Compile Include="Window_Dynamic_Parameters\Values.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />

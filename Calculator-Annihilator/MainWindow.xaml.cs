@@ -22,12 +22,25 @@ namespace Calculator_Annihilator
 	{
 		public  MainWindow()
         {
-            GUI_Dynamic_Parameters = new MainWindow_Dynamic_Parameters();
+            GUI_Dynamic_Parameters = new MainWindow_Dynamic_Parameters(510, 420);
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
-            InitializeComponent();
-            this.DataContext = GUI_Dynamic_Parameters;
-            GUI_Dynamic_Parameters.Window_Height = 502;
-            Current_Numeral_System = new Numeral_System(10);
-		}
-	}
+            try
+            {
+                this.DataContext = GUI_Dynamic_Parameters;
+                Current_Numeral_System = new Numeral_System(10);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+    }
 }

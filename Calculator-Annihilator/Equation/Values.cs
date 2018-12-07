@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 
 		private Equation_Elements Element_Colection = new Equation_Elements();
 
-		private bool Does_Solved = false;
+		//private bool Does_Solved = false;
 
 		public Number Solved_Value // xyz does needed to restor
 		/*{

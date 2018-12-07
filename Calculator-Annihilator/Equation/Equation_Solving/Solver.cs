@@ -17,7 +17,7 @@ namespace Calculator_Annihilator
 
 			Bracket_Map_Root = null;
 			Solved_Value = Result_Number;
-			Does_Solved = true;
+			//Does_Solved = true; //so fa not used
 		}
 	}
 }

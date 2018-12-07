@@ -12,9 +12,14 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class MainWindow_Dynamic_Parameters: Window_Dynamic_Parameters
     {
-        public MainWindow_Dynamic_Parameters(): base(Application.Current.MainWindow, new string[] { "Button_FontSize" })
+        private MainWindow Current_Window;
+
+        static private string[] Properties_Names_To_Handle = new string[] { "Button_FontSize" };
+
+        public MainWindow_Dynamic_Parameters(double initial_Heigth, double initial_Width)
+            : base(Properties_Names_To_Handle, initial_Heigth, initial_Width)
         {
-            //empty
+            Current_Window = (MainWindow)Application.Current.MainWindow;
         }
     }
 }

@@ -27,12 +27,12 @@ namespace Calculator_Annihilator
 			Operation_Button(new Subtraction());
 		}
 
-		private void Button_MultiplicationSing_Click(object sender, RoutedEventArgs e)
-		{
-			Operation_Button(new Multiplication());
-		}
+        private void Button_MultiplicationSing_Click(object sender, RoutedEventArgs e)
+        {
+            Operation_Button(new Multiplication());
+        }
 
-		private void Button_DivisionSign_Click(object sender, RoutedEventArgs e)
+        private void Button_DivisionSign_Click(object sender, RoutedEventArgs e)
 		{
 			Operation_Button(new Division());
 		}

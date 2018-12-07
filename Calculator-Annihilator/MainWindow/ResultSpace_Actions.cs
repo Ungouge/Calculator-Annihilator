@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-	public partial class MainWindow
+	partial class MainWindow
 	{
 		/// <summary>
 		/// Clears current text in result space and adds given text.
