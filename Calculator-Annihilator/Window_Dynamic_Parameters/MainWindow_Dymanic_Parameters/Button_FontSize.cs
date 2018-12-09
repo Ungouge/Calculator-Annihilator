@@ -34,6 +34,5 @@ namespace Calculator_Annihilator
                     return (_Actual_Button_Weidth / (2 * Height_Or_Width_Switch_Ration));
             }
         }
-
     }
 }

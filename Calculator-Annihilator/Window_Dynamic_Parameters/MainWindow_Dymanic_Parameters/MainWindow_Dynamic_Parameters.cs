@@ -14,7 +14,7 @@ namespace Calculator_Annihilator
     {
         private MainWindow Current_Window;
 
-        static private string[] Properties_Names_To_Handle = new string[] { "Button_FontSize" };
+        static private string[] Properties_Names_To_Handle = new string[] { "Button_FontSize", "WorkSpace_FontSize", "ResultSpace_FontSize" };
 
         public MainWindow_Dynamic_Parameters(double initial_Heigth, double initial_Width)
             : base(Properties_Names_To_Handle, initial_Heigth, initial_Width)

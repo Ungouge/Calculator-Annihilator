@@ -80,7 +80,7 @@ namespace Calculator_Annihilator
 
 			Reset_ResultSpace_Text(First_Number_In_Equation_Single.ToString());
 
-			no_operand_Sign_Single = true;
+			no_operand_Sign_Single = false;
 			operand_Sign_Single = operand_Sign;
 
 			Insert_To_ResultSpace(operand_Sign_Single.ToString());

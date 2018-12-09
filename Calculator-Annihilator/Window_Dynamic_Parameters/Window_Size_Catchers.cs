@@ -17,11 +17,7 @@ namespace Calculator_Annihilator
             {
                 _Window_Height = value;
 
-
-                foreach (string Property_Name in Names_Of_properties_To_Handle)
-                {
-                    OnPropertyChange(Property_Name);
-                }
+                Push_Recalculations();
             }
         }
         private double _Window_Width;
@@ -33,10 +29,7 @@ namespace Calculator_Annihilator
             {
                 _Window_Width = value;
 
-                foreach (string Property_Name in Names_Of_properties_To_Handle)
-                {
-                    OnPropertyChange(Property_Name);
-                }
+                Push_Recalculations();
             }
         }
 

@@ -17,15 +17,13 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    partial class MainWindow_Dynamic_Parameters
+    partial class Window_Dynamic_Parameters
     {
-        public double WorkSpace_FontSize
+        internal void Push_Recalculations()
         {
-            get
+            foreach (string Property_Name in Names_Of_properties_To_Handle)
             {
-                Font_To_TextBox_Macher Macher = new Font_To_TextBox_Macher(Current_Window.WorkSpace);
-
-                return Macher.Match_Font_To_TextBox();
+                OnPropertyChange(Property_Name);
             }
         }
     }

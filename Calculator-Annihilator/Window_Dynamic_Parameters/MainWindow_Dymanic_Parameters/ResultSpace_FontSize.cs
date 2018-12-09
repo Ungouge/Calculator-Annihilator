@@ -19,14 +19,15 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
-        public double WorkSpace_FontSize
+        public double ResultSpace_FontSize
         {
             get
             {
-                Font_To_TextBox_Macher Macher = new Font_To_TextBox_Macher(Current_Window.WorkSpace);
+                Font_To_TextBox_Macher Macher = new Font_To_TextBox_Macher(Current_Window.ResultSpace);
 
                 return Macher.Match_Font_To_TextBox();
             }
         }
+
     }
 }

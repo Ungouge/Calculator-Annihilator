@@ -8,8 +8,12 @@
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties" 
         mc:Ignorable="d"
-        Title="MainWindow"  
-        Height="{Binding Window_Height, Mode=TwoWay}" Width="{Binding Window_Width, Mode=TwoWay}">
+        Title="MainWindow"
+        SizeChanged="Window_Size_Changed"
+        StateChanged="Window_State_Changed"
+        Activated="Window_Activated"
+        Height="{Binding Window_Height, Mode=TwoWay}"
+        Width="{Binding Window_Width, Mode=TwoWay}">
 
     <Window.Resources >
         <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
@@ -44,11 +48,13 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox x:Name="WorkSpace" Height="Auto" FontSize="40" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" TextWrapping="Wrap"
+            <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" HorizontalAlignment="Stretch"
+                     Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay}"
                      Cursor="IBeam" AcceptsReturn="false" />
 
-            <TextBox x:Name="ResultSpace" FontSize="40" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1" TextWrapping="Wrap" Text=""
-                     Height="Auto" Cursor="IBeam" IsReadOnly="True" />
+            <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1"
+                     Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay}" TextWrapping="Wrap" Padding="0,-2,0,-2"
+                     Cursor="IBeam" IsReadOnly="True" />
 
             <Grid Grid.Row="1" Grid.Column="0" Margin="1,1,1,1">
                 <Grid.Resources>
@@ -67,7 +73,7 @@
                 </RadioButton>
                 <RadioButton GroupName="Calc_Method_Selection" Name="Complex_Calculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="1"
-                             VerticalAlignment="Center" IsChecked="True" Checked="Complex_Calculations_Button_Checked">
+                             VerticalAlignment="Center" Checked="Complex_Calculations_Button_Checked">
                     Complex Calculations
                 </RadioButton>
             </Grid>

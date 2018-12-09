@@ -15,20 +15,20 @@ namespace Calculator_Annihilator
 
             }
 
-            private int _number_Rows_In_ButtonGrid;
+            private int _Number_Rows_In_ButtonGrid;
 
-            public int number_Rows_In_ButtonGrid
+            public int Number_Rows_In_ButtonGrid
             {
-                get { return _number_Rows_In_ButtonGrid; }
-                set { _number_Rows_In_ButtonGrid = 4; }
+                get { return _Number_Rows_In_ButtonGrid; }
+                set { _Number_Rows_In_ButtonGrid = 4; }
             }
 
-            private int _number_Columns_In_ButtonGrid;
+            private int _Number_Columns_In_ButtonGrid;
 
-            public int number_Columns_In_ButtonGrid
+            public int Number_Columns_In_ButtonGrid
             {
-                get { return _number_Columns_In_ButtonGrid; }
-                set { _number_Columns_In_ButtonGrid = 7; }
+                get { return _Number_Columns_In_ButtonGrid; }
+                set { _Number_Columns_In_ButtonGrid = 7; }
             }
         }
     }
