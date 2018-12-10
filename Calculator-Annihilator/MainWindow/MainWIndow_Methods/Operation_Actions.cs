@@ -14,9 +14,9 @@ namespace Calculator_Annihilator
 		/// <param name="_Operand"></param>
 		private void Operation_Button(IOperand _Operand)
 		{
-			if (Convert.ToBoolean(Single_Calculations.IsChecked == true))
+			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
 				Basic_Calculation_Single(_Operand);
-			else if (Convert.ToBoolean(Complex_Calculations.IsChecked == true))
+			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
 				Insert_To_WorkSpace(_Operand.ToString());
 		}
 
