@@ -19,11 +19,11 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
-        private class Font_To_TextBox_Macher
+        private class Font_To_TextBox_Matcher
         {
             TextBox _TextBox;
 
-            public Font_To_TextBox_Macher(TextBox __TextBox)
+            public Font_To_TextBox_Matcher(TextBox __TextBox)
             {
                 _TextBox = __TextBox;
             }
@@ -75,10 +75,10 @@ namespace Calculator_Annihilator
                     return Matching_Font_To_TextBox1( ++wrap_Factor);
             }
 
-            private static FormattedText Get_Default_Formatted_Text(TextBox _WorkSpace, double default_FontSize)
+            private static FormattedText Get_Default_Formatted_Text(TextBox _TextBox, double default_FontSize)
             {
-                return new FormattedText(_WorkSpace.Text, CultureInfo.CurrentCulture, FlowDirection.LeftToRight,
-                    new Typeface(_WorkSpace.FontFamily, _WorkSpace.FontStyle, _WorkSpace.FontWeight, _WorkSpace.FontStretch),
+                return new FormattedText(_TextBox.Text, CultureInfo.CurrentCulture, FlowDirection.LeftToRight,
+                    new Typeface(_TextBox.FontFamily, _TextBox.FontStyle, _TextBox.FontWeight, _TextBox.FontStretch),
                     default_FontSize, Brushes.Black);
             }
         }

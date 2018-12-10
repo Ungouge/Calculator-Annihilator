@@ -69,14 +69,16 @@
                 <RadioButton GroupName="CalculationTypeSwitcher"  Name="SingleCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="0"
                              VerticalAlignment="Center" Checked="Single_Calculations_Button_Checked">
-                    <TextBox Name="SingleCalculations_TextBlock" FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
+                    <TextBlock Name="SingleCalculations_TextBlock" Margin="5,1,5,1"
+                               FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
                         Single Calculations
-                    </TextBox>
+                    </TextBlock>
                 </RadioButton>
-                <RadioButton GroupName="Calc_Method_Selection" Name="ComplexCalculations" HorizontalAlignment="Left" 
+                <RadioButton GroupName="CalculationTypeSwitcher" Name="ComplexCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="1" 
                              VerticalAlignment="Center" Checked="Complex_Calculations_Button_Checked">
-                    <TextBlock Name="ComplexCalculations_TextBlock" FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
+                    <TextBlock Name="ComplexCalculations_TextBlock" Margin="5,1,5,1"
+                               FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
                         Complex Calculations
                     </TextBlock>
                 </RadioButton>

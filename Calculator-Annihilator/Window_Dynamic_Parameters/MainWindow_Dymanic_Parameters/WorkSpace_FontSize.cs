@@ -23,9 +23,9 @@ namespace Calculator_Annihilator
         {
             get
             {
-                Font_To_TextBox_Macher Macher = new Font_To_TextBox_Macher(Current_Window.WorkSpace);
+                Font_To_TextBox_Matcher Matcher = new Font_To_TextBox_Matcher(Current_Window.WorkSpace);
 
-                return Macher.Match_Font_To_TextBox();
+                return Matcher.Match_Font_To_TextBox();
             }
         }
     }
