@@ -19,7 +19,7 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
-        public double WorkSpace_FontSize
+        public double WorkSpace_FontSize // Called by name by MainWindow.WorkSpace_TextChanged()
         {
             get
             {

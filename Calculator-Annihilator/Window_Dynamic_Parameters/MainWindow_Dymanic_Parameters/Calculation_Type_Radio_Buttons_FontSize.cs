@@ -19,15 +19,19 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
-        public double ResultSpace_FontSize // Called by name by MainWindow.WorkSpace_TextChanged()
+        public double Calculation_Type_Radio_Buttons_FontSize
         {
             get
             {
-                Font_To_TextBox_Macher Macher = new Font_To_TextBox_Macher(Current_Window.ResultSpace);
+                Font_To_TextBox_Macher(Current_Window.SingleCalculations_TextBlock);
+                TextBlock
+                   ; TextBox
+                double x = Current_Window.SingleCalculations.ActualHeight ;
 
-                return Macher.Match_Font_To_TextBox();
+                Current_Window.Reset_WorkSpace_Text(x.ToString());
+
+                return x;
             }
         }
-
     }
 }

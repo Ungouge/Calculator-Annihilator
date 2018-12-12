@@ -16,8 +16,6 @@ namespace Calculator_Annihilator
             set
             {
                 _Window_Height = value;
-
-                Push_Recalculations();
             }
         }
         private double _Window_Width;
@@ -28,8 +26,6 @@ namespace Calculator_Annihilator
             set
             {
                 _Window_Width = value;
-
-                Push_Recalculations();
             }
         }
 

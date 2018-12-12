@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 		/// Clears current text in workspace and adds given text.
 		/// </summary>
 		/// <param name="newWorkSpaceText"></param>
-		private void Reset_WorkSpace_Text(string newWorkSpaceText)
+		public void Reset_WorkSpace_Text(string newWorkSpaceText)
 		{
 			WorkSpace.Clear();
 			WorkSpace.Text = newWorkSpaceText;
@@ -52,7 +52,7 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Adds to current text in workspace given string in caret position.
 		/// </summary>
-		private void Insert_To_WorkSpace(string str)
+		public void Insert_To_WorkSpace(string str)
 		{
 			int CaretPosition = WorkSpace.CaretIndex;
 			WorkSpace.Text = WorkSpace.Text.Insert(CaretPosition, str);

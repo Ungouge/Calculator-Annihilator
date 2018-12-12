@@ -86,6 +86,7 @@
     <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
     <Compile Include="MainWindow\Bindable_Resources\OnResourceChange.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Changed_Events.cs" />
     <Compile Include="MainWindow\MainWIndow_Methods\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
     <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
     <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Button_FontSize.cs" />
+    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
     <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
     <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\MainWindow_Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\Push_Recalculations.cs" />
@@ -160,8 +162,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MainWindow\Resizible_Elements_Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

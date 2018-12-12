@@ -35,27 +35,13 @@ namespace Calculator_Annihilator
             try
             {
                 this.DataContext = GUI_Dynamic_Parameters;
-                this.Complex_Calculations.IsChecked = true;
+                this.ComplexCalculations.IsChecked = true;
                 Current_Numeral_System = new Numeral_System(10);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-        }
-
-        private void Window_Size_Changed(object sender, SizeChangedEventArgs e)
-        {
-            //GUI_Dynamic_Parameters.Push_Recalculations();
-        }
-        public void Window_State_Changed(object sender, EventArgs e)
-        {
-                GUI_Dynamic_Parameters.Push_Recalculations();
-        }
-
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            GUI_Dynamic_Parameters.Push_Recalculations();
         }
     }
 }

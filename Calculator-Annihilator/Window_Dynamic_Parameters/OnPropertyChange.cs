@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChange(string PropertName)
+        protected internal void OnPropertyChange(string PropertName)
         {
             if (PropertyChanged != null)
             {

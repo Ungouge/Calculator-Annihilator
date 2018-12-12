@@ -38,7 +38,7 @@
             </MenuItem>
 
         </Menu>
-        <Grid Grid.Row="1">
+        <Grid x:Name="WorkGrid" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition SharedSizeGroup="A"/>
                 <RowDefinition SharedSizeGroup="A"/>
@@ -49,12 +49,12 @@
             </Grid.ColumnDefinitions>
 
             <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" HorizontalAlignment="Stretch"
-                     Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay}"
-                     Cursor="IBeam" AcceptsReturn="false" />
+                     Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay}" Padding="0,-2,0,-2"
+                     Cursor="IBeam" AcceptsReturn="false" TextChanged="WorkSpace_TextChanged" />
 
             <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1"
-                     Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay}" TextWrapping="Wrap" Padding="0,-2,0,-2"
-                     Cursor="IBeam" IsReadOnly="True" />
+                     Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay}" Padding="0,-2,0,-2"
+                     Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged"/>
 
             <Grid Grid.Row="1" Grid.Column="0" Margin="1,1,1,1">
                 <Grid.Resources>
@@ -66,15 +66,19 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <RadioButton GroupName="Calc_Method_Selection" Name="Single_Calculations" HorizontalAlignment="Left" 
+                <RadioButton GroupName="CalculationTypeSwitcher"  Name="SingleCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="0"
                              VerticalAlignment="Center" Checked="Single_Calculations_Button_Checked">
-                    Single Calculations
+                    <TextBox Name="SingleCalculations_TextBlock" FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
+                        Single Calculations
+                    </TextBox>
                 </RadioButton>
-                <RadioButton GroupName="Calc_Method_Selection" Name="Complex_Calculations" HorizontalAlignment="Left" 
-                             Margin="15,1,1,1" Grid.Row="1"
+                <RadioButton GroupName="Calc_Method_Selection" Name="ComplexCalculations" HorizontalAlignment="Left" 
+                             Margin="15,1,1,1" Grid.Row="1" 
                              VerticalAlignment="Center" Checked="Complex_Calculations_Button_Checked">
-                    Complex Calculations
+                    <TextBlock Name="ComplexCalculations_TextBlock" FontSize="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}">
+                        Complex Calculations
+                    </TextBlock>
                 </RadioButton>
             </Grid>
         </Grid>
