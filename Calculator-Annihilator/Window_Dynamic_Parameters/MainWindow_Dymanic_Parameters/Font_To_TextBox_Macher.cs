@@ -22,6 +22,7 @@ namespace Calculator_Annihilator
         private class Font_To_TextBox_Matcher
         {
             TextBox _TextBox;
+            int wrap_Factor = 1;
 
             public Font_To_TextBox_Matcher(TextBox __TextBox)
             {
@@ -32,6 +33,8 @@ namespace Calculator_Annihilator
             {
                 double default_FontSize = _TextBox.ActualHeight / 1.5;
 
+                _TextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
+
                 FormattedText formatted_Text = Get_Default_Formatted_Text(_TextBox, default_FontSize);
 
                 double actual_Size_Of_Text_Space = _TextBox.ActualWidth - 16;
@@ -39,28 +42,29 @@ namespace Calculator_Annihilator
                 if (formatted_Text.Width < actual_Size_Of_Text_Space)
                 {
                     _TextBox.TextWrapping = TextWrapping.NoWrap;
-                    return default_FontSize;
+                    return Return_Non_Less_Than(default_FontSize);
                 }
                 else
                 {
-                    double wraped_FontSize = Matching_Font_To_TextBox1( 1);
+                    double wraped_FontSize = Matching_Font_To_TextBox();
 
                     double rescaled_FontSize = default_FontSize * (actual_Size_Of_Text_Space / formatted_Text.Width);
 
                     if ( wraped_FontSize > rescaled_FontSize)
                     {
                         _TextBox.TextWrapping = TextWrapping.Wrap;
-                        return wraped_FontSize;
+                        _TextBox.MaxLines = wrap_Factor;
+                        return Return_Non_Less_Than(wraped_FontSize);
                     }
                     else
                     {
                         _TextBox.TextWrapping = TextWrapping.NoWrap;
-                        return rescaled_FontSize;
+                        return Return_Non_Less_Than(rescaled_FontSize);
                     }
                 }
             }
 
-            private double Matching_Font_To_TextBox1( int wrap_Factor)
+            private double Matching_Font_To_TextBox( )
             {
                 double default_FontSize = _TextBox.ActualHeight / (1.5 * wrap_Factor);
 
@@ -68,11 +72,25 @@ namespace Calculator_Annihilator
 
                 if (formatted_Text.Width < (_TextBox.ActualWidth - 16) * wrap_Factor)
                 {
-                    _TextBox.MaxLines = wrap_Factor;
-                    return default_FontSize;
+                    return Return_Non_Less_Than(default_FontSize);
                 }
                 else
-                    return Matching_Font_To_TextBox1( ++wrap_Factor);
+                {
+                    wrap_Factor ++;
+                    return Matching_Font_To_TextBox();
+                }
+            }
+
+            private double Return_Non_Less_Than(double FontSize)
+            {
+                if (FontSize < 12)
+                {
+                    _TextBox.TextWrapping = TextWrapping.Wrap;
+                    _TextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+                    return 12;
+                }
+
+                return FontSize;
             }
 
             private static FormattedText Get_Default_Formatted_Text(TextBox _TextBox, double default_FontSize)
