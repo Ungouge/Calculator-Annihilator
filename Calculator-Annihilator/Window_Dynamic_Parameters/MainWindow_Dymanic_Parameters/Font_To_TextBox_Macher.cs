@@ -19,16 +19,26 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
+        /// <summary>
+        /// Class for font size calculations of text boxes of Main Window
+        /// </summary>
         private class Font_To_TextBox_Matcher
         {
             TextBox _TextBox;
             int wrap_Factor = 1;
 
+            /// <summary>
+            /// Constucts new Font_To_TextBox_Matcher
+            /// </summary>
             public Font_To_TextBox_Matcher(TextBox __TextBox)
             {
                 _TextBox = __TextBox;
             }
 
+
+            /// <summary>
+            /// Returns font size for text boxes of Main Window.
+            /// </summary>
             public double Match_Font_To_TextBox()
             {
                 double default_FontSize = _TextBox.ActualHeight / 1.5;
@@ -64,9 +74,12 @@ namespace Calculator_Annihilator
                 }
             }
 
+            /// <summary>
+            /// Returns font size for text boxes of Main Window when text needs more thanone line.
+            /// </summary>
             private double Matching_Font_To_TextBox( )
             {
-                double default_FontSize = _TextBox.ActualHeight / (1.5 * wrap_Factor);
+                double default_FontSize = _TextBox.ActualHeight / (15e-1 * wrap_Factor);
 
                 FormattedText formatted_Text = Get_Default_Formatted_Text(_TextBox, default_FontSize);
 
@@ -76,11 +89,14 @@ namespace Calculator_Annihilator
                 }
                 else
                 {
-                    wrap_Factor ++;
+                    wrap_Factor++;
                     return Matching_Font_To_TextBox();
                 }
             }
 
+            /// <summary>
+            /// Don't allow to return font size lesser than 12.
+            /// </summary>
             private double Return_Non_Less_Than(double FontSize)
             {
                 if (FontSize < 12)
@@ -93,6 +109,9 @@ namespace Calculator_Annihilator
                 return FontSize;
             }
 
+            /// <summary>
+            /// Returns FormattedText class for passed text blox for passed font size
+            /// </summary>
             private static FormattedText Get_Default_Formatted_Text(TextBox _TextBox, double default_FontSize)
             {
                 return new FormattedText(_TextBox.Text, CultureInfo.CurrentCulture, FlowDirection.LeftToRight,

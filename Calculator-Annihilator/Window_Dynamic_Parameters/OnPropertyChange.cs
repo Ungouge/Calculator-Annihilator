@@ -11,11 +11,14 @@ namespace Calculator_Annihilator
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected internal void OnPropertyChange(string PropertName)
+        /// <summary>
+        /// Handles changed events for property of passed Name
+        /// </summary>
+        protected internal void OnPropertyChange(string Property_Name)
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(PropertName));
+                PropertyChanged(this, new PropertyChangedEventArgs(Property_Name));
             }
         }
     }

@@ -19,6 +19,9 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow_Dynamic_Parameters
     {
+        /// <summary>
+        /// Gets font size for result space.
+        /// </summary>
         public double ResultSpace_FontSize // Called by name by MainWindow.WorkSpace_TextChanged()
         {
             get

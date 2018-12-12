@@ -99,7 +99,6 @@
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Single_Calculations_Button_Checked.cs" />
-    <Compile Include="MainWindow\SizeChanged.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
@@ -114,7 +113,6 @@
     <Compile Include="Window_Dynamic_Parameters\Values.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Size_Catchers.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Window_State_Changed.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
