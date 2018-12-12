@@ -23,37 +23,33 @@ namespace Calculator_Annihilator
         {
             get
             {
-                Font_To_TextBlock_Matcher Matcher = new Font_To_TextBlock_Matcher(Current_Window.SingleCalculations_TextBlock);
+                Font_To_TextBlock_Matcher Matcher = new Font_To_TextBlock_Matcher(Current_Window);
 
-                double x = Matcher.Match_Font_To_TextBlock();
-
-                Current_Window.Reset_WorkSpace_Text(x.ToString());
-
-                return x;
+                return Matcher.Match_Font_To_TextBlock();
             }
         }
 
         private class Font_To_TextBlock_Matcher
         {
-            TextBlock _TextBlock;
+            MainWindow Current_Window;
 
-            public Font_To_TextBlock_Matcher(TextBlock __TextBlock)
+            public Font_To_TextBlock_Matcher(MainWindow _Current_Window)
             {
-                _TextBlock = __TextBlock;
+                Current_Window = _Current_Window;
             }
 
             public double Match_Font_To_TextBlock()
             {
-                double default_FontSize = _TextBlock.ActualHeight / 1.5; // do roper factor
+                double default_FontSize = Current_Window.CalculationTypeSwitcher_Grid.ActualHeight / 3;
 
-                FormattedText formatted_Text = Get_Default_Formatted_Text(_TextBlock, default_FontSize);
+                FormattedText formatted_Text = Get_Default_Formatted_Text(Current_Window.ComplexCalculations_RadioButton_TextBlock, default_FontSize);
 
-                double actual_Size_Of_Text_Space = _TextBlock.ActualWidth - 16; //checked margins
+                double actual_Size_Of_Text_Space = (Current_Window.CalculationTypeSwitcher_Grid.ActualWidth - 32) / formatted_Text.Width;
 
-                if (formatted_Text.Width < actual_Size_Of_Text_Space)
+                if ( actual_Size_Of_Text_Space > 1)
                     return default_FontSize;
                 else
-                    return default_FontSize * (actual_Size_Of_Text_Space / formatted_Text.Width);
+                    return default_FontSize * actual_Size_Of_Text_Space;
             }
 
             private static FormattedText Get_Default_Formatted_Text(TextBlock _TextBlock, double default_FontSize)
