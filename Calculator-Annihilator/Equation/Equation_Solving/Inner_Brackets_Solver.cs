@@ -23,12 +23,13 @@ namespace Calculator_Annihilator
 				int Lenght_Of_Current_Bracket =
 					elements.IndexOf(Inner_Bracket_pair._Close_Bracket) - Index_Of_Open_Bracket + 1;
 
-				Number Solved_Inner_Bracket = Inner_Brackets_Solver
-					(new Equation_Elements(elements.GetRange
-					(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)), Inner_Bracket_pair);
+				Number Solved_Inner_Bracket = Inner_Brackets_Solver(
+                    new Equation_Elements(elements.GetRange(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)),
+                    Inner_Bracket_pair
+                    );
 
-				Exchange_Solved_Range_to_Calculated_Value
-					(elements, Index_Of_Open_Bracket, Lenght_Of_Current_Bracket, Solved_Inner_Bracket);
+				Exchange_Solved_Range_to_Calculated_Value(
+                    elements, Index_Of_Open_Bracket, Lenght_Of_Current_Bracket, Solved_Inner_Bracket);
 			}
 
 			Number Result_Of_Current_Bracket = No_Bracket_Solver(elements);
