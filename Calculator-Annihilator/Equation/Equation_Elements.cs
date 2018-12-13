@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -90,6 +87,7 @@ namespace Calculator_Annihilator
 			public void ReplaceRange(int index, int count, IElement _Element)
 			{
 				Elements_List.RemoveRange(index, count);
+
 				Elements_List.Insert(index, _Element);
 			}
 
@@ -105,11 +103,26 @@ namespace Calculator_Annihilator
 				return (item_Index < Elements_List.Count && 0 < Elements_List.Count);
 			}
 
-			/// <summary>
-			/// Returns enumerator of this container list.
-			/// </summary>
-			/// <returns></returns>
-			public IEnumerator GetEnumerator()
+            /// <summary>
+            /// Recreats string of equation from current element coletion.
+            /// </summary>
+            public string Recreate_Equation()
+            {
+                string recreated_Equation = "";
+
+                foreach (IElement_ToString String_Element in Elements_List)
+                {
+                    recreated_Equation += String_Element.ToString();
+                }
+
+                return recreated_Equation;
+            }
+
+            /// <summary>
+            /// Returns enumerator of this container list.
+            /// </summary>
+            /// <returns></returns>
+            public IEnumerator GetEnumerator()
 			{
 				return ((IEnumerable)Elements_List).GetEnumerator();
 			}
@@ -130,6 +143,7 @@ namespace Calculator_Annihilator
 			public Elements_Enumerator(Equation_Elements Elements_Coletion)
 			{
 				Coletion = Elements_Coletion;
+
 				Reset();
 			}
 
@@ -179,6 +193,7 @@ namespace Calculator_Annihilator
 			{
 				if (_Elements_Enumerator.Current_Index > -2)
 					_Elements_Enumerator.Current_Index--;
+
 				return _Elements_Enumerator;
 			}
 

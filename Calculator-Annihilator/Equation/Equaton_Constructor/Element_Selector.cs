@@ -17,11 +17,18 @@ namespace Calculator_Annihilator
 {
 	partial class Equation
 	{
-		/// <summary>
-		/// Selects every character to organized as element list.
-		/// </summary>
-		private void Element_Selector()
-		{
+        /// <summary>
+        /// Selects every character to organized as element list.
+        /// </summary>
+        private void Element_Selector()
+        {
+            if (the_Equation == default(string) || the_Equation == "")
+            {
+                Element_Colection.Add(new Number(0));
+
+                return;
+            }
+
 			for (int i = 0; i < the_Equation.Length; i++)
 			{
 				i = Element_Segregator(i);
@@ -39,6 +46,7 @@ namespace Calculator_Annihilator
 			if ( end_Number_Index != sign_Index)
 			{
 				sign_Index = end_Number_Index-1;
+
 				return sign_Index;
 			}
 
@@ -62,12 +70,14 @@ namespace Calculator_Annihilator
 			if (sign == '(')
 			{
 				Element_Colection.Add( new Open_Bracket());
+
 				return true;
 			}
 
 			if (sign == ')')
 			{
 				Element_Colection.Add( new Close_Bracket());
+
 				return true;
 			}
 
@@ -86,6 +96,7 @@ namespace Calculator_Annihilator
 					if (Signs_Lib.operand_Sings[i][k] == sign)
 					{
 						Element_Colection.Add( Signs_Lib.Operands[i][k]);
+
 						return true;
 					}
 

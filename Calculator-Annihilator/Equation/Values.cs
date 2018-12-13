@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -19,21 +15,6 @@ namespace Calculator_Annihilator
 
 		private Equation_Elements Element_Colection = new Equation_Elements();
 
-		//private bool Does_Solved = false;
-
-		public Number Solved_Value // xyz does needed to restor
-		/*{
-			get
-			{
-				if (Does_Solved == false)
-					Solver();
-
-				return Solved_Value;
-			}
-			set
-			{
-				Solved_Value = value;
-			}
-		}*/;
+		public Number Solved_Value;
 	}
 }

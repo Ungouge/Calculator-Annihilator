@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
 		/// <param name="operand_index">Index of operator to exchange.</param>
 		/// <param name="Result_Number">Result to insert.</param>
 		private void Exchange_Solved_to_Simple_Calculated_Value (
-            Equation_Elements elements, int operand_index, Number Result_Number)
+            Equation_Elements elements, int operand_index, INumber Result_Number)
 		{
 			elements.ReplaceRange(operand_index - 1, 3, Result_Number);
 		}
