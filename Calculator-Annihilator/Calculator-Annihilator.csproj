@@ -83,11 +83,14 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
-    <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="MainWindow\Bindable_Resources\OnResourceChange.cs" />
+    <Compile Include="internal enums lib.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Method.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
+    <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />
+    <Compile Include="MainWindow\Static_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_Calculations_Button_Checked.cs" />
-    <Compile Include="MainWindow\Changed_Events.cs" />
-    <Compile Include="MainWindow\MainWIndow_Methods\Operation_Actions.cs" />
+    <Compile Include="MainWindow\changed events.cs" />
+    <Compile Include="MainWindow\MainWindow_Methods\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
     <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
@@ -95,21 +98,26 @@
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
-    <Compile Include="MainWindow\MainWIndow_Methods\Set_Current_Numerical_System.cs" />
+    <Compile Include="MainWindow\MainWindow_Methods\Set_Current_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
+    <Compile Include="Settings_File_Reader\settings getters.cs" />
+    <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
+    <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
+    <Compile Include="Settings_File_Reader\Push_Static_Settings.cs" />
+    <Compile Include="Settings_File_Reader\Values.cs" />
     <Compile Include="Signs_Lib\Signs_Lib.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Button_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\MainWindow_Dynamic_Parameters.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Button_FontSize.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\Push_Recalculations.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\ResultSpace_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\MainWindow_Dymanic_Parameters\WorkSpace_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\OnPropertyChange.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\ResultSpace_FontSize.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\WorkSpace_FontSize.cs" />
+    <Compile Include="Window_Dynamic_Parameters\On_Property_Change.cs" />
     <Compile Include="Window_Dynamic_Parameters\Values.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
     <Compile Include="Window_Dynamic_Parameters\Window_Size_Catchers.cs" />
@@ -121,7 +129,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow\MainWIndow_Methods\Equals_Single.cs" />
+    <Compile Include="MainWindow\MainWindow_Methods\Equals_Single.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -133,7 +141,7 @@
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
-    <Compile Include="MainWindow\MainWIndow_Methods\Equals_Complex.cs" />
+    <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

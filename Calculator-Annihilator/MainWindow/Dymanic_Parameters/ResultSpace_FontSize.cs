@@ -17,20 +17,22 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    partial class MainWindow_Dynamic_Parameters
+    partial class MainWindow
     {
-        /// <summary>
-        /// Gets font size for result space.
-        /// </summary>
-        public double ResultSpace_FontSize // Called by name by MainWindow.WorkSpace_TextChanged()
+        partial class Dynamic_Parameters
         {
-            get
+            /// <summary>
+            /// Gets font size for result space.
+            /// </summary>
+            public double ResultSpace_FontSize // Called by name by MainWindow.WorkSpace_TextChanged()
             {
-                Font_To_TextBox_Matcher Matcher = new Font_To_TextBox_Matcher(Current_Window.ResultSpace);
+                get
+                {
+                    Font_To_TextBox_Matcher Matcher = new Font_To_TextBox_Matcher(Current_Window.ResultSpace);
 
-                return Matcher.Match_Font_To_TextBox();
+                    return Matcher.Match_Font_To_TextBox();
+                }
             }
         }
-
     }
 }

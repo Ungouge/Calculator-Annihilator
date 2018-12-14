@@ -22,21 +22,27 @@ namespace Calculator_Annihilator
     {
         public MainWindow()
         {
-            GUI_Dynamic_Parameters = new MainWindow_Dynamic_Parameters(510, 420);
+            // Preinitialization
             try
-            {
-                InitializeComponent();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            { 
+            Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
+            _Static_Resources = new Static_Resources(_Settings_File_Reader);
+            GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
 
-            try
-            {
+            // Initialization
+            
+                InitializeComponent();
+
+            // Postinitialization
+            
                 this.DataContext = GUI_Dynamic_Parameters;
-                this.ComplexCalculations.IsChecked = true;
-                Current_Numeral_System = new Numeral_System(10);
+
+                if (_Settings_File_Reader.calculation_Method == Calculation_Method.Single)
+                    this.SingleCalculations.IsChecked = true;
+                else // calculation_Method == Calculation_Method.Complex
+                    this.ComplexCalculations.IsChecked = true;
+
+                Current_Numeral_System = new Numeral_System(_Settings_File_Reader.initial_Numeral_System);
             }
             catch (Exception e)
             {

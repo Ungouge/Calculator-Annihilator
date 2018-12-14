@@ -33,12 +33,17 @@ namespace Calculator_Annihilator
 
         private void WorkSpace_TextChanged(object sender, TextChangedEventArgs e)
         {
-            GUI_Dynamic_Parameters.OnPropertyChange("WorkSpace_FontSize");
+            GUI_Dynamic_Parameters.On_Property_Change("WorkSpace_FontSize");
         }
 
         private void ResultSpace_TextChanged(object sender, TextChangedEventArgs e)
         {
-            GUI_Dynamic_Parameters.OnPropertyChange("ResultSpace_FontSize");
+            GUI_Dynamic_Parameters.On_Property_Change("ResultSpace_FontSize");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // check settings file is written when it will be written
         }
     }
 }

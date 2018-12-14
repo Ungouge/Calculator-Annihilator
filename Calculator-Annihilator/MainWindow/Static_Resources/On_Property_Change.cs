@@ -9,11 +9,11 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow
     {
-        partial class Bindable_Resources : INotifyPropertyChanged
+        partial class Static_Resources : INotifyPropertyChanged
         {
             public event PropertyChangedEventHandler PropertyChanged;
 
-            private void OnPropertyChange(string PropertName)
+            private void On_Property_Change(string PropertName)
             {
                 if (PropertyChanged != null)
                 {

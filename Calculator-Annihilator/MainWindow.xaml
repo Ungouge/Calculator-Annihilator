@@ -12,15 +12,16 @@
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
+        Closing="Window_Closing"
         MinHeight="240"
         MinWidth="320"
-        Height="{Binding Window_Height, Mode=TwoWay}"
-        Width="{Binding Window_Width, Mode=TwoWay}">
+        Height="{Binding Window_Height, Mode=TwoWay, FallbackValue=510}"
+        Width="{Binding Window_Width, Mode=TwoWay, FallbackValue=480}">
 
     <Window.Resources >
         <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
             <Setter Property="Margin" Value="1,1,1,1" />
-            <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay}" />
+            <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay, FallbackValue=16}" />
             <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="FontFamily" Value="Consolas" />
         </Style>
@@ -55,13 +56,13 @@
             </Grid.ColumnDefinitions>
 
             <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" HorizontalAlignment="Stretch"
-                     Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay}" Padding="0,-2,0,-2" 
-                     VerticalContentAlignment="Center"
+                     Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay, FallbackValue=30}"
+                     Padding="0,-2,0,-2" VerticalContentAlignment="Center"
                      Cursor="IBeam" AcceptsReturn="false" TextChanged="WorkSpace_TextChanged"
                      VerticalScrollBarVisibility="Auto"/>
 
             <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1"
-                     Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay}" Padding="0,-2,0,-2" 
+                     Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay, FallbackValue=30}" Padding="0,-2,0,-2" 
                      VerticalContentAlignment="Center"
                      Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged" />
 
@@ -71,7 +72,7 @@
                         <Setter Property="VerticalAlignment" Value="Center"/>
                     </Style>
                     <Style TargetType="TextBlock">
-                        <Setter Property="FontSize" Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay}"/>
+                        <Setter Property="FontSize" Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay, FallbackValue=15}"/>
                         <Setter Property="Margin" Value="5,1,5,1"/>
                     </Style>
                 </Grid.Resources>

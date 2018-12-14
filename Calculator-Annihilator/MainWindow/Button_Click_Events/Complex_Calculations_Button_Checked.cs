@@ -22,6 +22,8 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Complex_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
+            GUI_Dynamic_Parameters.Calculation_Method = Calculation_Method.Complex;
+
 			string newWorkSpaceText = "";
 
 			if (no_First_Number_In_Equation_Single == false)

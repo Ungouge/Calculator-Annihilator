@@ -21,8 +21,10 @@ namespace Calculator_Annihilator
 		/// Switches calculator to single calculation mode.
 		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
-		{
-			Complex_To_Single();
+        {
+            GUI_Dynamic_Parameters.Calculation_Method = Calculation_Method.Single;
+
+            Complex_To_Single();
 
 			Disable_Complex_Buttons();
 		}
@@ -66,6 +68,11 @@ namespace Calculator_Annihilator
 		{
 			Current_Complex_Equation.Solver();
 			Reset_ResultSpace_Text(Current_Complex_Equation.Solved_Value.ToString());
+
+            no_First_Number_In_Equation_Single = false;
+            First_Number_In_Equation_Single = Current_Complex_Equation.Solved_Value;
+
+            no_operand_Sign_Single = true;
 
 			Clear_WorkSpace();
 		}

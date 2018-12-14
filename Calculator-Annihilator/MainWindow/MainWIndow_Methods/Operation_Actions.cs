@@ -14,9 +14,9 @@ namespace Calculator_Annihilator
 		/// <param name="_Operand"></param>
 		private void Operation_Button(IOperand _Operand)
 		{
-			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
+			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 				Basic_Calculation_Single(_Operand);
-			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 				Insert_To_WorkSpace(_Operand.ToString());
 		}
 
@@ -29,7 +29,7 @@ namespace Calculator_Annihilator
 			if (no_operand_Sign_Single == true)
 			{
 				First_Number_In_Equation_Single = Parse_WorkSpace();
-				Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol);
+				Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
 			}
 			else if (WorkSpace.Text != default(string) || WorkSpace.Text != "")
 			{

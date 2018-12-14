@@ -14,7 +14,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Handles changed events for property of passed Name
         /// </summary>
-        protected internal void OnPropertyChange(string Property_Name)
+        protected internal void On_Property_Change(string Property_Name)
         {
             if (PropertyChanged != null)
             {

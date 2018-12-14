@@ -42,11 +42,11 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Button_Equals_Click(object sender, RoutedEventArgs e)
 		{
-			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
+			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 			{
 				Equals_Single();
 			}
-			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 			{
 				Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString());
 			}
@@ -75,12 +75,12 @@ namespace Calculator_Annihilator
 			Clear_WorkSpace();
 			Clear_ResultSpace();
 
-			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
+			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 			{
 				no_operand_Sign_Single = true;
 				no_First_Number_In_Equation_Single = true;
 			}
-			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 			{
 				Current_Complex_Equation = null;
 			}
