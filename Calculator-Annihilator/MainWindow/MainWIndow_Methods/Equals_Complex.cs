@@ -20,11 +20,11 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Controlls action after pressing equals button when option for complex calculations is on.
 		/// </summary>
-		private double Equals_Complex(string equation)
+		private void Equals_Complex(string equation)
 		{
-			Current_Complex_Equation = new Equation(equation, Current_Numeral_System);
-			Current_Complex_Equation.Solver();
-			return Current_Complex_Equation.Solved_Value.Value;
+			Equation = new Equation(equation, Current_Numeral_System);
+			Equation.Solver();
+            Reset_ResultSpace_Text(Equation.Solved_Value.ToString());
 		}
 	}
 }

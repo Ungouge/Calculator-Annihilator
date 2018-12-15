@@ -4,7 +4,7 @@ namespace Calculator_Annihilator
 {
     partial class Settings_File_Reader
     {
-        public sbyte initial_Numeral_System
+        public sbyte Initial_Numeral_System
         {
             get
             {
@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
             }
         }
 
-        public Calculation_Method initial_Calculation_Method
+        public Calculation_Method Initial_Calculation_Method
         {
             get
             {

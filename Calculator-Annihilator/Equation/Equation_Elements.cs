@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Custom Container for elements in equation class.
 		/// </summary>
-		private class Equation_Elements : IEnumerable
+		protected class Equation_Elements : IEnumerable
 		{
 			private List<IElement> Elements_List;
 

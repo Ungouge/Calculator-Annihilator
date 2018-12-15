@@ -28,8 +28,15 @@ namespace Calculator_Annihilator
 		{
 			if (no_operand_Sign_Single == true)
 			{
-				First_Number_In_Equation_Single = Parse_WorkSpace();
-				Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
+                if(no_First_Number_In_Equation_Single == true)
+                {
+			        First_Number_In_Equation_Single = Parse_WorkSpace();
+			        Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
+                }
+                else
+                {
+                    Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
+                }
 			}
 			else if (WorkSpace.Text != default(string) || WorkSpace.Text != "")
 			{

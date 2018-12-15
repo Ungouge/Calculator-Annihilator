@@ -84,6 +84,9 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
+    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
+    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
+    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Method.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
     <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />

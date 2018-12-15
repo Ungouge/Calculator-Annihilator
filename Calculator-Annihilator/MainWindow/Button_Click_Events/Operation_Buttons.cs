@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
@@ -46,9 +34,9 @@ namespace Calculator_Annihilator
 			{
 				Equals_Single();
 			}
-			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 			{
-				Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString());
+				Equals_Complex(WorkSpace.Text);
 			}
 		}
 
@@ -82,7 +70,7 @@ namespace Calculator_Annihilator
 			}
 			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 			{
-				Current_Complex_Equation = null;
+				Equation = null;
 			}
 
 		}

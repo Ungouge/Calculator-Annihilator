@@ -3,10 +3,10 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-	/// <summary>
-	/// Constructs given string to equation elements list.
-	/// </summary>
-	public partial class Equation //constructor
+    /// <summary>
+    /// Class to solving given text string parsing to equation elements list, with built in default fixes of mistekes.
+    /// </summary>
+    public partial class Equation //constructor
 	{
 		/// <summary>
 		/// Constructs given string to equation elements list, finds mistakes and correct them 
