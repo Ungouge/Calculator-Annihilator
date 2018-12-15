@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -23,11 +19,15 @@ namespace Calculator_Annihilator
 				if (Even_Preious_Element is Open_Bracket || Equation_Rator.Current_Element is Close_Bracket)
 				{
 					Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
 					Equation_Rator--;
+
 					Element_Colection.RemoveAt(Equation_Rator.Current_Index);
 
-					int removed_Element = Check_Integrity_Of_Equation_Begining(new Elements_Enumerator(Element_Colection));
-					for (int i = 0; i <= removed_Element; i++)
+					int removed_Elements = Check_Integrity_Of_Equation_Begining(
+                        new Elements_Enumerator(Element_Colection));
+
+					for (int i = 0; i <= removed_Elements; i++)
 					{
 						Equation_Rator--;
 					}
@@ -36,34 +36,41 @@ namespace Calculator_Annihilator
 			else if (Current_Element is Open_Bracket && Previous_Element is INot_Outside_The_Open_Bracket)
 			{
 				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+
 				Equation_Rator--;
 			}
 			else if (Previous_Element is Operand && Current_Element is Operand)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
 				Equation_Rator--;
 			}
 			else if (Previous_Element is Open_Bracket && Current_Element is Close_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
 				Equation_Rator--;
 
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
 				Equation_Rator--;
 			}
 			else if (Previous_Element is Close_Bracket && Current_Element is INot_Outside_The_Close_Bracket)
 			{
 				Element_Colection.Insert(Equation_Rator.Current_Index, new Multiplication());
+
 				Equation_Rator--;
 			}
 			else if (Previous_Element is Open_Bracket && Current_Element is INot_Intside_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index);
+
 				Equation_Rator--;
 			}
 			else if (Current_Element is Close_Bracket && Previous_Element is INot_Intside_Bracket)
 			{
 				Element_Colection.RemoveAt(Equation_Rator.Current_Index - 1);
+
 				Equation_Rator--;
 			}
 		}

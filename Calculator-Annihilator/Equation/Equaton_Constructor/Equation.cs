@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Calculator_Annihilator
 {
-	/// <summary>
-	/// Constructs given string to equation elements list.
-	/// </summary>
-	public partial class Equation //constructor
+    /// <summary>
+    /// Class to solving given text string parsing to equation elements list, with built in default fixes of mistekes.
+    /// </summary>
+    public partial class Equation //constructor
 	{
 		/// <summary>
 		/// Constructs given string to equation elements list, finds mistakes and correct them 
@@ -21,7 +17,7 @@ namespace Calculator_Annihilator
 		{
 			the_Equation = eq;
 			_Numerical_System = ns;
-
+            
 			Element_Selector();
 
 			try
@@ -30,7 +26,9 @@ namespace Calculator_Annihilator
 			}
 			catch (EquationIsEmptyException)
 			{
-				Element_Colection = new Equation_Elements { new Number(0) };
+                MessageBox.Show("Given equation to solve is empty or correction of incorrectly written equation " +
+                    "text left no elements in the equation.");
+                Element_Colection = new Equation_Elements { new Number(0) };
 			}
 
 			Bracket_Pairer();

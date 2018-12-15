@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -10,6 +6,9 @@ namespace Calculator_Annihilator
     {
         private double _Window_Height;
 
+        /// <summary>
+        /// Gets and sets hight of MainWindow.
+        /// </summary>
         public double Window_Height
         {
             get { return _Window_Height; }
@@ -20,6 +19,9 @@ namespace Calculator_Annihilator
         }
         private double _Window_Width;
 
+        /// <summary>
+        /// Gets and sets width of MainWindow.
+        /// </summary>
         public double Window_Width
         {
             get { return _Window_Width; }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -17,7 +13,6 @@ namespace Calculator_Annihilator
 
 			Bracket_Map_Root = null;
 			Solved_Value = Result_Number;
-			//Does_Solved = true; //so fa not used
 		}
 	}
 }

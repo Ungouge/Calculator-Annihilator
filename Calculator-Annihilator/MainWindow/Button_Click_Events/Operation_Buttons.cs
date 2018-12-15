@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
@@ -42,13 +30,13 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Button_Equals_Click(object sender, RoutedEventArgs e)
 		{
-			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
+			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 			{
 				Equals_Single();
 			}
-			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 			{
-				Reset_ResultSpace_Text(Equals_Complex(WorkSpace.Text).ToString());
+				Equals_Complex(WorkSpace.Text);
 			}
 		}
 
@@ -75,14 +63,14 @@ namespace Calculator_Annihilator
 			Clear_WorkSpace();
 			Clear_ResultSpace();
 
-			if (Convert.ToBoolean(SingleCalculations.IsChecked == true))
+			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
 			{
 				no_operand_Sign_Single = true;
 				no_First_Number_In_Equation_Single = true;
 			}
-			else if (Convert.ToBoolean(ComplexCalculations.IsChecked == true))
+			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
 			{
-				Current_Complex_Equation = null;
+				Equation = null;
 			}
 
 		}

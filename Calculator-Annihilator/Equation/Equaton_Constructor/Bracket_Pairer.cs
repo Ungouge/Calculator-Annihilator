@@ -1,17 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
@@ -75,7 +62,9 @@ namespace Calculator_Annihilator
 		private Bracket_Pair Add_Close_Bracket(Open_Bracket _Open_Bracket, Bracket_Pair Root_Bracket_Pair)
 		{
 			Close_Bracket new_CB = new Close_Bracket();
+
 			Element_Colection.Add(new_CB);
+
 			return new Bracket_Pair(_Open_Bracket, new_CB, Root_Bracket_Pair);
 		}
 
@@ -87,7 +76,9 @@ namespace Calculator_Annihilator
 		private void Add_Open_Bracket(Close_Bracket Closing_Bracket, Bracket_Pair Root_Bracket_Pair)
 		{
 			Open_Bracket new_OB = new Open_Bracket();
+
 			Element_Colection.Insert(0, new_OB);
+
 			Bracket_Pair bracket_Pair = new Bracket_Pair(new_OB, Closing_Bracket, Root_Bracket_Pair);
 		}
 	}

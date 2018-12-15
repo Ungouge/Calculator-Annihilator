@@ -20,11 +20,13 @@ namespace Calculator_Annihilator
 		private Parser parser = new Parser();
 		private Calc calc = new Calc();
 
-		private Equation Current_Complex_Equation;
+		private Equation Equation;
 
 		private Numeral_System Current_Numeral_System;
 
-        private MainWindow_Dynamic_Parameters GUI_Dynamic_Parameters;
+        internal Dynamic_Parameters GUI_Dynamic_Parameters;
+
+        internal Static_Resources _Static_Resources;
 
 		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
 		{
@@ -49,7 +51,7 @@ namespace Calculator_Annihilator
 			{
 				bool doGet = no_First_Number_In_Equation_Single;
 				no_First_Number_In_Equation_Single = true;
-				return !doGet ? first_Number_In_Equation_Single : new Number(0);
+				return !doGet ? first_Number_In_Equation_Single : default(INumber);
 			}
 			set
 			{
@@ -62,7 +64,7 @@ namespace Calculator_Annihilator
 		private IOperand operand_Sign_Single;
 		private IOperand Operand_Sign_Single
 		{
-			get { return no_operand_Sign_Single == false ? operand_Sign_Single : null; ; }
+			get { return no_operand_Sign_Single == false ? operand_Sign_Single : default(IOperand); ; }
 			set
 			{
 				operand_Sign_Single = value;

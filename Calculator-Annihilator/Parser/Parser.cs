@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
@@ -36,7 +24,8 @@ namespace Calculator_Annihilator
 			{
 				try
 				{
-					parsedOutput += DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i - 1);
+					parsedOutput +=
+                        DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i - 1);
 				}
 				catch (Exception ex)
 				{
@@ -50,7 +39,8 @@ namespace Calculator_Annihilator
 			{
 				try
 				{
-					parsedOutput += DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i);
+					parsedOutput +=
+                        DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i);
 				}
 				catch (Exception ex)
 				{

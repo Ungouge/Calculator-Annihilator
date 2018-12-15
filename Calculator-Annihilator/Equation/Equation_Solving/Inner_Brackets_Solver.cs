@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Windows;
 
 namespace Calculator_Annihilator
 {
@@ -23,17 +19,37 @@ namespace Calculator_Annihilator
 				int Lenght_Of_Current_Bracket =
 					elements.IndexOf(Inner_Bracket_pair._Close_Bracket) - Index_Of_Open_Bracket + 1;
 
-				Number Solved_Inner_Bracket = Inner_Brackets_Solver
-					(new Equation_Elements(elements.GetRange
-					(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)), Inner_Bracket_pair);
+				Number Solved_Inner_Bracket = Inner_Brackets_Solver(
+                    new Equation_Elements(elements.GetRange(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)),
+                    Inner_Bracket_pair
+                    );
 
-				Exchange_Solved_Range_to_Calculated_Value
-					(elements, Index_Of_Open_Bracket, Lenght_Of_Current_Bracket, Solved_Inner_Bracket);
+				Exchange_Solved_Range_to_Calculated_Value(
+                    elements, Index_Of_Open_Bracket, Lenght_Of_Current_Bracket, Solved_Inner_Bracket);
 			}
 
-			Number Result_Of_Current_Bracket = No_Bracket_Solver(elements);
+            Number Result_Of_Current_Bracket;
 
-			return Result_Of_Current_Bracket;
+            try
+            {
+                Result_Of_Current_Bracket = No_Bracket_Solver(elements);
+            }
+            catch (EquationIsEmptyException)
+            {
+                MessageBox.Show($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
+                    $"had been solved improperly so \"0\" been pushed as result of shown equation.{Environment.NewLine}" +
+                    "If there is an error in input eqution correct or try write write equation in other way");
+                Result_Of_Current_Bracket = new Number(0);
+            }
+            catch (EquationNotSolvedProperlyException e)
+            {
+                MessageBox.Show($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
+                    $"had been solved as \"{e.Message}\" so \"0\" been pushed as result of shown equation.{Environment.NewLine}" +
+                    "If there is an error in input eqution correct or try write write equation in other way");
+                Result_Of_Current_Bracket = new Number(0); ;
+            }
+
+            return Result_Of_Current_Bracket;
 		}
 	}
 }
