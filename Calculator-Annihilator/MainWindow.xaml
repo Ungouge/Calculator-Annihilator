@@ -19,22 +19,13 @@
         Width="{Binding Window_Width, Mode=TwoWay, FallbackValue=480}">
 
     <Window.Resources >
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.XAML"/>
-                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary_Borrowed.XAML"/>
-            </ResourceDictionary.MergedDictionaries>
-
-            <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
-                <Setter Property="Margin" Value="1,1,1,1" />
-                <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay, FallbackValue=16}" />
-                <Setter Property="VerticalContentAlignment" Value="Center" />
-                <Setter Property="FontFamily" Value="Consolas" />
-            </Style>
-        </ResourceDictionary>
-        
+        <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
+            <Setter Property="Margin" Value="1,1,1,1" />
+            <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay, FallbackValue=16}" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Consolas" />
+        </Style>
     </Window.Resources>
-    
     <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -42,24 +33,14 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
-        <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" IsMainMenu="True">
-            <MenuItem Header="View" ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-                <MenuItem x:Name="Standard_MenuButton" Header="Standard" Grid.Column="1" IsCheckable="True"
-                          Click="Standard_MenuButton_Click"/>
-                <MenuItem x:Name="Scientific_MenuButton" Header="Scientific" Grid.Column="1" IsCheckable="True"
-                          Click="Scientific_MenuButton_Click"/>
-                <Separator/>
+        <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" >
+            <MenuItem Header="View" >
+
             </MenuItem>
             <MenuItem Header="Edit" >
 
             </MenuItem>
-            <MenuItem Header="_Help" >
+            <MenuItem Header="Help" >
 
             </MenuItem>
 
@@ -181,3 +162,75 @@
         </Grid>
     </Grid>
 </Window>
+<!--<Menu DockPanel.Dock="Top">
+    <MenuItem Header="_File">
+        <MenuItem x:Name="menuNew" Header="_New" InputGestureText="Ctrl+N" Click="MenuNew_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/NewFile_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="menuOpen" Header="_Open" InputGestureText="Ctrl+O" Click="MenuOpen_Click" >
+            <MenuItem.Icon>
+                <Image Source="./Resources/OpenFile_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem >
+        <MenuItem x:Name="menuSave" Header="_Save" InputGestureText="Ctrl+S" Click="MenuSave_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/Save_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="menuSaveAs" Header="Save as" Click="MenuSaveAs_Click">
+            --><!--Add Ctrl+Shift+S shortcut
+            <MenuItem.Icon>
+                <Image Source="./Resources/SaveAs_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <Separator/>
+        <MenuItem x:Name="menuExit" Header="Exit" Click="MenuExit_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/Exit_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+    </MenuItem>
+    <MenuItem Header="_Edit">
+        <MenuItem x:Name="menuCopy" Header="_Copy" InputGestureText="Ctrl+C" Command="ApplicationCommands.Copy">
+            <MenuItem.Icon>
+                <Image Source="./Resources/Copy_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="menuPaste" Header="_Paste" InputGestureText="Ctrl+V" Command="ApplicationCommands.Paste">
+            <MenuItem.Icon>
+                <Image Source="./Resources/Paste_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="menuCut" Header="Cut" InputGestureText="Ctrl+X" Command="ApplicationCommands.Cut">
+            <MenuItem.Icon>
+                <Image Source="./Resources/Cut_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <Separator/>
+        <MenuItem x:Name="menuWrap" Header="Wrap Text" StaysOpenOnClick="True" Click="MenuWrap_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/WrapPanel_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="menuFont" Header="_Font" InputGestureText="Ctrl+F" IsCheckable="True" Click="MenuFont_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/FontIcon_16x.png"/>
+            </MenuItem.Icon>
+            <MenuItem x:Name="menuFontTimes" Header="Times" IsCheckable="True" IsChecked="True" StaysOpenOnClick="True" Click="MenuFontTimes_Click"/>
+            <MenuItem x:Name="menuFontArial" Header="Arial" IsCheckable="True" StaysOpenOnClick="True" Click="MenuFontArial_Click"/>
+            <MenuItem x:Name="menuFontCourier" Header="Courier" IsCheckable="True" StaysOpenOnClick="True" Click="MenuFontCourier_Click"/>
+        </MenuItem>
+        <Separator/>
+        <MenuItem x:Name="menuTimeDate" Header="TimeDate" InputGestureText="F10" Click="MenuTimeDate_Click">
+
+        </MenuItem>
+    </MenuItem>
+    <MenuItem Header="_About">
+        <MenuItem x:Name="menuAbout" Header="About" Click="MenuAbout_Click">
+            <MenuItem.Icon>
+                <Image Source="./Resources/InformationSymbol_16x.png"/>
+            </MenuItem.Icon>
+        </MenuItem>
+    </MenuItem>-->

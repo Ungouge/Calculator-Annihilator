@@ -29,15 +29,8 @@ namespace Calculator_Annihilator
             GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
 
             // Initialization
-            try
-            {
-            InitializeComponent();
 
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            InitializeComponent();
 
             // Postinitialization
             
