@@ -106,7 +106,7 @@
                             <Setter Property="Visibility" TargetName="Icon" Value="Collapsed"/>
                         </Trigger>
                         <Trigger SourceName="ModeSwitcherButton" Property="IsChecked" Value="False">
-                            <Setter Property="Visibility" TargetName="MenuBorderTemplate" Value="Hidden"/>
+                            <Setter Property="Visibility" TargetName="ModeSwitcher" Value="Hidden"/>
                             <Setter Property="Visibility" TargetName="ModeSwitcherButton" Value="Collapsed"/>
                         </Trigger>
                         <Trigger Property="IsHighlighted" Value="True">
@@ -115,7 +115,6 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="TextElement.Foreground" TargetName="MenuBorderTemplate" Value="#FF707070"/>
-                            <Setter Property="Visibility" TargetName="MenuBorderTemplate" Value="Collapsed"/>
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>

@@ -115,7 +115,7 @@
         </Setter>
     </Style>
 </ResourceDictionary>
-
+    
 <!-- 
     
     <Menu DockPanel.Dock="Top">
