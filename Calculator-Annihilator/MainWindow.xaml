@@ -22,7 +22,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.XAML"/>
-                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary_Borrowed.XAML"/>
             </ResourceDictionary.MergedDictionaries>
 
             <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
