@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Complex_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
-            GUI_Dynamic_Parameters.Calculation_Method = Calculation_Method.Complex;
+            _Static_Resources.Calculation_Method = Calculation_Method.Complex;
 
 			string newWorkSpaceText = "";
 
@@ -35,8 +35,8 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Enable_Complex_Buttons()
 		{
-			Button_Open_Bracket.IsEnabled = true;
-			Button_Close_Bracket.IsEnabled = true;
+			//Button_Open_Bracket.IsEnabled = true;
+			//Button_Close_Bracket.IsEnabled = true;
 		}
 	}
 }

@@ -21,19 +21,12 @@
     <Window.Resources >
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.XAML"/>
+                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.xaml"/>
+                <ResourceDictionary Source="WPF_Styles/Calculator_Buttons_Style.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
-                <Setter Property="Margin" Value="1,1,1,1" />
-                <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay, FallbackValue=16}" />
-                <Setter Property="VerticalContentAlignment" Value="Center" />
-                <Setter Property="FontFamily" Value="Consolas" />
-            </Style>
         </ResourceDictionary>
-        
     </Window.Resources>
-    
+
     <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -43,27 +36,33 @@
 
         <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" IsMainMenu="True">
             <MenuItem Header="View" ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
+                
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                 </Grid>
+                
                 <MenuItem x:Name="Standard_MenuButton" Header="Standard" Grid.Column="1" IsCheckable="True"
                           Click="Standard_MenuButton_Click"/>
                 <MenuItem x:Name="Scientific_MenuButton" Header="Scientific" Grid.Column="1" IsCheckable="True"
                           Click="Scientific_MenuButton_Click"/>
                 <Separator/>
             </MenuItem>
+            
             <MenuItem Header="Edit" >
 
             </MenuItem>
+            
             <MenuItem Header="_Help" >
 
             </MenuItem>
 
         </Menu>
+
         <Grid x:Name="WorkGrid" Grid.Row="1">
+            
             <Grid.RowDefinitions>
                 <RowDefinition SharedSizeGroup="A"/>
                 <RowDefinition SharedSizeGroup="A"/>
@@ -85,16 +84,20 @@
                      Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged" />
 
             <Grid Name="CalculationTypeSwitcher_Grid"  Grid.Row="1" Grid.Column="0" Margin="1,1,1,1">
+                
                 <Grid.Resources>
                     <Style TargetType="RadioButton">
                         <Setter Property="VerticalAlignment" Value="Center"/>
-                    </Style>
-                    <Style TargetType="TextBlock">
-                        <Setter Property="FontSize" Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay, FallbackValue=15}"/>
-                        <Setter Property="Margin" Value="5,1,5,1"/>
+                        <Style.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="FontSize"
+                                        Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay, FallbackValue=15}"/>
+                                <Setter Property="Margin" Value="5,1,5,1"/>
+                            </Style>
+                        </Style.Resources>
                     </Style>
                 </Grid.Resources>
-                
+
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -105,7 +108,7 @@
                     <TextBlock Name="SingleCalculations_RadioButton_TextBlock">
                         Single Calculations
                     </TextBlock>
-                    
+
                 </RadioButton>
                 <RadioButton GroupName="CalculationTypeSwitcher" Name="ComplexCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="1" Checked="Complex_Calculations_Button_Checked">
@@ -113,70 +116,26 @@
                         Complex Calculations
                     </TextBlock>
                 </RadioButton>
+                
             </Grid>
         </Grid>
+        <Grid x:Name="ButtonsGrid" Grid.Row="2">
 
-
-        <Grid x:Name="ButtonGrid" Grid.Row="2" >
-            <Grid.RowDefinitions>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="Button_Open_Bracket" Content="(" Grid.Row="0" Grid.Column="0" 
-                    Click="Button_Open_Bracket_Click" />
-            <Button x:Name="Button_Close_Bracket" Content=")" Grid.Row="0" Grid.Column="1" 
-                    Click="Button_Close_Bracket_Click" />
-            <Button x:Name="Button_BackSpace" Content="CE" Grid.Row="0" Grid.Column="2"
-                    Click="Button_CE_Click" />
-            <Button x:Name="Button_Clear" Content="C" Grid.Row="0" Grid.Column="3" 
-                    Click="Button_Clear_Click" />
+            <Grid.Resources>
+                <Style TargetType="ContentControl" BasedOn="{StaticResource Calculator_Buttons_Style}"/>
+            </Grid.Resources>
 
-            <Button x:Name="Button_7" Content="7" Grid.Row="1" Grid.Column="0"
-                    Click="Button_7_Click" />
-            <Button x:Name="Button_8" Content="8" Grid.Row="1" Grid.Column="1"
-                    Click="Button_8_Click" />
-            <Button x:Name="Button_9" Content="9" Grid.Row="1" Grid.Column="2"
-                    Click="Button_9_Click" />
-            <Button x:Name="Button_PlusSign" Content="+" Grid.Row="1" Grid.Column="3"
-                    Click="Button_PlusSign_Click" />
-
-            <Button x:Name="Button_6" Content="6" Grid.Row="2" Grid.Column="2"
-                    Click="Button_6_Click" />
-            <Button x:Name="Button_5" Content="5" Grid.Row="2" Grid.Column="1"
-                    Click="Button_5_Click" />
-            <Button x:Name="Button_4" Content="4" Grid.Row="2"
-                    Click="Button_4_Click" />
-            <Button x:Name="Button_MinuSing" Content="-" Grid.Row="2" Grid.Column="3"
-                    Click="Button_MinuSing_Click" />
-
-            <Button x:Name="Button_1" Content="1" Grid.Row="3" Grid.Column="0"
-                    Click="Button_1_Click" />
-            <Button x:Name="Button_2" Content="2" Grid.Row="3" Grid.Column="1"
-                    Click="Button_2_Click" />
-            <Button x:Name="Button_3" Content="3" Grid.Row="3" Grid.Column="2"
-                    Click="Button_3_Click" />
-            <Button x:Name="Button_MultiplicationSing" Content="*" Grid.Row="3" Grid.Column="3"
-                    Click="Button_MultiplicationSing_Click" />
-
-            <Button x:Name="Button_Comma" Content="," Grid.Row="4" Grid.Column="0"
-                    Click="Button_Comma_Click" />
-            <Button x:Name="Button_0" Content="0" Grid.Row="54" Grid.Column="1"
-                    Click="Button_0_Click" />
-            <Button x:Name="Button_Equals" Content="=" Grid.Row="4" Grid.Column="2"
-                    Click="Button_Equals_Click" />
-            <Button x:Name="Button_DivisionSign" Content="/" Grid.Row="4" Grid.Column="3"
-                    Click="Button_DivisionSign_Click" />
+            <ContentControl x:Name="NumberKeys_ContextControl" Grid.Column="0" Content="{Binding}"/>
+            <ContentControl x:Name="BasicOperations_ContextControl" Grid.Column="1" Content="{Binding}"/>
+            <ContentControl x:Name="AdvancedOperations_ContextControl" Grid.Column="2" Content="{Binding}"/>
 
         </Grid>
     </Grid>
+    
 </Window>

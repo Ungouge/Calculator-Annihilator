@@ -19,6 +19,8 @@ namespace Calculator_Annihilator
             initial_Width = Properties.Settings.Default.initial_Width;
             numeral_System = Properties.Settings.Default.numeral_System;
 
+
+
             //Default Values
             //calculator_Mode = Calculator_Mode.Standard;
             //calculation_Method = Calculation_Method.Single;

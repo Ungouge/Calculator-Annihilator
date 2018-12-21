@@ -23,34 +23,35 @@ namespace Calculator_Annihilator
         public MainWindow()
         {
             // Preinitialization
-
-            Settings_File_Reader _Settings_File_Reader  = new Settings_File_Reader();
-            _Static_Resources = new Static_Resources(_Settings_File_Reader);
-            GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
-
-            // Initialization
             try
             {
-            InitializeComponent();
+                Settings_File_Reader _Settings_File_Reader  = new Settings_File_Reader();
+                _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
+                GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
+                _Settings_File_Reader.Push_MainWindow_Values(this);
+                
+
+                // Initialization
+
+                InitializeComponent();
+
+                // Postinitialization
+            
+                this.DataContext = GUI_Dynamic_Parameters;
+                ComplexCalculations.DataContext = GUI_Dynamic_Parameters;
+                 Calculator_Buttons_Panel_Setter();
+                
+
+                if (_Static_Resources.Calculation_Method == Calculation_Method.Single)
+                    this.SingleCalculations.IsChecked = true;
+                else // calculation_Method == Calculation_Method.Complex
+                    this.ComplexCalculations.IsChecked = true;
 
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-
-            // Postinitialization
-            
-            this.DataContext = GUI_Dynamic_Parameters;
-
-            GUI_Dynamic_Parameters.Calculation_Method = _Settings_File_Reader.Initial_Calculation_Method;
-
-            if (GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single)
-                this.SingleCalculations.IsChecked = true;
-            else // calculation_Method == Calculation_Method.Complex
-                this.ComplexCalculations.IsChecked = true;
-
-            Current_Numeral_System = new Numeral_System(_Settings_File_Reader.Initial_Numeral_System);
         }
     }
 }

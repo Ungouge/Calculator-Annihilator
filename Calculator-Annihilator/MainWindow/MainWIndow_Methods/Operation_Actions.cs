@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -14,9 +10,9 @@ namespace Calculator_Annihilator
 		/// <param name="_Operand"></param>
 		private void Operation_Button(IOperand _Operand)
 		{
-			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
+			if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Single))
 				Basic_Calculation_Single(_Operand);
-			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
+			else if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Complex))
 				Insert_To_WorkSpace(_Operand.ToString());
 		}
 

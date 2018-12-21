@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
-    partial class MainWindow
-    {
-        partial class Static_Resources : INotifyPropertyChanged
-        {
-            public event PropertyChangedEventHandler PropertyChanged;
+    // So far no need for this
 
-            private void On_Property_Change(string PropertName)
-            {
-                if (PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs(PropertName));
-                }
-            }
-        }
-    }
+    //partial class MainWindow
+    //{
+    //    partial class Static_Resources //: INotifyPropertyChanged
+    //    {
+    //        //public event PropertyChangedEventHandler PropertyChanged;
+
+    //        //private void On_Property_Change(string PropertName)
+    //        //{
+    //        //    if (PropertyChanged != null)
+    //        //    {
+    //        //        PropertyChanged(this, new PropertyChangedEventArgs(PropertName));
+    //        //    }
+    //        //}
+    //    }
+    //}
 }

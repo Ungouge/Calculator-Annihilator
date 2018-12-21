@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Calculator_Annihilator.Basic_Operations_Less_Than_Hexadecimal_System"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Calculator_Annihilator"
+             mc:Ignorable="d" 
+             d:DesignHeight="308" d:DesignWidth="140">
+
+    <Grid x:Name="BasicOperation_Grid" Grid.Row="2" >
+        <Grid.RowDefinitions>
+            <RowDefinition SharedSizeGroup="A"/>
+            <RowDefinition SharedSizeGroup="A"/>
+            <RowDefinition SharedSizeGroup="A"/>
+            <RowDefinition SharedSizeGroup="A"/>
+            <RowDefinition SharedSizeGroup="A"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition SharedSizeGroup="A"/>
+            <ColumnDefinition SharedSizeGroup="A"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="Button_Clear" Content="C" Grid.Row="0" Grid.Column="0" 
+                    Click="Button_Clear_Click" />
+        <Button x:Name="Button_Exponent" Content="EXP" Grid.Row="0" Grid.Column="1"
+                    Click="Button_Exponent_Click" />
+
+        <Button x:Name="Button_ANS" Content="ANS" Grid.Row="1" Grid.Column="0"
+                    Click="Button_ANS_Click" />
+        <Button x:Name="Button_Percent" Content="%" Grid.Row="1" Grid.Column="1" 
+                    Click="Button_Percent_Click" />
+
+        <Button x:Name="Button_PlusSign" Content="+" Grid.Row="2" Grid.Column="0"
+                    Click="Button_PlusSign_Click" />
+        <Button x:Name="Button_MinuSing" Content="-" Grid.Row="2" Grid.Column="1"
+                    Click="Button_MinuSing_Click" />
+
+        <Button x:Name="Button_MultiplicationSing" Content="*" Grid.Row="3" Grid.Column="0"
+                    Click="Button_MultiplicationSing_Click" />
+        <Button x:Name="Button_DivisionSign" Content="/" Grid.Row="3" Grid.Column="1"
+                    Click="Button_DivisionSign_Click" />
+
+        <Button x:Name="Button_Equals" Content="=" Grid.Row="4" Grid.Column="1"
+                    Click="Button_Equals_Click" />
+        <Button x:Name="Button_Comma" Content="," Grid.Row="4" Grid.Column="0"
+                    Click="Button_Comma_Click" />
+    </Grid>
+</UserControl>

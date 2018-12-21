@@ -10,16 +10,9 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
         {
-            GUI_Dynamic_Parameters.Calculation_Method = Calculation_Method.Single;
+            _Static_Resources.Calculation_Method = Calculation_Method.Single;
 
-            try
-            {
-                Complex_To_Single();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Complex_To_Single();
 
             Disable_Complex_Buttons();
 		}
@@ -39,8 +32,8 @@ namespace Calculator_Annihilator
         /// </summary>
         private void Disable_Complex_Buttons()
 		{
-			Button_Open_Bracket.IsEnabled = false;
-			Button_Close_Bracket.IsEnabled = false;
+			//Button_Open_Bracket.IsEnabled = false;
+			//Button_Close_Bracket.IsEnabled = false;
 		}
 	}
 }
