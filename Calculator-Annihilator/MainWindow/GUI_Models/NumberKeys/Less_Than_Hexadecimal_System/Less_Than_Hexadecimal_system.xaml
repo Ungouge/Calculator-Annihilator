@@ -21,9 +21,9 @@
             <ColumnDefinition SharedSizeGroup="A"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="Button_Open_Bracket" Content="(" Grid.Row="0" Grid.Column="0" 
+        <Button x:Name="Button_Open_Bracket_Or_Change_Sign" Content="(" Grid.Row="0" Grid.Column="0" 
                     Click="Button_Open_Bracket_Click" />
-        <Button x:Name="Button_Close_Bracket" Content=")" Grid.Row="0" Grid.Column="1" 
+        <Button x:Name="Button_Close_Bracket_Or_Invert_Number" Content=")" Grid.Row="0" Grid.Column="1" 
                     Click="Button_Close_Bracket_Click" />
         <Button x:Name="Button_BackSpace" Content="BackSpace" Grid.Row="0" Grid.Column="2"
                     Click="Button_BackSpace_Click" />

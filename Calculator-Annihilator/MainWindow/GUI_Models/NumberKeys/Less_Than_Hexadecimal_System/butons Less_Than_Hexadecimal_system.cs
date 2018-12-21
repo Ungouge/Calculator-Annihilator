@@ -85,14 +85,24 @@ namespace Calculator_Annihilator
             MainWindow.Number_Button_Action('F');
         }
 
-        private void Button_Open_Bracket_Click(object sender, RoutedEventArgs e)
+        public void Button_Open_Bracket_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Number_Button_Action('(');
         }
 
-        private void Button_Close_Bracket_Click(object sender, RoutedEventArgs e)
+        public void Button_Close_Bracket_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Number_Button_Action(')');
+        }
+
+        void IButton_Changer.Button_Change_Sign_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_Change_Sign_Action();
+        }
+
+        void IButton_Changer.Button_Invert_Number_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_Invert_Number_Action();
         }
 
         private void Button_BackSpace_Click(object sender, RoutedEventArgs e)

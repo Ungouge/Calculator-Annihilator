@@ -135,6 +135,7 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
+    <Compile Include="MainWindow\Button_Click_Events\additional buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
@@ -143,6 +144,10 @@
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\Basic_Operations_Less_Than_Decimal_System.xaml.cs">
       <DependentUpon>Basic_Operations_Less_Than_Decimal_System.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Buttons_Exchanger_Base.cs" />
+    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
+    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
+    <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculator_Mode.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculation_Method.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
@@ -235,7 +240,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow\Button_Click_Events\Operation_Buttons.cs" />
+    <Compile Include="MainWindow\Button_Click_Events\operation buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Number_Button_Click.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
     <Compile Include="Parser\Parser.cs" />
