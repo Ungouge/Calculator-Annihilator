@@ -15,16 +15,19 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    class Open_Bracket_Or_Change_Sign_Exchanger: Buttons_Exchanger_Base
+    /// <summary>
+    /// Class for setting features of passed button to function as open bracket or change sign button
+    /// according to currently ussed calculation method.
+    /// </summary>
+    internal class Open_Bracket_Or_Change_Sign_Exchanger
     {
-        
-        public Open_Bracket_Or_Change_Sign_Exchanger(Button _Button, Calculation_Method _Calculation_Method, IButton_Changer _Buttons_Controller)
-            :base (_Button, _Calculation_Method,  _Buttons_Controller)
-        {
-            // Empty
-        }
 
-        protected internal void Set_Open_Bracket_Or_Change_Sign_Button()
+        /// <summary>
+        /// Sets button features to function as open bracket or change sign button
+        /// according to currently ussed calculation method.
+        /// </summary>
+
+        protected internal void Set_Open_Bracket_Or_Change_Sign_Button(Button Button, Calculation_Method Calculation_Method, IButton_Changer Buttons_Controller)
         {
             if (Calculation_Method == Calculation_Method.Complex)
             {

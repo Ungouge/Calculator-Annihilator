@@ -144,7 +144,6 @@
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\Basic_Operations_Less_Than_Decimal_System.xaml.cs">
       <DependentUpon>Basic_Operations_Less_Than_Decimal_System.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Buttons_Exchanger_Base.cs" />
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
