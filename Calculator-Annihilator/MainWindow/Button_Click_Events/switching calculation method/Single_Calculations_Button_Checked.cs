@@ -14,7 +14,7 @@ namespace Calculator_Annihilator
 
             Complex_To_Single();
 
-            Disable_Complex_Buttons();
+            Set_Specialized_Buttons();
 		}
 
 		/// <summary>
@@ -26,14 +26,5 @@ namespace Calculator_Annihilator
                 new Complex_To_Single_WorkSpace_Converter(WorkSpace.Text, Current_Numeral_System, this);
             _Converter.Convert_To_Single();
         }
-
-        /// <summary>
-        /// Dissables buttons that have no use in single calculations.
-        /// </summary>
-        private void Disable_Complex_Buttons()
-		{
-			//Button_Open_Bracket.IsEnabled = false;
-			//Button_Close_Bracket.IsEnabled = false;
-		}
 	}
 }

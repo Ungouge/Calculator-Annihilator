@@ -1,5 +1,5 @@
-﻿
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Calculator_Annihilator
 {
@@ -26,17 +26,8 @@ namespace Calculator_Annihilator
 
 			no_operand_Sign_Single = true;
 			no_First_Number_In_Equation_Single = true;
-        
-			Enable_Complex_Buttons();
-		}
 
-		/// <summary>
-		/// Enables buttons that have use in complex calculations.
-		/// </summary>
-		private void Enable_Complex_Buttons()
-		{
-			//Button_Open_Bracket.IsEnabled = true;
-			//Button_Close_Bracket.IsEnabled = true;
+            Set_Specialized_Buttons();
 		}
 	}
 }

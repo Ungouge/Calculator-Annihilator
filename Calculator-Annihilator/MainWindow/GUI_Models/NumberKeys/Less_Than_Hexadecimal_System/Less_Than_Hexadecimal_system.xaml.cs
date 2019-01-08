@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Calculator_Annihilator
@@ -16,17 +17,27 @@ namespace Calculator_Annihilator
             InitializeComponent();
             this.DataContext = _MainWindow.GUI_Dynamic_Parameters;
 
-            Calculation_Method calculation_Method = MainWindow._Static_Resources.Calculation_Method;
+            Set_Open_Bracket_Or_Change_Sign_Button();
 
-            Open_Bracket_Or_Change_Sign_Exchanger Open_Change_Exchanger = new Open_Bracket_Or_Change_Sign_Exchanger();
+            Set_Close_Bracket_Or_Invert_Number_Button();
+        }
+
+        public void Set_Open_Bracket_Or_Change_Sign_Button()
+        {
+            Open_Bracket_Or_Change_Sign_Exchanger Open_Change_Exchanger =
+                new Open_Bracket_Or_Change_Sign_Exchanger();
 
             Open_Change_Exchanger.Set_Open_Bracket_Or_Change_Sign_Button(
-                Button_Open_Bracket_Or_Change_Sign, calculation_Method, this);
+                    Button_Open_Bracket_Or_Change_Sign, MainWindow._Static_Resources.Calculation_Method, this as IButton_Changer);
+        }
 
-            Close_Bracket_Or_Invert_Number_Exchanger Close_Invert_Exchanger = new Close_Bracket_Or_Invert_Number_Exchanger();
+        public void Set_Close_Bracket_Or_Invert_Number_Button()
+        {
+            Close_Bracket_Or_Invert_Number_Exchanger Close_Invert_Exchanger =
+                   new Close_Bracket_Or_Invert_Number_Exchanger();
 
             Close_Invert_Exchanger.Set_Close_Bracket_Or_Invert_Number_Button(
-                Button_Close_Bracket_Or_Invert_Number, calculation_Method, this);
+                    Button_Close_Bracket_Or_Invert_Number, MainWindow._Static_Resources.Calculation_Method, this as IButton_Changer);
         }
     }
 }

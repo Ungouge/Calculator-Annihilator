@@ -65,12 +65,19 @@ namespace Calculator_Annihilator
             MainWindow.Exponent_Button_Action();
         }
 
-        public void Button_Open_Bracket_Click(object sender, RoutedEventArgs e)
+        void IButton_Changer.Button_Open_Bracket_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.Number_Button_Action('(');
+            try
+            {
+                MainWindow.Number_Button_Action('(');
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        public void Button_Close_Bracket_Click(object sender, RoutedEventArgs e)
+        void IButton_Changer.Button_Close_Bracket_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Number_Button_Action(')');
         }

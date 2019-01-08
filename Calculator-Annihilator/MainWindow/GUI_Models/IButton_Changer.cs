@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Calculator_Annihilator
@@ -11,7 +7,7 @@ namespace Calculator_Annihilator
     /// Defines an object that contains button click events for exchanging specialised buttons 
     /// for difrent calculation methods.
     /// </summary>
-    interface IButton_Changer
+    internal interface IButton_Changer
     {
         void Button_Open_Bracket_Click(object sender, RoutedEventArgs e);
 
@@ -20,5 +16,9 @@ namespace Calculator_Annihilator
         void Button_Change_Sign_Click(object sender, RoutedEventArgs e);
 
         void Button_Invert_Number_Click(object sender, RoutedEventArgs e);
+
+        void Set_Open_Bracket_Or_Change_Sign_Button();
+
+        void Set_Close_Bracket_Or_Invert_Number_Button();
     }
 }

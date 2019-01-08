@@ -16,39 +16,51 @@ namespace Calculator_Annihilator
 		/// <param name="_Numeral_System">Convert to this numeral system</param>
 		public Number Parse(string work_Text, Numeral_System _Numeral_System)
 		{
-			int commaPosition = Comma_Position(work_Text);
+			int comma_Position = Comma_Position(work_Text);
 
-			double parsedOutput = 0;
+            bool is_Negative = false;
 
-			for (int i = 0; i < commaPosition; i++) //parsing numbers highier than zero
+			double parsed_Output = 0;
+
+            if (work_Text[0] == '-')
+                is_Negative = true;
+
+			for (int i = ( is_Negative ? 1 : 0) ; i < comma_Position; i++) //parsing numbers highier than zero
 			{
 				try
 				{
-					parsedOutput +=
-                        DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i - 1);
+					parsed_Output +=
+                        Digit_Parse(work_Text[i], _Numeral_System) * Math.Pow(
+                            _Numeral_System.System_Type, comma_Position - i - 1);
 				}
 				catch (Exception ex)
 				{
-					parsedOutput = parsedOutput * Math.Pow(_Numeral_System.System_Type, i - commaPosition);
-					MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsedOutput}.");
-					return new Number(parsedOutput);
+					parsed_Output = parsed_Output * Math.Pow(_Numeral_System.System_Type, i - comma_Position);
+                    parsed_Output = Recognize_Negative_Sign(parsed_Output, is_Negative);
+                    MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+					return new Number( parsed_Output);
 				}
 			}
 
-			for (int i = commaPosition + 1; i < work_Text.Length; i++) //parsing numbers lower than zero
+			for (int i = comma_Position + 1; i < work_Text.Length; i++) //parsing numbers lower than zero
 			{
 				try
 				{
-					parsedOutput +=
-                        DigitParse(work_Text[i], _Numeral_System) * Math.Pow(_Numeral_System.System_Type, commaPosition - i);
+					parsed_Output +=
+                        Digit_Parse(work_Text[i], _Numeral_System) * Math.Pow(
+                            _Numeral_System.System_Type, comma_Position - i);
 				}
 				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsedOutput}.");
-				}
+                {
+                    parsed_Output = Recognize_Negative_Sign(parsed_Output, is_Negative);
+                    MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+                    return new Number(parsed_Output);
+                }
 			}
 
-			return new Number (parsedOutput);
+            parsed_Output = Recognize_Negative_Sign(parsed_Output, is_Negative);
+
+            return new Number (parsed_Output);
 		}
 
 		/// <summary>
@@ -65,6 +77,21 @@ namespace Calculator_Annihilator
 			return work_Text.Length;
 		}
 
+        /// <summary>
+        /// Recognizes does number is flaged as negative, if so returns it as negative
+        /// </summary>
+        private double Recognize_Negative_Sign(double parsed_Output, bool isNegative)
+        {
+            if ( isNegative == false)
+            {
+                return parsed_Output;
+            }
+            else // ( isNegative == true)
+            {
+                return parsed_Output * -1e0;
+            }
+        }
+
 		/// <summary>
 		/// Converts the character representation of a number in given numeral system to its
 		/// signed byte number equivalent.
@@ -73,7 +100,7 @@ namespace Calculator_Annihilator
 		/// The Exception that is thrown when character that is to be parsed to digit is corresponding
 		///  no digit from current numerical system.
 		/// </exception>
-		public sbyte DigitParse(char digit, Numeral_System _Numeral_System)
+		public sbyte Digit_Parse(char digit, Numeral_System _Numeral_System)
 		{
 			if (digit > (char)47 && digit < (char)58 && digit < _Numeral_System.System_Type + 48)
 				return (sbyte)(digit - 48);

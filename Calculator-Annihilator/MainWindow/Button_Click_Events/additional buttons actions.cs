@@ -44,14 +44,22 @@ namespace Calculator_Annihilator
             }
         }
 
-        internal void Button_Change_Sign_Action() //xyz To Implement
+        internal void Button_Change_Sign_Action()
         {
-            throw new NotImplementedException();
+            if (WorkSpace.Text[0] == '-')
+                Remove_From_WorkSpace(0, 1);
+            else
+                Insert_To_WorkSpace(0, '-');
         }
 
-        internal void Button_Invert_Number_Action()//xyz To Implement
+        internal void Button_Invert_Number_Action()
         {
-            throw new NotImplementedException();
+            Number WorkSpace_Number = Parse_WorkSpace();
+
+            if (WorkSpace_Number.Value != 0)
+                WorkSpace_Number = Calc.Operand_Selector(new Division(), new Number(1), WorkSpace_Number);
+
+            Reset_WorkSpace_Text(WorkSpace_Number.ToString());
         }
     }
 }

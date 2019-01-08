@@ -1,24 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
-		private Parser parser = new Parser();
-		private Calc calc = new Calc();
+		private Parser Parser = new Parser();
+		private Calc Calc = new Calc();
 
 		private Equation Equation;
 
@@ -28,13 +15,18 @@ namespace Calculator_Annihilator
 
         internal Static_Resources _Static_Resources;
 
-		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
+		public sbyte Numeral_System_Type //check class Numerical_System for description of exotic numeral system
 		{
 			get
 			{
 				return Current_Numeral_System.System_Type;
 			}
 		}
+
+        protected internal Numeral_System Get_Numeral_System
+        {
+            get { return Current_Numeral_System; }
+        }
 
 		public char[] Numerical_System_Signs
 		{

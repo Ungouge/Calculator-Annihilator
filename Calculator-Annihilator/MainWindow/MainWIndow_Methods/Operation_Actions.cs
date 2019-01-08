@@ -39,7 +39,7 @@ namespace Calculator_Annihilator
 				try
 				{
 					first_Number_In_Equation_Single = 
-						calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+						Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 					Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString());
 				}
 				catch (DivideByZeroException)

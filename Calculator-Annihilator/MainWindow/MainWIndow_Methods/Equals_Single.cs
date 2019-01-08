@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -15,7 +11,7 @@ namespace Calculator_Annihilator
 		{
 			try
 			{
-				Number calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+				Number calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 				Reset_ResultSpace_Text(calculation_Result.ToString());
 			}
 			catch (DivideByZeroException)
