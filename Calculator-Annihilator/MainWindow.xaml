@@ -35,26 +35,31 @@
         </Grid.RowDefinitions>
 
         <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" IsMainMenu="True">
-            <MenuItem Header="View" ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
+
+            <MenuItem Header="File">
+
+                <MenuItem x:Name="New_WindowButton" Header="New Window" Click="New_WindowButton_Click"/>
+
+                <MenuItem x:Name="OptionsButton" Header="Options" Click="OptionsButton_Click"/>
+
+                <Separator/>
+
+                <MenuItem x:Name="Close_WindowButton" Header="Close Window" Click="Close_WindowButton_Click"/>
                 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-                
+             </MenuItem>
+
+             <MenuItem Header="View" ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
+
                 <MenuItem x:Name="Standard_MenuButton" Header="Standard" Grid.Column="1" IsCheckable="True"
                           Click="Standard_MenuButton_Click"/>
+                
                 <MenuItem x:Name="Scientific_MenuButton" Header="Scientific" Grid.Column="1" IsCheckable="True"
                           Click="Scientific_MenuButton_Click"/>
-                
-                <Separator/>
-                
+
             </MenuItem>
             
             <MenuItem Header="Edit" >
-
+                
             </MenuItem>
             
             <MenuItem Header="_Help" >

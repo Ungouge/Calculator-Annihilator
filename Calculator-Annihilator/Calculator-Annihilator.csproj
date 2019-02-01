@@ -178,13 +178,16 @@
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\additional buttons actions.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Menu_Bar_Buttons\Scientific_MenuButton_Click.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Menu_Bar_Buttons\Standard_MenuButton_Click.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\switching calculation method\Set_Specialized_Buttons.cs" />
+    <Compile Include="MainWindow\Button_Click events\additional buttons actions.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\Close_WindowButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\New_WindowButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\OptionsButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\View\Scientific_MenuButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\View\Standard_MenuButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Set_Specialized_Buttons.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\Basic_Operations_Less_Than_Decimal_System.xaml.cs">
       <DependentUpon>Basic_Operations_Less_Than_Decimal_System.xaml</DependentUpon>
     </Compile>
@@ -213,7 +216,7 @@
     <Compile Include="MainWindow\Static_Resources\Number_Notation.cs" />
     <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />
     <Compile Include="MainWindow\Static_Resources\On_Property_Change.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\changed events.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Operation_Actions.cs" />
     <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
@@ -226,7 +229,7 @@
     <Compile Include="MainWindow\MainWindow_Methods\Set_Current_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\switching calculation method\Single_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
@@ -286,8 +289,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow\Button_Click_Events\operation buttons actions.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Number_Button_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
+    <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
