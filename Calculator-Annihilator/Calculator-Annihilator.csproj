@@ -232,6 +232,9 @@
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
+    <Compile Include="Options_Window.xaml.cs">
+      <DependentUpon>Options_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
     <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
@@ -276,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Hexadecimal_System\Less_Than_Hexadecimal_System.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Options_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -336,6 +343,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
+    <Folder Include="Options_Window\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
