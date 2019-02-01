@@ -30,14 +30,14 @@ namespace Calculator_Annihilator
                 MainWindow.no_First_Number_In_Equation_Single = false;
                 MainWindow.First_Number_In_Equation_Single = First_Number;
 
-                MainWindow.Reset_ResultSpace_Text(MainWindow.First_Number_In_Equation_Single.ToString());
+                MainWindow.Reset_ResultSpace_Text(MainWindow.Back_Parser.Parse_Back(MainWindow.First_Number_In_Equation_Single));
 
                 MainWindow.no_operand_Sign_Single = false;
                 MainWindow.operand_Sign_Single = Operand;
 
                 MainWindow.Insert_To_ResultSpace(MainWindow.operand_Sign_Single.ToString());
 
-                MainWindow.Reset_WorkSpace_Text(Seccond_Number.ToString());
+                MainWindow.Reset_WorkSpace_Text(MainWindow.Back_Parser.Parse_Back(Seccond_Number));
             }
 
             /// <summary>
@@ -48,7 +48,7 @@ namespace Calculator_Annihilator
                 MainWindow.no_First_Number_In_Equation_Single = false;
                 MainWindow.First_Number_In_Equation_Single = First_Number;
 
-                MainWindow.Reset_ResultSpace_Text(MainWindow.First_Number_In_Equation_Single.ToString());
+                MainWindow.Reset_ResultSpace_Text(MainWindow.Back_Parser.Parse_Back(MainWindow.First_Number_In_Equation_Single));
 
                 MainWindow.no_operand_Sign_Single = true;
                 MainWindow.operand_Sign_Single = Operand;
@@ -66,7 +66,7 @@ namespace Calculator_Annihilator
                 MainWindow.First_Number_In_Equation_Single = First_Number;
                 MainWindow.no_First_Number_In_Equation_Single = false;
 
-                MainWindow.Reset_ResultSpace_Text(MainWindow.First_Number_In_Equation_Single.ToString());
+                MainWindow.Reset_ResultSpace_Text(MainWindow.Back_Parser.Parse_Back(MainWindow.First_Number_In_Equation_Single));
 
                 MainWindow.Clear_WorkSpace();
             }

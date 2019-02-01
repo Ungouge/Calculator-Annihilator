@@ -69,10 +69,26 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private static int Comma_Position(string work_Text)
 		{
-			for (int i = 0; i < work_Text.Length; i++)
-				foreach (char comma in Signs_Lib.CommasType)
-					if (comma == work_Text[i])
-						return i;
+            for (int i = 0; i < work_Text.Length; i++)
+            {
+                foreach (string comma in Signs_Lib.Commas_Type)
+                {
+                    int j = i;
+
+                    foreach (char comma_sign in comma)
+                    {
+                        if (j < work_Text.Length)
+                        {
+                            if (comma_sign != work_Text[j++])
+                                break;
+                        }
+                        else
+                            break;
+
+                        return i;
+                    }
+                }
+            }
 
 			return work_Text.Length;
 		}
@@ -102,13 +118,13 @@ namespace Calculator_Annihilator
 		/// </exception>
 		public sbyte Digit_Parse(char digit, Numeral_System _Numeral_System)
 		{
-			if (digit > (char)47 && digit < (char)58 && digit < _Numeral_System.System_Type + 48)
-				return (sbyte)(digit - 48);
-			else if (digit > (char)64 && digit < (char)91 && digit < _Numeral_System.System_Type + 55) // not tested from this point
+			if (digit >= '0' && digit <= '9' && digit < _Numeral_System.System_Type + 48)
+				return (sbyte)(digit - '0');
+			else if (digit >= 'A' && digit <= 'Z' && digit < _Numeral_System.System_Type + 55)
 				return (sbyte)(digit - 55); // 'A' = 10 - 'Z' 35
-			else if (digit > (char)96 && digit < (char)121 && digit < _Numeral_System.System_Type + 51)
-				return (sbyte)(digit - 51); // 'a' = 36 - 'x' = 59 
-			else
+			else if (digit >= 'a' && digit <= '|' && digit < _Numeral_System.System_Type + 61)
+				return (sbyte)(digit - 61); // 'a' = 36 - 'z' = 61, '}' = 62, '|' =  63
+            else
 				throw new ParsingCharacterIsNoDigitException($"{digit} is not a digit");
 		}
 	}
@@ -134,8 +150,8 @@ namespace Calculator_Annihilator
 //'S' = 29
 //'T' = 29
 //'U' = 30
-//'W' = 31
-//'V' = 32
+//'V' = 31
+//'W' = 32
 //'X' = 33
 //'Y' = 34
 //'Z' = 35
@@ -160,6 +176,10 @@ namespace Calculator_Annihilator
 //'s' = 54
 //'t' = 55
 //'u' = 56
-//'w' = 57
-//'v' = 58
+//'v' = 57
+//'w' = 58
 //'x' = 59
+//'y' = 60
+//'z' = 61
+//'}' = 62
+//'|' = 63

@@ -8,26 +8,31 @@ namespace Calculator_Annihilator
 		/// Controlls action after pressing equals button when option for single calculations is on.
 		/// </summary>
 		private void Equals_Single( )
-		{
-			try
+        {
+            string new_ResultSpace_Text;
+
+            try
 			{
-				Number calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				Reset_ResultSpace_Text(calculation_Result.ToString());
+                Number calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+				
+                new_ResultSpace_Text = Back_Parser.Parse_Back(calculation_Result);
 			}
 			catch (DivideByZeroException)
 			{
-				Reset_ResultSpace_Text("Dividing by zero is not allowed");
+                new_ResultSpace_Text = "Dividing by zero is not allowed";
 			}
-			catch
+			catch(Exception e)
 			{
-				Reset_ResultSpace_Text(default(string));
+                new_ResultSpace_Text = "Unknown error occur";
 			}
 			finally
 			{
-				no_operand_Sign_Single = true;
+                no_operand_Sign_Single = true;
 				no_First_Number_In_Equation_Single = true;
 				Clear_WorkSpace();
 			}
+
+            Reset_ResultSpace_Text(new_ResultSpace_Text);
 		}
 	}
 }

@@ -73,13 +73,37 @@ namespace Calculator_Annihilator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        [global::System.Configuration.DefaultSettingValueAttribute("64")]
         public sbyte numeral_System {
             get {
                 return ((sbyte)(this["numeral_System"]));
             }
             set {
                 this["numeral_System"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public sbyte Number_Notation {
+            get {
+                return ((sbyte)(this["Number_Notation"]));
+            }
+            set {
+                this["Number_Notation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(",")]
+        public char comma_Type {
+            get {
+                return ((char)(this["comma_Type"]));
+            }
+            set {
+                this["comma_Type"] = value;
             }
         }
     }

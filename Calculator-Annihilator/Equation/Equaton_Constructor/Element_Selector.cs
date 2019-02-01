@@ -1,17 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
@@ -88,7 +75,6 @@ namespace Calculator_Annihilator
 		/// Checks does given character is operand.
 		/// </summary>
 		/// <param name="sign">Character to check is operand.</param>
-		/// <returns></returns>
 		private bool Is_Operand(char sign)
 		{
 			for (int i = 0; i < Signs_Lib.operand_Sings.Length; i++)
@@ -106,8 +92,6 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Returns end index of number whether given index is start of a number or do nothing if not. 
 		/// </summary>
-		/// <param name="first_Sign_Position"></param>
-		/// <returns></returns>
 		private int End_Number(int first_Sign_Position)
 		{
 			int sign_Position = first_Sign_Position;
@@ -120,8 +104,12 @@ namespace Calculator_Annihilator
 			}
 			else
 			{
-				Number Parsed_Number = _Parser.Parse(the_Equation.Substring(first_Sign_Position, sign_Position - first_Sign_Position), _Numerical_System);
+				Number Parsed_Number = _Parser.Parse( the_Equation.Substring(
+                    first_Sign_Position, sign_Position - first_Sign_Position),
+                    _Numerical_System );
+
 				Element_Colection.Add( Parsed_Number );
+
 				return sign_Position;
 			}
 		}
@@ -130,12 +118,11 @@ namespace Calculator_Annihilator
 		/// Finds index of last digit in number. 
 		/// </summary>
 		/// <param name="sign_Position">Index of first digit in number.</param>
-		/// <returns></returns>
 		private int End_of_Number_Finder(int sign_Position)
 		{
 			for (int i = sign_Position; i < the_Equation.Length; i++)
 			{
-				if (Is_Comma(the_Equation[i]) == true)
+				if (Is_Comma(i) == true)
 					continue;
 				else if (Is_Digit(the_Equation[i]) == true)
 					continue;
@@ -150,12 +137,25 @@ namespace Calculator_Annihilator
 		/// Checks does given character is comma.
 		/// </summary>
 		/// <param name="sign">Character to check is comma.</param>
-		/// <returns></returns>
-		private bool Is_Comma(char sign)
+		private bool Is_Comma(int sign_Position)
 		{
-			foreach (char comma in Signs_Lib.CommasType)
-				if (sign == comma)
-					return true;
+			foreach (string comma in Signs_Lib.Commas_Type)
+            {
+                int comma_Sign_Position = sign_Position;
+
+                foreach (char comma_sign in comma)
+                {
+                    if(comma_Sign_Position < the_Equation.Length)
+                    {
+                        if (comma_sign != the_Equation[comma_Sign_Position++])
+                            break;
+                    }
+                    else
+                        break;
+
+                    return true;
+                }
+            }
 
 			return false;
 		}
@@ -164,7 +164,6 @@ namespace Calculator_Annihilator
 		/// Checks does given character is digit.
 		/// </summary>
 		/// <param name="sign">Character to check is digit.</param>
-		/// <returns></returns>
 		private bool Is_Digit(char sign)
 		{
 			foreach (char digit in _Numerical_System.System_Digits)

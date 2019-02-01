@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Reads settings file and sets dynamic main window settings
         /// </summary>
-        public void Push_Dynamic_Settings(MainWindow.Dynamic_Parameters Dynamic_Parameters)
+        internal void Push_Dynamic_Settings(MainWindow.Dynamic_Parameters Dynamic_Parameters)
         {
             Dynamic_Parameters.Window_Height = initial_Height;
             Dynamic_Parameters.Window_Width = initial_Width;

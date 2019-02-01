@@ -6,7 +6,7 @@ namespace Calculator_Annihilator
     {
         partial class Static_Resources
         {
-            public Calculator_Mode Calculator_Mode { get; internal set; }
+            internal Calculator_Mode Calculator_Mode { get; set; }
         }
     }
 }

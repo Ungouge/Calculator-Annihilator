@@ -11,4 +11,14 @@
         Single,
         Complex
     }
+
+    public enum Number_Notation
+    {
+        Normal,
+        Scienfic_Normalized,
+        Force_Radix_Base,
+        Force_Exponent,
+        Force_Scientific,
+        Engineering
+    }
 }

@@ -13,7 +13,9 @@ namespace Calculator_Annihilator
 
         internal Dynamic_Parameters GUI_Dynamic_Parameters;
 
-        internal Static_Resources _Static_Resources;
+        protected internal Static_Resources _Static_Resources;
+
+        internal Back_Parser_Fascede Back_Parser;
 
 		public sbyte Numeral_System_Type //check class Numerical_System for description of exotic numeral system
 		{

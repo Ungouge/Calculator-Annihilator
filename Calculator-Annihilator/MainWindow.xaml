@@ -48,7 +48,9 @@
                           Click="Standard_MenuButton_Click"/>
                 <MenuItem x:Name="Scientific_MenuButton" Header="Scientific" Grid.Column="1" IsCheckable="True"
                           Click="Scientific_MenuButton_Click"/>
+                
                 <Separator/>
+                
             </MenuItem>
             
             <MenuItem Header="Edit" >

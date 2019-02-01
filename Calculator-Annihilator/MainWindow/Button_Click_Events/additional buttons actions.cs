@@ -38,7 +38,7 @@ namespace Calculator_Annihilator
                 no_operand_Sign_Single = true;
                 no_First_Number_In_Equation_Single = true;
             }
-            else if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Complex))
+            else // if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Complex))
             {
                 Equation = null;
             }
@@ -59,7 +59,7 @@ namespace Calculator_Annihilator
             if (WorkSpace_Number.Value != 0)
                 WorkSpace_Number = Calc.Operand_Selector(new Division(), new Number(1), WorkSpace_Number);
 
-            Reset_WorkSpace_Text(WorkSpace_Number.ToString());
+            Reset_WorkSpace_Text(Back_Parser.Parse_Back(WorkSpace_Number));
         }
     }
 }

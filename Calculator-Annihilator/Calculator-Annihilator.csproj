@@ -114,7 +114,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Back_Parser\Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Calculate_Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Cut_Off_Floating_Point_Migrants.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Divide_By_Two_ methods.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\getters for IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Muliply_By_Two.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Numeral_System_Precition.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Set_Divide_By_Two_Method.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Mantisa_To_Coefficients_Digit_List.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Normalize.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Shift_Comma_Point.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Smooth_To.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\values.cs" />
+    <Compile Include="Back_Parser_Fascede\Balanced_Ternary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Parse_Binary_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Check_For_Extreme_Values.cs" />
+    <Compile Include="Back_Parser_Fascede\Negabinary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Numeral_System_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Positional_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Back_Parser_Fascede.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Digit_List_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Binary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Decompose.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Double_Precition_Decomposer.cs" />
+    <Compile Include="Back_Parser_Fascede\IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Parse_Back.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Engineering_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Comma_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Exponent_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Normal_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Scientific_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Scienfic_Normalized_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Scientific_Exponent.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_Notation_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Set_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
     <Compile Include="Elements\Bracket_Pair.cs" />
     <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
     <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
@@ -131,12 +173,11 @@
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
     <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Check_Integrity_Of_Current_Element.cs" />
     <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Integrity_Check.cs" />
-    <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
-    <Compile Include="Floating_Point_Migration_Cutter.cs" />
     <Compile Include="internal enums lib.cs" />
+    <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="MainWindow\Button_Click_Events\additional buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
     <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
@@ -150,6 +191,7 @@
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
+    <Compile Include="MainWindow\Static_Resources\Button_Grid values.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculator_Mode.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculation_Method.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
@@ -167,6 +209,8 @@
       <DependentUpon>Less_Than_Hexadecimal_System.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow\MainWindow_Methods\Calculator_Buttons_Panel_Setter.cs" />
+    <Compile Include="MainWindow\Static_Resources\Commas_Type.cs" />
+    <Compile Include="MainWindow\Static_Resources\Number_Notation.cs" />
     <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />
     <Compile Include="MainWindow\Static_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Button_Click_Events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
@@ -190,11 +234,12 @@
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
     <Compile Include="Settings_File_Reader\Push_Static_Settings.cs" />
     <Compile Include="Settings_File_Reader\Values.cs" />
-    <Compile Include="Signs_Lib\Signs_Lib.cs" />
+    <Compile Include="Library\Signs_Lib\Signs_Lib.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Button_FontSize.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Dynamic_Parameters.cs" />
+    <Compile Include="Library\Standard_Messages\Standard_Messages.cs" />
     <Compile Include="Window_Dynamic_Parameters\Push_Recalculations.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\ResultSpace_FontSize.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\WorkSpace_FontSize.cs" />

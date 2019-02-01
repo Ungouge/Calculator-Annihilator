@@ -26,7 +26,7 @@ namespace Calculator_Annihilator
 
 			System_Type = system_Base_Code;
 
-			if (system_Base_Code > 1 && system_Base_Code < 61)
+			if (system_Base_Code > 1 && system_Base_Code <= 64)
 			{
 				for (int i = 0; i < system_Base_Code; i++)
 				{

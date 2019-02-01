@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
 			string newWorkSpaceText = "";
 
 			if (no_First_Number_In_Equation_Single == false)
-				newWorkSpaceText += First_Number_In_Equation_Single.ToString();
+				newWorkSpaceText += Back_Parser.Parse_Back(First_Number_In_Equation_Single);
 
 			if (no_operand_Sign_Single == false)
 				newWorkSpaceText += Operand_Sign_Single.ToString();
