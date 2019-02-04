@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Calculator_Annihilator>
+    <English >Calculator-Annihilator</English>
+    <Polski>Kalkulator-Anihilator</Polski>
+    <Deutsch>Rechner-Vernichter</Deutsch>
+    <Zhongguo>Ching-Chang-Chong-Calculator</Zhongguo>
+  </Calculator_Annihilator>
+  <Ok>
+    <English>Ok</English>
+    <Polski>Okej</Polski>
+    <Deutsch>Ok</Deutsch>
+    <Zhongguo>Ching Chang Chong</Zhongguo>
+  </Ok>
+  <A>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Ching</Zhongguo>
+  </A>
+  <B>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chang</Zhongguo>
+  </B>
+  <B>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chong</Zhongguo>
+  </B>
+</root>

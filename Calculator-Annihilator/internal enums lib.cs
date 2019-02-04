@@ -21,4 +21,12 @@
         Force_Scientific,
         Engineering
     }
+
+    public enum Language
+    {
+        English,
+        Polski,
+        Deutsch,
+        Zhongguo
+    }
 }

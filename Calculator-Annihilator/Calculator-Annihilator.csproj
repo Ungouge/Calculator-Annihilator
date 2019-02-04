@@ -178,6 +178,7 @@
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
+    <Compile Include="Library\Standard_Messages\Load_Language.cs" />
     <Compile Include="MainWindow\Button_Click events\additional buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
     <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
@@ -232,7 +233,7 @@
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
-    <Compile Include="Options_Window.xaml.cs">
+    <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
@@ -282,7 +283,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Options_Window.xaml">
+    <Page Include="Options_Window\Options_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -343,7 +344,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
-    <Folder Include="Options_Window\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Library\Language_Library\Language_Library.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
