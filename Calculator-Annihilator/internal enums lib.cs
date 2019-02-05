@@ -22,7 +22,7 @@
         Engineering
     }
 
-    public enum Language
+    public enum Languages
     {
         English,
         Polski,

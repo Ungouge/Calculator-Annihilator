@@ -178,7 +178,10 @@
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
+    <Compile Include="Library\Standard_Messages\Add_To_Dictionary.cs" />
+    <Compile Include="Library\Standard_Messages\Translate.cs" />
     <Compile Include="Library\Standard_Messages\Load_Language.cs" />
+    <Compile Include="Library\Standard_Messages\Set_Language_Loader_Delegate.cs" />
     <Compile Include="MainWindow\Button_Click events\additional buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
     <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
@@ -346,7 +349,10 @@
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Library\Language_Library\Language_Library.xml" />
+    <Resource Include="Library\Language_Library\Language_Library_Showcase.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Library\Language_Library\Calculator_Annihilator.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

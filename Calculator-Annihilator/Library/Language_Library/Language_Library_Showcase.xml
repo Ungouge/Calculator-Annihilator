@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Comment-->
+<root>
+  <A>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Ching</Zhongguo>
+  </A>
+  <B>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chang</Zhongguo>
+  </B>
+  <C>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chong</Zhongguo>
+  </C>
+  <D>
+    <Placeholders>
+      <e/>
+    </Placeholders>
+    <English>
+    </English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chong [e]</Zhongguo>
+  </D>
+</root>
