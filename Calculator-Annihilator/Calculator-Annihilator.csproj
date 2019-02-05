@@ -179,6 +179,7 @@
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Library\Standard_Messages\Add_To_Dictionary.cs" />
+    <Compile Include="Library\Standard_Messages\Find_Language_Libraries.cs" />
     <Compile Include="Library\Standard_Messages\Translate.cs" />
     <Compile Include="Library\Standard_Messages\Load_Language.cs" />
     <Compile Include="Library\Standard_Messages\Set_Language_Loader_Delegate.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Static_Resources\Text_MainWindow.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
@@ -349,10 +351,17 @@
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Library\Language_Library\Language_Library_Showcase.xml" />
+    <Content Include="Library\Language_Library\Language_Library_Showcase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Main_Menu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Library\Language_Library\Calculator_Annihilator.xml" />
+    <Content Include="Library\Language_Library\Calculator_Annihilator.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

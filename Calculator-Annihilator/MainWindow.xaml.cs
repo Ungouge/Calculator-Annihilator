@@ -27,9 +27,13 @@ namespace Calculator_Annihilator
                 // Preinitialization
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
-                _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
-                GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
+
                 _Settings_File_Reader.Push_MainWindow_Values(this);
+
+                _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
+
+                GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
+
                 Back_Parser = new Back_Parser_Fascede(this);
 
                 // Initialization
@@ -39,6 +43,7 @@ namespace Calculator_Annihilator
                 // Postinitialization
 
                 this.DataContext = GUI_Dynamic_Parameters;
+
                 ComplexCalculations.DataContext = GUI_Dynamic_Parameters;
                 Calculator_Buttons_Panel_Setter();
 
@@ -47,6 +52,7 @@ namespace Calculator_Annihilator
                     this.SingleCalculations.IsChecked = true;
                 else // calculation_Method == Calculation_Method.Complex
                     this.ComplexCalculations.IsChecked = true;
+
             }
             catch (Exception e)
             {

@@ -11,6 +11,8 @@ namespace Calculator_Annihilator
 
         protected internal Number_Notation number_Notation;
 
+        protected internal Languages Language;
+
         internal double initial_Height;
         internal double initial_Width;
 

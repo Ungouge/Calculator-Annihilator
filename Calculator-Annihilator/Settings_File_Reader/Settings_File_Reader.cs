@@ -16,6 +16,8 @@ namespace Calculator_Annihilator
 
             number_Notation = (Number_Notation)Properties.Settings.Default.Number_Notation;
 
+            Language = (Languages)Properties.Settings.Default.Language;
+
             initial_Height = Properties.Settings.Default.initial_Height;
             initial_Width = Properties.Settings.Default.initial_Width;
             numeral_System = Properties.Settings.Default.numeral_System;
@@ -26,6 +28,7 @@ namespace Calculator_Annihilator
             //calculator_Mode = Calculator_Mode.Standard;
             //calculation_Method = Calculation_Method.Single;
             //number_Notation = Number_Notation.Normal; 
+            //Language = Languages.English;
             //initial_Height = 510;
             //initial_Width = 420;
             //numeral_System = 10;

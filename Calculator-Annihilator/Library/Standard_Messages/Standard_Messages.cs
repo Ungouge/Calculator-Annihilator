@@ -22,12 +22,7 @@ namespace Calculator_Annihilator
 
             Dictionary_With_Placeholders = new Dictionary<string, Func<string[], string>>();
 
-            // mock loading all file from folder_direction
-
-            string[] language_Libraries = new string[] // = Find_Language_Libraries(folder_Direction);
-            {
-                @"C:\Users\Kamil\Desktop\C#\GUI\Calculator-Annihilator\Calculator-Annihilator\Library\Language_Library\Language_Library_Showcase.xml"
-            };
+            string[] language_Libraries = Find_Language_Libraries(folder_Direction);
 
             Load_Language(language_Libraries);
         }

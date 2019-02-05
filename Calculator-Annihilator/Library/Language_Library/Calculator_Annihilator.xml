@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- fdssf-->
+<!-- Change in properties to "Copy if Newer" when files will be done -->
 <root>
   <Calculator_Annihilator>
     <English >Calculator-Annihilator</English>
@@ -7,10 +7,34 @@
     <Deutsch>Rechner-Vernichter</Deutsch>
     <Zhongguo>Ching-Chang-Chong-Calculator</Zhongguo>
   </Calculator_Annihilator>
+  <Title>
+    <English >Calculator-Annihilator</English>
+    <Polski>Kalkulator-Annihilator</Polski>
+    <Deutsch>Rechner-Vernichter</Deutsch>
+    <Zhongguo>Ching-Chang-Chong-Calculator</Zhongguo>
+  </Title>
   <Ok>
     <English>Ok</English>
     <Polski>Okej</Polski>
     <Deutsch>Ok</Deutsch>
     <Zhongguo>Ching Chang Chong</Zhongguo>
   </Ok>
+  <Single_Calculations>
+    <English>Single Calculations</English>
+    <Polski>Pojedyncze Obliczenia</Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Ching</Zhongguo>
+  </Single_Calculations>
+  <Complex_Calculations>
+    <English>Complex Calculations</English>
+    <Polski>Złożone Obliczenia</Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chang</Zhongguo>
+  </Complex_Calculations>
+  <C>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chong</Zhongguo>
+  </C>
 </root>

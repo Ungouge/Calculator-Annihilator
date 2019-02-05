@@ -5,6 +5,7 @@ namespace Calculator_Annihilator
 	partial class MainWindow
 	{
 		private Parser Parser = new Parser();
+
 		private Calc Calc = new Calc();
 
 		private Equation Equation;
@@ -13,7 +14,9 @@ namespace Calculator_Annihilator
 
         internal Dynamic_Parameters GUI_Dynamic_Parameters;
 
-        protected internal Static_Resources _Static_Resources;
+        public Static_Resources _Static_Resources;
+
+        internal Standard_Messages Standard_Messages;
 
         internal Back_Parser_Fascede Back_Parser;
 
