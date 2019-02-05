@@ -252,13 +252,11 @@
     <Compile Include="MainWindow\Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\Dynamic_Parameters.cs" />
     <Compile Include="Library\Standard_Messages\Standard_Messages.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Push_Recalculations.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Push_Recalculations.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\ResultSpace_FontSize.cs" />
     <Compile Include="MainWindow\Dymanic_Parameters\WorkSpace_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\On_Property_Change.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Values.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Window_Size_Catchers.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\On_Property_Change.cs" />
+    <Compile Include="MainWindow\Dymanic_Parameters\Window_Size_Catchers.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

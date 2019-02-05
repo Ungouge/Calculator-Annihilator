@@ -7,9 +7,8 @@
         xmlns:b="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
-        xmlns:MainWindow="clr-namespace:Calculator_Annihilator.MainWindow" 
         mc:Ignorable="d"
-        Title="{Binding Title, Mode=TwoWay, FallbackValue=C}"
+        Title="xyz"
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
@@ -20,7 +19,6 @@
         Width="{Binding Window_Width, Mode=TwoWay, FallbackValue=480}">
 
     <Window.Resources >
-        <MainWindow:s />
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.xaml"/>
