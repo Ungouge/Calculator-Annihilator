@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow
     {
-        partial class Dynamic_Parameters
+        partial class Bindable_Resources
         {
             /// <summary>
             /// Class for font size calculations of text boxes of Main Window

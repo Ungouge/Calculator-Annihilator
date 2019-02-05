@@ -4,7 +4,7 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow
     {
-        partial class Dynamic_Parameters
+        partial class Bindable_Resources
         {
             private double _Window_Height;
 

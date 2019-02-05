@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
 
 		private Numeral_System Current_Numeral_System;
 
-        internal Dynamic_Parameters GUI_Dynamic_Parameters;
+        internal Bindable_Resources GUI_Bindable_Resources;
 
         public Static_Resources _Static_Resources;
 

@@ -202,7 +202,7 @@
     <Compile Include="MainWindow\Static_Resources\Button_Grid values.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculator_Mode.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculation_Method.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Values.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\buttons Basic_Operations_Less_Than_Decimal_System.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\Basic_Operations_Less_Than_Hexadecimal_System.xaml.cs">
       <DependentUpon>Basic_Operations_Less_Than_Hexadecimal_System.xaml</DependentUpon>
@@ -235,7 +235,7 @@
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
-    <Compile Include="MainWindow\Static_Resources\Text_MainWindow.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Text_MainWindow.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
@@ -247,16 +247,16 @@
     <Compile Include="Settings_File_Reader\Push_Static_Settings.cs" />
     <Compile Include="Settings_File_Reader\Values.cs" />
     <Compile Include="Library\Signs_Lib\Signs_Lib.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Button_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Dynamic_Parameters.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Button_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Font_To_TextBox_Macher.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
     <Compile Include="Library\Standard_Messages\Standard_Messages.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Push_Recalculations.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\ResultSpace_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\WorkSpace_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\On_Property_Change.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Window_Size_Catchers.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Push_Recalculations.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\ResultSpace_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

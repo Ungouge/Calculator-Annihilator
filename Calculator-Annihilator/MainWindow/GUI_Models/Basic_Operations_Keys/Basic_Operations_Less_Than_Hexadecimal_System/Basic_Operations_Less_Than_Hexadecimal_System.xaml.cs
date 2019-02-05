@@ -14,7 +14,7 @@ namespace Calculator_Annihilator
         {
             MainWindow = _MainWindow;
             InitializeComponent();
-            this.DataContext = _MainWindow.GUI_Dynamic_Parameters;
+            this.DataContext = _MainWindow.GUI_Bindable_Resources;
         }
     }
 }

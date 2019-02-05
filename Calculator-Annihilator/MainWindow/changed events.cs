@@ -19,26 +19,26 @@ namespace Calculator_Annihilator
     {
         private void Window_Size_Changed(object sender, SizeChangedEventArgs e)
         {
-            GUI_Dynamic_Parameters.Push_Recalculations();
+            GUI_Bindable_Resources.Push_Recalculations();
         }
         public void Window_State_Changed(object sender, EventArgs e)
         {
-            GUI_Dynamic_Parameters.Push_Recalculations();
+            GUI_Bindable_Resources.Push_Recalculations();
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            GUI_Dynamic_Parameters.Push_Recalculations();
+            GUI_Bindable_Resources.Push_Recalculations();
         }
 
         private void WorkSpace_TextChanged(object sender, TextChangedEventArgs e)
         {
-            GUI_Dynamic_Parameters.On_Property_Change("WorkSpace_FontSize");
+            GUI_Bindable_Resources.On_Property_Change("WorkSpace_FontSize");
         }
 
         private void ResultSpace_TextChanged(object sender, TextChangedEventArgs e)
         {
-            GUI_Dynamic_Parameters.On_Property_Change("ResultSpace_FontSize");
+            GUI_Bindable_Resources.On_Property_Change("ResultSpace_FontSize");
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
         {
             MainWindow = _MainWindow;
             InitializeComponent();
-            this.DataContext = _MainWindow.GUI_Dynamic_Parameters;
+            this.DataContext = _MainWindow.GUI_Bindable_Resources;
 
             Set_Open_Bracket_Or_Change_Sign_Button();
 

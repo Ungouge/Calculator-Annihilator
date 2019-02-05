@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow
     {
-        partial class Static_Resources 
+        partial class Bindable_Resources
         {
             string Title;
 

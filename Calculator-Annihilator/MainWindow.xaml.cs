@@ -32,7 +32,7 @@ namespace Calculator_Annihilator
 
                 _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
 
-                GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
+                GUI_Bindable_Resources = new Bindable_Resources(this, _Settings_File_Reader);
 
                 Back_Parser = new Back_Parser_Fascede(this);
 
@@ -42,9 +42,9 @@ namespace Calculator_Annihilator
 
                 // Postinitialization
 
-                this.DataContext = GUI_Dynamic_Parameters;
+                this.DataContext = GUI_Bindable_Resources;
 
-                ComplexCalculations.DataContext = GUI_Dynamic_Parameters;
+                ComplexCalculations.DataContext = GUI_Bindable_Resources;
                 Calculator_Buttons_Panel_Setter();
 
 

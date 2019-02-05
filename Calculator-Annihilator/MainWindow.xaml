@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
         mc:Ignorable="d"
-        Title="xyz"
+        Title="{Binding Title, Mode=OneWay, FallbackValue=c}"
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
