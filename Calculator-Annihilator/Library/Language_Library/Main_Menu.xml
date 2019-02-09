@@ -24,24 +24,7 @@
     <Deutsch></Deutsch>
     <Zhongguo>Ching</Zhongguo>
   </Help>
-  <A>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Ching</Zhongguo>
-  </A>
-  <B>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Chang</Zhongguo>
-  </B>
-  <C>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Chong</Zhongguo>
-  </C>
+  
   <New_Window>
     <English>New Window</English>
     <Polski>Nowe Okno</Polski>
@@ -60,6 +43,7 @@
     <Deutsch></Deutsch>
     <Zhongguo>Chong</Zhongguo>
   </Close_Window>
+  
   <Standard>
     <English>Standard</English>
     <Polski>Standardowy</Polski>
@@ -72,12 +56,6 @@
     <Deutsch></Deutsch>
     <Zhongguo>Chang</Zhongguo>
   </Scientific>
-  <C>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Chong</Zhongguo>
-  </C>
 
 
 </Main_Menu>

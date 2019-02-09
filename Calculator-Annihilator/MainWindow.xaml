@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
         mc:Ignorable="d"
-        Title="{Binding Title, Mode=OneWay}"
+        Title="{Binding Title, Mode=OneWay, FallbackValue=Calculator-Annihilator}"
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
@@ -36,62 +36,67 @@
 
         <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" IsMainMenu="True">
 
-            <MenuItem Header="File">
+            <MenuItem Header="{Binding File, Mode=OneWay, FallbackValue=File}">
 
-                <MenuItem x:Name="New_WindowButton" Header="New Window" Click="New_WindowButton_Click"/>
+                <MenuItem x:Name="New_WindowButton" Header="{Binding New_Window, Mode=OneWay, FallbackValue=New_Window}"
+                          Click="New_WindowButton_Click"/>
 
-                <MenuItem x:Name="OptionsButton" Header="Options" Click="OptionsButton_Click"/>
+                <MenuItem x:Name="OptionsButton" Header="{Binding Options, Mode=OneWay, FallbackValue=Options}"
+                          Click="OptionsButton_Click"/>
 
                 <Separator/>
 
-                <MenuItem x:Name="Close_WindowButton" Header="Close Window" Click="Close_WindowButton_Click"/>
-                
-             </MenuItem>
-
-             <MenuItem Header="View" ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
-
-                <MenuItem x:Name="Standard_MenuButton" Header="Standard" Grid.Column="1" IsCheckable="True"
-                          Click="Standard_MenuButton_Click"/>
-                
-                <MenuItem x:Name="Scientific_MenuButton" Header="Scientific" Grid.Column="1" IsCheckable="True"
-                          Click="Scientific_MenuButton_Click"/>
+                <MenuItem x:Name="Close_WindowButton" Header="{Binding Close_Window, Mode=OneWay, FallbackValue=Close_Window}"
+                          Click="Close_WindowButton_Click"/>
 
             </MenuItem>
-            
-            <MenuItem Header="Edit" >
-                
+
+            <MenuItem Header="{Binding Edit, Mode=OneWay, FallbackValue=Edit}"
+                      ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
+
+                <MenuItem x:Name="Standard_MenuButton" Header="{Binding Standard , Mode=OneWay, FallbackValue=Standard}"
+                          Grid.Column="1" IsCheckable="True" Click="Standard_MenuButton_Click"/>
+
+                <MenuItem x:Name="Scientific_MenuButton" Header="{Binding Standard, Mode=OneWay, FallbackValue= Standard}"
+                          Grid.Column="1" IsCheckable="True" Click="Scientific_MenuButton_Click"/>
+
             </MenuItem>
-            
-            <MenuItem Header="_Help" >
+
+            <MenuItem Header="{Binding Edit , Mode=OneWay, FallbackValue=Edit}" >
+
+            </MenuItem>
+
+            <MenuItem Header="{Binding Help, Mode=OneWay, FallbackValue=Help}" >
 
             </MenuItem>
 
         </Menu>
 
         <Grid x:Name="WorkGrid" Grid.Row="1">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition SharedSizeGroup="A"/>
                 <RowDefinition SharedSizeGroup="A"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="79*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" HorizontalAlignment="Stretch"
+            <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="3" Margin="5,1,4.6,0.8" HorizontalAlignment="Stretch"
                      Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay, FallbackValue=30}"
                      Padding="0,-2,0,-2" VerticalContentAlignment="Center"
                      Cursor="IBeam" AcceptsReturn="false" TextChanged="WorkSpace_TextChanged"
                      VerticalScrollBarVisibility="Auto"/>
 
-            <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1"
+            <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="2" Margin="5.2,1.2,4.6,0.4"
                      Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay, FallbackValue=30}" Padding="0,-2,0,-2" 
                      VerticalContentAlignment="Center"
                      Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged" />
 
-            <Grid Name="CalculationTypeSwitcher_Grid"  Grid.Row="1" Grid.Column="0" Margin="1,1,1,1">
-                
+            <Grid Name="CalculationTypeSwitcher_Grid"  Grid.Row="1" Grid.Column="0" Margin="1,1.2,0.8,1.4" Grid.ColumnSpan="2">
+
                 <Grid.Resources>
                     <Style TargetType="RadioButton">
                         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -119,7 +124,7 @@
                              Margin="15,1,1,1" Grid.Row="1" Checked="Complex_Calculations_Button_Checked">
                     <TextBlock Name="ComplexCalculations_RadioButton_TextBlock" Text="{Binding Complex_Calculations, Mode=OneWay}"/>
                 </RadioButton>
-                
+
             </Grid>
         </Grid>
         <Grid x:Name="ButtonsGrid" Grid.Row="2">
@@ -140,5 +145,5 @@
 
         </Grid>
     </Grid>
-    
+
 </Window>
