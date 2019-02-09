@@ -21,6 +21,7 @@ namespace Calculator_Annihilator
         {
             GUI_Bindable_Resources.Push_Recalculations();
         }
+
         public void Window_State_Changed(object sender, EventArgs e)
         {
             GUI_Bindable_Resources.Push_Recalculations();

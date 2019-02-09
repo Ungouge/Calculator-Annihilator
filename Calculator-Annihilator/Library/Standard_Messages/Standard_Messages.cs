@@ -8,6 +8,8 @@ namespace Calculator_Annihilator
     /// </summary>
     internal partial class Standard_Messages
     {
+        private Dictionary<string, Func<string>> Dictionary;
+
         private Dictionary<string, Func<string[], string>> Dictionary_With_Placeholders;
 
         private readonly string language_Name_Code;
@@ -19,6 +21,8 @@ namespace Calculator_Annihilator
         public Standard_Messages(Languages language, string folder_Direction)
         {
             language_Name_Code = Set_Language_Name_Code(language);
+
+            Dictionary = new Dictionary<string, Func<string>>();
 
             Dictionary_With_Placeholders = new Dictionary<string, Func<string[], string>>();
 

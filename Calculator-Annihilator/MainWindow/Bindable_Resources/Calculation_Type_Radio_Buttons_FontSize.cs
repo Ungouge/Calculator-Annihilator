@@ -29,7 +29,7 @@ namespace Calculator_Annihilator
             {
                 MainWindow Current_Window;
 
-                const double RadioButton_Text_Part_Of_Total_Width = 7e-1;
+                const double RadioButton_Text_Part_Of_Total_Width = 65e-2;
 
                 /// <summary>
                 /// Constructs new Font_To_TextBlock_Matcher

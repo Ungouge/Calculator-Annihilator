@@ -8,7 +8,8 @@ namespace Calculator_Annihilator
     {
         private void Add_To_Dictionary(XmlNode Node)
         {
-            if (Dictionary_With_Placeholders.ContainsKey(Node.Name) == true)
+            if (Dictionary_With_Placeholders.ContainsKey(Node.Name) == true ||
+                Dictionary.ContainsKey(Node.Name) == true)
                 return;
 
             XmlNode Entry = Node.SelectSingleNode(language_Name_Code);
@@ -20,19 +21,25 @@ namespace Calculator_Annihilator
 
             XmlNode Placeholders = Node.SelectSingleNode("Placeholders");
 
-            List<string> placeholders_Names_List = new List<string>();
-
             if (Placeholders != null)
             {
+                List<string> placeholders_Names_List = new List<string>();
+
                 foreach (XmlNode Placeholder in Placeholders)
                 {
                     placeholders_Names_List.Add('[' + Placeholder.InnerText + ']');
                 }
+
+                Func<string[], string> func = Create_Function_To_Return_Text(message, placeholders_Names_List);
+
+                Dictionary_With_Placeholders.Add(Node.Name, func);
             }
+            else
+            {
+                Func<string> func = Create_Function_To_Return_Text(message);
 
-            Func<string[], string> func = Create_Function_To_Return_Text(message, placeholders_Names_List);
-
-            Dictionary_With_Placeholders.Add(Node.Name, func);
+                Dictionary.Add(Node.Name, func);
+            }
         }
 
         private static Func<string[], string> Create_Function_To_Return_Text(string message, List<string> placeholders_Names_List)
@@ -48,6 +55,11 @@ namespace Calculator_Annihilator
 
                 return output;
             };
+        }
+
+        private static Func<string> Create_Function_To_Return_Text(string message)
+        {
+            return () => message;
         }
     }
 }

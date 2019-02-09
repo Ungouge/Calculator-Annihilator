@@ -8,7 +8,10 @@ namespace Calculator_Annihilator
     {
         public string Translate(string code)
         {
-            return Translate(code, new string[] { });
+            if (Dictionary.ContainsKey(code) == false)
+                return code;
+
+            return Dictionary[code]();
         }
 
         public string Translate(string code, string[] arr)
@@ -16,7 +19,7 @@ namespace Calculator_Annihilator
             if (Dictionary_With_Placeholders.ContainsKey(code) == false)
                 return code;
 
-            return Dictionary_With_Placeholders[code]( arr);
+            return Dictionary_With_Placeholders[code](arr);
         }
     }
 }
