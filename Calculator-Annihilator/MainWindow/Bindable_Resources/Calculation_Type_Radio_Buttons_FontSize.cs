@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
             /// <summary>
             /// Gets font size for text of radio buttons in calculation type switcher
             /// </summary>
-            protected internal double Calculation_Type_Radio_Buttons_FontSize
+            public double Calculation_Type_Radio_Buttons_FontSize
             {
                 get
                 {

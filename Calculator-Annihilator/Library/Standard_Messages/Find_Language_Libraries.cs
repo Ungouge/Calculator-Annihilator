@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
     {
         public string[] Find_Language_Libraries(string folder_Direction)
         {
-            return Directory.GetDirectories(folder_Direction, "*.xml", SearchOption.AllDirectories);
+            return Directory.GetFiles(@"C:\Users\Kamil\Desktop\C#\GUI\Calculator-Annihilator\Calculator-Annihilator\bin\Debug\Library\Language_Library");//folder_Direction);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
         {
             _MainWindow.Set_Current_Numerical_System(numeral_System);
             _MainWindow.Standard_Messages = new Standard_Messages(Language,
-                AppDomain.CurrentDomain.BaseDirectory + @"\Library\Language_Library");
+                AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Library");
         }
     }
 }

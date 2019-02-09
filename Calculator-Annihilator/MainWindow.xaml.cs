@@ -32,7 +32,9 @@ namespace Calculator_Annihilator
 
                 _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
 
-                GUI_Bindable_Resources = new Bindable_Resources(this, _Settings_File_Reader);
+                GUI_Bindable_Resources = new Bindable_Resources(_Settings_File_Reader);
+
+                GUI_Bindable_Resources.Set_Texts(this);
 
                 Back_Parser = new Back_Parser_Fascede(this);
 

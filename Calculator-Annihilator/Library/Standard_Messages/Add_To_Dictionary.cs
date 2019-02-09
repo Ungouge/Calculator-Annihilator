@@ -8,15 +8,13 @@ namespace Calculator_Annihilator
     {
         private void Add_To_Dictionary(XmlNode Node)
         {
-            if (Dictionary_With_Placeholders.ContainsKey(Node.Name) == false)
+            if (Dictionary_With_Placeholders.ContainsKey(Node.Name) == true)
                 return;
 
             XmlNode Entry = Node.SelectSingleNode(language_Name_Code);
 
             if (Entry == null)
-            {
                 return;
-            }
 
             string message = Entry.InnerText;
 

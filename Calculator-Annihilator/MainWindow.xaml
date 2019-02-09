@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
         mc:Ignorable="d"
-        Title="{Binding Title, Mode=OneWay, FallbackValue=c}"
+        Title="{Binding Title, Mode=OneWay}"
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
@@ -112,16 +112,12 @@
 
                 <RadioButton GroupName="CalculationTypeSwitcher"  Name="SingleCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="0" Checked="Single_Calculations_Button_Checked">
-                    <TextBlock Name="SingleCalculations_RadioButton_TextBlock">
-                        Single Calculations
-                    </TextBlock>
+                    <TextBlock Name="SingleCalculations_RadioButton_TextBlock" Text="{Binding Single_Calculations, Mode=OneWay}"/>
 
                 </RadioButton>
                 <RadioButton GroupName="CalculationTypeSwitcher" Name="ComplexCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="1" Checked="Complex_Calculations_Button_Checked">
-                    <TextBlock Name="ComplexCalculations_RadioButton_TextBlock">
-                        Complex Calculations
-                    </TextBlock>
+                    <TextBlock Name="ComplexCalculations_RadioButton_TextBlock" Text="{Binding Complex_Calculations, Mode=OneWay}"/>
                 </RadioButton>
                 
             </Grid>
