@@ -26,7 +26,6 @@ namespace Calculator_Annihilator
                     _TextBox = __TextBox;
                 }
 
-
                 /// <summary>
                 /// Returns font size for text boxes of Main Window.
                 /// </summary>
@@ -36,11 +35,11 @@ namespace Calculator_Annihilator
 
                     _TextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
 
-                    FormattedText formatted_Text = Get_Default_Formatted_Text(_TextBox, default_FontSize);
+                    Formatted_Text_Getter Formatted_Text = new Formatted_Text_Getter(_TextBox, default_FontSize);
 
                     double actual_Size_Of_Text_Space = _TextBox.ActualWidth - 16;
 
-                    if (formatted_Text.Width < actual_Size_Of_Text_Space)
+                    if (Formatted_Text.Get_Text_Width < actual_Size_Of_Text_Space)
                     {
                         _TextBox.TextWrapping = TextWrapping.NoWrap;
                         return Return_Non_Less_Than(default_FontSize);
@@ -49,7 +48,7 @@ namespace Calculator_Annihilator
                     {
                         double wraped_FontSize = Matching_Font_To_TextBox();
 
-                        double rescaled_FontSize = default_FontSize * (actual_Size_Of_Text_Space / formatted_Text.Width);
+                        double rescaled_FontSize = default_FontSize * (actual_Size_Of_Text_Space / Formatted_Text.Get_Text_Width);
 
                         if (wraped_FontSize > rescaled_FontSize)
                         {

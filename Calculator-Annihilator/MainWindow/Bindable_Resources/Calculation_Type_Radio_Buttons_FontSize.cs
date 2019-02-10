@@ -46,12 +46,14 @@ namespace Calculator_Annihilator
                 {
                     double default_FontSize = Current_Window.CalculationTypeSwitcher_Grid.ActualHeight / 3;
 
+                    Formatted_Text_Getter Formatted_Text = 
+                        new Formatted_Text_Getter(Current_Window.ComplexCalculations_RadioButton_TextBlock, default_FontSize);
                     FormattedText formatted_Text =
                         Get_Default_Formatted_Text(Current_Window.ComplexCalculations_RadioButton_TextBlock, default_FontSize);
 
                     double actual_Size_Of_Text_Space =
                         (Current_Window.CalculationTypeSwitcher_Grid.ActualWidth * RadioButton_Text_Part_Of_Total_Width) /
-                        formatted_Text.Width;
+                        Formatted_Text.Get_Text_Width;
 
                     if (actual_Size_Of_Text_Space > 1)
                         return default_FontSize;
