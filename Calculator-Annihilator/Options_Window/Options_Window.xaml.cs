@@ -19,9 +19,17 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class Options_Window : Window
     {
-        public Options_Window()
+        public Bindable_Resources _Bindable_Resources;
+
+        Standard_Messages Standard_Messages;
+
+        internal Options_Window(Standard_Messages _Standard_Messages)
         {
+            Standard_Messages = _Standard_Messages;
+            _Bindable_Resources = new Bindable_Resources(this);
             InitializeComponent();
+            this.DataContext = _Bindable_Resources;
+            Language_List_ComboBox.DataContext = _Bindable_Resources;
         }
     }
 }

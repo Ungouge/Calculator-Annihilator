@@ -157,6 +157,9 @@
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Set_Number_To_String.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
+    <Compile Include="Formatted_Text_Getter\Default_Formatted_Text_Getter.cs" />
+    <Compile Include="Formatted_Text_Getter\Get_Text_Height.cs" />
+    <Compile Include="Formatted_Text_Getter\Get_Text_Width.cs" />
     <Compile Include="Elements\Bracket_Pair.cs" />
     <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
     <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
@@ -238,9 +241,13 @@
     <Compile Include="MainWindow\Bindable_Resources\Text_MainWindow.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Bindable_Resources.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Language_List_ComboBox_SelectionChanged.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Language_List_Resources.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Options_Window\values.cs" />
     <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
     <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
@@ -349,12 +356,28 @@
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library\Language_Flags_Images\German_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Flags_Images\English_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Flags_Images\Latin_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Flags_Images\Polish_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Flags_Images\Chinese_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Library\Language_Library\Language_Library_Showcase.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Main_Menu.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Library\Language_Library\Options\Language_List.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\Language_Library\Calculator_Annihilator.xml">

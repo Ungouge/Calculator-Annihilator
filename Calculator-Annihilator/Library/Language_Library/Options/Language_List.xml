@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Languages in Options-->
+<root>
+  <English>
+    <English>English</English>
+    <Polski>Angielski</Polski>
+    <Deutsch>Englisch</Deutsch>
+    <Latin>Anglicus</Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </English>
+  <Polish>
+    <English>Polish</English>
+    <Polski>Polski</Polski>
+    <Deutsch>Polnisch</Deutsch>
+    <Latin>Poloniae</Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Polish>
+  <German>
+    <English>German</English>
+    <Polski>Niemiecki</Polski>
+    <Deutsch>Deutsch</Deutsch>
+    <Latin>Germanica</Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </German>
+  <Latin>
+    <English>Latin</English>
+    <Polski>Łacina</Polski>
+    <Deutsch>Latein</Deutsch>
+    <Latin>Latin</Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Latin>
+  <Chinese>
+    <English>Chinese</English>
+    <Polski>Chiński</Polski>
+    <Deutsch>Chinesisch</Deutsch>
+    <Latin>Seres</Latin>
+    <Zhongguo>Zhongguo</Zhongguo>
+  </Chinese>
+</root>
