@@ -5,36 +5,35 @@
     <English >Calculator-Annihilator</English>
     <Polski>Kalkulator-Annihilator</Polski>
     <Deutsch>Rechner-Vernichter</Deutsch>
+    <Latin>Lorem Ipsum Calculator</Latin>
     <Zhongguo>Ching-Chang-Chong-Calculator</Zhongguo>
   </Calculator_Annihilator>
   <Title>
     <English >Calculator-Annihilator</English>
     <Polski>Kalkulator-Annihilator</Polski>
     <Deutsch>Rechner-Vernichter</Deutsch>
+    <Latin>Lorem-Ipsum-Calculator</Latin>
     <Zhongguo>Ching-Chang-Chong-Calculator</Zhongguo>
   </Title>
   <Ok>
     <English>Ok</English>
     <Polski>Okej</Polski>
     <Deutsch>Ok</Deutsch>
+    <Latin>Ok</Latin>
     <Zhongguo>Ching Chang Chong</Zhongguo>
   </Ok>
   <Single_Calculations>
     <English>Single Calculations</English>
     <Polski>Pojedyncze Obliczenia</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Einzelberechnungen</Deutsch>
+    <Latin>Lorem</Latin>
     <Zhongguo>Ching</Zhongguo>
   </Single_Calculations>
   <Complex_Calculations>
     <English>Complex Calculations</English>
     <Polski>Złożone Obliczenia</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Komplexe Berechnungen</Deutsch>
+    <Latin>Ipsum</Latin>
     <Zhongguo>Chang</Zhongguo>
   </Complex_Calculations>
-  <C>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Chong</Zhongguo>
-  </C>
 </root>

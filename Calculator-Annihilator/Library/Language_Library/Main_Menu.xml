@@ -3,59 +3,67 @@
   <File>
     <English>File</English>
     <Polski>Plik</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Datei</Deutsch>
+    <Latin>Lorem</Latin>
     <Zhongguo>Ching</Zhongguo>
   </File>
   <View>
     <English>View</English>
     <Polski>Widok</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Aussicht</Deutsch>
+    <Latin>Ipsum</Latin>
     <Zhongguo>Chang</Zhongguo>
   </View>
   <Edit>
     <English>Edit</English>
     <Polski>Edycja</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Bearbeiten</Deutsch>
+    <Latin>Dolor sit</Latin>
     <Zhongguo>Chong</Zhongguo>
   </Edit>
   <Help>
     <English>Help</English>
     <Polski>Pomoc</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Hilfe</Deutsch>
+    <Latin>Amet</Latin>
     <Zhongguo>Ching</Zhongguo>
   </Help>
   
   <New_Window>
     <English>New Window</English>
     <Polski>Nowe Okno</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Neues Fenster</Deutsch>
+    <Latin>Consectetur</Latin>
     <Zhongguo>Ching</Zhongguo>
   </New_Window>
   <Options>
     <English>Options</English>
     <Polski>Opcje</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Optionen</Deutsch>
+    <Latin>Adipiscing</Latin>
     <Zhongguo>Chang</Zhongguo>
   </Options>
   <Close_Window>
     <English>Close Window</English>
     <Polski>Zamknij Okno</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Fenster schließen</Deutsch>
+    <Latin>Elit</Latin>
     <Zhongguo>Chong</Zhongguo>
   </Close_Window>
   
   <Standard>
     <English>Standard</English>
     <Polski>Standardowy</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Standard</Deutsch>
+    <Latin>Proin</Latin>
     <Zhongguo>Ching</Zhongguo>
   </Standard>
   <Scientific>
     <English>Scientific</English>
     <Polski>Naukowy</Polski>
-    <Deutsch></Deutsch>
+    <Deutsch>Wissenschaftlich</Deutsch>
+    <Latin>Nibh</Latin>
     <Zhongguo>Chang</Zhongguo>
   </Scientific>
-
 
 </Main_Menu>

@@ -27,6 +27,7 @@
         English,
         Polski,
         Deutsch,
+        Latin,
         Zhongguo
     }
 }
