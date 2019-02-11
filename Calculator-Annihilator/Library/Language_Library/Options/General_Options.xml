@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Options Window General Tab-->
+<root>
+  <Language>
+    <English>Language</English>
+    <Polski>Język</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Language>
+  <B>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </B>
+  <C>
+    <English></English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </C>
+  <D>
+    <Placeholders>
+      <e/>
+    </Placeholders>
+    <English>
+    </English>
+    <Polski></Polski>
+    <Deutsch></Deutsch>
+    <Zhongguo>Chong [e]</Zhongguo>
+  </D>
+</root>

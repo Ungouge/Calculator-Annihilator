@@ -21,14 +21,24 @@ namespace Calculator_Annihilator
     {
         public Bindable_Resources _Bindable_Resources;
 
-        Standard_Messages Standard_Messages;
+        MainWindow Paretnt_MainWindow;
 
-        internal Options_Window(Standard_Messages _Standard_Messages)
+        internal Options_Window(MainWindow _MainWindow)
         {
-            Standard_Messages = _Standard_Messages;
+            // Preinitialization
+
+            Paretnt_MainWindow = _MainWindow;
+
             _Bindable_Resources = new Bindable_Resources(this);
+
+            // Initialization
+
             InitializeComponent();
+
+            // Postinitialization
+
             this.DataContext = _Bindable_Resources;
+
             Language_List_ComboBox.DataContext = _Bindable_Resources;
         }
     }

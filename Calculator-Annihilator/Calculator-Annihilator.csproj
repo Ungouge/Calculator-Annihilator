@@ -202,6 +202,7 @@
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
+    <Compile Include="MainWindow\MainWindow_Methods\Set_Language.cs" />
     <Compile Include="MainWindow\Static_Resources\Button_Grid values.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculator_Mode.cs" />
     <Compile Include="MainWindow\Static_Resources\Calculation_Method.cs" />
@@ -243,11 +244,15 @@
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Bindable_Resources.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Language_List_ComboBox_SelectionChanged.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Language_List_Resources.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_Current_Language_In_ComboBox.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_Languges_List_Items.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Langauge_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\et_Language_List_ComboBox_Height.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text_Bindables.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Options_Window\values.cs" />
     <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
     <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
@@ -377,6 +382,7 @@
     <Content Include="Library\Language_Library\Main_Menu.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Library\Language_Library\Options\General_Options.xml" />
     <Resource Include="Library\Language_Library\Options\Language_List.xml" />
   </ItemGroup>
   <ItemGroup>

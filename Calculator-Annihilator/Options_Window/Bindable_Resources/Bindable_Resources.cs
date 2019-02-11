@@ -16,23 +16,28 @@ namespace Calculator_Annihilator
 {
     public partial class Options_Window : Window
     {
-
         public partial class Bindable_Resources
         {
             readonly Options_Window Options_Window;
 
-            public double Language_List_ComboBox_Item_Height { get; set; }
+            public double Language_List_ComboBox_Height { get; set; }
 
-            object Language_List_ComboBox_SelectedItem;
+            public List<Langauge_List_Item> Langauge_List_Items_List { get; set; }
+
+            public Langauge_List_Item Language_List_ComboBox_SelectedItem { get; set; }
 
             public Bindable_Resources(Options_Window _Options_Window)
             {
                 Options_Window = _Options_Window;
-                Set_Language_List_Bidables();
 
-                //Formatted_Text_Getter formatted_Text = new Formatted_Text_Getter(_Options_Window.English_Language_List_ComboBox_Item, _Options_Window.English_Language_List_ComboBox_Item.FontSize);
+                Langauge_List_Items_List = Set_Languges_List_Items();
 
-                Language_List_ComboBox_Item_Height = 3e1;// formatted_Text.Get_Text_Height;
+                Langauge_List_Item Language_List_ComboBox_SelectedItem = 
+                    Set_Current_Language_In_ComboBox(Options_Window.Paretnt_MainWindow.Current_Language);
+
+                Language_List_ComboBox_Height = Set_Language_List_ComboBox_Height();
+
+                Set_Text_Bindables();
             }
         }
     }

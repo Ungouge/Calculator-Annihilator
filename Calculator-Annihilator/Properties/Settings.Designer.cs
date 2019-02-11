@@ -73,7 +73,7 @@ namespace Calculator_Annihilator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("64")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public sbyte numeral_System {
             get {
                 return ((sbyte)(this["numeral_System"]));

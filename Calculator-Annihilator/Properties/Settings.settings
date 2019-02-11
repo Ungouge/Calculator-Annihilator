@@ -15,7 +15,7 @@
       <Value Profile="(Default)">420</Value>
     </Setting>
     <Setting Name="numeral_System" Type="System.SByte" Scope="User">
-      <Value Profile="(Default)">64</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="Number_Notation" Type="System.SByte" Scope="User">
       <Value Profile="(Default)">0</Value>

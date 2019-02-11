@@ -5,62 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Annihilator"
         mc:Ignorable="d"
-        Title="Options_Window" Height="400" Width="300">
+        Title="Options_Window"
+        Height="224"
+        Width="300">
     <TabControl>
-        <TabItem Header="1" Width="58">
-            <StackPanel Orientation="Vertical">
-                <ComboBox Name="Language_List_ComboBox" SelectedItem="{Binding Language_List_ComboBox_SelectedItem}"
-                          SelectionChanged="Language_List_ComboBox_SelectionChanged">
-                    <ComboBox.Resources>
-                        <Style TargetType="ComboBoxItem">
-                            <Setter Property="Height" Value="{Binding Language_List_ComboBox_Item_Height, Mode=OneWay}"/>
-                        </Style>
-                    </ComboBox.Resources>
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding English_Flag_Uri, Mode=OneWay}"/>
-                            <TextBlock x:Name="English_Language_List_ComboBox_Item" Text="{Binding English, Mode=OneWay}" FontSize="25"/>
-                        </StackPanel>
-                    </ComboBoxItem>
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding Polish_Flag_Uri, Mode=OneWay}"/>
-                            <TextBlock x:Name="Polish_Language_List_ComboBox_Item" Text="{Binding Polish, Mode=OneWay}" FontSize="25"/>
-                        </StackPanel>
-                    </ComboBoxItem>
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding German_Flag_Uri, Mode=OneWay}"/>
-                            <TextBlock x:Name="German_Language_List_ComboBox_Item" Text="{Binding German, Mode=OneWay}" FontSize="25"/>
-                        </StackPanel>
-                    </ComboBoxItem>
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding Latin_Flag_Uri, Mode=OneWay}"/>
-                            <TextBlock x:Name="Latin_Language_List_ComboBox_Item" Text="{Binding Latin, Mode=OneWay}" FontSize="25"/>
-                        </StackPanel>
-                    </ComboBoxItem>
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding Chinese_Flag_Uri, Mode=OneWay}"/>
-                            <TextBlock x:Name="Chinese_Language_List_ComboBox_Item" Text="{Binding Chinese, Mode=OneWay}" FontSize="25"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+        <TabItem Header="General" Width="58">
+            <Grid Margin="10,10,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay}" Grid.Column="0" Grid.Row="0"
+                           FontSize="12"/>
+
+                <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
+                          SelectedItem="{Binding Language_List_ComboBox_SelectedItem}"
+                          SelectionChanged="Language_List_ComboBox_SelectionChanged" Grid.Column="1" Grid.Row="0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal"  Height="{Binding Language_List_ComboBox_Height, Mode=OneWay}">
+                                <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"/>
+                                <TextBlock x:Name="English_Language_List_ComboBox_Item" Text="{Binding Language_Name, Mode=OneWay}" FontSize="25"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
                 </ComboBox>
-            </StackPanel>
+            </Grid>
         </TabItem>
         <TabItem Header="2" Width="58">
-            
-        </TabItem>
-        <TabItem Header="3" Width="58">
-            
-        </TabItem>
-        <TabItem Header="4" Width="58">
-            
-        </TabItem>
-        <TabItem Header="5" Width="58">
-            
+
         </TabItem>
     </TabControl>
 </Window>
-<!--{Binding Englis_Flag_Uri, Mode=OneWay}-->
