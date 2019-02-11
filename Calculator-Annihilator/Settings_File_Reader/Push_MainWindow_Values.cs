@@ -10,8 +10,7 @@ namespace Calculator_Annihilator
         public void Push_MainWindow_Values(MainWindow _MainWindow)
         {
             _MainWindow.Set_Current_Numerical_System(numeral_System);
-            _MainWindow.Standard_Messages = new Standard_Messages(Language,
-                AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Library");
+            _MainWindow.Current_Language = Language;
         }
     }
 }
