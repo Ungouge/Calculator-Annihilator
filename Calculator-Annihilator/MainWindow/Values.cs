@@ -10,8 +10,6 @@ namespace Calculator_Annihilator
 
 		private Equation Equation;
 
-		private Numeral_System Current_Numeral_System;
-
         internal Bindable_Resources GUI_Bindable_Resources;
 
         public Static_Resources _Static_Resources;
@@ -20,7 +18,21 @@ namespace Calculator_Annihilator
 
         internal Back_Parser_Fascede Back_Parser;
 
-		public sbyte Numeral_System_Type //check class Numerical_System for description of exotic numeral system
+        private Numeral_System current_Numeral_System;
+        
+        protected internal Numeral_System Current_Numeral_System
+        {
+            get
+            {
+                return current_Numeral_System;
+            }
+            private set
+            {
+                current_Numeral_System = value;
+            }
+        }
+
+        public sbyte Numeral_System_Type //check class Numerical_System for description of exotic numeral system
 		{
 			get
 			{
@@ -28,20 +40,31 @@ namespace Calculator_Annihilator
 			}
 		}
 
-        protected internal Numeral_System Get_Numeral_System
-        {
-            get { return Current_Numeral_System; }
-        }
-
 		public char[] Numerical_System_Signs
 		{
 			get
 			{
 				return Current_Numeral_System.System_Digits;
 			}
-		}
+        }
 
-		private INumber first_Number_In_Equation_Single; //Psedonullable double container for single
+        private Languages current_Language;
+
+        internal Languages Current_Language
+        {
+            get
+            {
+                return current_Language;
+            }
+            set
+            {
+                current_Language = value;
+
+                Set_Language(value);
+            }
+        }
+
+        private INumber first_Number_In_Equation_Single; //Psedonullable double container for single
 		private INumber First_Number_In_Equation_Single
 		{
 			get
