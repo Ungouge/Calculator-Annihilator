@@ -15,13 +15,13 @@ namespace Calculator_Annihilator
             {
                 case Languages.English:
                     return "English";
-                case Languages.Polski:
+                case Languages.Polish:
                     return "Polski";
-                case Languages.Deutsch:
+                case Languages.German:
                     return "Deutsch";
                 case Languages.Latin:
                     return "Latina";
-                case Languages.Zhongguo:
+                case Languages.Chinese:
                     return "Zhongguo";
                 default:
                     return "No_Language";

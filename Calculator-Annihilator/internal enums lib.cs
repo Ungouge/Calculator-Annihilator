@@ -25,9 +25,9 @@
     public enum Languages
     {
         English,
-        Polski,
-        Deutsch,
+        Polish,
+        German,
         Latin,
-        Zhongguo
+        Chinese
     }
 }
