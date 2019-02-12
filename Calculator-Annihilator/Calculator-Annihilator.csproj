@@ -247,8 +247,10 @@
     <Compile Include="Options_Window\Bindable_Resources\Set_Current_Language_In_ComboBox.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Languges_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Langauge_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\X.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_Language_List_ComboBox_Height.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_Language_List_Image_Height.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text_Bindables.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>

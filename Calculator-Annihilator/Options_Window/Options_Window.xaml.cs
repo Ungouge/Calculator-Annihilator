@@ -36,10 +36,8 @@ namespace Calculator_Annihilator
             InitializeComponent();
 
             // Postinitialization
-
+            
             this.DataContext = _Bindable_Resources;
-
-            Language_List_ComboBox.DataContext = _Bindable_Resources;
         }
     }
 }

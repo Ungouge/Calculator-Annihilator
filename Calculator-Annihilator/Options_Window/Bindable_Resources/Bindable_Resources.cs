@@ -22,20 +22,28 @@ namespace Calculator_Annihilator
 
             public double Language_List_ComboBox_Height { get; set; }
 
+            public double Language_List_Image_Height { get; set; }
+
             public List<Langauge_List_Item> Langauge_List_Items_List { get; set; }
 
             public Langauge_List_Item Language_List_ComboBox_SelectedItem { get; set; }
+
+            public double Options_Text_FontSize { get; set; }
 
             public Bindable_Resources(Options_Window _Options_Window)
             {
                 Options_Window = _Options_Window;
 
+                Options_Text_FontSize = Set_Options_Text_FontSize();
+
                 Langauge_List_Items_List = Set_Languges_List_Items();
 
-                Langauge_List_Item Language_List_ComboBox_SelectedItem = 
+                Language_List_ComboBox_SelectedItem = 
                     Set_Current_Language_In_ComboBox(Options_Window.Paretnt_MainWindow.Current_Language);
 
-                Language_List_ComboBox_Height = Set_Language_List_ComboBox_Height();
+                Language_List_Image_Height = Set_Language_List_Image_Height()  ;
+
+                Language_List_ComboBox_Height = Language_List_Image_Height + 12 ;
 
                 Set_Text_Bindables();
             }

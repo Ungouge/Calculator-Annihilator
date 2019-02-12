@@ -18,12 +18,13 @@ namespace Calculator_Annihilator
     {
         public partial class Bindable_Resources
         {
-            public double Set_Language_List_ComboBox_Height()//Options_Window _Options_Window)
+            public double Set_Language_List_Image_Height()//Options_Window _Options_Window)
             {
-                //Formatted_Text_Getter formatted_Text =
-                //    new Formatted_Text_Getter(_Options_Window.Language_List_TextBlock,
-                //    _Options_Window.Language_List_TextBlock.FontSize);
-                return 15e0;
+                Formatted_Text_Getter formatted_Text =
+                    new Formatted_Text_Getter(new TextBlock() { Text = "Xyz" },
+                    Options_Text_FontSize);
+
+                return formatted_Text.Get_Text_Height;
             }
         }
     }
