@@ -39,7 +39,7 @@ namespace Calculator_Annihilator
                 Langauge_List_Items_List = Set_Languges_List_Items();
 
                 Language_List_ComboBox_SelectedItem = 
-                    Set_Current_Language_In_ComboBox(Options_Window.Paretnt_MainWindow.Current_Language);
+                    Set_Current_Language_In_ComboBox(Options_Window.Options.Current_Language);
 
                 Language_List_Image_Height = Set_Language_List_Image_Height()  ;
 

@@ -21,13 +21,13 @@ namespace Calculator_Annihilator
     {
         public Bindable_Resources _Bindable_Resources;
 
-        MainWindow Paretnt_MainWindow;
+        Options Options;
 
-        internal Options_Window(MainWindow _MainWindow)
+        internal Options_Window(Options _Options)
         {
             // Preinitialization
 
-            Paretnt_MainWindow = _MainWindow;
+            Options = _Options;
 
             _Bindable_Resources = new Bindable_Resources(this);
 

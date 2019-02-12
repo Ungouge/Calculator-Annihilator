@@ -26,7 +26,7 @@ namespace Calculator_Annihilator
 
                 internal Langauge_List_Item(Options_Window _Options_Window, Languages Language)
                 {
-                    Language_Name = _Options_Window.Paretnt_MainWindow.Standard_Messages.Translate( Language.ToString() );
+                    Language_Name = _Options_Window.Options.Standard_Messages.Translate( Language.ToString() );
 
                     Language_Flag_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Flags_Images\" + Language.ToString() + "_Flag.png";
                 }

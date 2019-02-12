@@ -22,7 +22,7 @@ namespace Calculator_Annihilator
 
             private void Set_General_Options_Texts()
             {
-                Language = Options_Window.Paretnt_MainWindow.Standard_Messages.Translate("Language");
+                Language = Options_Window.Options.Standard_Messages.Translate("Language");
             }
         }
     }
