@@ -14,46 +14,21 @@ namespace Calculator_Annihilator
 
         internal Number_Notation Number_Notation { get; set; }
 
-        internal Font_Size_Type Font_Size_Type { get; set; }
+        internal Font_Size_Type Font_Size_Type { get; set; };
 
-        private sbyte numeral_System_Code;
-
-        internal sbyte Numeral_System_Code
-        {
-            get
-            {
-                return numeral_System_Code;
-            }
-            set
-            {
-                numeral_System_Code = value;
-
-                Set_Numeral_System(value);
-            }
-        }
+        internal sbyte Numeral_System_Code { get; private set; }
 
         internal Parser Parser { get; private set; }
 
         internal Numeral_System Current_Numeral_System { get; private set; }
 
-        private Languages current_Language;
-
-        internal Languages Current_Language
-        {
-            get
-            {
-                return current_Language;
-            }
-            set
-            {
-                current_Language = value;
-
-                Set_Language(value);
-            }
-        }
+        internal Languages Current_Language { get; private set; }
 
         internal Standard_Messages Standard_Messages { get; private set; }
 
+        internal string Comma_Type { get; private set; }
+
+        internal string[] Commas_Type_Array { get; private set; } = Signs_Lib.Commas_Type;
     }
 }
 
