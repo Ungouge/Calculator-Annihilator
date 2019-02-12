@@ -4,31 +4,31 @@ namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
-		private Parser Parser = new Parser();
+       internal Options options;
 
-		private Calc Calc = new Calc();
+        private Parser Parser = new Parser();
 
-		private Equation Equation;
+        private Calc Calc = new Calc();
+
+        private Equation Equation;
 
         internal Bindable_Resources GUI_Bindable_Resources;
 
-        public Static_Resources _Static_Resources;
+        internal Static_Resources _Static_Resources;
 
         internal Standard_Messages Standard_Messages;
 
         internal Back_Parser_Fascede Back_Parser;
-
-        private Numeral_System current_Numeral_System;
         
         protected internal Numeral_System Current_Numeral_System
         {
             get
             {
-                return current_Numeral_System;
+                return options.Current_Numeral_System;
             }
             private set
             {
-                current_Numeral_System = value;
+                options.Current_Numeral_System = value;
             }
         }
 
@@ -36,7 +36,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				return Current_Numeral_System.System_Type;
+				return options.Current_Numeral_System.System_Type;
 			}
 		}
 
@@ -44,21 +44,19 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				return Current_Numeral_System.System_Digits;
+				return options.Current_Numeral_System.System_Digits;
 			}
         }
-
-        private Languages current_Language;
-
+        
         internal Languages Current_Language
         {
             get
             {
-                return current_Language;
+                return options.Current_Language;
             }
             set
             {
-                current_Language = value;
+                options.Current_Language = value;
 
                 Set_Language(value);
             }

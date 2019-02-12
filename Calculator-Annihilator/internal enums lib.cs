@@ -30,4 +30,12 @@
         Latin,
         Chinese
     }
+
+    internal enum Font_Size_Type
+    {
+        Small,
+        Normal,
+        Big,
+        Hight_Contrast
+    }
 }

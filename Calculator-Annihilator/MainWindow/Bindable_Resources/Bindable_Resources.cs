@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
             protected internal Bindable_Resources(Settings_File_Reader _Settings_File_Reader)
             {
                 Current_Window = (MainWindow)Application.Current.MainWindow;
-                _Settings_File_Reader.Push_Dynamic_Settings(this);
+                _Settings_File_Reader.Push_Bindable_Resources(this);
             }
         }
     }

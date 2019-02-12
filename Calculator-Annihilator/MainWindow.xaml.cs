@@ -28,6 +28,8 @@ namespace Calculator_Annihilator
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
 
+                this.options = new Options(this);
+
                 _Settings_File_Reader.Push_MainWindow_Values(this);
 
                 _Static_Resources = new Static_Resources(this, _Settings_File_Reader);

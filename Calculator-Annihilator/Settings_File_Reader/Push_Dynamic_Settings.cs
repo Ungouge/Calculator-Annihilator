@@ -7,10 +7,10 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Reads settings file and sets dynamic main window settings
         /// </summary>
-        internal void Push_Dynamic_Settings(MainWindow.Bindable_Resources Dynamic_Parameters)
+        internal void Push_Bindable_Resources(MainWindow.Bindable_Resources Bindable_Resources)
         {
-            Dynamic_Parameters.Window_Height = initial_Height;
-            Dynamic_Parameters.Window_Width = initial_Width;
+            Bindable_Resources.Window_Height = initial_Height;
+            Bindable_Resources.Window_Width = initial_Width;
         }
     }
 
