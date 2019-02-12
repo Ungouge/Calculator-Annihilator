@@ -2,7 +2,7 @@
 
 namespace Calculator_Annihilator
 {
-    partial class MainWindow
+    partial class Options
     {
         private void Set_Language(Languages Language)
         {

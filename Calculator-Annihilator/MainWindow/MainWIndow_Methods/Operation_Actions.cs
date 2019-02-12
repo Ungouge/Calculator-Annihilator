@@ -10,9 +10,9 @@ namespace Calculator_Annihilator
 		/// <param name="_Operand"></param>
 		private void Operation_Button(IOperand _Operand)
 		{
-			if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Single))
+			if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Single))
 				Basic_Calculation_Single(_Operand);
-			else if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Complex))
+			else if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Complex))
 				Insert_To_WorkSpace(_Operand.ToString());
 		}
 

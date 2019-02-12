@@ -202,11 +202,9 @@
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
-    <Compile Include="MainWindow\MainWindow_Methods\Set_Language.cs" />
-    <Compile Include="MainWindow\Options\Options.cs" />
-    <Compile Include="MainWindow\Options\values.cs" />
-    <Compile Include="MainWindow\Static_Resources\Calculator_Mode.cs" />
-    <Compile Include="MainWindow\Static_Resources\Calculation_Method.cs" />
+    <Compile Include="Options\Set_Language.cs" />
+    <Compile Include="Options\Options.cs" />
+    <Compile Include="Options\values.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Values.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\buttons Basic_Operations_Less_Than_Decimal_System.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\Basic_Operations_Less_Than_Hexadecimal_System.xaml.cs">
@@ -222,9 +220,7 @@
       <DependentUpon>Less_Than_Hexadecimal_System.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow\MainWindow_Methods\Calculator_Buttons_Panel_Setter.cs" />
-    <Compile Include="MainWindow\Static_Resources\Commas_Type.cs" />
-    <Compile Include="MainWindow\Static_Resources\Number_Notation.cs" />
-    <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />
+    <Compile Include="Options\Commas_Type.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\changed events.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Operation_Actions.cs" />
@@ -235,7 +231,7 @@
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
-    <Compile Include="MainWindow\MainWindow_Methods\Set_Current_Numerical_System.cs" />
+    <Compile Include="Options\Set_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
@@ -255,11 +251,10 @@
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Settings_File_Reader\Push_MainWindow_Values.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Settings_File_Reader\Options_Generator.cs" />
     <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
-    <Compile Include="Settings_File_Reader\Push_Static_Settings.cs" />
-    <Compile Include="Settings_File_Reader\Values.cs" />
     <Compile Include="Library\Signs_Lib\Signs_Lib.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Button_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
@@ -317,7 +312,7 @@
     <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
     <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
-    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\Parse.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

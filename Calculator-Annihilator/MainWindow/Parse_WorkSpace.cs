@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
             //if (String.IsNullOrEmpty(WorkSpace.Text)) // xyz: fix errors when empty work space like this or by implementin no actions when ws empty
             //    return new Number(0);
             //else
-                return Parser.Parse(WorkSpace.Text, Current_Numeral_System);
+                return Parser.Parse(WorkSpace.Text);
 		}
 	}
 }

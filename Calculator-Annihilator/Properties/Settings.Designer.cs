@@ -98,9 +98,9 @@ namespace Calculator_Annihilator.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(",")]
-        public char comma_Type {
+        public string comma_Type {
             get {
-                return ((char)(this["comma_Type"]));
+                return ((string)(this["comma_Type"]));
             }
             set {
                 this["comma_Type"] = value;
@@ -116,6 +116,18 @@ namespace Calculator_Annihilator.Properties {
             }
             set {
                 this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public sbyte Font_Size_Type {
+            get {
+                return ((sbyte)(this["Font_Size_Type"]));
+            }
+            set {
+                this["Font_Size_Type"] = value;
             }
         }
     }

@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
         /// </summary>
         private void Scientific_MenuButton_Click(object sender, RoutedEventArgs e)
         {
-            _Static_Resources.Calculator_Mode = Calculator_Mode.Scientific;
+            options.Calculator_Mode = Calculator_Mode.Scientific;
 
             Calculator_Buttons_Panel_Setter();
         }

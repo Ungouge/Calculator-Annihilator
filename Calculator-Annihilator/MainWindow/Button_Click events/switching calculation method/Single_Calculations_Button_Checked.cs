@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
         {
-            _Static_Resources.Calculation_Method = Calculation_Method.Single;
+            options.Calculation_Method = Calculation_Method.Single;
 
             Complex_To_Single();
 

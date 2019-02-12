@@ -28,15 +28,11 @@ namespace Calculator_Annihilator
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
 
-                this.options = new Options(this);
+                options = _Settings_File_Reader.Options_Generator();
+                
+                GUI_Bindable_Resources = new Bindable_Resources(this, options.Intitial_Height, options.Intial_Width);
 
-                _Settings_File_Reader.Push_MainWindow_Values(this);
-
-                _Static_Resources = new Static_Resources(this, _Settings_File_Reader);
-
-                GUI_Bindable_Resources = new Bindable_Resources(_Settings_File_Reader);
-
-                GUI_Bindable_Resources.Set_Texts(this);
+                GUI_Bindable_Resources.Set_Texts(Standard_Messages);
 
                 Back_Parser = new Back_Parser_Fascede(this);
 
@@ -52,7 +48,7 @@ namespace Calculator_Annihilator
                 Calculator_Buttons_Panel_Setter();
 
 
-                if (_Static_Resources.Calculation_Method == Calculation_Method.Single)
+                if (options.Calculation_Method == Calculation_Method.Single)
                     this.SingleCalculations.IsChecked = true;
                 else // calculation_Method == Calculation_Method.Complex
                     this.ComplexCalculations.IsChecked = true;

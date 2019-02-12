@@ -34,11 +34,11 @@ namespace Calculator_Annihilator
         /// </summary>
         internal void Button_Equals_Action()
 		{
-			if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Single))
+			if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Single))
 			{
 				Equals_Single();
 			}
-			else if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Complex))
+			else if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Complex))
 			{
 				Equals_Complex(WorkSpace.Text);
 			}

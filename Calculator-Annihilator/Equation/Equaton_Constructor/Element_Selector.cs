@@ -105,8 +105,7 @@ namespace Calculator_Annihilator
 			else
 			{
 				Number Parsed_Number = _Parser.Parse( the_Equation.Substring(
-                    first_Sign_Position, sign_Position - first_Sign_Position),
-                    _Numerical_System );
+                    first_Sign_Position, sign_Position - first_Sign_Position));
 
 				Element_Colection.Add( Parsed_Number );
 

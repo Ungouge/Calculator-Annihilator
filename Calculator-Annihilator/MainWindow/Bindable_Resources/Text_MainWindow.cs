@@ -30,23 +30,23 @@ namespace Calculator_Annihilator
             //public string  { get; set; }
 
 
-            protected internal void Set_Texts(MainWindow MainWindow)
+            protected internal void Set_Texts(Standard_Messages Standard_Messages)
             {
                 // \Calculator_Annihilator.xml
-                Title                = MainWindow.Standard_Messages.Translate("Title");
-                Single_Calculations  = MainWindow.Standard_Messages.Translate("Single_Calculations");
-                Complex_Calculations = MainWindow.Standard_Messages.Translate("Complex_Calculations");
+                Title                = Standard_Messages.Translate("Title");
+                Single_Calculations  = Standard_Messages.Translate("Single_Calculations");
+                Complex_Calculations = Standard_Messages.Translate("Complex_Calculations");
 
                 // \Main_Menu.xml
-                File         = MainWindow.Standard_Messages.Translate("File");
-                View         = MainWindow.Standard_Messages.Translate("View");
-                Edit         = MainWindow.Standard_Messages.Translate("Edit");
-                Help         = MainWindow.Standard_Messages.Translate("Help");
-                New_Window   = MainWindow.Standard_Messages.Translate("New_Window");
-                Options      = MainWindow.Standard_Messages.Translate("Options");
-                Close_Window = MainWindow.Standard_Messages.Translate("Close_Window");
-                Standard     = MainWindow.Standard_Messages.Translate("Standard");
-                Scientific   = MainWindow.Standard_Messages.Translate("Scientific");
+                File         = Standard_Messages.Translate("File");
+                View         = Standard_Messages.Translate("View");
+                Edit         = Standard_Messages.Translate("Edit");
+                Help         = Standard_Messages.Translate("Help");
+                New_Window   = Standard_Messages.Translate("New_Window");
+                Options      = Standard_Messages.Translate("Options");
+                Close_Window = Standard_Messages.Translate("Close_Window");
+                Standard     = Standard_Messages.Translate("Standard");
+                Scientific   = Standard_Messages.Translate("Scientific");
             }
         }
     }

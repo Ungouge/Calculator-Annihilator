@@ -13,8 +13,8 @@ namespace Calculator_Annihilator
             return Parse_Back
                 (Number,
                 MainWindow.Numeral_System_Type,
-                MainWindow._Static_Resources.Number_Notation,
-                MainWindow._Static_Resources.Comma_Type
+                MainWindow.options.Number_Notation,
+                MainWindow.options.Comma_Type
                 );
         }
 

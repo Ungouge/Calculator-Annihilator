@@ -20,10 +20,13 @@
     <Setting Name="Number_Notation" Type="System.SByte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="comma_Type" Type="System.Char" Scope="User">
+    <Setting Name="comma_Type" Type="System.String" Scope="User">
       <Value Profile="(Default)">,</Value>
     </Setting>
     <Setting Name="Language" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Font_Size_Type" Type="System.SByte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>

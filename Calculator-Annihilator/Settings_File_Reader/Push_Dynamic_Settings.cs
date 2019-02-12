@@ -9,8 +9,10 @@ namespace Calculator_Annihilator
         /// </summary>
         internal void Push_Bindable_Resources(MainWindow.Bindable_Resources Bindable_Resources)
         {
-            Bindable_Resources.Window_Height = initial_Height;
-            Bindable_Resources.Window_Width = initial_Width;
+            //Bindable_Resources.Window_Height = initial_Height;
+            //Bindable_Resources.Window_Width = initial_Width;
+
+            //_Static_Resources.Comma_Type = System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
         }
     }
 

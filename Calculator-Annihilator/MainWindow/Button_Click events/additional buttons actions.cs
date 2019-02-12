@@ -33,7 +33,7 @@ namespace Calculator_Annihilator
             Clear_WorkSpace();
             Clear_ResultSpace();
 
-            if (Convert.ToBoolean(_Static_Resources.Calculation_Method == Calculation_Method.Single))
+            if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Single))
             {
                 no_operand_Sign_Single = true;
                 no_First_Number_In_Equation_Single = true;

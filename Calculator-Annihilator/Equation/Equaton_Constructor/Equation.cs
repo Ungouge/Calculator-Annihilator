@@ -17,8 +17,10 @@ namespace Calculator_Annihilator
 		{
 			the_Equation = eq;
 			_Numerical_System = ns;
-            
-			Element_Selector();
+
+            _Parser = new Parser(_Numerical_System);
+
+            Element_Selector();
 
 			try
 			{

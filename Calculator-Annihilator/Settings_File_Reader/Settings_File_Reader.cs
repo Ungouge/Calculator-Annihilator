@@ -8,21 +8,22 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class Settings_File_Reader
     {
-        public Settings_File_Reader()
+        Options options;
+
+        internal Settings_File_Reader()
         {
-            calculator_Mode = (Calculator_Mode) Properties.Settings.Default.Calculator_Mode;
-
-            calculation_Method = (Calculation_Method) Properties.Settings.Default.Calculation_Method;
-
-            number_Notation = (Number_Notation)Properties.Settings.Default.Number_Notation;
-
-            Language = (Languages)Properties.Settings.Default.Language;
-
-            initial_Height = Properties.Settings.Default.initial_Height;
-            initial_Width = Properties.Settings.Default.initial_Width;
-            numeral_System = Properties.Settings.Default.numeral_System;
-
-            comma_Type = Properties.Settings.Default.comma_Type;
+            options = new Options
+            (
+                (Calculator_Mode)Properties.Settings.Default.Calculator_Mode,
+                (Calculation_Method)Properties.Settings.Default.Calculation_Method,
+                Properties.Settings.Default.initial_Height,
+                Properties.Settings.Default.initial_Width,
+                (Number_Notation)Properties.Settings.Default.Number_Notation,
+                Properties.Settings.Default.comma_Type,
+                (Font_Size_Type)Properties.Settings.Default.Font_Size_Type,
+                Properties.Settings.Default.numeral_System,
+                (Languages)Properties.Settings.Default.Language
+            );
 
             //Default Values:
             //calculator_Mode = Calculator_Mode.Standard;
