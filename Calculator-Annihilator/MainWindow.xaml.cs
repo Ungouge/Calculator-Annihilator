@@ -30,9 +30,9 @@ namespace Calculator_Annihilator
 
                 options = _Settings_File_Reader.Options_Generator();
                 
-                GUI_Bindable_Resources = new Bindable_Resources(this, options.Intitial_Height, options.Intial_Width);
+                GUI_Bindable_Resources = new Bindable_Resources(this);
 
-                GUI_Bindable_Resources.Set_Texts(Standard_Messages);
+                GUI_Bindable_Resources.Set_Texts();
 
                 Back_Parser = new Back_Parser_Fascede(this);
 

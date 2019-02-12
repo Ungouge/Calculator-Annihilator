@@ -8,6 +8,8 @@ namespace Calculator_Annihilator
         {
             private MainWindow Current_Window;
 
+            private Standard_Messages standard_Messages;
+
             /// <summary>
             /// Contains names of fields that should be recalculated at MainWindow state change
             /// </summary>

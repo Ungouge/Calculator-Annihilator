@@ -13,11 +13,14 @@ namespace Calculator_Annihilator
             /// <summary>
             /// Constructs new Bindable Resources class
             /// </summary>
-            protected internal Bindable_Resources(MainWindow mainWindow, double initaial_Height, double initial_Width)
+            protected internal Bindable_Resources(MainWindow mainWindow)
             {
                 Current_Window = mainWindow;
-                Window_Height = initaial_Height;
-                Window_Width = initial_Width;
+
+                standard_Messages = Current_Window.options.Standard_Messages;
+
+                Window_Height = Current_Window.options.Initial_Height;
+                Window_Width = Current_Window.options.Initial_Width;
             }
         }
     }
