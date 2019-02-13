@@ -36,6 +36,10 @@ namespace Calculator_Annihilator
 			{
 				return options.Current_Numeral_System.System_Type;
 			}
+            private set
+            {
+                options.Set_Numeral_System(value);
+            }
 		}
 
 		public char[] Numerical_System_Signs
@@ -54,7 +58,7 @@ namespace Calculator_Annihilator
             }
             set
             {
-                options.Current_Language = value;
+                options.Set_Language(value);
             }
         }
         internal Standard_Messages Standard_Messages
