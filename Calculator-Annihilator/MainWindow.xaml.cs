@@ -27,13 +27,13 @@ namespace Calculator_Annihilator
                 // Preinitialization
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
-
-                options = _Settings_File_Reader.Options_Generator();
                 
                 GUI_Bindable_Resources = new Bindable_Resources(this);
 
-                GUI_Bindable_Resources.Set_Texts();
+                options = _Settings_File_Reader.Options_Generator(this);
 
+                GUI_Bindable_Resources.Intialize_MainWindow_Size();
+                
                 Back_Parser = new Back_Parser_Fascede(this);
 
                 // Initialization

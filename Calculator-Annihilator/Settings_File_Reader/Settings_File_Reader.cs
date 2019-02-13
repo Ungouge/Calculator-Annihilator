@@ -8,11 +8,11 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class Settings_File_Reader
     {
-        Options options;
+        Options_Storage options;
 
         internal Settings_File_Reader()
         {
-            options = new Options
+            options = new Options_Storage
             (
                 (Calculator_Mode)Properties.Settings.Default.Calculator_Mode,
                 (Calculation_Method)Properties.Settings.Default.Calculation_Method,
@@ -24,6 +24,8 @@ namespace Calculator_Annihilator
                 Properties.Settings.Default.numeral_System,
                 (Languages)Properties.Settings.Default.Language
             );
+
+            //_Static_Resources.Comma_Type = System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
 
             //Default Values:
             //calculator_Mode = Calculator_Mode.Standard;

@@ -7,9 +7,9 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Returns options read from the settings file.
         /// </summary>
-        internal Options Options_Generator()
+        internal Options Options_Generator(MainWindow mainWindow)
         {
-            return new Options(options);
+            return new Options(mainWindow, options);
         }
     }
 }
