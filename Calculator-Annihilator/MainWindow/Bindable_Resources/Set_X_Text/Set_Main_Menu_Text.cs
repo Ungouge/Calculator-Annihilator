@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
             public string Standard { get; set; }
             public string Scientific { get; set; }
 
-            private void Set_Main_Menu_Text()
+            private void Set_Main_Menu_Text(Standard_Messages standard_Messages)
             {
                 // \Main_Menu.xml
 
@@ -29,6 +29,18 @@ namespace Calculator_Annihilator
                 Close_Window = standard_Messages.Translate("Close_Window");
                 Standard = standard_Messages.Translate("Standard");
                 Scientific = standard_Messages.Translate("Scientific");
+
+                On_Properties_Change(new string[] {
+                    "File",         
+                    "View",
+                    "Edit",
+                    "Help",
+                    "New_Window",
+                    "Options",
+                    "Close_Window",
+                    "Standard",
+                    "Scientific"
+                });
             }
         }
     }
