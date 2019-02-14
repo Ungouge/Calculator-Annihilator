@@ -179,6 +179,7 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
@@ -277,6 +278,16 @@
     <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
+    <Compile Include="Windows_Structure_Manager\Add_MainWindow.cs" />
+    <Compile Include="Windows_Structure_Manager\Add_Children_Window.cs" />
+    <Compile Include="Windows_Structure_Manager\Add_Children.cs" />
+    <Compile Include="Windows_Structure_Manager\Get_MainWindow_Children_List.cs" />
+    <Compile Include="Windows_Structure_Manager\Is_Children_Windows.cs" />
+    <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\MainWindow_Children_List.cs" />
+    <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\null MainWindow_Children_List.cs" />
+    <Compile Include="Windows_Structure_Manager\Remove_MainWindow.cs" />
+    <Compile Include="Windows_Structure_Manager\Remove_Children_Window.cs" />
+    <Compile Include="Windows_Structure_Manager\Windows_Structure_Manager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
