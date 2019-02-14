@@ -14,18 +14,7 @@ namespace Calculator_Annihilator
                 Options_Windows_List.Remove(options_Window);
             }
 
-            foreach (MainWindow_Children_List Children_List in MainWindows_List)
-            {
-                foreach (IMainWindow_Children Children in Children_List.This_Children_List)
-                {
-                    if(Children == Children_Window)
-                    {
-                        Children_List.This_Children_List.Remove(Children);
-
-                        return;
-                    }
-                }
-            }
+            Remove_children(Children_Window);
         }
     }
 }

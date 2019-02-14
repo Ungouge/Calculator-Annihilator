@@ -285,6 +285,7 @@
     <Compile Include="Windows_Structure_Manager\Is_Children_Windows.cs" />
     <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\MainWindow_Children_List.cs" />
     <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\null MainWindow_Children_List.cs" />
+    <Compile Include="Windows_Structure_Manager\Remove_Children.cs" />
     <Compile Include="Windows_Structure_Manager\Remove_MainWindow.cs" />
     <Compile Include="Windows_Structure_Manager\Remove_Children_Window.cs" />
     <Compile Include="Windows_Structure_Manager\Windows_Structure_Manager.cs" />
