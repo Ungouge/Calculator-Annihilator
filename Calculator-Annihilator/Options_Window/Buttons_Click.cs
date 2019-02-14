@@ -14,16 +14,29 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
+    /// <summary>
+    /// Interaction logic for Options_Window.xaml
+    /// </summary>
     public partial class Options_Window : Window
     {
-        public partial class Bindable_Resources
+        private void Apply_In_All_Buton_Click(object sender, RoutedEventArgs e)
         {
-            internal void Set_Text_Bindables(Standard_Messages standard_Messages)
-            {
-                Set_General_Options_Texts(standard_Messages);
 
-                Set_Buttons_Texts(standard_Messages);
-            }
+        }
+
+        private void Ok_Buton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cancel_Buton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Apply_Buton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

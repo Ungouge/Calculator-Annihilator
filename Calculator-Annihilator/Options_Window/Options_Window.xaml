@@ -12,8 +12,8 @@
         <TabItem Header="General" Width="58">
             <Grid Margin="10,10,10,10">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
@@ -21,6 +21,8 @@
                     <RowDefinition Height="3*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Language_List_Image_Height}"/>
                 </Grid.RowDefinitions>
                 <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay}" Grid.Column="0" Grid.Row="0"
                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"/>
@@ -41,6 +43,34 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Name="Apply_In_All_Buton" Content="{Binding Apply_All_Windows, Mode=OneWay}"
+                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                            Click="Apply_In_All_Buton_Click"
+                            Grid.Column="0"/>
+                    <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay}"
+                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                            Click="Ok_Buton_Click"
+                            Grid.Column="2"/>
+                    <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay}"
+                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                            Click="Cancel_Buton_Click"
+                            Grid.Column="4"/>
+                    <Button Name="Apply_Buton" Content="{Binding Apply, Mode=OneWay}"
+                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                            Click="Apply_Buton_Click"
+                            Grid.Column="6"/>
+                </Grid>
             </Grid>
         </TabItem>
         <TabItem Header="2" Width="58">
