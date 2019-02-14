@@ -36,4 +36,40 @@
     <Latin>Seres</Latin>
     <Zhongguo>Zhongguo</Zhongguo>
   </Chinese>
+  <!-- Languages_Native must be in native-->
+  <English_Native>
+    <English>English</English>
+    <Polski>English</Polski>
+    <Deutsch>English</Deutsch>
+    <Latin>English</Latin>
+    <Zhongguo>English</Zhongguo>
+  </English_Native>
+  <Polish_Native>
+    <English>Polski</English>
+    <Polski>Polski</Polski>
+    <Deutsch>Polski</Deutsch>
+    <Latin>Polski</Latin>
+    <Zhongguo>Polski</Zhongguo>
+  </Polish_Native>
+  <German_Native>
+    <English>Deutsch</English>
+    <Polski>Deutsch</Polski>
+    <Deutsch>Deutsch</Deutsch>
+    <Latin>Deutsch</Latin>
+    <Zhongguo>Deutsch</Zhongguo>
+  </German_Native>
+  <Latin_Native>
+    <English>Deutsch</English>
+    <Polski>Deutsch</Polski>
+    <Deutsch>Deutsch</Deutsch>
+    <Latin>Deutsch</Latin>
+    <Zhongguo>Deutsch</Zhongguo>
+  </Latin_Native>
+  <Chinese_Native>
+    <English>Zhongguo</English>
+    <Polski>Zhongguo</Polski>
+    <Deutsch>Zhongguo</Deutsch>
+    <Latin>Zhongguo</Latin>
+    <Zhongguo>Zhongguo</Zhongguo>
+  </Chinese_Native>
 </root>

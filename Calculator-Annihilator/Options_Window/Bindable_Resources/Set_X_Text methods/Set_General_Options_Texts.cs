@@ -20,9 +20,14 @@ namespace Calculator_Annihilator
         {
             public string Language { get; set; }
 
-            private void Set_General_Options_Texts()
+            private void Set_General_Options_Texts(Standard_Messages standard_Messages)
             {
                 Language = Options_Window.Options.Standard_Messages.Translate("Language");
+
+                On_Properties_Change(new string[]
+                {
+                    "Language"
+                });
             }
         }
     }

@@ -181,11 +181,15 @@
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
-    <Compile Include="Library\Standard_Messages\Add_To_Dictionary.cs" />
-    <Compile Include="Library\Standard_Messages\Find_Language_Libraries.cs" />
-    <Compile Include="Library\Standard_Messages\Translate.cs" />
-    <Compile Include="Library\Standard_Messages\Load_Language.cs" />
-    <Compile Include="Library\Standard_Messages\Set_Language_Loader_Delegate.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Language_ComboBox_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
+    <Compile Include="Options_Window\Buttons_Click.cs" />
+    <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
+    <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
+    <Compile Include="Standard_Messages\Translate.cs" />
+    <Compile Include="Standard_Messages\Load_Language.cs" />
+    <Compile Include="Standard_Messages\Set_Language_Loader_Delegate.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Intialize_MainWindow_Size.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Properties_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Set_X_Text\Set_Calculator_annihilator_Text.cs" />
@@ -269,7 +273,7 @@
     <Compile Include="MainWindow\Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Font_To_TextBox_Macher.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="Library\Standard_Messages\Standard_Messages.cs" />
+    <Compile Include="Standard_Messages\Standard_Messages.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Push_Recalculations.cs" />
     <Compile Include="MainWindow\Bindable_Resources\ResultSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
@@ -383,17 +387,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Language_Library_Showcase.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Main_Menu.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Library\Language_Library\Options\General_Options.xml" />
-    <Resource Include="Library\Language_Library\Options\Language_List.xml" />
+    <Content Include="Library\Language_Library\Options\Options_Buttons.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\General_Options.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\Language_List.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\Language_Library\Calculator_Annihilator.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

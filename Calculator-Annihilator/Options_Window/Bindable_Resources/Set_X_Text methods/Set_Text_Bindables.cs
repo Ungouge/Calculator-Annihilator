@@ -18,9 +18,13 @@ namespace Calculator_Annihilator
     {
         public partial class Bindable_Resources
         {
-            private void Set_Text_Bindables()
+            internal void Set_Text_Bindables(Standard_Messages standard_Messages)
             {
-                Set_General_Options_Texts();
+                Set_General_Options_Texts(standard_Messages);
+
+                Set_Buttons_Texts(standard_Messages);
+
+                Set_Language_ComboBox_Texts(standard_Messages);
             }
         }
     }
