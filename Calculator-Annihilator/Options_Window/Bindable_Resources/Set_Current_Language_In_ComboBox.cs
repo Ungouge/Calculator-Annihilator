@@ -22,7 +22,7 @@ namespace Calculator_Annihilator
             {
                 foreach (Langauge_List_Item item in Langauge_List_Items_List)
                 {
-                    if (item.Language_Name == current_Language.ToString())
+                    if (item.Language == current_Language)
                         return item;
                 }
 
