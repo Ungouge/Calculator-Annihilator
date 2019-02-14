@@ -17,17 +17,21 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Interaction logic for Options_Window.xaml
     /// </summary>
-    public partial class Options_Window : Window
+    public partial class Options_Window : Window, IMainWindow_Children
     {
         public Bindable_Resources _Bindable_Resources;
 
+        public MainWindow Parent_MainWindow { get; set; }
+
         Options Options;
 
-        internal Options_Window(Options _Options)
+        internal Options_Window(MainWindow mainWindow)
         {
             // Preinitialization
 
-            Options = _Options;
+            Parent_MainWindow = mainWindow;
+
+            Options = mainWindow.options;
 
             _Bindable_Resources = new Bindable_Resources(this);
 
