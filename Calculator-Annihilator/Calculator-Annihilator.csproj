@@ -182,7 +182,6 @@
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Language_ComboBox_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Options_Window\Buttons_Click.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
@@ -258,7 +257,6 @@
     <Compile Include="Options_Window\Bindable_Resources\Set_Languges_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Langauge_List_Item.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\X.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Language_List_Image_Height.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text_Bindables.cs" />
