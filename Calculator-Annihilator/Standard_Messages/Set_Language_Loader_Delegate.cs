@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
                 case Languages.German:
                     return "Deutsch";
                 case Languages.Latin:
-                    return "Latina";
+                    return "Latin";
                 case Languages.Chinese:
                     return "Zhongguo";
                 default:
