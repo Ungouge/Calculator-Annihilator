@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
     {
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
-            Options_Window Options_Window = new Options_Window(options);
+            Options_Window Options_Window = new Options_Window(this);
             Options_Window.Show();
         }
     }

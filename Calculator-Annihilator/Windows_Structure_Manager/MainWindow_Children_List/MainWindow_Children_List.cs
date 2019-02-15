@@ -17,7 +17,6 @@ namespace Calculator_Annihilator
             /// <summary>
             /// Construct new MainWindow_Children_List with empty children list.
             /// </summary>
-            /// <param name="mainWindow"></param>
             public MainWindow_Children_List(MainWindow mainWindow)
             {
                 This_MainWindow = mainWindow;
