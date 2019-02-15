@@ -34,7 +34,7 @@ namespace Calculator_Annihilator
             {
                 Options_Window = _Options_Window;
 
-                Set_Text_Bindables(Options_Window.Options.Standard_Messages);
+                Set_Text(Options_Window.Options.Standard_Messages);
 
                 Options_Text_FontSize = Set_Options_Text_FontSize();
 

@@ -5,7 +5,7 @@ namespace Calculator_Annihilator
 {
     public partial class Options_Window
     {
-        public partial class Bindable_Resources
+        public partial class Bindable_Resources : INotifyPropertyChanged
         {
             public event PropertyChangedEventHandler PropertyChanged;
 

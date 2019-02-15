@@ -16,18 +16,13 @@ namespace Calculator_Annihilator
 {
     public partial class Options_Window : Window
     {
-        partial class Bindable_Resources
+        public partial class Bindable_Resources
         {
-            public string Language { get; set; }
-
-            private void Set_General_Options_Texts(Standard_Messages standard_Messages)
+            internal void Set_Text(Standard_Messages standard_Messages)
             {
-                Language = standard_Messages.Translate("Language");
+                Set_General_Options_Texts(standard_Messages);
 
-                On_Properties_Change(new string[]
-                {
-                    "Language"
-                });
+                Set_Buttons_Texts(standard_Messages);
             }
         }
     }

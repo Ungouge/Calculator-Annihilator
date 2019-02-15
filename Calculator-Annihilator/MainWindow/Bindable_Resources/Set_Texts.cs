@@ -11,12 +11,6 @@ namespace Calculator_Annihilator
     {
         partial class Bindable_Resources
         {
-            //public string  { get; set; }
-            //public string  { get; set; }
-            //public string  { get; set; }
-            //public string  { get; set; }
-            //public string  { get; set; }
-            
             protected internal void Set_Texts(Standard_Messages standard_Messages)
             {
                 Set_Calculator_annihilator_Text(standard_Messages);

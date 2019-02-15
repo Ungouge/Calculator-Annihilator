@@ -25,6 +25,8 @@ namespace Calculator_Annihilator
 
             Parent_MainWindow = mainWindow;
 
+            Windows_Structure_Manager.Add_Children_Window(this);
+
             Options = mainWindow.options;
 
             _Bindable_Resources = new Bindable_Resources(this);

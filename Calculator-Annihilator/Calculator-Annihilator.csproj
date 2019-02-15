@@ -179,12 +179,21 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
+    <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
-    <Compile Include="Options_Window\Buttons_Click.cs" />
+    <Compile Include="Options_Window\Buttons click\Apply_Buton_Click.cs" />
+    <Compile Include="Options_Window\Buttons click\Apply_In_All_Buton_Click.cs" />
+    <Compile Include="Options_Window\Buttons click\Apply_Option_Change.cs" />
+    <Compile Include="Options_Window\Buttons click\Cancel_Buton_Click.cs" />
+    <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
+    <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
+    <Compile Include="Options_Window\Push_Set_Text.cs" />
+    <Compile Include="Options_Window\values.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
     <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
     <Compile Include="Standard_Messages\Translate.cs" />
@@ -260,7 +269,7 @@
     <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Language_List_Image_Height.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text_Bindables.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>
@@ -281,6 +290,7 @@
     <Compile Include="Windows_Structure_Manager\Add_MainWindow.cs" />
     <Compile Include="Windows_Structure_Manager\Add_Children_Window.cs" />
     <Compile Include="Windows_Structure_Manager\Add_Children.cs" />
+    <Compile Include="Windows_Structure_Manager\Get_MainWindows_List.cs" />
     <Compile Include="Windows_Structure_Manager\Get_MainWindow_Children_List.cs" />
     <Compile Include="Windows_Structure_Manager\Is_Children_Windows.cs" />
     <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\MainWindow_Children_List.cs" />

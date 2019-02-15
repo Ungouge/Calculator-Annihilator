@@ -14,16 +14,11 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window : Window
+    partial class Options_Window : Window
     {
-        public partial class Bindable_Resources
+        void IMainWindow_Children.Push_Set_Text(Standard_Messages standard_Messages)
         {
-            internal void Set_Text_Bindables(Standard_Messages standard_Messages)
-            {
-                Set_General_Options_Texts(standard_Messages);
-
-                Set_Buttons_Texts(standard_Messages);
-            }
+            _Bindable_Resources.Set_Text(standard_Messages);
         }
     }
 }
