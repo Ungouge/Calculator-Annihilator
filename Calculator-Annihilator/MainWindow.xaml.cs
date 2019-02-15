@@ -25,6 +25,7 @@ namespace Calculator_Annihilator
             try
             {
                 // Preinitialization
+                Windows_Structure_Manager.Add_MainWindow(this);
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
                 

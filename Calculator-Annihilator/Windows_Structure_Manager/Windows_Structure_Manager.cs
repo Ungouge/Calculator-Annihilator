@@ -10,8 +10,8 @@ namespace Calculator_Annihilator
     {
         static MainWindow MainWindow_Root;
 
-        static List<MainWindow_Children_List> MainWindows_List;
+        static List<MainWindow_Children_List> MainWindows_List = new List<MainWindow_Children_List>();
 
-        static List<Options_Window> Options_Windows_List;
+        static List<Options_Window> Options_Windows_List = new List<Options_Window>();
     }
 }

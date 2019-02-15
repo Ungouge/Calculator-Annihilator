@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Adds given MainWindow to structure manager MainWindow list.
         /// </summary>
-        static void Add_MainWindow(MainWindow mainWindow)
+        static internal void Add_MainWindow(MainWindow mainWindow)
         {
             MainWindows_List.Add(new MainWindow_Children_List (mainWindow));
         }
