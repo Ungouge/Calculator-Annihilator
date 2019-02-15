@@ -185,6 +185,7 @@
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Options_Window\Buttons click\Apply_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Apply_In_All_Buton_Click.cs" />

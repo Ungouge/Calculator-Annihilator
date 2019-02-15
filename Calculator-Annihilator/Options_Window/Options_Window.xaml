@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Annihilator"
         mc:Ignorable="d"
-        Title="Options_Window"
+        Title="{Binding Options, Mode=OneWay, FallbackValue= Options_Window}"
         Height="324"
         Width="336">
     <TabControl>
-        <TabItem Header="General" Width="58">
+        <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}" 
+                 Width="{Binding TabItem_Width, Mode=OneWay, FallbackValue= 70}">
             <Grid Margin="10,10,10,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -24,13 +25,16 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="{Binding Language_List_Image_Height}"/>
                 </Grid.RowDefinitions>
-                <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay}" Grid.Column="0" Grid.Row="0"
-                           FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"/>
+                
+                <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay, FallbackValue= Language}"
+                           FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"
+                           Grid.Column="0" Grid.Row="0"/>
 
                 <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
                           SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" VerticalAlignment="Center"
-                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}"
-                          SelectionChanged="Language_List_ComboBox_SelectionChanged" Grid.Column="1" Grid.Row="0">
+                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}"
+                          SelectionChanged="Language_List_ComboBox_SelectionChanged"
+                          Grid.Column="1" Grid.Row="0">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Width="200"
@@ -43,37 +47,62 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
+
+
+                <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size, Mode=OneWay, FallbackValue= Font_Size}"
+                           FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"
+                           Grid.Column="0" Grid.Row="2"/>
+
+                <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_List_Items_List, Mode=OneWay}"
+                          SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}" VerticalAlignment="Center"
+                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Font_Size_List_ComboBox_Height, Mode=OneWay}"
+                          SelectionChanged="Font_Size_List_ComboBox_SelectionChangedx"
+                          Grid.Column="1" Grid.Row="2">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Width="200"
+                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}">
+                                <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"
+                                       Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_Image_Height, Mode=OneWay}"/>
+                                <TextBlock Text="{Binding Language_Name, Mode=OneWay}" VerticalAlignment="Center"
+                                           FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Options_Text_FontSize, Mode=OneWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                    
                 <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    
-                    <Button Name="Apply_In_All_Buton" Content="{Binding Apply_All_Windows, Mode=OneWay}"
+
+                    <Button Name="Apply_In_All_Buton" Content="{Binding Apply_All_Windows, Mode=OneWay,FallbackValue=Apply_All_Windows}"
                             FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
                             Click="Apply_In_All_Buton_Click"
                             Grid.Column="0"/>
-                    <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay}"
+                    <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay ,FallbackValue= Ok}"
                             FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
                             Click="Ok_Buton_Click"
                             Grid.Column="2"/>
-                    <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay}"
+                    <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay ,FallbackValue= Cancel}"
                             FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
                             Click="Cancel_Buton_Click"
                             Grid.Column="4"/>
-                    <Button Name="Apply_Buton" Content="{Binding Apply, Mode=OneWay}"
+                    <Button Name="Apply_Buton" Content="{Binding Apply, Mode=OneWay, FallbackValue= Apply}"
                             FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
                             Click="Apply_Buton_Click"
                             Grid.Column="6"/>
                 </Grid>
             </Grid>
         </TabItem>
-        <TabItem Header="2" Width="58">
+        <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}"
+                 Width="{Binding TabItem_Width, Mode=OneWay, FallbackValue= 70}">
 
         </TabItem>
     </TabControl>

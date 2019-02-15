@@ -18,14 +18,17 @@ namespace Calculator_Annihilator
     {
         partial class Bindable_Resources
         {
+            public string Font_Size_Type { get; set; }
             public string Language { get; set; }
 
             private void Set_General_Options_Texts(Standard_Messages standard_Messages)
             {
                 Language = standard_Messages.Translate("Language");
+                Font_Size_Type = standard_Messages.Translate("");
 
                 On_Properties_Change(new string[]
                 {
+                    "Font_Size_Type",
                     "Language"
                 });
             }

@@ -8,20 +8,13 @@
     <Latin></Latin>
     <Zhongguo>Ching</Zhongguo>
   </Language>
-  <B>
+  <Font_Size_Type>
     <English></English>
     <Polski></Polski>
     <Deutsch></Deutsch>
     <Latin></Latin>
     <Zhongguo>Chang</Zhongguo>
-  </B>
-  <C>
-    <English></English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Latin></Latin>
-    <Zhongguo>Chong</Zhongguo>
-  </C>
+  </Font_Size_Type>
   <D>
     <Placeholders>
       <e/>
