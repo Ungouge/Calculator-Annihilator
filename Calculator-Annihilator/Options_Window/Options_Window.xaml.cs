@@ -19,12 +19,6 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class Options_Window : Window, IMainWindow_Children
     {
-        public Bindable_Resources _Bindable_Resources;
-
-        public MainWindow Parent_MainWindow { get; set; }
-
-        Options Options;
-
         internal Options_Window(MainWindow mainWindow)
         {
             // Preinitialization
@@ -42,6 +36,8 @@ namespace Calculator_Annihilator
             // Postinitialization
             
             this.DataContext = _Bindable_Resources;
+
+            Option_Change_Command_List = new List<IChange_Option_Command>();
         }
     }
 }

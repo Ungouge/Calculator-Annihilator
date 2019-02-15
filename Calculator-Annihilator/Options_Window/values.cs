@@ -22,6 +22,6 @@ namespace Calculator_Annihilator
 
         private Options Options;
 
-        List<Action<MainWindow>> Options_Changed_List;
+        List<IChange_Option_Command> Option_Change_Command_List;
     }
 }

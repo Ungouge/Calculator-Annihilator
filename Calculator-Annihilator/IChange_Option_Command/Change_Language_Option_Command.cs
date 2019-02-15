@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Constructs new command for changing language in Options class.
         /// </summary>
-        internal Change_Language_Option_Command(Languages language_To_Change, bool in_All_Instances)
+        internal Change_Language_Option_Command(Languages language_To_Change)
         {
             Language_To_Change = language_To_Change;
         }
