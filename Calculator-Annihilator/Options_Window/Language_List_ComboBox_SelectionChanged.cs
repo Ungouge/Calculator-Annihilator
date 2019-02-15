@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         private void Language_List_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

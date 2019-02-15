@@ -17,7 +17,7 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Interaction logic for Options_Window.xaml
     /// </summary>
-    public partial class Options_Window : Window, IMainWindow_Children
+    partial class Options_Window : Window, IMainWindow_Children
     {
         internal Options_Window(MainWindow mainWindow)
         {

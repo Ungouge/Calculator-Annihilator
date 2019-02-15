@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         void IMainWindow_Children.Push_Set_Text(Standard_Messages standard_Messages)
         {

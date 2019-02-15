@@ -14,13 +14,13 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         internal Bindable_Resources _Bindable_Resources;
 
         public MainWindow Parent_MainWindow { get; set; }
 
-        private Options Options;
+        internal Options Options;
 
         List<IChange_Option_Command> Option_Change_Command_List;
     }

@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window : Window
+    partial class Options_Window
     {
         public partial class Bindable_Resources
         {

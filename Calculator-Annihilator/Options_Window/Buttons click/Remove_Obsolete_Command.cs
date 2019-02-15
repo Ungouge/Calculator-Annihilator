@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         /// <summary>
         /// Removes from command list command in given type.

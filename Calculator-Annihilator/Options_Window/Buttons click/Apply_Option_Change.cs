@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         /// <summary>
         /// Executes every change option command enlisten in command list in given options class.

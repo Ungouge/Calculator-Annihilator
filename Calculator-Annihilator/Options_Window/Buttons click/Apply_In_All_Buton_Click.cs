@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace Calculator_Annihilator
 {
-    partial class Options_Window : Window
+    partial class Options_Window
     {
         private void Apply_In_All_Buton_Click(object sender, RoutedEventArgs e)
         {

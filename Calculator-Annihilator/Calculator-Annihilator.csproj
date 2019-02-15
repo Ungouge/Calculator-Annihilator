@@ -184,6 +184,9 @@
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Current_Font_Size_In_ComboBox.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
@@ -269,8 +272,7 @@
     <Compile Include="Options_Window\Bindable_Resources\Language_List methods\Langauge_List_Item.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Language_List methods\Set_Language_List_Image_Height.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Text.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
     </Compile>

@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window : Window
+    partial class Options_Window
     {
         public partial class Bindable_Resources
         {
@@ -22,7 +22,7 @@ namespace Calculator_Annihilator
 
             public double Language_List_ComboBox_Height { get; set; }
 
-            public double Language_List_Image_Height { get; set; }
+            public double ComboBox_List_Image_Height { get; set; }
 
             public List<Langauge_List_Item> Langauge_List_Items_List { get; set; }
 
@@ -43,9 +43,9 @@ namespace Calculator_Annihilator
                 Language_List_ComboBox_SelectedItem = 
                     Set_Current_Language_In_ComboBox(Options_Window.Options.Current_Language);
 
-                Language_List_Image_Height = Set_Language_List_Image_Height()  ;
+                ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height()  ;
 
-                Language_List_ComboBox_Height = Language_List_Image_Height + 12 ;
+                Language_List_ComboBox_Height = ComboBox_List_Image_Height + 12 ;
             }
         }
     }

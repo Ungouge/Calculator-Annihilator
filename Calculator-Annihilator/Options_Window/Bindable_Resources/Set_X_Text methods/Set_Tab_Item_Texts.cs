@@ -2,7 +2,7 @@
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window
+    partial class Options_Window
     {
         partial class Bindable_Resources
         {

@@ -3,9 +3,9 @@ using System.ComponentModel;
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window
+    partial class Options_Window
     {
-        public partial class Bindable_Resources : INotifyPropertyChanged
+        partial class Bindable_Resources : INotifyPropertyChanged
         {
             public event PropertyChangedEventHandler PropertyChanged;
 

@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 
 namespace Calculator_Annihilator
 {
-    public partial class Options_Window : Window
+    partial class Options_Window
     {
         public partial class Bindable_Resources
         {
-            public double Set_Language_List_Image_Height()//Options_Window _Options_Window)
+            public double Set_ComboBox_List_Image_Height()
             {
                 Formatted_Text_Getter formatted_Text =
                     new Formatted_Text_Getter(new TextBlock() { Text = "Xyz" },
