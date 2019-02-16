@@ -12,6 +12,8 @@ namespace Calculator_Annihilator
                 AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Library");
 
             Current_MainWindow.Set_Texts_Turntable(Standard_Messages);
+
+            Current_MainWindow.GUI_Bindable_Resources.Push_Recalculations();
         }
     }
 }

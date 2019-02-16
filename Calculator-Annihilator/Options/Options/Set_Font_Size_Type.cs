@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
         {
             Font_Size_Type = new_Font_Size_Type;
 
-            //TBA: Change font size application.
+            Current_MainWindow.GUI_Bindable_Resources.Push_Recalculations();
         }
     }
 }

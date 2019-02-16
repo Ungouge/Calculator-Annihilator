@@ -12,11 +12,14 @@ namespace Calculator_Annihilator
         /// <typeparam name="T">Only "IChange_Option_Command" Type</typeparam>
         private void Remove_Obsolete_Command<T>()
         {
-            foreach (T obsolete_Command in Option_Change_Command_List)
+            foreach (IChange_Option_Command command in Option_Change_Command_List)
             {
-                Option_Change_Command_List.Remove((IChange_Option_Command)obsolete_Command);
+                if (command is T obsolete_Command)
+                {
+                    Option_Change_Command_List.Remove((IChange_Option_Command)obsolete_Command);
 
-                return;
+                    return;
+                }
             }
         }
     }
