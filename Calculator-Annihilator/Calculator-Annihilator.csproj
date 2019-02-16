@@ -179,16 +179,19 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
+    <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Current_Font_Size_In_ComboBox.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Font_Size_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Font_Size_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\values.cs" />
@@ -198,6 +201,7 @@
     <Compile Include="Options_Window\Buttons click\Cancel_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
+    <Compile Include="Options_Window\Font_Size_List_ComboBo_SelectionChanged.cs" />
     <Compile Include="Options_Window\Push_Set_Text.cs" />
     <Compile Include="Options_Window\values.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
@@ -417,7 +421,12 @@
     <Content Include="Library\Language_Library\Main_Menu.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Library\Language_Library\Options\Numer_Notation_List.xml" />
+    <Content Include="Library\Language_Library\Options\Numer_Notation_List.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\Font_Size_List.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Library\Language_Library\Options\Options_Buttons.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -427,7 +436,9 @@
     <Content Include="Library\Language_Library\Options\Language_List.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Library\Language_Library\Options\Tab_Items.xml" />
+    <Content Include="Library\Language_Library\Options\Tab_Items.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\Language_Library\Calculator_Annihilator.xml">

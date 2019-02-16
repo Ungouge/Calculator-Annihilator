@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
         {
             readonly Options_Window Options_Window;
 
-            public double Language_List_ComboBox_Height { get; set; }
+            public double ComboBox_Element_Height { get; set; }
 
             public double ComboBox_List_Image_Height { get; set; }
 

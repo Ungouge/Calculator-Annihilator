@@ -24,9 +24,9 @@ namespace Calculator_Annihilator
                 Font_Size_List_ComboBox_SelectedItem =
                     Set_Current_Font_Size_In_ComboBox(Options_Window.Options.Font_Size_Type);
 
-                ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height()  ;
+                ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
 
-                Language_List_ComboBox_Height = ComboBox_List_Image_Height + 12 ;
+                ComboBox_Element_Height = ComboBox_List_Image_Height + 12 ;
             }
         }
     }

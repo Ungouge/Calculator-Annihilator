@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Annihilator"
         mc:Ignorable="d"
-        Title="{Binding Options, Mode=OneWay, FallbackValue= Options_Window}"
+        Title="{Binding Options, Mode=OneWay, FallbackValue= Options}"
         Height="324"
         Width="336">
     <TabControl>
@@ -30,16 +30,17 @@
                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"
                            Grid.Column="0" Grid.Row="0"/>
 
-                <ComboBox Name="Language_List_ComboBo" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
+                <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
                           SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" VerticalAlignment="Center"
-                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}"
+                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}"
                           SelectionChanged="Language_List_ComboBox_SelectionChanged"
                           Grid.Column="1" Grid.Row="0">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Width="200"
-                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}">
-                                <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"/>
+                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
+                                <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"
+                                       Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
                                 <TextBlock Text="{Binding Language_Name, Mode=OneWay}" VerticalAlignment="Center"
                                            FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Options_Text_FontSize, Mode=OneWay}"/>
                             </StackPanel>
@@ -48,22 +49,22 @@
                 </ComboBox>
 
 
-                <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size, Mode=OneWay, FallbackValue= Font_Size}"
+                <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size_Type, Mode=OneWay, FallbackValue= Font_Size}"
                            FontSize="{Binding Options_Text_FontSize, Mode=OneWay}" VerticalAlignment="Center"
                            Grid.Column="0" Grid.Row="2"/>
 
-                <ComboBox Name="Font_Size_List_ComboBo" ItemsSource="{Binding Font_Size_List_Items_List, Mode=OneWay}"
+                <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_List_Items_List, Mode=OneWay}"
                           SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}" VerticalAlignment="Center"
-                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Font_Size_List_ComboBox_Height, Mode=OneWay}"
+                          Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}"
                           SelectionChanged="Font_Size_List_ComboBox_SelectionChanged"
                           Grid.Column="1" Grid.Row="2">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Width="200"
-                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Language_List_ComboBox_Height, Mode=OneWay}">
-                                <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"
+                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
+                                <Image Source="{Binding Font_Size_Symbol_Uri, Mode=OneWay}"  VerticalAlignment="Center"
                                        Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-                                <TextBlock Text="{Binding Language_Name, Mode=OneWay}" VerticalAlignment="Center"
+                                <TextBlock Text="{Binding Font_Size_Name, Mode=OneWay}" VerticalAlignment="Center"
                                            FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Options_Text_FontSize, Mode=OneWay}"/>
                             </StackPanel>
                         </DataTemplate>
