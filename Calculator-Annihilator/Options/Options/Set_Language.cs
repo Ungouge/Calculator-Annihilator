@@ -4,9 +4,9 @@ namespace Calculator_Annihilator
 {
     partial class Options
     {
-        internal void Set_Language(Languages new_Numeral_System_Base)
+        internal void Set_Language(Languages new_Language)
         {
-            Current_Language = new_Numeral_System_Base;
+            Current_Language = new_Language;
 
             Standard_Messages = new Standard_Messages(Current_Language,
                 AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Library");

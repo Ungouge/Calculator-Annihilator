@@ -12,9 +12,9 @@ namespace Calculator_Annihilator
 
             private void Set_Tab_Item_Texts(Standard_Messages standard_Messages)
             {
-                Options= standard_Messages.Translate("");
-                General_Options = standard_Messages.Translate("");
-                Calculator_Options = standard_Messages.Translate("");
+                Options= standard_Messages.Translate("Options");
+                General_Options = standard_Messages.Translate("General_Options");
+                Calculator_Options = standard_Messages.Translate("Calculator_Options");
 
                 On_Properties_Change(new string[]
                 {
