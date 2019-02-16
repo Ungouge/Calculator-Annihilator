@@ -23,10 +23,14 @@ namespace Calculator_Annihilator
             public double Language_List_ComboBox_Height { get; set; }
 
             public double ComboBox_List_Image_Height { get; set; }
-
+            
             public List<Langauge_List_Item> Langauge_List_Items_List { get; set; }
 
             public Langauge_List_Item Language_List_ComboBox_SelectedItem { get; set; }
+            
+            public List<Font_Size_List_Item> Font_Size_List_Items_List { get; set; }
+
+            public Font_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
 
             public double Options_Text_FontSize { get; set; }
 
@@ -40,8 +44,13 @@ namespace Calculator_Annihilator
 
                 Langauge_List_Items_List = Set_Languges_List_Items();
 
-                Language_List_ComboBox_SelectedItem = 
+                Language_List_ComboBox_SelectedItem =
                     Set_Current_Language_In_ComboBox(Options_Window.Options.Current_Language);
+
+                Font_Size_List_Items_List = Set_Font_Size_List_Items();
+
+                Font_Size_List_ComboBox_SelectedItem =
+                    Set_Current_Font_Size_In_ComboBox(Options_Window.Options.Font_Size_Type);
 
                 ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height()  ;
 

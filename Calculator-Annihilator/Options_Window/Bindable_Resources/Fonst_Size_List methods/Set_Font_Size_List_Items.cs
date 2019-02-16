@@ -16,19 +16,19 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        public partial class Bindable_Resources
         {
-            private Font_Size_List_Item Set_Current_Font_Size_In_ComboBox(Font_Size_Type current_Font_Size)
+            private List<Font_Size_List_Item> Set_Font_Size_List_Items()
             {
-                foreach (Font_Size_List_Item item in Font_Size_List_Items_List)
+                List<Font_Size_List_Item> Output_Items_List = new List<Font_Size_List_Item>();
+
+                foreach (Font_Size_Type font_Size in (Font_Size_Type[])Enum.GetValues(typeof(Font_Size_Type)))
                 {
-                    if (item.Font_Size == current_Font_Size)
-                        return item;
+                    Output_Items_List.Add(new Font_Size_List_Item(Options_Window, font_Size));
                 }
 
-                return null;
+                return Output_Items_List;
             }
         }
     }
 }
-
