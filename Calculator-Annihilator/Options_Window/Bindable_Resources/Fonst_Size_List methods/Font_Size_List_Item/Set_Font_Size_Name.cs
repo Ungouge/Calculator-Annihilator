@@ -18,12 +18,12 @@ namespace Calculator_Annihilator
     {
         partial class Bindable_Resources
         {
-            private void Set_Font_Size_Texts(Standard_Messages standard_Messages)
+            partial class Font_Size_List_Item
             {
-                foreach (Font_Size_List_Item list_Item in Font_Size_List_Items_List)
+                internal void Set_Font_Size_Name(string new_Font_Size_Name)
                 {
-                    list_Item.Set_Font_Size_Name(
-                        standard_Messages.Translate(list_Item.Font_Size.ToString() + "_Font_Size"));
+                    Font_Size_Name = new_Font_Size_Name;
+                    On_Property_Change("Font_Size_Name");
                 }
             }
         }

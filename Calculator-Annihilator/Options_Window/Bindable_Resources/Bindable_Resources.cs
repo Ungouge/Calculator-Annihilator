@@ -10,8 +10,6 @@ namespace Calculator_Annihilator
             {
                 Options_Window = _Options_Window;
 
-                Set_Text(Options_Window.Options.Standard_Messages);
-
                 Options_Text_FontSize = Set_Options_Text_FontSize();
 
                 Langauge_List_Items_List = Set_Languges_List_Items();
@@ -23,6 +21,8 @@ namespace Calculator_Annihilator
 
                 Font_Size_List_ComboBox_SelectedItem =
                     Set_Current_Font_Size_In_ComboBox(Options_Window.Options.Font_Size_Type);
+
+                Set_Text(Options_Window.Options.Standard_Messages);
 
                 ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
 

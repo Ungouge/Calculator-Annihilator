@@ -18,7 +18,7 @@ namespace Calculator_Annihilator
     {
         partial class Bindable_Resources
         {
-            public class Font_Size_List_Item
+            public partial class Font_Size_List_Item
             {
                 public string Font_Size_Name { get; set; }
 
@@ -34,6 +34,7 @@ namespace Calculator_Annihilator
 
                     Font_Size_Symbol_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Font_Size_Symbol_Images\" + Font_Size.ToString() + "_Flag.png";
                 }
+
             }
         }
     }
