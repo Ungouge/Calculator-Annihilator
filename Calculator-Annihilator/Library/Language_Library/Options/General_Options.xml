@@ -9,20 +9,10 @@
     <Zhongguo>Ching</Zhongguo>
   </Language>
   <Font_Size_Type>
-    <English></English>
-    <Polski></Polski>
+    <English>Font Size</English>
+    <Polski>Rozmiar Czcionki</Polski>
     <Deutsch></Deutsch>
     <Latin></Latin>
     <Zhongguo>Chang</Zhongguo>
   </Font_Size_Type>
-  <D>
-    <Placeholders>
-      <e/>
-    </Placeholders>
-    <English>
-    </English>
-    <Polski></Polski>
-    <Deutsch></Deutsch>
-    <Zhongguo>Chong [e]</Zhongguo>
-  </D>
 </root>

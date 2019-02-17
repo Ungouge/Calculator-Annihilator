@@ -186,11 +186,14 @@
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item\Font_Size_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item\On_Property_Change.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item\Set_Font_Size_Name.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Current_Font_Size_In_ComboBox.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Font_Size_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Font_Size_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
@@ -398,6 +401,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
+    <Folder Include="Options_Window\Bindable_Resources\Number_Notation methods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\Language_Flags_Images\German_Flag.png">
@@ -419,6 +423,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Main_Menu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\Calculator_Options.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Options\Numer_Notation_List.xml">

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Options Window Calculator Tab-->
+<root>
+  <Number_Notation_Type>
+    <English>Number notation</English>
+    <Polski>Notacja licz</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Number_Notation_Type>
+  <Numeral_System_Type>
+    <English>Numeral system</English>
+    <Polski>System Liczbowy</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Numeral_System_Type>
+  <Comma_Symbol>
+    <English>Comma symbol</English>
+    <Polski>Symbol przecinka</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </Comma_Symbol>
+  <Mode_Calculator>
+    <English>Calculator mode</English>
+    <Polski>Tyyb obliczeń</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Mode_Calculator>
+  <Method_Calculation>
+    <English>Calculation method</English>
+    <Polski>Metoda obliczeń</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Method_Calculation>
+</root>

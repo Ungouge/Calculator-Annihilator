@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
         {
             private double Set_Options_Text_FontSize()
             {
-                return 12;
+                return 18;
             }
         }
     }
