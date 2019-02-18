@@ -16,19 +16,16 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Number_Notation_List_Context
         {
-            private Number_Notation_List_Item Set_Current_Number_Notation_In_ComboBox(Number_Notation current_Number_Notation)
+            partial class Number_Notation_List_Item
             {
-                foreach (Number_Notation_List_Item item in Number_Notation_List_Items_List)
+                internal void Number_Notation_Size_Name(string new_Number_Notation_Name)
                 {
-                    if (item.Number_Notation == current_Number_Notation)
-                        return item;
+                    Number_Notation_Name = new_Number_Notation_Name;
+                    On_Property_Change("Number_Notation_Name");
                 }
-
-                return null;
             }
         }
     }
 }
-

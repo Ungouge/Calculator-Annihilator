@@ -16,15 +16,15 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        public partial class Bindable_Resources
+        partial class Number_Notation_List_Context
         {
-            private List<Font_Size_List_Item> Set_Font_Size_List_Items()
+            private List<Number_Notation_List_Item> Set_Number_Notation_List_Items()
             {
-                List<Font_Size_List_Item> Output_Items_List = new List<Font_Size_List_Item>();
+                List<Number_Notation_List_Item> Output_Items_List = new List<Number_Notation_List_Item>();
 
-                foreach (Font_Size_Type font_Size in (Font_Size_Type[])Enum.GetValues(typeof(Font_Size_Type)))
+                foreach (Number_Notation number_Notation in (Number_Notation[])Enum.GetValues(typeof(Number_Notation)))
                 {
-                    Output_Items_List.Add(new Font_Size_List_Item(Options_Window, font_Size));
+                    Output_Items_List.Add(new Number_Notation_List_Item(Options_Window, number_Notation));
                 }
 
                 return Output_Items_List;

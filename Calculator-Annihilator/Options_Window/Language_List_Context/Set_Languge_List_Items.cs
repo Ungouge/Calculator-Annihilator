@@ -16,15 +16,15 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        public partial class Bindable_Resources
+        partial class Langauge_List_Context
         {
-            private List<Number_Notation_List_Item> Set_Number_Notation_List_Items()
+            private List<Langauge_List_Items> Set_Languge_List_Items()
             {
-                List<Number_Notation_List_Item> Output_Items_List = new List<Number_Notation_List_Item>();
+                List<Langauge_List_Items> Output_Items_List = new List<Langauge_List_Items>();
 
-                foreach (Number_Notation number_Notation in (Number_Notation[])Enum.GetValues(typeof(Number_Notation)))
+                foreach (Languages language in (Languages[]) Enum.GetValues(typeof(Languages)))
                 {
-                    Output_Items_List.Add(new Number_Notation_List_Item(Options_Window, number_Notation));
+                    Output_Items_List.Add( new Langauge_List_Items(Options_Window, language));
                 }
 
                 return Output_Items_List;

@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Font_Size_List_Context
         {
             public partial class Font_Size_List_Item
             {

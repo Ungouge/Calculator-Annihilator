@@ -16,14 +16,14 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Font_Size_List_Context
         {
-            private void Set_Number_Notation_Texts(Standard_Messages standard_Messages)
+            internal void Set_Font_Size_Texts(Standard_Messages standard_Messages)
             {
-                foreach (Number_Notation_List_Item list_Item in Number_Notation_List_Items_List)
+                foreach (Font_Size_List_Item list_Item in Font_Size_List_Items_List)
                 {
-                    list_Item.Number_Notation_Size_Name(
-                        standard_Messages.Translate(list_Item.Number_Notation.ToString() + "_Notation"));
+                    list_Item.Set_Font_Size_Name(
+                        standard_Messages.Translate(list_Item.Font_Size.ToString() + "_Font_Size"));
                 }
             }
         }

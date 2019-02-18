@@ -5,9 +5,9 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Font_Size_List_Context
         {
-            partial class Number_Notation_List_Item : INotifyPropertyChanged
+            partial class Font_Size_List_Item : INotifyPropertyChanged
             {
                 public event PropertyChangedEventHandler PropertyChanged;
 

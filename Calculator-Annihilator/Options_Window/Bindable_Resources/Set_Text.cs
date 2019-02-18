@@ -15,8 +15,6 @@ namespace Calculator_Annihilator
                 Set_Buttons_Texts(standard_Messages);
 
                 Set_Calculator_Options_Text(standard_Messages);
-
-                Set_Font_Size_Texts(standard_Messages);
             }
         }
     }

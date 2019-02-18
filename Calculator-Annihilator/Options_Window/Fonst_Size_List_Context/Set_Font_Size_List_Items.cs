@@ -16,15 +16,15 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        public partial class Bindable_Resources
+        public partial class Font_Size_List_Context
         {
-            private List<Langauge_List_Item> Set_Languges_List_Items()
+            private List<Font_Size_List_Item> Set_Font_Size_List_Items()
             {
-                List<Langauge_List_Item> Output_Items_List = new List<Langauge_List_Item>();
+                List<Font_Size_List_Item> Output_Items_List = new List<Font_Size_List_Item>();
 
-                foreach (Languages language in (Languages[]) Enum.GetValues(typeof(Languages)))
+                foreach (Font_Size_Type font_Size in (Font_Size_Type[])Enum.GetValues(typeof(Font_Size_Type)))
                 {
-                    Output_Items_List.Add( new Langauge_List_Item(Options_Window, language));
+                    Output_Items_List.Add(new Font_Size_List_Item(Options_Window, font_Size));
                 }
 
                 return Output_Items_List;

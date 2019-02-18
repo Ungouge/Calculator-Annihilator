@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Number_Notation_List_Context
         {
             public partial class Number_Notation_List_Item
             {

@@ -16,16 +16,19 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Font_Size_List_Context
         {
-            private void Set_Font_Size_Texts(Standard_Messages standard_Messages)
+            private Font_Size_List_Item Set_Current_Font_Size_In_ComboBox(Font_Size_Type current_Font_Size)
             {
-                foreach (Font_Size_List_Item list_Item in Font_Size_List_Items_List)
+                foreach (Font_Size_List_Item item in Font_Size_List_Items_List)
                 {
-                    list_Item.Set_Font_Size_Name(
-                        standard_Messages.Translate(list_Item.Font_Size.ToString() + "_Font_Size"));
+                    if (item.Font_Size == current_Font_Size)
+                        return item;
                 }
+
+                return null;
             }
         }
     }
 }
+

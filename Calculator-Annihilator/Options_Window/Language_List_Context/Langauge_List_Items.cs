@@ -16,17 +16,19 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Langauge_List_Context
         {
-            public class Langauge_List_Item
+            public class Langauge_List_Items
             {
+            private Options_Window Options_Window;
+
                 public string Language_Name { get; set; }
 
                 public string Language_Flag_Uri { get; set; }
 
                 internal Languages Language;
 
-                internal Langauge_List_Item(Options_Window _Options_Window, Languages _Language)
+                internal Langauge_List_Items(Options_Window _Options_Window, Languages _Language)
                 {
                     Language = _Language;
 

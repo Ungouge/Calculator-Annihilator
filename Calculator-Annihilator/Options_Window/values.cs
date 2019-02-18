@@ -16,7 +16,13 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        internal Bindable_Resources _Bindable_Resources;
+        private Bindable_Resources _Bindable_Resources;
+
+        private Number_Notation_List_Context _Number_Notation_List_Context;
+
+        private Langauge_List_Context _Langauge_List_Context;
+
+        private Font_Size_List_Context _Font_Size_List_Context;
 
         public MainWindow Parent_MainWindow { get; set; }
 

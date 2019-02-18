@@ -16,17 +16,15 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Number_Notation_List_Context
         {
-            private Langauge_List_Item Set_Current_Language_In_ComboBox(Languages current_Language)
+            internal void Set_Number_Notation_Texts(Standard_Messages standard_Messages)
             {
-                foreach (Langauge_List_Item item in Langauge_List_Items_List)
+                foreach (Number_Notation_List_Item list_Item in Number_Notation_List_Items_List)
                 {
-                    if (item.Language == current_Language)
-                        return item;
+                    list_Item.Number_Notation_Size_Name(
+                        standard_Messages.Translate(list_Item.Number_Notation.ToString() + "_Notation"));
                 }
-
-                return null;
             }
         }
     }

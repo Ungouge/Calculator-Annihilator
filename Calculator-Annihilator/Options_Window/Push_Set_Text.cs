@@ -19,6 +19,8 @@ namespace Calculator_Annihilator
         void IMainWindow_Children.Push_Set_Text(Standard_Messages standard_Messages)
         {
             _Bindable_Resources.Set_Text(standard_Messages);
+
+            Set_Text(standard_Messages);
         }
     }
 }

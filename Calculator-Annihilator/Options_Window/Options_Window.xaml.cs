@@ -36,7 +36,19 @@ namespace Calculator_Annihilator
             InitializeComponent();
 
             // Postinitialization
-            
+
+            _Number_Notation_List_Context = new Number_Notation_List_Context(this);
+
+            Number_Notation_List_ComboBox.DataContext = _Number_Notation_List_Context;
+
+            _Langauge_List_Context = new Langauge_List_Context(this);
+
+            Language_List_ComboBox.DataContext = _Langauge_List_Context;
+
+            _Font_Size_List_Context = new Font_Size_List_Context(this);
+
+            Font_Size_List_ComboBox.DataContext = _Font_Size_List_Context;
+
             this.DataContext = _Bindable_Resources;
 
             Option_Change_Command_List = new List<IChange_Option_Command>();

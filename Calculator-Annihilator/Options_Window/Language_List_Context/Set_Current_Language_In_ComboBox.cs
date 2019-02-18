@@ -16,15 +16,17 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Bindable_Resources
+        partial class Langauge_List_Context
         {
-            partial class Font_Size_List_Item
+            private Langauge_List_Items Set_Current_Language_In_ComboBox(Languages current_Language)
             {
-                internal void Set_Font_Size_Name(string new_Font_Size_Name)
+                foreach (Langauge_List_Items item in Langauge_List_Items_List)
                 {
-                    Font_Size_Name = new_Font_Size_Name;
-                    On_Property_Change("Font_Size_Name");
+                    if (item.Language == current_Language)
+                        return item;
                 }
+
+                return null;
             }
         }
     }
