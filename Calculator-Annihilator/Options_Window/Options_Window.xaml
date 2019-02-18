@@ -28,8 +28,8 @@
             <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}">
                 <Grid Height="{Binding General_Options_Grid_Height, Mode= OneWay, FallbackValue= 250}">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3*"/>
@@ -82,9 +82,8 @@
             <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}">
                 <Grid Height="{Binding TabItem_Grid_Height, Mode= OneWay, FallbackValue= 250}">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="7*"/>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3*"/>
@@ -103,6 +102,21 @@
                                Text="{Binding Number_Notation_Type, Mode=OneWay, FallbackValue= Number_Notation_Type}"
                                Grid.Column="0" Grid.Row="0"/>
 
+                    <ComboBox Name="Number_Notation_List_ComboBox" ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Number_Notation_List_ComboBox_SelectedItem}"
+                              SelectionChanged="Number_Notation_List_ComboBox_SelectionChanged"
+                              Grid.Column="1" Grid.Row="0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Width="200"
+                                            Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
+                                    <TextBlock Text="{Binding Number_Notation_Name, Mode=OneWay}" VerticalAlignment="Center"
+                                               FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    
                     <TextBlock Name="Numeral_System_List_TextBlock" 
                                Text="{Binding Numeral_System_Type, Mode=OneWay, FallbackValue= Numeral_System_Type}"
                                Grid.Column="0" Grid.Row="2"/>

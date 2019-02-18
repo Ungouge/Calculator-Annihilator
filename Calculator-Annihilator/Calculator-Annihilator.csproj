@@ -191,10 +191,16 @@
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Font_Size_List_Item\Set_Font_Size_Name.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Current_Font_Size_In_ComboBox.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Fonst_Size_List methods\Set_Font_Size_List_Items.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Number_Notation methods\Number_Notation_List_Item\Number_Notation_List_Item.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Number_Notation methods\Number_Notation_List_Item\On_Property_Change.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Number_Notation methods\Number_Notation_List_Item\Set_Number_Notation_Name.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Number_Notation methods\Set_Current_Number_Notation_In_ComboBox.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Number_Notation methods\Set_Number_Notation_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Font_Size_Texts.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Number_Notation_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Options_Window\Bindable_Resources\values.cs" />
@@ -205,6 +211,7 @@
     <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
     <Compile Include="Options_Window\Font_Size_List_ComboBo_SelectionChanged.cs" />
+    <Compile Include="Options_Window\Number_Notation_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="Options_Window\Push_Set_Text.cs" />
     <Compile Include="Options_Window\values.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
@@ -401,7 +408,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
-    <Folder Include="Options_Window\Bindable_Resources\Number_Notation methods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\Language_Flags_Images\German_Flag.png">
@@ -426,6 +432,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Options\Calculator_Options.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\Number_Notiation_List.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Options\Numer_Notation_List.xml">

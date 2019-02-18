@@ -22,6 +22,11 @@ namespace Calculator_Annihilator
                 Font_Size_List_ComboBox_SelectedItem =
                     Set_Current_Font_Size_In_ComboBox(Options_Window.Options.Font_Size_Type);
 
+                Number_Notation_List_Items_List = Set_Number_Notation_List_Items();
+
+                Number_Notation_List_ComboBox_SelectedItem =
+                     Set_Current_Number_Notation_In_ComboBox(Options_Window.Options.Number_Notation);
+
                 Set_Text(Options_Window.Options.Standard_Messages);
 
                 ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
