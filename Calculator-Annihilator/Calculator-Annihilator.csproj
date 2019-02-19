@@ -157,6 +157,7 @@
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Set_Number_To_String.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
+    <Compile Include="Elements\Number.cs" />
     <Compile Include="Formatted_Text_Getter\Default_Formatted_Text_Getter.cs" />
     <Compile Include="Formatted_Text_Getter\Get_Text_Height.cs" />
     <Compile Include="Formatted_Text_Getter\Get_Text_Width.cs" />
@@ -276,7 +277,7 @@
     <Compile Include="Equation\Recreate_Equation.cs" />
     <Compile Include="Elements\Interfaces\IElement.cs" />
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
-    <Compile Include="Elements\Element.cs" />
+    <Compile Include="Elements\Bracket.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
     <Compile Include="Options\Options\Set_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />

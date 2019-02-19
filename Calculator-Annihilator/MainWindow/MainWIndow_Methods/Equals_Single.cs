@@ -11,16 +11,28 @@ namespace Calculator_Annihilator
         {
             string new_ResultSpace_Text;
 
+
             try
-			{
-                Number calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				
+            {
+                Number calculation_Result;
+
+                if (no_First_Number_In_Equation_Single == true)
+                {
+
+
+                    return;
+                }
+
+                calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+
                 new_ResultSpace_Text = Back_Parser.Parse_Back(calculation_Result);
-			}
+                
+                First_Number_In_Equation_Single = calculation_Result;
+            }
 			catch (DivideByZeroException)
 			{
                 new_ResultSpace_Text = "Dividing by zero is not allowed";
-			}
+            }
 			catch(Exception e)
 			{
                 new_ResultSpace_Text = "Unknown error occur";
@@ -28,7 +40,7 @@ namespace Calculator_Annihilator
 			finally
 			{
                 no_operand_Sign_Single = true;
-				no_First_Number_In_Equation_Single = true;
+				//no_First_Number_In_Equation_Single = true;
 				Clear_WorkSpace();
 			}
 

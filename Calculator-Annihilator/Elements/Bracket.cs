@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -40,24 +35,6 @@ namespace Calculator_Annihilator
 		public override string ToString()
 		{
 			return ")";
-		}
-	}
-
-	/// <summary>
-	/// Contains given value as double type.
-	/// </summary>
-	public class Number : IElement_ToString, INumber, INot_Outside_The_Bracket
-	{
-		public double Value { get; private set; }
-			
-		public Number(double v)
-		{
-			Value = v;
-		}
-
-		public override string ToString()
-		{
-			return Value.ToString();
 		}
 	}
 }
