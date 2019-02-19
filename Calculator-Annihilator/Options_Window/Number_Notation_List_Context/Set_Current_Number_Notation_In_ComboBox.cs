@@ -25,7 +25,7 @@ namespace Calculator_Annihilator
                     if (item.Number_Notation == current_Number_Notation)
                         return item;
                 }
-                Number_Notation_List_ComboBox.se
+
                 return null;
             }
         }
