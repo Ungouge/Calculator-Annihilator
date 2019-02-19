@@ -181,11 +181,13 @@
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
+    <Compile Include="IChange_Option_Command\Change_Number_Notation_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
+    <Compile Include="Options\Options\Set_Number_Notation_Type.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Context.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\On_Property_Change.cs" />
