@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        public partial class Font_Size_List_Context
+        partial class Font_Size_List_Context
         {
             private Options_Window Options_Window;
 
