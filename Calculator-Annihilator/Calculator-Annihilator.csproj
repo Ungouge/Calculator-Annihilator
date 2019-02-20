@@ -186,6 +186,7 @@
     <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
+    <Compile Include="internal values.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
     <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
     <Compile Include="Options\Options\Set_Number_Notation_Type.cs" />
@@ -216,8 +217,16 @@
     <Compile Include="Options_Window\Buttons click\Cancel_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
-    <Compile Include="Options_Window\Font_Size_List_ComboBo_SelectionChanged.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_ComboBox_SelectionChanged.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Context.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\On_Property_Change.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Current_Numeral_System_In_ComboBox.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_List_Items.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
+    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Font_Size_List_ComboBo_SelectionChanged.cs" />
+    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Number_Notation_List_ComboBox_SelectionChanged.cs" />
+    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Numeral_System_List_ComboBox_SelectedItem.cs" />
     <Compile Include="Options_Window\Push_Set_Text.cs" />
     <Compile Include="Options_Window\Set_Texts.cs" />
     <Compile Include="Options_Window\values.cs" />
@@ -289,7 +298,7 @@
     <Compile Include="Options_Window\Bindable_Resources\Bindable_Resources.cs" />
     <Compile Include="Options_Window\Bindable_Resources\OnPropertyChange.cs" />
     <Compile Include="Options_Window\Bindable_Resources\On_Properties_Change.cs" />
-    <Compile Include="Options_Window\Language_List_ComboBox_SelectionChanged.cs" />
+    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Language_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="Options_Window\Language_List_Context\Set_Current_Language_In_ComboBox.cs" />
     <Compile Include="Options_Window\Language_List_Context\Set_Languge_List_Items.cs" />
     <Compile Include="Options_Window\Language_List_Context\Langauge_List_Items.cs" />
@@ -391,7 +400,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Calculator-Annihilator_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -443,9 +451,6 @@
     </Content>
     <Content Include="Library\Language_Library\Options\Number_Notiation_List.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Numer_Notation_List.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Options\Font_Size_List.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

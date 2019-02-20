@@ -48,7 +48,11 @@ namespace Calculator_Annihilator
             _Font_Size_List_Context = new Font_Size_List_Context(this);
 
             Font_Size_List_ComboBox.DataContext = _Font_Size_List_Context;
+            
+            _Numeral_System_List_Context = new Numeral_System_List_Context(this);
 
+            Numeral_System_List_ComboBox.DataContext = _Numeral_System_List_Context;
+            
             this.DataContext = _Bindable_Resources;
 
             Option_Change_Command_List = new List<IChange_Option_Command>();

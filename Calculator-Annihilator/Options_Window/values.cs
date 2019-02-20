@@ -24,6 +24,8 @@ namespace Calculator_Annihilator
 
         private Font_Size_List_Context _Font_Size_List_Context;
 
+        private Numeral_System_List_Context _Numeral_System_List_Context;
+
         public MainWindow Parent_MainWindow { get; set; }
 
         internal Options Options;
