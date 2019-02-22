@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Names of numeral systems-->
+<root>
+  <N-Base_Numeral_System>
+    <Placeholders>
+      <Base/>
+    </Placeholders>
+    <English>Base [Base]</English>
+    <Polski>[Base]-kowy</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong [Base]</Zhongguo>
+  </N-Base_Numeral_System>
+  <Negabinary_Numeral_System>
+    <English>Negabinary</English>
+    <Polski>Minus-dwójkowy</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang -2</Zhongguo>
+  </Negabinary_Numeral_System>
+  <Balanced_Ternary_Numeral_System>
+    <English>Balanced ternary</English>
+    <Polski>Trójkowy zbalansowany</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching 3</Zhongguo>
+  </Balanced_Ternary_Numeral_System>
+  <Unknown_Numeral_System>
+    <English>Unknown numeral system</English>
+    <Polski>Nieznany system liczbowy</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching 3</Zhongguo>
+  </Unknown_Numeral_System>
+</root>

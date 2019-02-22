@@ -22,8 +22,10 @@ namespace Calculator_Annihilator
             {
                 foreach (Numeral_System_List_Item list_Item in Numeral_System_List_Items_List)
                 {
-                    list_Item.Set_Numeral_System_Name(
-                        standard_Messages.Translate(list_Item.numeral_System_Code.ToString() + "_Font_Size"));
+                    string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
+                        list_Item.numeral_System_Code, standard_Messages);
+
+                    list_Item.Set_Numeral_System_Name(new_Numeral_System_Name);
                 }
             }
         }

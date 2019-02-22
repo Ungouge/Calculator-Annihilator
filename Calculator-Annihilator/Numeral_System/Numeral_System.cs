@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
 	/// 1 for bijective system, -2 negabinary system, balanced ternary system.
 	/// </summary>
 	/// <exception cref="NoSuchNumericalSystemException">Thrown when is given wrong code number of numeral system</exception>
-	public class Numeral_System
+	public partial class Numeral_System
 	{
 		public char[] System_Digits { get; private set; }
 		public sbyte System_Type { get; private set;}

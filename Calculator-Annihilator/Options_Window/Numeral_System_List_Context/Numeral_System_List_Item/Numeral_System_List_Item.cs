@@ -28,7 +28,8 @@ namespace Calculator_Annihilator
                 {
                     numeral_System_Code = _numeral_System_Code;
 
-                    Numeral_System_Name = _Options_Window.Options.Standard_Messages.Translate(_numeral_System_Code.ToString() + "_Font_Size");
+                    Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
+                        numeral_System_Code, _Options_Window.Options.Standard_Messages);
                 }
 
             }
