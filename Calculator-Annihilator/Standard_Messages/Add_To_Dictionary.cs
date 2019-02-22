@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace Calculator_Annihilator
 {
@@ -20,25 +21,26 @@ namespace Calculator_Annihilator
             string message = Entry.InnerText;
 
             XmlNode Placeholders = Node.SelectSingleNode("Placeholders");
+            
 
-            if (Placeholders != null)
+            if (Placeholders == null)
+            {
+                Func<string> func = Create_Function_To_Return_Text(message);
+
+                Dictionary.Add(Node.Name, func);
+            }
+            else if (Placeholders is XmlNode)
             {
                 List<string> placeholders_Names_List = new List<string>();
 
                 foreach (XmlNode Placeholder in Placeholders)
                 {
-                    placeholders_Names_List.Add('[' + Placeholder.InnerText + ']');
+                    placeholders_Names_List.Add('[' + Placeholder.Name + ']');
                 }
 
                 Func<string[], string> func = Create_Function_To_Return_Text(message, placeholders_Names_List);
 
                 Dictionary_With_Placeholders.Add(Node.Name, func);
-            }
-            else
-            {
-                Func<string> func = Create_Function_To_Return_Text(message);
-
-                Dictionary.Add(Node.Name, func);
             }
         }
 
@@ -50,7 +52,7 @@ namespace Calculator_Annihilator
 
                 for (int i = 0; i < placeholders_Names_List.Count; i++)
                 {
-                    message.Replace(placeholders_Names_List[i], x[i]);
+                    output = output.Replace(placeholders_Names_List[i], x[i]);
                 }
 
                 return output;
