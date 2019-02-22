@@ -16,7 +16,7 @@ namespace Calculator_Annihilator
 {
     partial class Options_Window
     {
-        partial class Numeral_System_List_Context
+        public partial class Numeral_System_List_Context
         {
             private Options_Window Options_Window;
 

@@ -183,11 +183,13 @@
     <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Number_Notation_Option_Command.cs" />
+    <Compile Include="IChange_Option_Command\Change_Numeral_System_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="internal enums lib.cs" />
     <Compile Include="internal values.cs" />
     <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
+    <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
     <Compile Include="Options\Options\Set_Number_Notation_Type.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Context.cs" />
@@ -379,7 +381,7 @@
   <ItemGroup>
     <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
-    <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
+    <Compile Include="Numeral_System\Numeral_System.cs" />
     <Compile Include="Parser\Parse.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
@@ -454,6 +456,9 @@
     </Content>
     <Content Include="Library\Language_Library\Options\Font_Size_List.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Language_Library\Options\Numeral_System.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Options\Options_Buttons.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
