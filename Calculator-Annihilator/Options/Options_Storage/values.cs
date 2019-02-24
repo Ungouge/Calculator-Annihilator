@@ -18,6 +18,8 @@ namespace Calculator_Annihilator
 
         protected internal sbyte Numeral_System_Code { get; protected set; }
 
+        protected internal sbyte[] Pined_Numeral_Systems { get; protected set; }
+
         protected internal Languages Current_Language { get; protected set; }
 
         protected internal string Comma_Type { get; protected set; }

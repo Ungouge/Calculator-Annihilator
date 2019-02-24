@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace Calculator_Annihilator
@@ -22,6 +23,7 @@ namespace Calculator_Annihilator
                 Properties.Settings.Default.comma_Type,
                 (Font_Size_Type)Properties.Settings.Default.Font_Size_Type,
                 Properties.Settings.Default.numeral_System,
+                Read_Pinnend_Numeral_Systems,
                 (Languages)Properties.Settings.Default.Language
             );
 
@@ -34,7 +36,30 @@ namespace Calculator_Annihilator
             //Language = Languages.English;
             //initial_Height = 510;
             //initial_Width = 420;
+            //Pinnend_Numeral_Systems = "2,8,10,12,16
             //numeral_System = 10;
+        }
+
+        private sbyte[] Read_Pinnend_Numeral_Systems
+        {
+            get
+            {
+                string Pined_Numeral_Systems = Properties.Settings.Default.Pined_Numeral_Systems;
+
+                string[] Systems_Array = Pined_Numeral_Systems.Split(',');
+
+                List<sbyte> Systems_Code_Array = new List<sbyte>();
+
+                foreach (string system in Systems_Array)
+                {
+                    if (SByte.TryParse(system, out sbyte system_Code))
+                    {
+                        Systems_Code_Array.Add(system_Code);
+                    }
+                }
+
+                return Systems_Code_Array.ToArray();
+            }
         }
     }
 

@@ -29,5 +29,11 @@
     <Setting Name="Font_Size_Type" Type="System.SByte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Pined_Numeral_Systems" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2,8,10,12,16</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

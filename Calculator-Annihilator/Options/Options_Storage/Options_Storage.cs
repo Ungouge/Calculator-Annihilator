@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
         /// </summary>
         public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation, string comma_Type,
-            Font_Size_Type font_Size_Type, sbyte numeral_System_Code, Languages current_Language) 
+            Font_Size_Type font_Size_Type, sbyte numeral_System_Code, sbyte[] Pined_Numeral_Systems, Languages current_Language) 
             : this(calculator_Mode,calculation_Method,intitial_Height,intial_Width, number_Notation,font_Size_Type)
         {
             Comma_Type = comma_Type;
@@ -31,7 +31,8 @@ namespace Calculator_Annihilator
 
         public Options_Storage(Options options) : this(options.Calculator_Mode,
             options.Calculation_Method, options.Initial_Height, options.Initial_Width, options.Number_Notation,
-            options.Comma_Type, options.Font_Size_Type, options.Numeral_System_Code, options.Current_Language)
+            options.Comma_Type, options.Font_Size_Type, options.Numeral_System_Code, options.Pined_Numeral_Systems,
+            options.Current_Language)
         { }
     }
 }
