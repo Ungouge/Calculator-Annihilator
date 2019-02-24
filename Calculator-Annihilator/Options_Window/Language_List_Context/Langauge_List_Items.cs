@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
         {
             public class Langauge_List_Items
             {
-            private Options_Window Options_Window;
+                private Options_Window Options_Window;
 
                 public string Language_Name { get; set; }
 
@@ -34,7 +34,7 @@ namespace Calculator_Annihilator
 
                     Language_Name = _Options_Window.Options.Standard_Messages.Translate( Language.ToString() + "_Native" );
 
-                    Language_Flag_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Flags_Images\" + Language.ToString() + "_Flag.png";
+                    Language_Flag_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Images\Language_Flags\" + Language.ToString() + "_Flag.png";
                 }
             }
         }
