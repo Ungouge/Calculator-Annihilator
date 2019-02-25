@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
 
                 Options_Text_FontSize = Set_Options_Text_FontSize();
 
-                Set_Text(Options_Window.Options.Standard_Messages);
+                Set_Text(_Options_Window.Options.Standard_Messages);
 
                 ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
 

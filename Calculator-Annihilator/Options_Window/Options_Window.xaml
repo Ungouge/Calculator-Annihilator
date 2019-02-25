@@ -17,7 +17,7 @@
                 </Style>
                 <Style TargetType="TextBlock">
                     <Setter Property="FontSize"
-                                    Value="{Binding Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+                            Value="{Binding Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
                 <Style TargetType="ComboBox">
@@ -135,7 +135,7 @@
                                     <TextBlock Text="{Binding Numeral_System_List_Item_Text, Mode=OneWay}" VerticalAlignment="Center"
                                                FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"
                                                Width="{Binding Text_Width, Mode=OneWay}"/>
-                                    <Button Click="Button_Click" Margin="0,0,0,0">
+                                    <Button Name="Pin_Numeral_System" Click="Pin_Numeral_System_Click" Margin="0,0,0,0">
                                         <Image Source="{Binding Pin_Image_Uri, Mode=OneWay}" VerticalAlignment="Center"
                                                Height="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay, FallbackValue=13.5}"
                                                Width="{Binding Image_Width, Mode=OneWay, FallbackValue=13.5}"/>
