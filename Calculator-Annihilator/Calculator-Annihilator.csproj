@@ -192,6 +192,8 @@
     <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
     <Compile Include="Options\Options\Set_Number_Notation_Type.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_ComboBox_List_Image_Width.cs" />
+    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Context.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
     <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\On_Property_Change.cs" />
@@ -219,10 +221,15 @@
     <Compile Include="Options_Window\Buttons click\Cancel_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\INumeral_System_List_Context.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_All_Numeral_System_List_Item.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Numeral_System_List_Item.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Pinned_Numeral_System_List_Item.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Pined_Numeral_System_List_Item\Pined_Numeral_System_List_Item.cs" />
     <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Context.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\On_Property_Change.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\On_Property_Change.cs" />
+    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
     <Compile Include="Options_Window\Numeral_System_List_Context\Set_Current_Numeral_System_In_ComboBox.cs" />
     <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_List_Items.cs" />
     <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
@@ -305,7 +312,6 @@
     <Compile Include="Options_Window\Language_List_Context\Set_Languge_List_Items.cs" />
     <Compile Include="Options_Window\Language_List_Context\Langauge_List_Items.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
     <Compile Include="Options_Window\Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
     <Compile Include="Options_Window\Options_Window.xaml.cs">
       <DependentUpon>Options_Window.xaml</DependentUpon>
@@ -424,22 +430,30 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Library\Images\Font_Sign\" />
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library\Language_Flags_Images\German_Flag.png">
+    <Content Include="Library\Images\Language_Flags\German_Flag.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\Language_Flags_Images\English_Flag.png">
+    <Content Include="Library\Images\Language_Flags\English_Flag.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\Language_Flags_Images\Latin_Flag.png">
+    <Content Include="Library\Images\Language_Flags\Latin_Flag.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\Language_Flags_Images\Polish_Flag.png">
+    <Resource Include="Library\Images\Pins\PinnedItem_64x_Transparent.png" />
+    <Content Include="Library\Images\Language_Flags\Polish_Flag.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\Language_Flags_Images\Chinese_Flag.png">
+    <Content Include="Library\Images\Language_Flags\Chinese_Flag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Images\Pins\PinnedItem_64x_Clear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Images\Pins\PinnedItem_64x_Pined.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Language_Library\Language_Library_Showcase.xml">

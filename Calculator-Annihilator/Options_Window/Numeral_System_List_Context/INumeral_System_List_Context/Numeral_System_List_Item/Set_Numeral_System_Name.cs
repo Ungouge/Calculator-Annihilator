@@ -22,8 +22,8 @@ namespace Calculator_Annihilator
             {
                 internal void Set_Numeral_System_Name(string new_Numeral_System_Name)
                 {
-                    Numeral_System_Name = new_Numeral_System_Name;
-                    On_Property_Change("Numeral_System_Name");
+                    Numeral_System_List_Item_Text = new_Numeral_System_Name;
+                    On_Property_Change("Numeral_System_List_Item_Text");
                 }
             }
         }

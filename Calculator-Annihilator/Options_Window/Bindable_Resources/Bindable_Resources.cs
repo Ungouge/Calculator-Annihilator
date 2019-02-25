@@ -17,6 +17,8 @@ namespace Calculator_Annihilator
                 ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
 
                 ComboBox_Element_Height = ComboBox_List_Image_Height + 12 ;
+
+                ComboBox_Element_Width = Set_ComboBox_List_Image_Width();
             }
         }
     }

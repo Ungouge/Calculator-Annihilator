@@ -18,20 +18,13 @@ namespace Calculator_Annihilator
     {
         partial class Numeral_System_List_Context
         {
-            public partial class Numeral_System_List_Item
+            public partial class Pined_Numeral_System_List_Item : Numeral_System_List_Item
             {
-                public string Numeral_System_Name { get; set; }
-
-                internal sbyte numeral_System_Code;
-
-                internal Numeral_System_List_Item(Options_Window _Options_Window, sbyte _numeral_System_Code)
+                internal Pined_Numeral_System_List_Item(Options_Window _Options_Window, sbyte _numeral_System_Code)
+                    :base(_numeral_System_Code, _Options_Window)
                 {
-                    numeral_System_Code = _numeral_System_Code;
-
-                    Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
-                        numeral_System_Code, _Options_Window.Options.Standard_Messages);
+                    Pin_Image_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Images\Pins\PinnedItem_64x_Pined.png";
                 }
-
             }
         }
     }

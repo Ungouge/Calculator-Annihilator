@@ -32,7 +32,7 @@ namespace Calculator_Annihilator
 
                     Font_Size_Name = _Options_Window.Options.Standard_Messages.Translate(Font_Size.ToString() + "_Font_Size");
 
-                    Font_Size_Symbol_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Font_Size_Symbol_Images\" + Font_Size.ToString() + "_Flag.png";
+                    Font_Size_Symbol_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Image\Font_Size\" + Font_Size.ToString() + "_Flag.png";
                 }
 
             }

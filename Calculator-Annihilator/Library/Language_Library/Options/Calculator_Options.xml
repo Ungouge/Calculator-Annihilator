@@ -36,4 +36,18 @@
     <Latin></Latin>
     <Zhongguo>Chang</Zhongguo>
   </Method_Calculation>
+  <Pinned_Numeral_System>
+    <English>Calculation method</English>
+    <Polski>Przypiete systemy liczbowe</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Pinned_Numeral_System>
+  <All_Numeral_System>
+    <English>All numeral system</English>
+    <Polski>Wszystkie systemy liczbowe</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </All_Numeral_System>
 </root>
