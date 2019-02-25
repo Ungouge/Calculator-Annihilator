@@ -2,7 +2,7 @@
 
 namespace Calculator_Annihilator
 {
-    internal partial class Options : Options_Storage
+    partial class Options
     {
         internal Options_Storage Generate_Options_Storage()
         {

@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Constructs new Otpions class reading and setting resorcess for MainWindow .
         /// </summary>
-        public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
+        internal Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation, string comma_Type,
             Font_Size_Type font_Size_Type, sbyte numeral_System_Code, sbyte[] Pined_Numeral_Systems, Languages current_Language) 
             : this(calculator_Mode,calculation_Method,intitial_Height,intial_Width, number_Notation,font_Size_Type)
@@ -17,7 +17,7 @@ namespace Calculator_Annihilator
             Current_Language = current_Language;
         }
 
-        public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
+        internal Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation,
             Font_Size_Type font_Size_Type)
         {
@@ -29,10 +29,10 @@ namespace Calculator_Annihilator
             Font_Size_Type = font_Size_Type;
         }
 
-        public Options_Storage(Options options) : this(options.Calculator_Mode,
-            options.Calculation_Method, options.Initial_Height, options.Initial_Width, options.Number_Notation,
-            options.Comma_Type, options.Font_Size_Type, options.Numeral_System_Code, options.Pined_Numeral_Systems,
-            options.Current_Language)
-        { }
+        //Options_Storage(Options options) : this(options.Calculator_Mode,
+        //    options.Calculation_Method, options.Initial_Height, options.Initial_Width, options.Number_Notation,
+        //    options.Comma_Type, options.Font_Size_Type, options.Numeral_System_Code, options.Pined_Numeral_Systems,
+        //    options.Current_Language)
+        //{ }
     }
 }
