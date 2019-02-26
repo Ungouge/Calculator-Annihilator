@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
-    internal static class Used_Numeral_Systems
+    public static class Used_Numeral_Systems
     {
-        internal static sbyte[][] Numeral_Systems
+        public static sbyte[][] Numeral_Systems
         {
             get { return new sbyte[][] { new sbyte[] { -3, -2 }, new sbyte[] { 1, 64 } }; }
         }

@@ -1,12 +1,12 @@
-﻿namespace Calculator_Annihilator
+﻿namespace Common_Library
 {
-    internal enum Calculator_Mode
+    public enum Calculator_Mode
     {
         Standard,
         Scientific
     }
 
-    internal enum Calculation_Method
+    public enum Calculation_Method
     {
         Single,
         Complex
@@ -31,7 +31,7 @@
         Chinese
     }
 
-    internal enum Font_Size_Type
+    public enum Font_Size_Type
     {
         Small,
         Normal,
