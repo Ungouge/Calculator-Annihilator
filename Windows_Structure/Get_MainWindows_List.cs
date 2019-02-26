@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
         /// <summary>
         /// Gets list of children windows of given MainWindow.
         /// </summary>
-        static internal List<MainWindow> Get_MainWindows_List
+        public static List<IMainWindow> Get_MainWindows_List
         {
             get
             {
-                List<MainWindow> mainWindows_List = new List<MainWindow>();
+                List<IMainWindow> mainWindows_List = new List<IMainWindow>();
 
                 foreach (MainWindow_Children_List Children_List in MainWindows_List)
                 {

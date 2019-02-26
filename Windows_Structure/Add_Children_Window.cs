@@ -1,8 +1,9 @@
 ﻿using System;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
         /// <summary>
         /// Adds children window to list binded to its parent in structure manager. 
@@ -11,7 +12,7 @@ namespace Calculator_Annihilator
         {
             Add_Children(children_Window);
 
-            if( children_Window is Options_Window options_Window)
+            if( children_Window is IOptionsWindow options_Window)
             {
                 Options_Windows_List.Add(options_Window);
             }

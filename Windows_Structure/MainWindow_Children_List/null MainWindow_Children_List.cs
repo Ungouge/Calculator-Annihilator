@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
-        internal partial class MainWindow_Children_List
+        public partial class MainWindow_Children_List
         {
             /// <summary>
             /// Construnct Null MainWindow_Children_List.

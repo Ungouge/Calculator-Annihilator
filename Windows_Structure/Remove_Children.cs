@@ -1,8 +1,9 @@
 ﻿using System;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
         /// <summary>
         /// Removes given children window out of binding to MainWindow.

@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
         /// <summary>
         /// Adds children window to list binded to its parent. 

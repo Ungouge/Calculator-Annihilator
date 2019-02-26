@@ -1,13 +1,14 @@
 ﻿using System;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
-    static partial class Windows_Structure_Manager
+    static partial class Windows_Manager
     {
         /// <summary>
         /// Gets list of children windows of given MainWindow.
         /// </summary>
-        static internal MainWindow_Children_List Get_MainWindow_Children_List(MainWindow mainWindow)
+        public static MainWindow_Children_List Get_MainWindow_Children_List(IMainWindow mainWindow)
         {
             foreach (MainWindow_Children_List Children_List in MainWindows_List)
             {

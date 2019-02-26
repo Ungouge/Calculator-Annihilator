@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Windows_Structure
 {
     /// <summary>
     /// Manages structure of Windows in application.
     /// </summary>
-    static internal partial class Windows_Structure_Manager
+    public static partial class Windows_Manager
     {
-        static MainWindow MainWindow_Root;
+        private static IMainWindow MainWindow_Root;
 
         static List<MainWindow_Children_List> MainWindows_List = new List<MainWindow_Children_List>();
 
-        static List<Options_Window> Options_Windows_List = new List<Options_Window>();
+        static List<IOptionsWindow> Options_Windows_List = new List<IOptionsWindow>();
     }
 }
