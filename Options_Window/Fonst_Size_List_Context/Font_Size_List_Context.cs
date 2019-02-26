@@ -14,25 +14,22 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    internal partial class Font_Size_List_Context
     {
-        partial class Font_Size_List_Context
+        private OWXYZ OptionsWindow;
+
+        public List<Font_Size_List_Item> Font_Size_List_Items_List { get; set; }
+
+        public Font_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
+
+        public Font_Size_List_Context(OWXYZ _OptionsWindow)
         {
-            private OWXYZ OptionsWindow;
+            OptionsWindow = _OptionsWindow;
 
-            public List<Font_Size_List_Item> Font_Size_List_Items_List { get; set; }
+            Font_Size_List_Items_List = Set_Font_Size_List_Items();
 
-            public Font_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
-
-            public Font_Size_List_Context(OWXYZ _OptionsWindow)
-            {
-                OptionsWindow = _OptionsWindow;
-
-                Font_Size_List_Items_List = Set_Font_Size_List_Items();
-
-                Font_Size_List_ComboBox_SelectedItem =
-                     Set_Current_Font_Size_In_ComboBox(OptionsWindow.Options.Font_Size_Type);
-            }
+            Font_Size_List_ComboBox_SelectedItem =
+                    Set_Current_Font_Size_In_ComboBox(OptionsWindow.Options.Font_Size_Type);
         }
     }
 }

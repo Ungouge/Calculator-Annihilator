@@ -14,17 +14,14 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class Numeral_System_List_Context
     {
-        partial class Numeral_System_List_Context
+        public partial class Pined_Numeral_System_List_Item : Numeral_System_List_Item
         {
-            public partial class Pined_Numeral_System_List_Item : Numeral_System_List_Item
+            internal Pined_Numeral_System_List_Item(OWXYZ _OptionsWindow, sbyte _numeral_System_Code)
+                : base(_numeral_System_Code, _OptionsWindow)
             {
-                internal Pined_Numeral_System_List_Item(OWXYZ _OptionsWindow, sbyte _numeral_System_Code)
-                    :base(_numeral_System_Code, _OptionsWindow)
-                {
-                    Pin_Image_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Images\Pins\PinnedItem_64x_Pined.png";
-                }
+                Pin_Image_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Images\Pins\PinnedItem_64x_Pined.png";
             }
         }
     }

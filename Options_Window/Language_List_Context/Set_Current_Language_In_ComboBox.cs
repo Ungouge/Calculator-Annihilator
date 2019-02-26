@@ -3,20 +3,17 @@ using Common_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class Langauge_List_Context
     {
-        partial class Langauge_List_Context
+        private Langauge_List_Items Set_Current_Language_In_ComboBox(Languages current_Language)
         {
-            private Langauge_List_Items Set_Current_Language_In_ComboBox(Languages current_Language)
+            foreach (Langauge_List_Items item in Langauge_List_Items_List)
             {
-                foreach (Langauge_List_Items item in Langauge_List_Items_List)
-                {
-                    if (item.Language == current_Language)
-                        return item;
-                }
-
-                return null;
+                if (item.Language == current_Language)
+                    return item;
             }
+
+            return null;
         }
     }
 }

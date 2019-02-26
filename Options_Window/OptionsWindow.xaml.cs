@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Common_Library;
+using Windows_Structure;
 
 namespace Options_Window
 {
@@ -26,7 +27,7 @@ namespace Options_Window
 
             Parent_MainWindow = mainWindow;
 
-            //Windows_Structure_Manager.Add_Children_Window(this);
+            Windows_Manager.Add_Children_Window(this);
 
             Options = mainWindow.Get_Options;
 

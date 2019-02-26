@@ -14,17 +14,14 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class Font_Size_List_Context
     {
-        partial class Font_Size_List_Context
+        partial class Font_Size_List_Item
         {
-            partial class Font_Size_List_Item
+            internal void Set_Font_Size_Name(string new_Font_Size_Name)
             {
-                internal void Set_Font_Size_Name(string new_Font_Size_Name)
-                {
-                    Font_Size_Name = new_Font_Size_Name;
-                    On_Property_Change("Font_Size_Name");
-                }
+                Font_Size_Name = new_Font_Size_Name;
+                On_Property_Change("Font_Size_Name");
             }
         }
     }

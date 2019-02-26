@@ -8,7 +8,7 @@ namespace Windows_Structure
         /// <summary>
         /// Adds children window to list binded to its parent in structure manager. 
         /// </summary>
-        static internal void Add_Children_Window(IMainWindow_Children children_Window)
+        public static void Add_Children_Window(IMainWindow_Children children_Window)
         {
             Add_Children(children_Window);
 

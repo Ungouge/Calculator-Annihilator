@@ -14,17 +14,14 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class Number_Notation_List_Context
     {
-        partial class Number_Notation_List_Context
+        partial class Number_Notation_List_Item
         {
-            partial class Number_Notation_List_Item
+            internal void Number_Notation_Size_Name(string new_Number_Notation_Name)
             {
-                internal void Number_Notation_Size_Name(string new_Number_Notation_Name)
-                {
-                    Number_Notation_Name = new_Number_Notation_Name;
-                    On_Property_Change("Number_Notation_Name");
-                }
+                Number_Notation_Name = new_Number_Notation_Name;
+                On_Property_Change("Number_Notation_Name");
             }
         }
     }

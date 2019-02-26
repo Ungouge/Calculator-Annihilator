@@ -4,9 +4,7 @@ using Common_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
-    {
-        public partial class Font_Size_List_Context
+    partial class Font_Size_List_Context
         {
             private List<Font_Size_List_Item> Set_Font_Size_List_Items()
             {
@@ -21,4 +19,3 @@ namespace Options_Window
             }
         }
     }
-}

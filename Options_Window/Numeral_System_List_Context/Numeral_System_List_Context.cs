@@ -14,25 +14,22 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    internal partial class Numeral_System_List_Context
     {
-        public partial class Numeral_System_List_Context
+        private OWXYZ OptionsWindow;
+
+        public List<Numeral_System_List_Item> Numeral_System_List_Items_List { get; set; }
+
+        public Numeral_System_List_Item Numeral_System_List_ComboBox_SelectedItem { get; set; }
+
+        public Numeral_System_List_Context(OWXYZ _OptionsWindow)
         {
-            private OWXYZ OptionsWindow;
+            OptionsWindow = _OptionsWindow;
 
-            public List<Numeral_System_List_Item> Numeral_System_List_Items_List { get; set; }
+            Numeral_System_List_Items_List = Set_Numeral_System_List_Items();
 
-            public Numeral_System_List_Item Numeral_System_List_ComboBox_SelectedItem { get; set; }
-
-            public Numeral_System_List_Context(OWXYZ _OptionsWindow)
-            {
-                OptionsWindow = _OptionsWindow;
-
-                Numeral_System_List_Items_List = Set_Numeral_System_List_Items();
-
-                Numeral_System_List_ComboBox_SelectedItem =
-                     Set_Current_Numeral_System_In_ComboBox(OptionsWindow.Options.Numeral_System_Code);
-            }
+            Numeral_System_List_ComboBox_SelectedItem =
+                 Set_Current_Numeral_System_In_ComboBox(OptionsWindow.Options.Numeral_System_Code);
         }
     }
 }

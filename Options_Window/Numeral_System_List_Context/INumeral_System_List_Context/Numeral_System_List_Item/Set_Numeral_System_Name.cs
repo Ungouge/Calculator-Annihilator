@@ -14,17 +14,14 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class Numeral_System_List_Context
     {
-        partial class Numeral_System_List_Context
+        partial class Numeral_System_List_Item
         {
-            partial class Numeral_System_List_Item
+            internal void Set_Numeral_System_Name(string new_Numeral_System_Name)
             {
-                internal void Set_Numeral_System_Name(string new_Numeral_System_Name)
-                {
-                    Numeral_System_List_Item_Text = new_Numeral_System_Name;
-                    On_Property_Change("Numeral_System_List_Item_Text");
-                }
+                Numeral_System_List_Item_Text = new_Numeral_System_Name;
+                On_Property_Change("Numeral_System_List_Item_Text");
             }
         }
     }

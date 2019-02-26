@@ -14,25 +14,22 @@ using System.Windows.Shapes;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    internal partial class Langauge_List_Context
     {
-        partial class Langauge_List_Context
+        private OWXYZ OptionsWindow;
+
+        public List<Langauge_List_Items> Langauge_List_Items_List { get; set; }
+
+        public Langauge_List_Items Language_List_ComboBox_SelectedItem { get; set; }
+
+        public Langauge_List_Context(OWXYZ _OptionsWindow)
         {
-            private OWXYZ OptionsWindow;
+            OptionsWindow = _OptionsWindow;
 
-            public List<Langauge_List_Items> Langauge_List_Items_List { get; set; }
+            Langauge_List_Items_List = Set_Languge_List_Items();
 
-            public Langauge_List_Items Language_List_ComboBox_SelectedItem { get; set; }
-
-            public Langauge_List_Context(OWXYZ _OptionsWindow)
-            {
-                OptionsWindow = _OptionsWindow;
-
-                Langauge_List_Items_List = Set_Languge_List_Items();
-
-                Language_List_ComboBox_SelectedItem =
-                     Set_Current_Language_In_ComboBox(OptionsWindow.Options.Current_Language);
-            }
+            Language_List_ComboBox_SelectedItem =
+                    Set_Current_Language_In_ComboBox(OptionsWindow.Options.Current_Language);
         }
     }
 }

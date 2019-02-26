@@ -110,7 +110,7 @@
     <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
     <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Pined_Numeral_System_List_Item\Pined_Numeral_System_List_Item.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Context.cs" />
-    <Compile Include="Numeral_System_List_Context\Pin_Numeral_System_Click.cs" />
+    <Compile Include="Pin_Numeral_System_Click.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Current_Numeral_System_In_ComboBox.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Numeral_System_List_Items.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
