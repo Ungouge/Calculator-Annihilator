@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
             /// </summary>
             private void Complex_Equation_To_Solve_In_WorsSpace()
             {
-                MainWindow.Reset_ResultSpace_Text(ToString());
+                MainWindow.Reset_ResultSpace_Text(this.ToString());
 
                 MainWindow.no_First_Number_In_Equation_Single = false;
                 MainWindow.First_Number_In_Equation_Single = Solved_Number;
