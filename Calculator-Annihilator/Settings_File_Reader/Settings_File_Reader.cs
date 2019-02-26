@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Class to read options file or generate new if there is non.
     /// </summary>
-    public partial class Settings_File_Reader
+    internal partial class Settings_File_Reader
     {
         Options_Storage options;
 
