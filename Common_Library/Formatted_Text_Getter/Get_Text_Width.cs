@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     partial class Formatted_Text_Getter
     {
-        internal double Get_Text_Width
+        public double Get_Text_Width
         {
             get
             {

@@ -4,19 +4,28 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
-    internal partial class Formatted_Text_Getter
+    /// <summary>
+    /// XYZ
+    /// </summary>
+    public partial class Formatted_Text_Getter
     {
         private FormattedText Formatted_Text;
 
-        internal Formatted_Text_Getter(TextBox _TextBox, double default_FontSize)
+        /// <summary>
+        /// XYZ
+        /// </summary>
+        public Formatted_Text_Getter(TextBox _TextBox, double default_FontSize)
         {
             Formatted_Text = Get_Default_Formatted_Text(_TextBox.Text, _TextBox.FontFamily, _TextBox.FontStyle,
                 _TextBox.FontWeight, _TextBox.FontStretch, default_FontSize);
         }
 
-        internal Formatted_Text_Getter(TextBlock _TextBlock, double default_FontSize)
+        /// <summary>
+        /// XYZ
+        /// </summary>
+        public Formatted_Text_Getter(TextBlock _TextBlock, double default_FontSize)
         {
             Formatted_Text = Get_Default_Formatted_Text(_TextBlock.Text, _TextBlock.FontFamily, _TextBlock.FontStyle,
                 _TextBlock.FontWeight, _TextBlock.FontStretch, default_FontSize);
