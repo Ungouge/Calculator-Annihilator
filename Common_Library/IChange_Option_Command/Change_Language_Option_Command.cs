@@ -1,18 +1,18 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     /// <summary>
     /// Changes language in Options class.
     /// </summary>
-    internal class Change_Language_Option_Command : IChange_Option_Command
+    public class Change_Language_Option_Command : IChange_Option_Command
     {
         private readonly Languages Language_To_Change;
 
         /// <summary>
         /// Constructs new command for changing language in Options class.
         /// </summary>
-        internal Change_Language_Option_Command(Languages language_To_Change)
+        public Change_Language_Option_Command(Languages language_To_Change)
         {
             Language_To_Change = language_To_Change;
         }
@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Change language option in given Options class
         /// </summary>
-        public void Change_Option(Options options)
+        public void Change_Option(IOptions_Provider options)
         {
             options.Set_Language(Language_To_Change);
         }

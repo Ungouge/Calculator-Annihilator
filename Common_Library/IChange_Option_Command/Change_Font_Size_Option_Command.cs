@@ -1,18 +1,18 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     /// <summary>
-    /// Changes language in Options class.
+    /// Changes font size type in Options class.
     /// </summary>
-    internal class Change_Font_Size_Option_Command : IChange_Option_Command
+    public class Change_Font_Size_Option_Command : IChange_Option_Command
     {
         private readonly Font_Size_Type Font_Size_To_Change;
 
         /// <summary>
-        /// Constructs new command for changing language in Options class.
+        /// Constructs new command for changing font size type in Options class.
         /// </summary>
-        internal Change_Font_Size_Option_Command(Font_Size_Type language_To_Change)
+        public Change_Font_Size_Option_Command(Font_Size_Type language_To_Change)
         {
             Font_Size_To_Change = language_To_Change;
         }
@@ -20,7 +20,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Change font size type option in given Options class
         /// </summary>
-        public void Change_Option(Options options)
+        public void Change_Option(IOptions_Provider options)
         {
             options.Set_Font_Size_Type(Font_Size_To_Change);
         }

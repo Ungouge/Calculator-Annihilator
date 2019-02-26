@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     /// <summary>
     /// Provides Machanism to change option in Options class.
     /// </summary>
-    interface IChange_Option_Command
+    public interface IChange_Option_Command
     {
-        void Change_Option(Options options);
+        void Change_Option(IOptions_Provider options);
     }
 }
