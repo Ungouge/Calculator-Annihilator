@@ -58,7 +58,7 @@ namespace Calculator_Annihilator
             Number WorkSpace_Number = Parse_WorkSpace();
 
             if (WorkSpace_Number.Value != 0)
-                WorkSpace_Number = Calc.Operand_Selector(new Division(), new Number(1), WorkSpace_Number);
+                WorkSpace_Number = _Calculator.Operand_Selector(new Division(), new Number(1), WorkSpace_Number);
 
             Reset_WorkSpace_Text(Back_Parser.Parse_Back(WorkSpace_Number));
         }

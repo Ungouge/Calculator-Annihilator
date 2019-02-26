@@ -47,7 +47,7 @@ namespace Calculator_Annihilator
 				try
 				{
 					first_Number_In_Equation_Single = 
-						Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+						_Calculator.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 
                     new_ResultSpace_Text = 
                         Back_Parser.Parse_Back(first_Number_In_Equation_Single);

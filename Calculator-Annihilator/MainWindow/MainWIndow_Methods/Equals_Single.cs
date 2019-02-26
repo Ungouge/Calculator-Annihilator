@@ -23,7 +23,7 @@ namespace Calculator_Annihilator
                     return;
                 }
 
-                calculation_Result = Calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+                calculation_Result = _Calculator.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
 
                 new_ResultSpace_Text = Back_Parser.Parse_Back(calculation_Result);
                 

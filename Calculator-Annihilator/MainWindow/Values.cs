@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
             }
         }
         
-        private Calc Calc = new Calc();
+        private Calculator _Calculator = new Calculator();
 
         private Equation Equation;
 

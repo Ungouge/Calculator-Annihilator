@@ -25,7 +25,7 @@ namespace Calculator_Annihilator
 								INumber First_Number = (INumber)elements[operand_index - 1];
 								INumber Seccond_Number = (INumber)elements[operand_index + 1];
 
-								INumber Result_Number = _Calc.Operand_Selector(Equation_Operand, First_Number, Seccond_Number);
+								INumber Result_Number = _Calculator.Operand_Selector(Equation_Operand, First_Number, Seccond_Number);
 
 								Exchange_Solved_to_Simple_Calculated_Value(elements, operand_index, Result_Number);
 								operand_index --;

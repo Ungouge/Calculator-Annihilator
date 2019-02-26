@@ -13,7 +13,7 @@ namespace Calculator_Annihilator
 
 		private Parser _Parser;
 
-		private Calc _Calc = new Calc();
+		private Calculator _Calculator = new Calculator();
 
 		protected Equation_Elements Element_Colection = new Equation_Elements();
 

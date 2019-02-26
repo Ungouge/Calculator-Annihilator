@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator_Annihilator;
 using Xunit;
 
 namespace Calculator_Annihilator.UTests
@@ -13,7 +8,7 @@ namespace Calculator_Annihilator.UTests
 	/// </summary>
 	public class Calc_Test
 	{
-		Calc calc = new Calc();
+		Calculator Calculator = new Calculator();
 
 		/// <summary>
 		/// Cheks does addition is done properly to business logic.
@@ -29,14 +24,11 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Addition();
 
 			// Act
-			double actual = calc.Operand_Selector('+', x, y);
-			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
+			Number Actual = Arrange_Calculation(new Addition(), new Number(x), new Number(y));
 
 			// Assert
-			Assert.Equal(expected, actual);
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
@@ -53,14 +45,11 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Subtraction();
 
 			// Act
-			double actual = calc.Operand_Selector('-', x, y);
-			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
+			Number Actual = Arrange_Calculation(new Subtraction(), new Number(x), new Number(y));
 
 			// Assert
-			Assert.Equal(expected, actual);
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
@@ -78,14 +67,11 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Multiplication();
 
 			// Act
-			double actual = calc.Operand_Selector('*', x, y);
-			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
+			Number Actual = Arrange_Calculation(new Multiplication(), new Number(x), new Number(y));
 
 			// Assert
-			Assert.Equal(expected, actual);
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
@@ -104,15 +90,11 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Division();
-
 
 			// Act
-			double actual = calc.Operand_Selector('/', x, y);
-			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
+			Number Actual = Arrange_Calculation(new Division(), new Number(x), new Number(y));
 
 			// Assert
-			Assert.Equal(expected, actual);
 			Assert.Equal(Expected.Value, Actual.Value);
 		}
 
@@ -129,8 +111,7 @@ namespace Calculator_Annihilator.UTests
 		public void Divition_By_Zero_Exception_SouldCaculate(double x)
 		{
 			// Assert
-			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector('/', x, 0));
-			Assert.Throws<DivideByZeroException>(() => calc.Operand_Selector(new Division(), new Number(x), new Number(0)));
+			Assert.Throws<DivideByZeroException>(() => Calculator.Operand_Selector(new Division(), new Number(x), new Number(0)));
 		}
 
 		/// <summary>
@@ -147,15 +128,18 @@ namespace Calculator_Annihilator.UTests
 		{
 			// Arrange
 			Number Expected = new Number(expected);
-			Operand _Operand = new Expontent();
 
 			// Act
-			double actual = calc.Operand_Selector('^', x, y);
-			Number Actual = calc.Operand_Selector(_Operand, new Number(x), new Number(y));
+			Number Actual = Arrange_Calculation(new Expontent(), new Number(x), new Number(y));
 
 			// Assert
-			Assert.Equal(expected, actual);
 			Assert.Equal(Expected.Value, Actual.Value);
-		}
-	}
+        }
+
+        public Number Arrange_Calculation(IOperand Operand, INumber Number1, INumber Number2)
+        {
+            // Act
+            return Calculator.Operand_Selector(Operand, Number1, Number2);
+        }
+    }
 }

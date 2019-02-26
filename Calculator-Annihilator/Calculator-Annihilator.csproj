@@ -231,7 +231,7 @@
     <Compile Include="Elements\Interfaces\IElement.cs" />
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Bracket.cs" />
-    <Compile Include="Calc\Basic_Operations_Sack.cs" />
+    <Compile Include="Calculator\operations methods.cs" />
     <Compile Include="Options\Set_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
@@ -251,6 +251,7 @@
     <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
+    <Compile Include="test.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -293,7 +294,7 @@
     <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
     <Compile Include="Parser\Parse.cs" />
-    <Compile Include="Calc\Operand_Selector.cs" />
+    <Compile Include="Calculator\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
