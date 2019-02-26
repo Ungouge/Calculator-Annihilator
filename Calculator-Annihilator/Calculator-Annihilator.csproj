@@ -251,7 +251,6 @@
     <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
-    <Compile Include="test.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

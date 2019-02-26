@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
 
         private readonly Calculator _Calculator = new Calculator();
 
-		private Equation_Elements Element_Colection = new Equation_Elements();
+		protected Equation_Elements Element_Colection = new Equation_Elements();
 
         private bool is_Solved = false;
 
