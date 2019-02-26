@@ -33,9 +33,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			_equation = new Equation(str, new Numeral_System(10));
 
-			_equation.Solver();
-
-			double actual = _equation.Solved_Value.Value;
+			double actual = _equation.Solved_Value;
 
 			//Assert.True(expected == actual);
 			Assert.Equal(expected, actual);
@@ -55,9 +53,7 @@ namespace Calculator_Annihilator.UTests
 		{
 			_equation = new Equation(str, new Numeral_System(10));
 
-			_equation.Solver();
-
-			double actual = _equation.Solved_Value.Value;
+			double actual = _equation.Solved_Value;
 
 			//Assert.True(expected == actual);
 			Assert.Equal(expected.ToString(), actual.ToString());

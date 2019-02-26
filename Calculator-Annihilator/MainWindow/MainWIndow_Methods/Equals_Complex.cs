@@ -10,8 +10,7 @@ namespace Calculator_Annihilator
 		private void Equals_Complex(string equation)
 		{
 			Equation = new Equation(equation, Current_Numeral_System);
-			Equation.Solver();
-            Reset_ResultSpace_Text(Back_Parser.Parse_Back(Equation.Solved_Value));
+            Reset_ResultSpace_Text(Back_Parser.Parse_Back(Equation.Solved_Number));
 		}
 	}
 }

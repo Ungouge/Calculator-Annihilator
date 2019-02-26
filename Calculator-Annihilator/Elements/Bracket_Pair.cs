@@ -11,8 +11,8 @@ namespace Calculator_Annihilator
 	/// </summary>
 	public class Bracket_Pair
 	{
-		public Open_Bracket _Open_Bracket { get; private set; }
-		public Close_Bracket _Close_Bracket { get; private set; }
+		public Open_Bracket Open_Bracket { get; private set; }
+		public Close_Bracket Close_Bracket { get; private set; }
 		public Bracket_Pair Root_Bracket_Pair;
 		public List<Bracket_Pair> Inner_Brackets;
 
@@ -24,11 +24,11 @@ namespace Calculator_Annihilator
 		
 		public Bracket_Pair(Open_Bracket OB, Close_Bracket CB, Bracket_Pair RBP)
 		{
-			_Open_Bracket = OB;
-			_Close_Bracket = CB;
+			Open_Bracket = OB;
+			Close_Bracket = CB;
 
-			_Open_Bracket.Pair = this;
-			_Close_Bracket.Pair  = this;
+			Open_Bracket.Pair = this;
+			Close_Bracket.Pair  = this;
 
 			Root_Bracket_Pair = RBP;
 

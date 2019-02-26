@@ -11,11 +11,10 @@ namespace Calculator_Annihilator
             /// </summary>
             private void Complex_Equation_To_Solve_In_WorsSpace()
             {
-                Solver();
-                MainWindow.Reset_ResultSpace_Text(Solved_Value.ToString());
+                MainWindow.Reset_ResultSpace_Text(ToString());
 
                 MainWindow.no_First_Number_In_Equation_Single = false;
-                MainWindow.First_Number_In_Equation_Single = Solved_Value;
+                MainWindow.First_Number_In_Equation_Single = Solved_Number;
 
                 MainWindow.no_operand_Sign_Single = true;
 

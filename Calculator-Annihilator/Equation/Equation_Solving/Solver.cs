@@ -7,13 +7,19 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Solves whole equation and gives result to Solved_Value.
 		/// </summary>
-		public void Solver()
-		{
-			Number Result_Number = Inner_Brackets_Solver(Element_Colection, Bracket_Map_Root);
+		private void Solve()
+        {
+            if (is_Solved == false)
+            {
+                Number Result_Number = Inner_Brackets_Solver(Element_Colection, Bracket_Map_Root);
 
-			Bracket_Map_Root = null;
-			Solved_Value = Result_Number;
-		}
-	}
+                Bracket_Map_Root = null;
+
+                is_Solved = true;
+
+                _Solved_Value = Result_Number;
+            }
+        }
+    }
 }
 
