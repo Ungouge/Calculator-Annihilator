@@ -15,7 +15,7 @@ namespace Calculator_Annihilator
         /// representation of a number according to current settings of the calculator. Passing 
         /// pointer to calculator to get current setting of the calculator.
         /// </summary>
-        public Back_Parser_Fascede(MainWindow _MainWindow)
+        protected internal Back_Parser_Fascede(MainWindow _MainWindow)
         {
             MainWindow = _MainWindow;
         }

@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
         /// Class to decompose double precition floating point number to mantissa, exponent
         /// and check it is a negative number.
         /// </summary>
-        internal partial class Double_Precition_Decomposer
+        protected partial class Double_Precition_Decomposer
         {
             internal bool Is_Negative { get; private set; }
 

@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
 
         internal Bindable_Resources GUI_Bindable_Resources;
         
-        internal Back_Parser_Fascede Back_Parser;
+        private Back_Parser_Fascede Back_Parser;
 
         private Parser Parser
         {

@@ -4,7 +4,7 @@ namespace Calculator_Annihilator
 {
     partial class Back_Parser_Fascede
     {
-        internal partial class Positional_Back_Parser
+        partial class Positional_Back_Parser
         {
             public string Get_Coeficient
             {

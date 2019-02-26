@@ -1,7 +1,6 @@
 ﻿using System;
 using Common_Library;
 
-
 namespace Calculator_Annihilator
 {
     partial class Options

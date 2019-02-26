@@ -7,7 +7,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Class to convert mantisa and exponent to return binary coeficient and exponent by IBack_Parser interface..
         /// </summary>
-        internal partial class Binary_Back_Parser : IBack_Parser
+        protected partial class Binary_Back_Parser : IBack_Parser
         {
             private readonly int binary_Exponent;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Xunit;
+using Common_Library;
 using Assert = Xunit.Assert;
 
 namespace Calculator_Annihilator.Mock_Tests

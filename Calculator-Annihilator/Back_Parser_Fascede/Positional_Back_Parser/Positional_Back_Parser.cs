@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
         /// Class to convert number in binary form to form in given positional numeral system from 3 to 64
         /// and return coeficient and exponent by IBack_Parser interface.
         /// </summary>
-        internal partial class Positional_Back_Parser : IBack_Parser
+        protected partial class Positional_Back_Parser : IBack_Parser
         {
             Arbitrary_Digits Arbitrary_Digits;
 
