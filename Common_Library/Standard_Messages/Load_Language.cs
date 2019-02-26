@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Windows;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     partial class Standard_Messages
     {

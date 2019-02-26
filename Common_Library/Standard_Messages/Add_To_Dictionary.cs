@@ -3,7 +3,7 @@ using System.Xml;
 using System.Collections.Generic;
 using System.Windows;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     partial class Standard_Messages
     {

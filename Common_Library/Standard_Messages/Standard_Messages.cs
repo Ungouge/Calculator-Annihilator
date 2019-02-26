@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
     /// <summary>
     /// Class for translating string code into text from Language Library files in given language.
     /// </summary>
-    internal partial class Standard_Messages
+    public partial class Standard_Messages
     {
         private Dictionary<string, Func<string>> Dictionary;
 
