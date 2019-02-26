@@ -5,7 +5,7 @@ namespace Calculator_Annihilator
 {
     partial class Options
     {
-        internal void Set_Comma_Type(string new_Comma_Type)
+        public void Set_Comma_Type(string new_Comma_Type)
         {
             Comma_Type = new_Comma_Type;
 

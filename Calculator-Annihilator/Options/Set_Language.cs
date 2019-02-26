@@ -1,10 +1,11 @@
 ﻿using System;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
     partial class Options
     {
-        internal void Set_Language(Languages new_Language)
+        public void Set_Language(Languages new_Language)
         {
             Current_Language = new_Language;
 

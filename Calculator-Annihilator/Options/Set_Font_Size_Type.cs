@@ -1,10 +1,11 @@
 ﻿using System;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
     partial class Options
     {
-        internal void Set_Font_Size_Type(Font_Size_Type new_Font_Size_Type)
+        public void Set_Font_Size_Type(Font_Size_Type new_Font_Size_Type)
         {
             Font_Size_Type = new_Font_Size_Type;
 
