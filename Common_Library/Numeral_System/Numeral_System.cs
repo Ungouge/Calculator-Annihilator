@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Calculator_Annihilator
+namespace Common_Library
 {
 	/// <summary>
 	/// Contains data of numeral systems based on encoded number:
