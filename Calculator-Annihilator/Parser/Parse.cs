@@ -4,7 +4,7 @@ using Common_Library;
 
 namespace Calculator_Annihilator
 {
-	public partial class Parser
+	internal partial class Parser
 	{
 		/// <summary>
 		/// Converts the string representation of a number in given numeral system to its
