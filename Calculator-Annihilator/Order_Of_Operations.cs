@@ -5,7 +5,7 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Static libraries of components for calculation.
     /// </summary>
-    static partial class Signs_Lib
+    static partial class Order_Of_Operations
     {
         /// <summary>
         /// Jagged array of operand classes on order of operatin.

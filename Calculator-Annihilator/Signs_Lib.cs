@@ -3,7 +3,7 @@
 namespace Calculator_Annihilator
 {
 	/// <summary>
-	/// Static libraries of components for calculation.
+	/// xyz to change Static libraries of components for calculation.
 	/// </summary>
 	static partial class Signs_Lib
 	{
