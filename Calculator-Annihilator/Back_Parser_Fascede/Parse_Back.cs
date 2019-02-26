@@ -1,4 +1,5 @@
 ﻿using System;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -13,8 +14,8 @@ namespace Calculator_Annihilator
             return Parse_Back
                 (Number,
                 MainWindow.Numeral_System_Type,
-                MainWindow.options.Number_Notation,
-                MainWindow.options.Comma_Type
+                MainWindow.Options.Number_Notation,
+                MainWindow.Options.Comma_Type
                 );
         }
 

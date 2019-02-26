@@ -1,10 +1,19 @@
 ﻿using System;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
-        internal Options options;
+        internal Options Options;
+
+        public IOptions_Provider Get_Options
+        {
+            get
+            {
+                return Options;
+            }
+        }
         
         private Calc Calc = new Calc();
 
@@ -18,7 +27,7 @@ namespace Calculator_Annihilator
         {
             get
             {
-                return options.Parser;
+                return Options.Parser;
             }
         }
 
@@ -26,7 +35,7 @@ namespace Calculator_Annihilator
         {
             get
             {
-                return options.Current_Numeral_System;
+                return Options.Current_Numeral_System;
             }
         }
 
@@ -34,11 +43,11 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				return options.Current_Numeral_System.System_Type;
+				return Options.Current_Numeral_System.System_Type;
 			}
             private set
             {
-                options.Set_Numeral_System(value);
+                Options.Set_Numeral_System(value);
             }
 		}
 
@@ -46,7 +55,7 @@ namespace Calculator_Annihilator
 		{
 			get
 			{
-				return options.Current_Numeral_System.System_Digits;
+				return Options.Current_Numeral_System.System_Digits;
 			}
         }
         
@@ -54,18 +63,18 @@ namespace Calculator_Annihilator
         {
             get
             {
-                return options.Current_Language;
+                return Options.Current_Language;
             }
             set
             {
-                options.Set_Language(value);
+                Options.Set_Language(value);
             }
         }
         internal Standard_Messages Standard_Messages
         {
             get
             {
-                return options.Standard_Messages;
+                return Options.Standard_Messages;
             }
         }
 

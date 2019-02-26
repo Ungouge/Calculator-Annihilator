@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows;
+using Options_Window;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -7,8 +9,8 @@ namespace Calculator_Annihilator
     {
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
-            Options_Window Options_Window = new Options_Window(this);
-            Options_Window.Show();
+            IOptionsWindow OWindow = new OWXYZ(this);
+            OWindow.Show();
         }
     }
 }

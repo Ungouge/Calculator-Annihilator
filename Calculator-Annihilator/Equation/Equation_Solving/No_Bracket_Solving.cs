@@ -12,7 +12,7 @@ namespace Calculator_Annihilator
         /// <exception cref="EquationNotSolvedProperlyException">Thrown when solving equation after been solved is not composed of one number element.</exception>
         private Number No_Bracket_Solver(Equation_Elements elements )
 		{
-			foreach (IOperand[] operand_Level in Signs_Lib.Operands)
+			foreach (IOperand[] operand_Level in Order_Of_Operations.Operands)
 			{
 				for (int operand_index = 0; operand_index < elements.Count; operand_index++)
 				{

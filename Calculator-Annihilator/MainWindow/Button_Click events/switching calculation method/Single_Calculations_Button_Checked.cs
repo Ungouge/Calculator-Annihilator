@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -10,7 +11,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
         {
-            options.Calculation_Method = Calculation_Method.Single;
+            Options.Calculation_Method = Calculation_Method.Single;
 
             Complex_To_Single();
 

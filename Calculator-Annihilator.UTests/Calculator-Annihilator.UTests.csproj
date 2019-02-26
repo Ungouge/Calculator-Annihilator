@@ -118,6 +118,10 @@
       <Project>{37e4b73c-6cd4-4528-8a86-759b643dfe76}</Project>
       <Name>Calculator-Annihilator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -77,11 +77,11 @@ namespace Calculator_Annihilator
 		/// <param name="sign">Character to check is operand.</param>
 		private bool Is_Operand(char sign)
 		{
-			for (int i = 0; i < Signs_Lib.operand_Sings.Length; i++)
-				for (int k = 0; k < Signs_Lib.operand_Sings[i].Length; k++)
-					if (Signs_Lib.operand_Sings[i][k] == sign)
+			for (int i = 0; i < Order_Of_Operations.operand_Sings.Length; i++)
+				for (int k = 0; k < Order_Of_Operations.operand_Sings[i].Length; k++)
+					if (Order_Of_Operations.operand_Sings[i][k] == sign)
 					{
-						Element_Colection.Add( Signs_Lib.Operands[i][k]);
+						Element_Colection.Add(Order_Of_Operations.Operands[i][k]);
 
 						return true;
 					}

@@ -158,9 +158,6 @@
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
     <Compile Include="Elements\Number.cs" />
-    <Compile Include="Formatted_Text_Getter\Default_Formatted_Text_Getter.cs" />
-    <Compile Include="Formatted_Text_Getter\Get_Text_Height.cs" />
-    <Compile Include="Formatted_Text_Getter\Get_Text_Width.cs" />
     <Compile Include="Elements\Bracket_Pair.cs" />
     <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
     <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
@@ -180,71 +177,11 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
-    <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Number_Notation_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Numeral_System_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
-    <Compile Include="IMainWindow_Children.cs" />
-    <Compile Include="internal enums lib.cs" />
-    <Compile Include="internal values.cs" />
-    <Compile Include="Library\Signs_Lib\Operands_Lib.cs" />
-    <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
-    <Compile Include="Options\Options\Set_Font_Size_Type.cs" />
-    <Compile Include="Options\Options\Set_Number_Notation_Type.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_ComboBox_List_Image_Width.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Context.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\On_Property_Change.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Font_Size_List_Item\Set_Font_Size_Name.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Set_Font_Size_List_Items.cs" />
-    <Compile Include="Options_Window\Language_List_Context\Language_List_Context.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Number_Notation_List_Context.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Number_Notation_List_Item\Number_Notation_List_Item.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Number_Notation_List_Item\On_Property_Change.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Number_Notation_List_Item\Set_Number_Notation_Name.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Set_Current_Number_Notation_In_ComboBox.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Set_Number_Notation_List_Items.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_Text.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
-    <Compile Include="Options_Window\Fonst_Size_List_Context\Set_Font_Size_Texts.cs" />
-    <Compile Include="Options_Window\Number_Notation_List_Context\Set_Number_Notation_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\values.cs" />
-    <Compile Include="Options_Window\Buttons click\Apply_Buton_Click.cs" />
-    <Compile Include="Options_Window\Buttons click\Apply_In_All_Buton_Click.cs" />
-    <Compile Include="Options_Window\Buttons click\Apply_Option_Change.cs" />
-    <Compile Include="Options_Window\Buttons click\Cancel_Buton_Click.cs" />
-    <Compile Include="Options_Window\Buttons click\Ok_Buton_Click.cs" />
-    <Compile Include="Options_Window\Buttons click\Remove_Obsolete_Command.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\INumeral_System_List_Context.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_All_Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Pinned_Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Pined_Numeral_System_List_Item\Pined_Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Numeral_System_List_Context.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\On_Property_Change.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Pin_Numeral_System_Click.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Current_Numeral_System_In_ComboBox.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_List_Items.cs" />
-    <Compile Include="Options_Window\Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
-    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Font_Size_List_ComboBo_SelectionChanged.cs" />
-    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Number_Notation_List_ComboBox_SelectionChanged.cs" />
-    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Numeral_System_List_ComboBox_SelectedItem.cs" />
-    <Compile Include="Options_Window\Push_Set_Text.cs" />
-    <Compile Include="Options_Window\Set_Texts.cs" />
-    <Compile Include="Options_Window\values.cs" />
-    <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
-    <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
-    <Compile Include="Standard_Messages\Translate.cs" />
-    <Compile Include="Standard_Messages\Load_Language.cs" />
-    <Compile Include="Standard_Messages\Set_Language_Loader_Delegate.cs" />
+    <Compile Include="Options\Set_Language.cs" />
+    <Compile Include="Order_Of_Operations.cs" />
+    <Compile Include="Signs_Lib.cs" />
+    <Compile Include="Options\Set_Font_Size_Type.cs" />
+    <Compile Include="Options\Set_Number_Notation_Type.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Intialize_MainWindow_Size.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Properties_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Set_X_Text\Set_Calculator_annihilator_Text.cs" />
@@ -266,12 +203,9 @@
     <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
     <Compile Include="MainWindow\Set_Texts_Turntable\Set_Texts_Turntable.cs" />
-    <Compile Include="Options\Options\Generate_Options_Storage.cs" />
-    <Compile Include="Options\Options\Options.cs" />
-    <Compile Include="Options\Options\Set_Language.cs" />
-    <Compile Include="Options\Options\values.cs" />
-    <Compile Include="Options\Options_Storage\Options_Storage.cs" />
-    <Compile Include="Options\Options_Storage\values.cs" />
+    <Compile Include="Options\Generate_Options_Storage.cs" />
+    <Compile Include="Options\Options.cs" />
+    <Compile Include="Options\values.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Values.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\buttons Basic_Operations_Less_Than_Decimal_System.cs" />
     <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\Basic_Operations_Less_Than_Hexadecimal_System.xaml.cs">
@@ -287,7 +221,7 @@
       <DependentUpon>Less_Than_Hexadecimal_System.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow\MainWindow_Methods\Calculator_Buttons_Panel_Setter.cs" />
-    <Compile Include="Options\Options\Set_Comma_Type.cs" />
+    <Compile Include="Options\Set_Comma_Type.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\changed events.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Operation_Actions.cs" />
@@ -298,51 +232,25 @@
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
     <Compile Include="Elements\Bracket.cs" />
     <Compile Include="Calc\Basic_Operations_Sack.cs" />
-    <Compile Include="Options\Options\Set_Numerical_System.cs" />
+    <Compile Include="Options\Set_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
     <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Set_Texts.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\OnPropertyChange.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\On_Properties_Change.cs" />
-    <Compile Include="Options_Window\X_ComboBox_SelectedItem\Language_List_ComboBox_SelectionChanged.cs" />
-    <Compile Include="Options_Window\Language_List_Context\Set_Current_Language_In_ComboBox.cs" />
-    <Compile Include="Options_Window\Language_List_Context\Set_Languge_List_Items.cs" />
-    <Compile Include="Options_Window\Language_List_Context\Langauge_List_Items.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_Options_Text_FontSize.cs" />
-    <Compile Include="Options_Window\Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
-    <Compile Include="Options_Window\Options_Window.xaml.cs">
-      <DependentUpon>Options_Window.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Settings_File_Reader\Options_Generator.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
-    <Compile Include="Library\Signs_Lib\Signs_Lib.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Button_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Font_To_TextBox_Macher.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="Standard_Messages\Standard_Messages.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Push_Recalculations.cs" />
     <Compile Include="MainWindow\Bindable_Resources\ResultSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
     <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
-    <Compile Include="Windows_Structure_Manager\Add_MainWindow.cs" />
-    <Compile Include="Windows_Structure_Manager\Add_Children_Window.cs" />
-    <Compile Include="Windows_Structure_Manager\Add_Children.cs" />
-    <Compile Include="Windows_Structure_Manager\Get_MainWindows_List.cs" />
-    <Compile Include="Windows_Structure_Manager\Get_MainWindow_Children_List.cs" />
-    <Compile Include="Windows_Structure_Manager\Is_Children_Windows.cs" />
-    <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\MainWindow_Children_List.cs" />
-    <Compile Include="Windows_Structure_Manager\MainWindow_Children_List\null MainWindow_Children_List.cs" />
-    <Compile Include="Windows_Structure_Manager\Remove_Children.cs" />
-    <Compile Include="Windows_Structure_Manager\Remove_MainWindow.cs" />
-    <Compile Include="Windows_Structure_Manager\Remove_Children_Window.cs" />
-    <Compile Include="Windows_Structure_Manager\Windows_Structure_Manager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -372,10 +280,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Options_Window\Options_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="WPF_Styles\Calculator_Buttons_Style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -388,7 +292,6 @@
   <ItemGroup>
     <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
     <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
-    <Compile Include="Numeral_System\Numeral_System.cs" />
     <Compile Include="Parser\Parse.cs" />
     <Compile Include="Calc\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
@@ -409,7 +312,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -431,67 +333,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Library\Images\Font_Sign\" />
     <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library\Images\Language_Flags\German_Flag.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Images\Language_Flags\English_Flag.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Images\Language_Flags\Latin_Flag.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Library\Images\Pins\PinnedItem_64x_Transparent.png" />
-    <Content Include="Library\Images\Language_Flags\Polish_Flag.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Images\Language_Flags\Chinese_Flag.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Images\Pins\PinnedItem_64x_Clear.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Images\Pins\PinnedItem_64x_Pined.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Language_Library_Showcase.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Main_Menu.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Calculator_Options.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Number_Notiation_List.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Font_Size_List.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Numeral_System.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Options_Buttons.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\General_Options.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Language_List.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Library\Language_Library\Options\Tab_Items.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Library\Language_Library\Calculator_Annihilator.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Window\Options_Window.csproj">
+      <Project>{51f187c6-ba14-446c-bb1f-3025a74ed593}</Project>
+      <Name>Options_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows_Structure\Windows_Structure.csproj">
+      <Project>{d7996eaf-8f5b-426e-adc6-c333c69a2047}</Project>
+      <Name>Windows_Structure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

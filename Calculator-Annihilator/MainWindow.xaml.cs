@@ -12,26 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Common_Library;
+using Windows_Structure;
 
 namespace Calculator_Annihilator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window //Initialize Part
+    public partial class MainWindow : Window, IMainWindow //Initialize Part
     {
         public MainWindow()
         {
             try
             {
                 // Preinitialization
-                Windows_Structure_Manager.Add_MainWindow(this);
+                Windows_Manager.Add_MainWindow(this);
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
                 
                 GUI_Bindable_Resources = new Bindable_Resources(this);
 
-                options = _Settings_File_Reader.Options_Generator(this);
+                Options = _Settings_File_Reader.Options_Generator(this);
 
                 GUI_Bindable_Resources.Intialize_MainWindow_Size();
                 
@@ -49,7 +51,7 @@ namespace Calculator_Annihilator
                 Calculator_Buttons_Panel_Setter();
 
 
-                if (options.Calculation_Method == Calculation_Method.Single)
+                if (Options.Calculation_Method == Calculation_Method.Single)
                     this.SingleCalculations.IsChecked = true;
                 else // calculation_Method == Calculation_Method.Complex
                     this.ComplexCalculations.IsChecked = true;

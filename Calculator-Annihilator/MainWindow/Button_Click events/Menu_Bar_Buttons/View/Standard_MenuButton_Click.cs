@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -10,7 +11,7 @@ namespace Calculator_Annihilator
         /// </summary>
         private void Standard_MenuButton_Click(object sender, RoutedEventArgs e)
         {
-            options.Calculator_Mode = Calculator_Mode.Standard;
+            Options.Calculator_Mode = Calculator_Mode.Standard;
 
             Calculator_Buttons_Panel_Setter();
         }

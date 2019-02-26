@@ -1,4 +1,5 @@
 ﻿using System;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -34,11 +35,11 @@ namespace Calculator_Annihilator
         /// </summary>
         internal void Button_Equals_Action()
 		{
-			if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Single))
+			if (Convert.ToBoolean(Options.Calculation_Method == Calculation_Method.Single))
 			{
 				Equals_Single();
 			}
-			else if (Convert.ToBoolean(options.Calculation_Method == Calculation_Method.Complex))
+			else if (Convert.ToBoolean(Options.Calculation_Method == Calculation_Method.Complex))
 			{
 				Equals_Complex(WorkSpace.Text);
 			}

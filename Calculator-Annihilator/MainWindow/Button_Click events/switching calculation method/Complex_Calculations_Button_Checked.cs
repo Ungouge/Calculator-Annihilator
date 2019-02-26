@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -10,7 +11,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Complex_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
-            options.Calculation_Method = Calculation_Method.Complex;
+            Options.Calculation_Method = Calculation_Method.Complex;
 
 			string newWorkSpaceText = "";
 
