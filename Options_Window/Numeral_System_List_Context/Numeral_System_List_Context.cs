@@ -18,7 +18,7 @@ namespace Options_Window
     {
         private OWXYZ OptionsWindow;
 
-        public List<Numeral_System_List_Item> Numeral_System_List_Items_List { get; set; }
+        public List<INumeral_System_List_Content> Numeral_System_List_Items_List { get; set; }
 
         public Numeral_System_List_Item Numeral_System_List_ComboBox_SelectedItem { get; set; }
 

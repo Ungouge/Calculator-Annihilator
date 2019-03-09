@@ -18,10 +18,11 @@ namespace Options_Window
     {
         private Numeral_System_List_Item Set_Current_Numeral_System_In_ComboBox(sbyte current_Numeral_System_Code)
         {
-            foreach (Numeral_System_List_Item item in Numeral_System_List_Items_List)
+            foreach (INumeral_System_List_Content item in Numeral_System_List_Items_List)
             {
-                if (item.numeral_System_Code == current_Numeral_System_Code)
-                    return item;
+                if (item is Numeral_System_List_Item list_Item )
+                    if(list_Item.Numeral_System_Code == current_Numeral_System_Code)
+                        return list_Item;
             }
 
             return null;

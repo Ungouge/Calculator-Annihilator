@@ -7,7 +7,7 @@ namespace Options_Window
 {
     partial class OWXYZ
     {
-        private Bindable_Resources _Bindable_Resources;
+        internal Bindable_Resources _Bindable_Resources;
 
         private Number_Notation_List_Context _Number_Notation_List_Context;
 

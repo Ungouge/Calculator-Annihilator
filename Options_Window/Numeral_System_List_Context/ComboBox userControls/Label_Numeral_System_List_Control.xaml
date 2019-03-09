@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Options_Window.Label_Numeral_System_List_Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Options_Window"
+             mc:Ignorable="d" 
+             d:DesignHeight="24" d:DesignWidth="128">
+
+    <DockPanel>
+
+        <DockPanel.Background>
+            <SolidColorBrush Color="Gray"/>
+        </DockPanel.Background>
+
+        <TextBlock Text="{Binding Numeral_System_List_Content_Text, Mode=OneWay}" FontSize="18"/>
+
+    </DockPanel>
+</UserControl>

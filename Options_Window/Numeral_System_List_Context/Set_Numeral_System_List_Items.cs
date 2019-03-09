@@ -6,15 +6,25 @@ namespace Options_Window
 {
     partial class Numeral_System_List_Context
     {
-        private List<Numeral_System_List_Item> Set_Numeral_System_List_Items()
+        private List<INumeral_System_List_Content> Set_Numeral_System_List_Items()
         {
-            List<Numeral_System_List_Item> Output_Items_List = new List<Numeral_System_List_Item>();
+            List<INumeral_System_List_Content> Output_Items_List = new List<INumeral_System_List_Content>();
 
-            foreach (sbyte[] numeral_Systems_Group in Used_Numeral_Systems.Numeral_Systems)
+            Output_Items_List.Add(new Label_Pinned_Numeral_System_List_Item( OptionsWindow));
+            
+            foreach (sbyte numeral_Systems in OptionsWindow.Options.Pined_Numeral_Systems)
             {
-                for (sbyte i = numeral_Systems_Group[0]; i <= numeral_Systems_Group[numeral_Systems_Group.Length - 1]; i++)
+                Output_Items_List.Add(new Pined_Numeral_System_List_Item(OptionsWindow, numeral_Systems));
+            }
+
+            Output_Items_List.Add(new Label_All_Numeral_System_List_Item(OptionsWindow));
+
+            foreach (Numeral_System_Group numeral_Systems_Group in Used_Numeral_Systems.Numeral_Systems)
+            {
+                for (sbyte numeral_System = numeral_Systems_Group.starting_Code;
+                    numeral_System <= numeral_Systems_Group.finale_Code; numeral_System++)
                 {
-                    Output_Items_List.Add(new Numeral_System_List_Item(OptionsWindow, i));
+                    Output_Items_List.Add(new Numeral_System_List_Item(OptionsWindow, numeral_System));
                 }
             }
 

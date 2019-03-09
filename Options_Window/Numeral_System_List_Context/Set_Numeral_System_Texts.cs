@@ -10,7 +10,7 @@ namespace Options_Window
             foreach (Numeral_System_List_Item list_Item in Numeral_System_List_Items_List)
             {
                 string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
-                    list_Item.numeral_System_Code, standard_Messages);
+                    list_Item.Numeral_System_Code, standard_Messages);
 
                 list_Item.Set_Numeral_System_Name(new_Numeral_System_Name);
             }
