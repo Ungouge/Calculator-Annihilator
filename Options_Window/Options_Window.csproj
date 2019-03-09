@@ -61,6 +61,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Numeral_System_List_Context\ComboBox userControls\Item_Numeral_System_List_Control.xaml.cs">
+      <DependentUpon>Item_Numeral_System_List_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Numeral_System_List_Context\ComboBox userControls\Label_Numeral_System_List_Control.xaml.cs">
+      <DependentUpon>Label_Numeral_System_List_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\INumeral_System_List_Content.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\INumeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Label_Numeral_System_List_Item\Label_All_Numeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Label_Numeral_System_List_Item\Label_Numeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Label_Numeral_System_List_Item\Label_Pinned_Numeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Numeral_System_List_Item\On_Property_Change.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Numeral_System_List_Item\Pined_Numeral_System_List_Item\Pined_Numeral_System_List_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Content\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
@@ -101,14 +116,6 @@
     <Compile Include="Number_Notation_List_Context\Set_Current_Number_Notation_In_ComboBox.cs" />
     <Compile Include="Number_Notation_List_Context\Set_Number_Notation_List_Items.cs" />
     <Compile Include="Number_Notation_List_Context\Set_Number_Notation_Texts.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\INumeral_System_List_Context.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_All_Numeral_System_List_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Numeral_System_List_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Label_Numeral_System_List_Item\Label_Pinned_Numeral_System_List_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\On_Property_Change.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Numeral_System_List_Item\Set_Numeral_System_Name.cs" />
-    <Compile Include="Numeral_System_List_Context\INumeral_System_List_Context\Pined_Numeral_System_List_Item\Pined_Numeral_System_List_Item.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Context.cs" />
     <Compile Include="Pin_Numeral_System_Click.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Current_Numeral_System_In_ComboBox.cs" />
@@ -147,6 +154,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Numeral_System_List_Context\ComboBox userControls\Item_Numeral_System_List_Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numeral_System_List_Context\ComboBox userControls\Label_Numeral_System_List_Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="OptionsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,10 +172,15 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Windows_Structure\Windows_Structure.csproj">
       <Project>{d7996eaf-8f5b-426e-adc6-c333c69a2047}</Project>
       <Name>Windows_Structure</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

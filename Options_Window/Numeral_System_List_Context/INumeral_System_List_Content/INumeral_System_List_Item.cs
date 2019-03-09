@@ -1,14 +1,11 @@
 ﻿namespace Options_Window
 {
-    partial class Numeral_System_List_Context
+    internal interface INumeral_System_List_Item: INumeral_System_List_Content
     {
-        public interface INumeral_System_List_Item: INumeral_System_List_Content
-        {
-            double Image_Width { get; set; }
+        double Image_Width { get; set; }
 
-            string Pin_Image_Uri { get; set; }
+        string Pin_Image_Uri { get; set; }
 
-            sbyte Numeral_System_Code { get;}
-        }
+        sbyte Numeral_System_Code { get;}
     }
 }

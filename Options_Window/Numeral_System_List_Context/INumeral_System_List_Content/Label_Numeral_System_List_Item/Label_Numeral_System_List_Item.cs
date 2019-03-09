@@ -33,5 +33,3 @@ namespace Options_Window
         }
     }
 }
-
-//Numeral_System_List_Item_Text = _OptionsWindow.Options.Standard_Messages.Translate("XYZ");

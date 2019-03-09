@@ -2,7 +2,7 @@
 
 namespace Options_Window
 {
-    public interface INumeral_System_List_Content
+    internal interface INumeral_System_List_Content
     {
         string Numeral_System_List_Content_Text { get; set; }
 

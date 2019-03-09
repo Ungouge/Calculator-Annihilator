@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Common_Library;
+using Options_Library;
+
 using Windows_Structure;
 
 namespace Options_Window
@@ -21,7 +13,7 @@ namespace Options_Window
     /// </summary>
     public partial class OWXYZ : Window, IMainWindow_Children, IOptionsWindow
     {
-        public OWXYZ(IMainWindow mainWindow)
+        public OWXYZ(IGet_MainWindow_Options mainWindow)
         {
             // Preinitialization
 

@@ -340,6 +340,10 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Options_Window\Options_Window.csproj">
       <Project>{51f187c6-ba14-446c-bb1f-3025a74ed593}</Project>
       <Name>Options_Window</Name>

@@ -29,8 +29,9 @@
             <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}">
                 <Grid Height="{Binding General_Options_Grid_Height, Mode= OneWay, FallbackValue= 250}">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="5*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3*"/>
@@ -40,12 +41,12 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay, FallbackValue= Language}"
-                               Grid.Column="0" Grid.Row="0"/>
+                               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,35,0,34.6"/>
 
                     <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" 
                               SelectionChanged="Language_List_ComboBox_SelectionChanged"
-                              Grid.Column="1" Grid.Row="0">
+                              Grid.Column="2" Grid.Row="0" Margin="0,29,0,28.6">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Width="200"
@@ -60,12 +61,12 @@
                     </ComboBox>
 
                     <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size_Type, Mode=OneWay, FallbackValue= Font_Size}"
-                               Grid.Column="0" Grid.Row="2"/>
+                               Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,35.2,0,34.4"/>
 
                     <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}"
                               SelectionChanged="Font_Size_List_ComboBox_SelectionChanged"
-                              Grid.Column="1" Grid.Row="2">
+                              Grid.Column="2" Grid.Row="2" Margin="0,29.2,0,28.4">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Width="200"

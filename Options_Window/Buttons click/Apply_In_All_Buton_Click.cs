@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using Common_Library;
+using Options_Library;
 using Windows_Structure;
 
 namespace Options_Window
@@ -10,7 +10,7 @@ namespace Options_Window
     {
         private void Apply_In_All_Buton_Click(object sender, RoutedEventArgs e)
         {
-            foreach (IMainWindow mainWindow in Windows_Manager.Get_MainWindows_List)
+            foreach (IGet_MainWindow_Options mainWindow in Windows_Manager.Get_MainWindows_List)
             {
                 Apply_Option_Change(mainWindow.Get_Options);
             }

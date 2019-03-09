@@ -14,13 +14,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Common_Library;
 using Windows_Structure;
+using Options_Library;
 
 namespace Calculator_Annihilator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IMainWindow //Initialize Part
+    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Options //Initialize Part
     {
         public MainWindow()
         {
