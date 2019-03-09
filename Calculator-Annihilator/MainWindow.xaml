@@ -95,7 +95,7 @@
                      VerticalContentAlignment="Center"
                      Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged" />
 
-            <Grid Name="CalculationTypeSwitcher_Grid"  Grid.Row="1" Grid.Column="0" Margin="1,1.2,0.8,1.4" Grid.ColumnSpan="2">
+            <Grid Name="CalculationTypeSwitcher_Grid" Grid.Row="1" Grid.Column="0" Margin="1,1.2,0.8,1.4" Grid.ColumnSpan="2">
 
                 <Grid.Resources>
                     <Style TargetType="RadioButton">

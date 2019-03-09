@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
         /// </summary>
         internal Options(MainWindow mainWindow , Options_Storage options) : base(options.Calculator_Mode,
             options.Calculation_Method, options.Initial_Height, options.Initial_Width,
-            options.Number_Notation, options.Font_Size_Type)
+            options.Number_Notation, options.Font_Size_Type, options.Pined_Numeral_Systems)
         {
             Current_MainWindow = mainWindow;
             Set_Comma_Type(options.Comma_Type);
