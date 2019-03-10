@@ -24,6 +24,8 @@ namespace Options_Window
 
             public UserControl Content_Control { get; set; }
 
+            public bool Is_Enabled { get { return false; } }
+
             internal Label_Numeral_System_List_Item(OWXYZ _OptionsWindow)
             {
                 Text_Width = _OptionsWindow._Bindable_Resources.ComboBox_Element_Width;

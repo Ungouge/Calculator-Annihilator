@@ -20,6 +20,8 @@ namespace Options_Window
 
             public UserControl Content_Control { get; set; }
 
+            public bool Is_Enabled { get { return true; } }
+
             internal Numeral_System_List_Item(OWXYZ _OptionsWindow, sbyte _numeral_System_Code)
                 : this(_numeral_System_Code, _OptionsWindow)
             {

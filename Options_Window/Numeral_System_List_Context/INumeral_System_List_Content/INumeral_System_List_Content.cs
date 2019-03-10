@@ -9,5 +9,7 @@ namespace Options_Window
         double Text_Width { get; set; }
 
         UserControl Content_Control { get; set; }
-    }
+
+        bool Is_Enabled { get;}
+}
 }

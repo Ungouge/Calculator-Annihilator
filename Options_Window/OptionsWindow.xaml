@@ -125,6 +125,11 @@
                               SelectedItem="{Binding Numeral_System_List_ComboBox_SelectedItem}"
                               SelectionChanged="Numeral_System_List_ComboBox_SelectionChanged"
                               Grid.Column="1" Grid.Row="2">
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="IsEnabled" Value="{Binding Is_Enabled, Mode=OneWay, FallbackValue=True}"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <ContentControl x:Name="Numeral_System_List_ComboBox_ContentControl"
