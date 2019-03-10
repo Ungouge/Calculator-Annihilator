@@ -54,7 +54,6 @@
     <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="public enums lib.cs" />
-    <Compile Include="Signs.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
     <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
     <Compile Include="Standard_Messages\Load_Language.cs" />
