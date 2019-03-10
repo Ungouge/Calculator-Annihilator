@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Common_Library
+namespace Options_Library
 {
     /// <summary>
     /// Changes numeral system in Options class.

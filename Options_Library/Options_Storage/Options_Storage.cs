@@ -1,6 +1,7 @@
 ﻿using System;
+using Common_Library;
 
-namespace Common_Library
+namespace Options_Library
 {
     public partial class Options_Storage
     {

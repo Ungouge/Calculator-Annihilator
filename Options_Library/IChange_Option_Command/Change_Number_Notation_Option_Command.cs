@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common_Library;
 
-namespace Common_Library
+namespace Options_Library
 {
     /// <summary>
     /// Changes number notation in Options class.

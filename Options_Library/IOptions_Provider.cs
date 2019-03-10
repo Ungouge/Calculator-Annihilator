@@ -1,4 +1,6 @@
-﻿namespace Common_Library
+﻿using Common_Library;
+
+namespace Options_Library
 {
     public interface IOptions_Provider
     {
