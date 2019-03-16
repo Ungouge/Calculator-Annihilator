@@ -133,25 +133,13 @@ namespace Calculator_Annihilator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2,8,10,12,16")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2,8,10,12,16,60")]
         public string Pined_Numeral_Systems {
             get {
                 return ((string)(this["Pined_Numeral_Systems"]));
             }
             set {
                 this["Pined_Numeral_Systems"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
-            }
-            set {
-                this["Setting"] = value;
             }
         }
     }

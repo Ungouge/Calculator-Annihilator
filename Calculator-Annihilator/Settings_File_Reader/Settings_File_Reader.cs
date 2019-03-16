@@ -24,10 +24,10 @@ namespace Calculator_Annihilator
                 Properties.Settings.Default.comma_Type,
                 (Font_Size_Type)Properties.Settings.Default.Font_Size_Type,
                 Properties.Settings.Default.numeral_System,
-                Read_Pinnend_Numeral_Systems,
                 (Languages)Properties.Settings.Default.Language
             );
 
+            Pinned_Numeral_Systems.Set_Numeral_Systems_Codes = Read_Pinnend_Numeral_Systems;
             //_Static_Resources.Comma_Type = System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
 
             //Default Values:

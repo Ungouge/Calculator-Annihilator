@@ -18,8 +18,6 @@ namespace Options_Library
 
         sbyte Numeral_System_Code { get;  }
 
-        sbyte[] Pined_Numeral_Systems { get; }
-
         Languages Current_Language { get; }
 
         Standard_Messages Standard_Messages { get; }

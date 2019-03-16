@@ -10,9 +10,8 @@ namespace Options_Library
         /// </summary>
         public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation, string comma_Type,
-            Font_Size_Type font_Size_Type, sbyte numeral_System_Code, sbyte[] Pined_Numeral_Systems, Languages current_Language) 
-            : this(calculator_Mode, calculation_Method,intitial_Height,intial_Width, number_Notation, font_Size_Type,
-                  Pined_Numeral_Systems)
+            Font_Size_Type font_Size_Type, sbyte numeral_System_Code, Languages current_Language) 
+            : this(calculator_Mode, calculation_Method,intitial_Height,intial_Width, number_Notation, font_Size_Type)
         {
             Comma_Type = comma_Type;
             Numeral_System_Code = numeral_System_Code;
@@ -22,7 +21,7 @@ namespace Options_Library
 
         public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation,
-            Font_Size_Type font_Size_Type, sbyte[] _Pined_Numeral_Systems)
+            Font_Size_Type font_Size_Type)
         {
             Calculator_Mode = calculator_Mode;
             Calculation_Method = calculation_Method;
@@ -30,7 +29,6 @@ namespace Options_Library
             Initial_Width = intial_Width;
             Number_Notation = number_Notation;
             Font_Size_Type = font_Size_Type;
-            Pined_Numeral_Systems = _Pined_Numeral_Systems;
         }
     }
 }

@@ -19,8 +19,6 @@ namespace Options_Library
         
         public sbyte Numeral_System_Code { get; protected set; }
         
-        public sbyte[] Pined_Numeral_Systems { get; protected set; }
-        
         public Languages Current_Language { get; protected set; }
 
         public string Comma_Type { get; protected set; }

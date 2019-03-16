@@ -30,10 +30,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="Pined_Numeral_Systems" Type="System.String" Scope="User">
-      <Value Profile="(Default)">2,8,10,12,16</Value>
-    </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">2,8,10,12,16,60</Value>
     </Setting>
   </Settings>
 </SettingsFile>

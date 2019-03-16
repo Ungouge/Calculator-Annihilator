@@ -50,6 +50,7 @@
     <Compile Include="IOptions_Provider.cs" />
     <Compile Include="Options_Storage\Options_Storage.cs" />
     <Compile Include="Options_Storage\values.cs" />
+    <Compile Include="Pinned_Numeral_Systems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
