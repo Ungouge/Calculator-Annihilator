@@ -20,11 +20,11 @@ namespace Options_Window
     /// </summary>
     public partial class Label_Numeral_System_List_Control : Numeral_System_List_Content
     {
-        public Label_Numeral_System_List_Control(OWXYZ.Bindable_Resources _Bindable_Resources, string text)
+        public Label_Numeral_System_List_Control(double comboBox_Element_Width, string text)
         {
             Content_Text = text;
 
-            Text_Width = _Bindable_Resources.ComboBox_Element_Width;
+            Text_Width = comboBox_Element_Width;
 
             InitializeComponent();
         }
