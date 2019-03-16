@@ -5,7 +5,7 @@ namespace Options_Window
 {
     partial class OWXYZ
     {
-        public partial class Bindable_Resources
+        partial class Bindable_Resources
         {
             internal void Set_Text(Standard_Messages standard_Messages)
             {

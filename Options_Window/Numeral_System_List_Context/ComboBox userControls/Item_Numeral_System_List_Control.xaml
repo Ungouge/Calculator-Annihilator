@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Options_Window.Item_Numeral_System_List_Control"
+﻿<local:Numeral_System_List_Item x:Class="Options_Window.Item_Numeral_System_List_Control"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,7 +10,7 @@
     <StackPanel Height="{Binding RelativeSource={RelativeSource AncestorType=Window},
                          Path=DataContext.ComboBox_Element_Height, Mode=OneWay}" Orientation="Horizontal">
         
-        <TextBlock Text="{Binding Numeral_System_List_Content_Text, Mode=OneWay}" VerticalAlignment="Center" d:DesignHeight="24"
+        <TextBlock Text="{Binding Content_Text, Mode=OneWay}" VerticalAlignment="Center" d:DesignHeight="24"
                    FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window},
                               Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"
                    Width="{Binding Text_Width, Mode=OneWay, FallbackValue=102}"/>
@@ -21,4 +21,4 @@
                    Width="{Binding Image_Width, Mode=OneWay, FallbackValue=13.5}"/>
         </Button>
     </StackPanel>
-</UserControl>
+</local:Numeral_System_List_Item>

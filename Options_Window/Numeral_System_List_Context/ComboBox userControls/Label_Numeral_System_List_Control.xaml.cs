@@ -18,11 +18,23 @@ namespace Options_Window
     /// <summary>
     /// Interaction logic for Label_Numeral_System_List_Control.xaml
     /// </summary>
-    public partial class Label_Numeral_System_List_Control : UserControl
+    public partial class Label_Numeral_System_List_Control : Numeral_System_List_Content
     {
-        public Label_Numeral_System_List_Control()
+        public Label_Numeral_System_List_Control(OWXYZ.Bindable_Resources _Bindable_Resources, string text)
         {
+            Content_Text = text;
+
+            Text_Width = _Bindable_Resources.ComboBox_Element_Width;
+
             InitializeComponent();
+        }
+
+        public override bool Is_Enabled
+        {
+            get
+            {
+                return false;
+            }
         }
     }
 }
