@@ -16,16 +16,21 @@ namespace Options_Window
 {
     partial class Numeral_System_List_Context
     {
-        private Numeral_System_List_Item Set_Current_Numeral_System_In_ComboBox(sbyte current_Numeral_System_Code)
+        private Item_Numeral_System_List_Control Set_Numeral_System_List_ComboBox_SelectedItem(sbyte current_Numeral_System_Code)
         {
-            foreach (INumeral_System_List_Content item in Numeral_System_List_Items_List)
+            Item_Numeral_System_List_Control List_Control = null;
+
+            try
             {
-                if (item is Numeral_System_List_Item list_Item )
-                    if(list_Item.Numeral_System_Code == current_Numeral_System_Code)
-                        return list_Item;
+                List_Control = Find_Numeral_System_Item(current_Numeral_System_Code);
+            }
+            catch (Exception e )
+            {
+                List_Control = null;
+                MessageBox.Show(e.Message);
             }
 
-            return null;
+            return List_Control;
         }
     }
 }

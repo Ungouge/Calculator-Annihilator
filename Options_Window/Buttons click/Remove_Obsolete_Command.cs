@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Options_Library;
 
 namespace Options_Window
@@ -9,17 +11,16 @@ namespace Options_Window
         /// Removes from command list command in given type.
         /// </summary>
         /// <typeparam name="T">Only "IChange_Option_Command" Type</typeparam>
-        private void Remove_Obsolete_Command<T>()
+        private void Remove_Obsolete_Command<T>() where T: IChange_Option_Command
         {
-            foreach (IChange_Option_Command command in Option_Change_Command_List)
-            {
-                if (command is T obsolete_Command)
-                {
-                    Option_Change_Command_List.Remove((IChange_Option_Command)obsolete_Command);
+            List<T> Obsolete_Commands_List = new List<T>();
 
-                    return;
-                }
-            }
+            foreach (IChange_Option_Command Command in Option_Change_Command_List ?? Enumerable.Empty<IChange_Option_Command>())
+                if (Command is T obsolete_Command)
+                    Obsolete_Commands_List.Add(obsolete_Command);
+
+            foreach (T obsolete_Command in Obsolete_Commands_List)
+                    Option_Change_Command_List.Remove(obsolete_Command);
         }
     }
 }

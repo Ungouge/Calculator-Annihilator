@@ -5,11 +5,12 @@ namespace Options_Window
 {
     partial class Numeral_System_List_Context
     {
-        private Numeral_System_List_Item Find_Numeral_System_Item(sbyte numeral_System_Code)
+        private Item_Numeral_System_List_Control Find_Numeral_System_Item(sbyte numeral_System_Code)
         {
-            foreach (Numeral_System_List_Item item in Numeral_System_List_Items_List)
-                if ((item as Numeral_System_List_Item).Numeral_System_Code == numeral_System_Code)
-                    return item;
+            foreach (Numeral_System_List_Content content in Numeral_System_List_Items_List)
+                if (content is Item_Numeral_System_List_Control list_Control )
+                    if (list_Control.Numeral_System_Code == numeral_System_Code)
+                        return list_Control;
 
             throw new NoSuchNumericalSystemException();
         }
