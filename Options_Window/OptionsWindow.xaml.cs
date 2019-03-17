@@ -25,31 +25,34 @@ namespace Options_Window
 
             _Bindable_Resources = new Bindable_Resources(this);
 
+            Option_Change_Command_List = new List<IChange_Option_Command>();
+
+
+            _Numeral_System_List_Context = new Numeral_System_List_Context(this);
+
+            _Number_Notation_List_Context = new Number_Notation_List_Context(this);
+
+            _Langauge_List_Context = new Langauge_List_Context(this);
+
+            _Font_Size_List_Context = new Font_Size_List_Context(this);
+            
+            this.DataContext = _Bindable_Resources;
+
             // Initialization
 
             InitializeComponent();
 
             // Postinitialization
 
-            _Number_Notation_List_Context = new Number_Notation_List_Context(this);
-
             Number_Notation_List_ComboBox.DataContext = _Number_Notation_List_Context;
-
-            _Langauge_List_Context = new Langauge_List_Context(this);
 
             Language_List_ComboBox.DataContext = _Langauge_List_Context;
 
-            _Font_Size_List_Context = new Font_Size_List_Context(this);
-
             Font_Size_List_ComboBox.DataContext = _Font_Size_List_Context;
-
-            _Numeral_System_List_Context = new Numeral_System_List_Context(this);
 
             Numeral_System_List_ComboBox.DataContext = _Numeral_System_List_Context;
 
-            this.DataContext = _Bindable_Resources;
-
-            Option_Change_Command_List = new List<IChange_Option_Command>();
+            Numeral_System_List_ComboBox.SelectedItem = _Numeral_System_List_Context.Numeral_System_List_ComboBox_SelectedItem;
         }
     }
 }
