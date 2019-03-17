@@ -15,7 +15,6 @@ namespace Options_Window
 
             if (New_Number_Notation != Options.Number_Notation)
                 Option_Change_Command_List.Add(new Change_Number_Notation_Option_Command(New_Number_Notation));
-
         }
     }
 }
