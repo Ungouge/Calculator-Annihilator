@@ -21,14 +21,18 @@ namespace Options_Window
     /// </summary>
     public partial class Item_Numeral_System_List_Control : Numeral_System_List_Item
     {
+        internal OWXYZ OptionsWindow;
+
         public Item_Numeral_System_List_Control(OWXYZ _OptionsWindow, sbyte numeral_System_Code)
         {
+            OptionsWindow = _OptionsWindow;
+
             Numeral_System_Code = numeral_System_Code;
 
-            Content_Text = Numeral_System.Numeral_System_Dictionary_Name( numeral_System_Code,
-                _OptionsWindow.Options.Standard_Messages);
+            Content_Text = Numeral_System.Numeral_System_Dictionary_Name( Numeral_System_Code,
+                OptionsWindow.Options.Standard_Messages);
 
-            OWXYZ.Bindable_Resources Bindable_Resources = _OptionsWindow._Bindable_Resources;
+            OWXYZ.Bindable_Resources Bindable_Resources = OptionsWindow._Bindable_Resources;
 
             Image_Width = Bindable_Resources.ComboBox_List_Image_Height;
 
@@ -51,11 +55,6 @@ namespace Options_Window
             {
                 return true;
             }
-        }
-
-        private void Pin_Numeral_System_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
