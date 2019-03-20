@@ -39,8 +39,6 @@ namespace Options_Library
         {
             if (Is_Numeral_sytem_Pinned(new_Numeral_System_Code) == true)
                 Numeral_Systems_Codes_List.Remove(new_Numeral_System_Code);
-
-            Numeral_Systems_Codes_List.Sort();
         }
 
         public static bool Is_Numeral_sytem_Pinned(sbyte numeral_System_Code)
@@ -52,6 +50,4 @@ namespace Options_Library
             return false;
         }
     }
-
-
 }
