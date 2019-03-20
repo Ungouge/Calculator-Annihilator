@@ -18,7 +18,15 @@ namespace Options_Window
     {
         private OWXYZ OptionsWindow;
 
-        public List<Numeral_System_List_Content> Numeral_System_List_Items_List { get; set; }
+        private Numeral_System_Items_List _Numeral_System_List_Items_List { get; set; }
+
+        public List<Numeral_System_List_Content> Numeral_System_List_Items_List
+        {
+            get
+            {
+                return _Numeral_System_List_Items_List.Get_Numeral_System_Items_List;
+            }
+        }
 
         public Numeral_System_List_Item Numeral_System_List_ComboBox_SelectedItem { get; set; }
 
@@ -26,7 +34,7 @@ namespace Options_Window
         {
             OptionsWindow = _OptionsWindow;
 
-            Numeral_System_List_Items_List = Set_Numeral_System_List_Items();
+            _Numeral_System_List_Items_List = new Numeral_System_Items_List(OptionsWindow);
 
             Numeral_System_List_ComboBox_SelectedItem =
                  Set_Numeral_System_List_ComboBox_SelectedItem(OptionsWindow.Options.Numeral_System_Code);

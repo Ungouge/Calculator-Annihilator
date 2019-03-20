@@ -22,7 +22,7 @@ namespace Options_Window
 
             try
             {
-                List_Control = Find_Numeral_System_Item(current_Numeral_System_Code);
+                List_Control = _Numeral_System_List_Items_List.Find_Numeral_System_Item(current_Numeral_System_Code);
             }
             catch (Exception e )
             {
