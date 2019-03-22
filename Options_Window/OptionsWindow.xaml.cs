@@ -5,6 +5,7 @@ using Common_Library;
 using Options_Library;
 using IOptions_Window;
 using Windows_Structure;
+using Options_Window_Library;
 
 namespace Options_Window
 {
@@ -13,11 +14,13 @@ namespace Options_Window
     /// </summary>
     public partial class OWXYZ : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_Parameters
     {
-        public OWXYZ(IGet_MainWindow_Options mainWindow)
+        public OWXYZ(IGet_MainWindow_Parameters mainWindow)
         {
             // Preinitialization
 
             Parent_MainWindow = mainWindow;
+
+            MainWindow = mainWindow;
 
             Windows_Manager.Add_Children_Window(this);
 
