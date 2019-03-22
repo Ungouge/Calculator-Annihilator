@@ -6,7 +6,7 @@ namespace Common_Library
     /// <summary>
     /// Class for translating string code into text from Language Library files in given language.
     /// </summary>
-    public partial class Standard_Messages
+    public partial class Standard_Messages: IStandard_Messages_Translate
     {
         private Dictionary<string, Func<string>> Dictionary;
 

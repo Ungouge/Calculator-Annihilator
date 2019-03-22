@@ -57,6 +57,7 @@
     <Compile Include="public enums lib.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
     <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
+    <Compile Include="Standard_Messages\IStandard_Messages_Translate.cs" />
     <Compile Include="Standard_Messages\Load_Language.cs" />
     <Compile Include="Standard_Messages\Set_Language_Loader_Delegate.cs" />
     <Compile Include="Standard_Messages\Standard_Messages.cs" />
