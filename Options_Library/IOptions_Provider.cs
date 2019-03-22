@@ -24,6 +24,10 @@ namespace Options_Library
 
         string Comma_Type { get; }
 
+        string[] Commas_Type_Array { get;}
+
+        void Add_New_Comma_Type(string[] Comma_Types);
+
         void Set_Comma_Type(string new_Comma_Type);
 
         void Set_Font_Size_Type(Font_Size_Type new_Font_Size_Type);
