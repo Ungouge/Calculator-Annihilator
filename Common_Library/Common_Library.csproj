@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commas_Type.cs" />
     <Compile Include="Exceptions\NoSuchNumericalSystemException.cs" />
     <Compile Include="Formatted_Text_Getter\Default_Formatted_Text_Getter.cs" />
     <Compile Include="Formatted_Text_Getter\Get_Text_Height.cs" />

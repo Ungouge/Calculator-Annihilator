@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common_Library;
+using System;
 
 namespace Calculator_Annihilator
 {
@@ -138,7 +139,7 @@ namespace Calculator_Annihilator
 		/// <param name="sign">Character to check is comma.</param>
 		private bool Is_Comma(int sign_Position)
 		{
-			foreach (string comma in Signs_Lib.Commas_Type)
+			foreach (string comma in Commas.Commas_Type)
             {
                 int comma_Sign_Position = sign_Position;
 

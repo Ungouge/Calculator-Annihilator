@@ -11,7 +11,6 @@ namespace Calculator_Annihilator
         {
             string new_ResultSpace_Text;
 
-
             try
             {
                 Number calculation_Result;

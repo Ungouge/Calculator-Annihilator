@@ -68,7 +68,7 @@ namespace Calculator_Annihilator
 		{
             for (int i = 0; i < work_Text.Length; i++)
             {
-                foreach (string comma in Signs_Lib.Commas_Type)
+                foreach (string comma in Commas.Commas_Type)
                 {
                     int j = i;
 
