@@ -10,7 +10,7 @@ namespace Windows_Structure
         /// </summary>
         static void Remove_Children_Window(IMainWindow_Children Children_Window)
         {
-            if (Children_Window is IOptionsWindow options_Window)
+            if (Children_Window is IOptionsWindow_Show options_Window)
             {
                 Options_Windows_List.Remove(options_Window);
             }

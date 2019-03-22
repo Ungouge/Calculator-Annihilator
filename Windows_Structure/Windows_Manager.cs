@@ -13,6 +13,6 @@ namespace Windows_Structure
 
         static List<MainWindow_Children_List> MainWindows_List = new List<MainWindow_Children_List>();
 
-        static List<IOptionsWindow> Options_Windows_List = new List<IOptionsWindow>();
+        static List<IOptionsWindow_Show> Options_Windows_List = new List<IOptionsWindow_Show>();
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using Common_Library;
 using Options_Library;
-
+using IOptions_Window;
 using Windows_Structure;
 
 namespace Options_Window
@@ -11,7 +11,7 @@ namespace Options_Window
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
     /// </summary>
-    public partial class OWXYZ : Window, IMainWindow_Children, IOptionsWindow
+    public partial class OWXYZ : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_Parameters
     {
         public OWXYZ(IGet_MainWindow_Options mainWindow)
         {
@@ -26,8 +26,7 @@ namespace Options_Window
             _Bindable_Resources = new Bindable_Resources(this);
 
             Option_Change_Command_List = new List<IChange_Option_Command>();
-
-
+            
             _Numeral_System_List_Context = new Numeral_System_List_Context(this);
 
             _Number_Notation_List_Context = new Number_Notation_List_Context(this);

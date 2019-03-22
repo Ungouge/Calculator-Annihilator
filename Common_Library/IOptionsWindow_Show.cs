@@ -1,6 +1,6 @@
 ﻿namespace Common_Library
 {
-    public interface IOptionsWindow
+    public interface IOptionsWindow_Show
     {
         void Show();
     }

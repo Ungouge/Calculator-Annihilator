@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
     {
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
-            IOptionsWindow OWindow = new OWXYZ(this);
+            IOptionsWindow_Show OWindow = new OWXYZ(this);
             OWindow.Show();
         }
     }

@@ -12,7 +12,7 @@ namespace Windows_Structure
         {
             Add_Children(children_Window);
 
-            if( children_Window is IOptionsWindow options_Window)
+            if( children_Window is IOptionsWindow_Show options_Window)
             {
                 Options_Windows_List.Add(options_Window);
             }

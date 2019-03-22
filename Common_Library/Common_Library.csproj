@@ -50,7 +50,7 @@
     <Compile Include="Formatted_Text_Getter\Get_Text_Width.cs" />
     <Compile Include="IMainWindow.cs" />
     <Compile Include="IMainWindow_Children.cs" />
-    <Compile Include="IOptionsWindow.cs" />
+    <Compile Include="IOptionsWindow_Show.cs" />
     <Compile Include="Numeral_System\Numeral_System.cs" />
     <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

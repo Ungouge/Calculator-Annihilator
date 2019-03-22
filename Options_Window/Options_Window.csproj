@@ -207,9 +207,17 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+      <Project>{4c4bcaa4-3e53-462e-b03b-8d2ec2212c0d}</Project>
+      <Name>IOptions_Window</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
       <Name>Options_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Window_Library\Options_Window_Library.csproj">
+      <Project>{5f68a69a-879f-4503-8d90-843ae24761c7}</Project>
+      <Name>Options_Window_Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\Windows_Structure\Windows_Structure.csproj">
       <Project>{d7996eaf-8f5b-426e-adc6-c333c69a2047}</Project>
