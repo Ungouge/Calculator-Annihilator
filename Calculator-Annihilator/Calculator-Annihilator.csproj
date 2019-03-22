@@ -177,9 +177,10 @@
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="MainWindow\Button_Click events\Insert_Text_Button_Action.cs" />
+    <Compile Include="Options\Add_New_Comma_Type.cs" />
     <Compile Include="Options\Set_Language.cs" />
     <Compile Include="Order_Of_Operations.cs" />
-    <Compile Include="Signs_Lib.cs" />
     <Compile Include="Options\Set_Font_Size_Type.cs" />
     <Compile Include="Options\Set_Number_Notation_Type.cs" />
     <Compile Include="MainWindow\Bindable_Resources\Intialize_MainWindow_Size.cs" />
@@ -291,7 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
-    <Compile Include="MainWindow\Button_Click events\Number_Button_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Number_Button_Action.cs" />
     <Compile Include="Parser\Parse.cs" />
     <Compile Include="Calculator\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />

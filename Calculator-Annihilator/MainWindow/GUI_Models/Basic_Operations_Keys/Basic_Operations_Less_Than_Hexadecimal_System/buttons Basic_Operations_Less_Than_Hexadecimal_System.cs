@@ -49,7 +49,7 @@ namespace Calculator_Annihilator
 
         private void Button_Comma_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.Number_Button_Action(',');
+            MainWindow.Insert_Text_Button_Actionn(MainWindow.Options.Comma_Type);
         }
 
         private void Button_Exponent_Click(object sender, RoutedEventArgs e)
