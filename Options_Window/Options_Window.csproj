@@ -102,7 +102,6 @@
     <Compile Include="Numeral_System_List_Context\On_Property_Change.cs" />
     <Compile Include="Numeral_System_List_Context\Pin_Numeral_System.cs" />
     <Compile Include="Numeral_System_List_Context\Unpin_Numeral_System.cs" />
-    <Compile Include="On_Porperty_Change.cs" />
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
