@@ -35,6 +35,8 @@ namespace Options_Window
             _Langauge_List_Context = new Langauge_List_Context(this);
 
             _Font_Size_List_Context = new Font_Size_List_Context(this);
+
+            _Comma_Type_List_Content = new Comma_Type_List_Context(this);
             
             this.DataContext = _Bindable_Resources;
 
@@ -52,7 +54,7 @@ namespace Options_Window
 
             Numeral_System_List_ComboBox.DataContext = _Numeral_System_List_Context;
 
-            Numeral_System_List_ComboBox.SelectedItem = _Numeral_System_List_Context.Numeral_System_List_ComboBox_SelectedItem;
+            Comma_Type_List_ComboBox.DataContext = _Comma_Type_List_Content;
         }
     }
 }

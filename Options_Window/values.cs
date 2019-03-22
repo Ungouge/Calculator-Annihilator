@@ -18,10 +18,12 @@ namespace Options_Window
 
         private Numeral_System_List_Context _Numeral_System_List_Context;
 
+        private Comma_Type_List_Context _Comma_Type_List_Content;
+
         public IMainWindow Parent_MainWindow { get; set; }
 
         internal IOptions_Provider Options;
 
-        List<IChange_Option_Command> Option_Change_Command_List;
+        internal List<IChange_Option_Command> Option_Change_Command_List;
     }
 }
