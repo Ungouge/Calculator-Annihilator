@@ -1,5 +1,6 @@
 ﻿using System;
 using Common_Library;
+using IOptions_Window;
 
 namespace Options_Window
 {
@@ -11,11 +12,11 @@ namespace Options_Window
 
             internal Number_Notation Number_Notation;
 
-            internal Number_Notation_List_Item(OWXYZ _OptionsWindow, Number_Notation _Number_Notation)
+            internal Number_Notation_List_Item(IOptionsWindow_Parameters _OptionsWindow, Number_Notation _Number_Notation)
             {
                 Number_Notation = _Number_Notation;
 
-                Number_Notation_Name = _OptionsWindow.Options.Standard_Messages.Translate(Number_Notation.ToString() + "_Notation");
+                Number_Notation_Name = _OptionsWindow.Get_Standard_Messages.Translate(Number_Notation.ToString() + "_Notation");
             }
 
         }

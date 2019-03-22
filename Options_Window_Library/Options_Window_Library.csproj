@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +41,44 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bindable_Resources\Bindable_Resources.cs" />
+    <Compile Include="Bindable_Resources\On_Properties_Change.cs" />
+    <Compile Include="Bindable_Resources\On_Property_Change.cs" />
+    <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
+    <Compile Include="Bindable_Resources\Set_Options_Text_FontSize.cs" />
+    <Compile Include="Bindable_Resources\Set_Text.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
+    <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Width.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
+    <Compile Include="Bindable_Resources\values.cs" />
+    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Context.cs" />
+    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
+    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\On_Property_Change.cs" />
+    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\Set_Font_Size_Name.cs" />
+    <Compile Include="Fonst_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
+    <Compile Include="Fonst_Size_List_Context\Set_Font_Size_List_Items.cs" />
+    <Compile Include="Fonst_Size_List_Context\Set_Font_Size_Texts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+      <Project>{4c4bcaa4-3e53-462e-b03b-8d2ec2212c0d}</Project>
+      <Name>IOptions_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

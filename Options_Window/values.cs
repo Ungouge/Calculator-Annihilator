@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Common_Library;
 using Options_Library;
+using Options_Window_Library;
 
 
 namespace Options_Window
@@ -20,7 +21,9 @@ namespace Options_Window
 
         private Comma_Type_List_Context _Comma_Type_List_Content;
 
-        public IMainWindow Parent_MainWindow { get; set; }
+        public IMainWindow Parent_MainWindow { get; private set; }
+
+        public IGet_MainWindow_Parameters MainWindow { get; set; }
 
         internal IOptions_Provider Options;
 

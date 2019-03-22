@@ -178,6 +178,7 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
     <Compile Include="MainWindow\Button_Click events\Insert_Text_Button_Action.cs" />
+    <Compile Include="MainWindow\Get_Standard_Messages.cs" />
     <Compile Include="Options\Add_New_Comma_Type.cs" />
     <Compile Include="Options\Set_Language.cs" />
     <Compile Include="Order_Of_Operations.cs" />
@@ -340,6 +341,10 @@
     <ProjectReference Include="..\Common_Library\Common_Library.csproj">
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+      <Project>{4C4BCAA4-3E53-462E-B03B-8D2EC2212C0D}</Project>
+      <Name>IOptions_Window</Name>
     </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>

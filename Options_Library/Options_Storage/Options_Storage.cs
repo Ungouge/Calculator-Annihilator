@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Library
 {
-    public partial class Options_Storage
+    public partial class Options_Storage: IOptions_Provider
     {
         /// <summary>
         /// Constructs new Otpions class reading and setting resorcess for MainWindow .

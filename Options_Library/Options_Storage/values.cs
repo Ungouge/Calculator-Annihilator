@@ -22,5 +22,7 @@ namespace Options_Library
         public Languages Current_Language { get; protected set; }
 
         public string Comma_Type { get; protected set; }
+
+        public string[] Commas_Type_Array { get; protected set; } = Commas.Commas_Type;
     }
 }

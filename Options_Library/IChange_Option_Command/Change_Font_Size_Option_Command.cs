@@ -21,7 +21,7 @@ namespace Options_Library
         /// <summary>
         /// Change font size type option in given Options class
         /// </summary>
-        public void Change_Option(IOptions_Provider options)
+        public void Change_Option(ISet_Options options)
         {
             options.Set_Font_Size_Type(Font_Size_To_Change);
         }

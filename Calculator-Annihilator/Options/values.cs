@@ -12,8 +12,6 @@ namespace Calculator_Annihilator
         internal Numeral_System Current_Numeral_System { get; private set; }
 
         public Standard_Messages Standard_Messages { get; private set; }
-
-        public string[] Commas_Type_Array { get; private set; } = Commas.Commas_Type;
     }
 }
 

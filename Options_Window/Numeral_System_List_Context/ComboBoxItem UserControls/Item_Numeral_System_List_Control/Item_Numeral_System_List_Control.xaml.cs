@@ -1,18 +1,6 @@
 ﻿using Common_Library;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using IOptions_Window;
 
 namespace Options_Window
 {
@@ -21,7 +9,7 @@ namespace Options_Window
     /// </summary>
     public partial class Item_Numeral_System_List_Control : Numeral_System_List_Item
     {
-        internal OWXYZ OptionsWindow;
+        internal IOptionsWindow_Parameters OptionsWindow;
 
         public Item_Numeral_System_List_Control(OWXYZ _OptionsWindow, sbyte numeral_System_Code)
         {
@@ -30,7 +18,7 @@ namespace Options_Window
             Numeral_System_Code = numeral_System_Code;
 
             Content_Text = Numeral_System.Numeral_System_Dictionary_Name( Numeral_System_Code,
-                OptionsWindow.Options.Standard_Messages);
+                OptionsWindow.Get_Standard_Messages);
 
             OWXYZ.Bindable_Resources Bindable_Resources = OptionsWindow._Bindable_Resources;
 

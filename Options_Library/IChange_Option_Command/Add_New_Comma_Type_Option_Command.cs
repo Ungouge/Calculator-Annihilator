@@ -21,7 +21,7 @@ namespace Options_Library
         /// <summary>
         /// Change language option in given Options class
         /// </summary>
-        public void Change_Option(IOptions_Provider options)
+        public void Change_Option(ISet_Options options)
         {
             options.Add_New_Comma_Type(new_Comma_Types);
         }

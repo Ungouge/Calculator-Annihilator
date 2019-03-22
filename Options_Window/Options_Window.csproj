@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Comma_Type_List_Context\On_Property_Change.cs" />
     <Compile Include="Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
+    <Compile Include="Get_Standard_Messages.cs" />
     <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Item_Numeral_System_List_Control\Item_Numeral_System_List_Control.xaml.cs">
       <DependentUpon>Item_Numeral_System_List_Control.xaml</DependentUpon>
     </Compile>
@@ -105,19 +106,6 @@
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="Bindable_Resources\On_Property_Change.cs" />
-    <Compile Include="Bindable_Resources\On_Properties_Change.cs" />
-    <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
-    <Compile Include="Bindable_Resources\Set_Options_Text_FontSize.cs" />
-    <Compile Include="Bindable_Resources\Set_Text.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_ComboBox_List_Image_Width.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_General_Options_Texts.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
-    <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
-    <Compile Include="Bindable_Resources\values.cs" />
     <Compile Include="Buttons click\Apply_Buton_Click.cs" />
     <Compile Include="Buttons click\Apply_In_All_Buton_Click.cs" />
     <Compile Include="Buttons click\Apply_Option_Change.cs" />

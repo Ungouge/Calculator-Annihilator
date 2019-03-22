@@ -21,7 +21,7 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Options //Initialize Part
+    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters //Initialize Part
     {
         public MainWindow()
         {

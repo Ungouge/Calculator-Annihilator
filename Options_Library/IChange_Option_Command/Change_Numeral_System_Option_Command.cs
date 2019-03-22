@@ -20,7 +20,7 @@ namespace Options_Library
         /// <summary>
         /// Change numeral system option in given Options class
         /// </summary>
-        public void Change_Option(IOptions_Provider options)
+        public void Change_Option(ISet_Options options)
         {
             options.Set_Numeral_System(numeral_System_To_Change);
         }

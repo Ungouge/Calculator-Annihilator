@@ -21,7 +21,7 @@ namespace Options_Library
         /// <summary>
         /// Change number notation option in given Options class
         /// </summary>
-        public void Change_Option(IOptions_Provider options)
+        public void Change_Option(ISet_Options options)
         {
             options.Set_Number_Notation(Number_Notation_To_Change);
         }

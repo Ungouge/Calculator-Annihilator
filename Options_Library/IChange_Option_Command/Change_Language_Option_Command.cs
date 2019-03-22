@@ -21,7 +21,7 @@ namespace Options_Library
         /// <summary>
         /// Change language option in given Options class
         /// </summary>
-        public void Change_Option(IOptions_Provider options)
+        public void Change_Option(ISet_Options options)
         {
             options.Set_Language(Language_To_Change);
         }

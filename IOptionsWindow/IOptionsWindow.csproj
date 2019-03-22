@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAC99763-1AAA-445D-8E4B-068AE08DEECA}</ProjectGuid>
+    <ProjectGuid>{491F062B-61CF-46EB-A65C-ED782D026032}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Options_Library</RootNamespace>
-    <AssemblyName>Options_Library</AssemblyName>
+    <RootNamespace>IOptionsWindow</RootNamespace>
+    <AssemblyName>IOptionsWindow</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,26 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IChange_Option_Command\Add_New_Comma_Type_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Comma_Type_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Number_Notation_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\Change_Numeral_System_Option_Command.cs" />
-    <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
-    <Compile Include="IGet_MainWindow_Options.cs" />
-    <Compile Include="IOptions_Provider.cs" />
-    <Compile Include="ISet_Options.cs" />
-    <Compile Include="Options_Storage\Options_Storage.cs" />
-    <Compile Include="Options_Storage\values.cs" />
-    <Compile Include="Pinned_Numeral_Systems.cs" />
+    <Compile Include="IOptionsWindow_Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
-      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
-      <Name>Common_Library</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

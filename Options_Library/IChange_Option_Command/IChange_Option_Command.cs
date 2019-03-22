@@ -7,6 +7,6 @@ namespace Options_Library
     /// </summary>
     public interface IChange_Option_Command
     {
-        void Change_Option(IOptions_Provider options);
+        void Change_Option(ISet_Options options);
     }
 }

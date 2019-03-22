@@ -2,7 +2,7 @@
 
 namespace Common_Library
 {
-    interface IStandard_Messages_Translate
+    public interface IStandard_Messages_Translate
     {
         string Translate(string code);
 
