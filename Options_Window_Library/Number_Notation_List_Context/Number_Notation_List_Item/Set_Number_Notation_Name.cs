@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Number_Notation_List_Context
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Number_Notation_List_Context
     {
