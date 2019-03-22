@@ -121,7 +121,8 @@
                                Text="{Binding Numeral_System_Type, Mode=OneWay, FallbackValue= Numeral_System_Type}"
                                Grid.Column="0" Grid.Row="2"/>
 
-                    <ComboBox Name="Numeral_System_List_ComboBox" ItemsSource="{Binding Numeral_System_List_Items_List, Mode=OneWay}"
+                    <ComboBox Name="Numeral_System_List_ComboBox"
+                              ItemsSource="{Binding Numeral_System_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Numeral_System_List_ComboBox_SelectedItem}"
                               SelectionChanged="Numeral_System_List_ComboBox_SelectionChanged"
                               Grid.Column="1" Grid.Row="2">
@@ -141,6 +142,26 @@
                     <TextBlock Name="Comma_Symbol_TextBlock" 
                                Text="{Binding Comma_Symbol, Mode=OneWay, FallbackValue= Comma_Symbol}"
                                Grid.Column="0" Grid.Row="4"/>
+
+                    <ComboBox Name="Comma_Type_List_ComboBox" ItemsSource="{Binding Comma_Type_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Comma_Type_List_ComboBox_SelectedItem}"
+                              SelectionChanged="Comma_Type_List_ComboBox_SelectionChanged"
+                              Grid.Column="1" Grid.Row="4">
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <!--<Setter Property="IsEnabled" Value="True"/>-->
+                                <Setter Property="IsSelected" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
+                                <Setter Property="Focusable" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
+                                <Setter Property="Selector.IsManipulationEnabled" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <ContentControl x:Name="Comma_Type_List_ComboBox_ContentControl"
+                                                Content="{Binding }"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock Name="Mode_Calculator_TextBlock" 
                                Text="{Binding Mode_Calculator, Mode=OneWay, FallbackValue= Mode_Calculator}"

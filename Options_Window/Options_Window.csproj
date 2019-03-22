@@ -61,23 +61,48 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Numeral_System_List_Context\ComboBox userControls\Item_Numeral_System_List_Control.xaml.cs">
+    <Compile Include="Comma_Type_List_Context\Add_New_Comma_Type.cs" />
+    <Compile Include="Comma_Type_List_Context\Commas_Type_Item_Factory\Commas_Type_Item_Factory.cs" />
+    <Compile Include="Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Add_New_Comma_Type.cs" />
+    <Compile Include="Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Item.cs" />
+    <Compile Include="Comma_Type_List_Context\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Click.cs" />
+    <Compile Include="Comma_Type_List_Context\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Type_Control.xaml.cs">
+      <DependentUpon>Add_New_Comma_Type_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Comma_Type_List_Context\Comma_Type_List_Context.cs" />
+    <Compile Include="Comma_Type_List_Context\Comma_Type_List_Content\Comma_Type_List_Content.cs" />
+    <Compile Include="Comma_Type_List_Context\Comma_Type_List_Content\Item_Comma_Type_Control\Item_Comma_Type_Control.xaml.cs">
+      <DependentUpon>Item_Comma_Type_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Comma_Type_List_Context\On_Property_Change.cs" />
+    <Compile Include="Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
+    <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Item_Numeral_System_List_Control\Item_Numeral_System_List_Control.xaml.cs">
       <DependentUpon>Item_Numeral_System_List_Control.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Numeral_System_List_Context\ComboBox userControls\Pinned_Item_Numeral_System_List_Control.cs" />
-    <Compile Include="Numeral_System_List_Context\Find_Numeral_System_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content_Factory\Is_Numeral_sytem_Pinned.cs" />
+    <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Item_Numeral_System_List_Control\Pin_Numeral_System_Click.cs" />
+    <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Pinned_Item_Numeral_System_List_Control\Pinned_Item_Numeral_System_List_Control.cs" />
+    <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Pinned_Item_Numeral_System_List_Control\Pin_Numeral_System_Click.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Add_Pinned_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Find_Numeral_System_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Reload_Item.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Remove_Pinned_Item.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content.cs" />
-    <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content_Factory\Get_Item.cs" />
-    <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content_Factory\Get_Label.cs" />
-    <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content_Factory\Numeral_System_List_Pinned_Content_Factory.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Get_Numeral_System_Items_List.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Numeral_System_List_Content_Factory\Get_Item.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Item\Numeral_System_List_Item.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\On_Property_Change.cs" />
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Set_Numeral_System_Name.cs" />
-    <Compile Include="Numeral_System_List_Context\ComboBox userControls\Label_Numeral_System_List_Control.xaml.cs">
+    <Compile Include="Numeral_System_List_Context\ComboBoxItem UserControls\Label_Numeral_System_List_Control.xaml.cs">
       <DependentUpon>Label_Numeral_System_List_Control.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Numeral_System_List_Context\Numeral_System_List_Content\Numeral_System_List_Content_Factory\Numeral_System_List_Content_Factory.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Numeral_System_List_Content_Factory\Numeral_System_List_Content_Factory.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Numeral_System_List_Content_Factory\Get_All_Systems_Label_Control.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Numeral_System_List_Content_Factory\Get_Pinned_Systems_Label_Control.cs" />
+    <Compile Include="Numeral_System_List_Context\Numeral_System_Items_List\Numeral_System_Items_List.cs" />
+    <Compile Include="Numeral_System_List_Context\On_Property_Change.cs" />
+    <Compile Include="Numeral_System_List_Context\Pin_Numeral_System.cs" />
+    <Compile Include="Numeral_System_List_Context\Unpin_Numeral_System.cs" />
+    <Compile Include="On_Porperty_Change.cs" />
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
@@ -121,11 +146,12 @@
     <Compile Include="Numeral_System_List_Context\Numeral_System_List_Context.cs" />
     <Compile Include="Pin_Numeral_System_Click.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Numeral_System_List_ComboBox_SelectedItem.cs" />
-    <Compile Include="Numeral_System_List_Context\Set_Numeral_System_List_Items.cs" />
     <Compile Include="Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
     <Compile Include="Push_Set_Text.cs" />
     <Compile Include="Set_Texts.cs" />
     <Compile Include="values.cs" />
+    <Compile Include="X_ComboBox_SelectedItem\Add_New_Comma_Type_Option_Command.cs" />
+    <Compile Include="X_ComboBox_SelectedItem\Comma_Type_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Font_Size_List_ComboBo_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Language_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Number_Notation_List_ComboBox_SelectionChanged.cs" />
@@ -156,11 +182,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Numeral_System_List_Context\ComboBox userControls\Item_Numeral_System_List_Control.xaml">
+    <Page Include="Comma_Type_List_Context\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Type_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Comma_Type_List_Context\Comma_Type_List_Content\Item_Comma_Type_Control\Item_Comma_Type_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Numeral_System_List_Context\ComboBoxItem UserControls\Item_Numeral_System_List_Control\Item_Numeral_System_List_Control.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Numeral_System_List_Context\ComboBox userControls\Label_Numeral_System_List_Control.xaml">
+    <Page Include="Numeral_System_List_Context\ComboBoxItem UserControls\Label_Numeral_System_List_Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

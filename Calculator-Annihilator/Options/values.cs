@@ -13,7 +13,7 @@ namespace Calculator_Annihilator
 
         public Standard_Messages Standard_Messages { get; private set; }
 
-        internal string[] Commas_Type_Array { get; private set; } = Signs_Lib.Commas_Type;
+        public string[] Commas_Type_Array { get; private set; } = Commas.Commas_Type;
     }
 }
 
