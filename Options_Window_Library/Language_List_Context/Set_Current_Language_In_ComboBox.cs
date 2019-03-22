@@ -1,7 +1,7 @@
 ﻿using System;
 using Common_Library;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Langauge_List_Context
     {

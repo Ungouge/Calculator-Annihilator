@@ -112,17 +112,6 @@
     <Compile Include="Buttons click\Cancel_Buton_Click.cs" />
     <Compile Include="Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Buttons click\Remove_Obsolete_Command.cs" />
-    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Context.cs" />
-    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
-    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\On_Property_Change.cs" />
-    <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\Set_Font_Size_Name.cs" />
-    <Compile Include="Fonst_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
-    <Compile Include="Fonst_Size_List_Context\Set_Font_Size_List_Items.cs" />
-    <Compile Include="Fonst_Size_List_Context\Set_Font_Size_Texts.cs" />
-    <Compile Include="Language_List_Context\Langauge_List_Items.cs" />
-    <Compile Include="Language_List_Context\Language_List_Context.cs" />
-    <Compile Include="Language_List_Context\Set_Current_Language_In_ComboBox.cs" />
-    <Compile Include="Language_List_Context\Set_Languge_List_Items.cs" />
     <Compile Include="Number_Notation_List_Context\Number_Notation_List_Context.cs" />
     <Compile Include="Number_Notation_List_Context\Number_Notation_List_Item\Number_Notation_List_Item.cs" />
     <Compile Include="Number_Notation_List_Context\Number_Notation_List_Item\On_Property_Change.cs" />

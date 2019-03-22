@@ -2,7 +2,7 @@
 using Common_Library;
 using IOptions_Window;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Langauge_List_Context
     {
@@ -14,11 +14,11 @@ namespace Options_Window
 
             internal Languages Language;
 
-            internal Langauge_List_Items(OWXYZ _OptionsWindow, Languages _Language)
+            internal Langauge_List_Items(IStandard_Messages_Translate Standard_Messages, Languages _Language)
             {
                 Language = _Language;
 
-                Language_Name = _OptionsWindow.Options.Standard_Messages.Translate( Language.ToString() + "_Native" );
+                Language_Name = Standard_Messages.Translate( Language.ToString() + "_Native" );
 
                 Language_Flag_Uri = AppDomain.CurrentDomain.BaseDirectory + @"Library\Images\Language_Flags\" + Language.ToString() + "_Flag.png";
             }

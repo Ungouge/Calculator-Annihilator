@@ -64,6 +64,10 @@
     <Compile Include="Fonst_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
     <Compile Include="Fonst_Size_List_Context\Set_Font_Size_List_Items.cs" />
     <Compile Include="Fonst_Size_List_Context\Set_Font_Size_Texts.cs" />
+    <Compile Include="Language_List_Context\Langauge_List_Items.cs" />
+    <Compile Include="Language_List_Context\Language_List_Context.cs" />
+    <Compile Include="Language_List_Context\Set_Current_Language_In_ComboBox.cs" />
+    <Compile Include="Language_List_Context\Set_Languge_List_Items.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

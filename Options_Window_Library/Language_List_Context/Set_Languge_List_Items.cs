@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Common_Library;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Langauge_List_Context
     {
@@ -12,7 +12,7 @@ namespace Options_Window
 
             foreach (Languages language in (Languages[]) Enum.GetValues(typeof(Languages)))
             {
-                Output_Items_List.Add( new Langauge_List_Items(OptionsWindow, language));
+                Output_Items_List.Add( new Langauge_List_Items(Standard_Messages, language));
             }
 
             return Output_Items_List;
