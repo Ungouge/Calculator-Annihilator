@@ -1,7 +1,7 @@
 ﻿using System;
-using IOptions_Window;
+using Common_Library;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     /// <summary>
     /// Interaction logic for Add_New_Comma_Type_Control.xaml
@@ -14,23 +14,19 @@ namespace Options_Window
 
         public double Image_Width { get; private set; }
 
-        private OWXYZ OptionsWindow;
+        Comma_Type_List_Context Comma_Type_List_Context;
 
-        public Add_New_Comma_Type_Control(OWXYZ _OptionsWindow)
+        internal Add_New_Comma_Type_Control(Comma_Type_List_Context _Comma_Type_List_Context, Bindable_Resources Bindable_Resources, IStandard_Messages_Translate Standard_Messages)
         {
-            OptionsWindow = _OptionsWindow;
+            Comma_Type_List_Context = _Comma_Type_List_Context;
 
-            Content_Text = OptionsWindow.Options.Standard_Messages.Translate("Add_New_Comma");
-
-            OWXYZ.Bindable_Resources Bindable_Resources = OptionsWindow._Bindable_Resources;
+            Content_Text = Standard_Messages.Translate("Add_New_Comma");
 
             Image_Width = Bindable_Resources.ComboBox_List_Image_Height;
 
             Text_Width = Bindable_Resources.ComboBox_Element_Width - Image_Width;
 
             InitializeComponent();
-
-            
         }
 
         public override bool Is_Selectable

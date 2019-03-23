@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     public class Comma_Type_List_Content: UserControl
     {

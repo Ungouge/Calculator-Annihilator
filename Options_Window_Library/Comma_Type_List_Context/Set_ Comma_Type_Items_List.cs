@@ -1,11 +1,10 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Comma_Type_List_Context
     {
@@ -18,7 +17,7 @@ namespace Options_Window
                 Output_List.Add(Factory.Get_Item(comma_Type));
             }
 
-            Output_List.Add(Factory.Get_Add_New_Comma_Type());
+            Output_List.Add(Factory.Get_Add_New_Comma_Type(this));
 
             return Output_List;
         }

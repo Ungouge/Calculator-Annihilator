@@ -1,9 +1,9 @@
-﻿<local:Comma_Type_List_Content x:Class="Options_Window.Item_Comma_Type_Control"
+﻿<local:Comma_Type_List_Content x:Class="Options_Window_Library.Item_Comma_Type_Control"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Options_Window"
+             xmlns:local="clr-namespace:Options_Window_Library"
              mc:Ignorable="d" 
              d:DesignHeight="24" d:DesignWidth="128">
     <StackPanel Height="{Binding RelativeSource={RelativeSource AncestorType=Window},

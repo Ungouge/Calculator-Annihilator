@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Options_Window
+namespace Options_Window_Library
 {
     partial class Comma_Type_List_Context
     {
@@ -14,7 +14,7 @@ namespace Options_Window
 
             Comma_Type_Items_List = Set_Comma_Type_Items_List();
 
-            _OptionsWindow.Add_New_Comma_Type_Option_Command(Commas_Type);
+            OptionsWindow.Add_New_Comma_Type_Option_Command(Commas_Type);
 
             On_Property_Change("Comma_Type_Items_List");
         }
