@@ -1,11 +1,16 @@
 ﻿using System;
 using Common_Library;
-using IOptions_Window;
 
 namespace Options_Window_Library
 {
+    /// <summary>
+    /// Item with resources for Language_List_ComboBox.
+    /// </summary>
     partial class Langauge_List_Context
     {
+        /// <summary>
+        /// Constructs item for given Language.
+        /// </summary>
         public class Langauge_List_Items
         {
             public string Language_Name { get; set; }

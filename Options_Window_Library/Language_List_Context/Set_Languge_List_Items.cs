@@ -6,6 +6,9 @@ namespace Options_Window_Library
 {
     partial class Langauge_List_Context
     {
+        /// <summary>
+        /// Sets texts for list_Item in Font_Size_Items_List.
+        /// </summary>
         private List<Langauge_List_Items> Set_Languge_List_Items()
         {
             List<Langauge_List_Items> Output_Items_List = new List<Langauge_List_Items>();
