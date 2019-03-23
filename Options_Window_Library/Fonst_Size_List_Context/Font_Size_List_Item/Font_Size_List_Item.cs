@@ -5,6 +5,9 @@ namespace Options_Window_Library
 {
     partial class Font_Size_List_Context
     {
+        /// <summary>
+        /// Item with resources for Font_Size_List_ComboBox.
+        /// </summary>
         public partial class Font_Size_List_Item
         {
             public string Font_Size_Name { get; set; }
@@ -13,6 +16,9 @@ namespace Options_Window_Library
 
             internal Font_Size_Type Font_Size;
 
+            /// <summary>
+            /// Constructs item for given Font_Size.
+            /// </summary>
             internal Font_Size_List_Item(IStandard_Messages_Translate Standard_Messages, Font_Size_Type _Font_Size)
             {
                 Font_Size = _Font_Size;

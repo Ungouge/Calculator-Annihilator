@@ -7,7 +7,7 @@ namespace Options_Window_Library
     {
         private Font_Size_List_Item Set_Current_Font_Size_In_ComboBox(Font_Size_Type current_Font_Size)
         {
-            foreach (Font_Size_List_Item item in Font_Size_List_Items_List)
+            foreach (Font_Size_List_Item item in Font_Size_Items_List)
             {
                 if (item.Font_Size == current_Font_Size)
                     return item;
