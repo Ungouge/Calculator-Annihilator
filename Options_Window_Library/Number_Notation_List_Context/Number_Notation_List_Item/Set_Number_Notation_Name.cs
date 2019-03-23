@@ -18,7 +18,10 @@ namespace Options_Window_Library
     {
         partial class Number_Notation_List_Item
         {
-            internal void Number_Notation_Size_Name(string new_Number_Notation_Name)
+            /// <summary>
+            /// Sets Number_Notation_Name.
+            /// </summary>
+            internal void Set_Number_Notation_Name(string new_Number_Notation_Name)
             {
                 Number_Notation_Name = new_Number_Notation_Name;
                 On_Property_Change("Number_Notation_Name");

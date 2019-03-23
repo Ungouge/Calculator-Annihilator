@@ -6,6 +6,9 @@ namespace Options_Window_Library
 {
     partial class Number_Notation_List_Context
     {
+        /// <summary>
+        /// Sets list of Number_Notation_List_Content.
+        /// </summary>
         private List<Number_Notation_List_Item> Set_Number_Notation_List_Items()
         {
             List<Number_Notation_List_Item> Output_Items_List = new List<Number_Notation_List_Item>();

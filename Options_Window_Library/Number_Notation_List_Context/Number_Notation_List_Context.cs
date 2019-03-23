@@ -5,6 +5,9 @@ using IOptions_Window;
 
 namespace Options_Window_Library
 {
+    /// <summary>
+    /// Provides data context for Number_Notation_List_CombBox.
+    /// </summary>
     public partial class Number_Notation_List_Context
     {
         private IStandard_Messages_Translate Standard_Messages;
