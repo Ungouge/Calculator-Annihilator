@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    partial class Bindable_Resources
+    partial class Bindable_Resources // General options tab  texts
     {
         public string Language { get; set; }
         public string Font_Size_Type { get; set; }

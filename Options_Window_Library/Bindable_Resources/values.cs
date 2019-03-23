@@ -3,7 +3,7 @@ using IOptions_Window;
 
 namespace Options_Window_Library
 {
-    partial class Bindable_Resources
+    partial class Bindable_Resources // Values
     {
         private readonly IOptionsWindow_Parameters OptionsWindow;
 

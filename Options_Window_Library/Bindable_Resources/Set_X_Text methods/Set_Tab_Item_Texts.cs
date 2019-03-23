@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    partial class Bindable_Resources
+    partial class Bindable_Resources // Tabs texts.
     {
         public string Options { get; set; }
         public string General_Options { get; set; }

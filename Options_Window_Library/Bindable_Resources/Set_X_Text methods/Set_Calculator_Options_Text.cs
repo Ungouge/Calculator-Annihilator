@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    partial class Bindable_Resources
+    partial class Bindable_Resources // Calculator options tab label texts.
     {
         public string Number_Notation_Type { get; set; }
         public string Numeral_System_Type { get; set; }

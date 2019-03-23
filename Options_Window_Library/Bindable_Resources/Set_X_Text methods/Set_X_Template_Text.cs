@@ -3,7 +3,7 @@
 
 //namespace Options_Window_Library
 //{
-//    partial class Bindable_Resources
+//    partial class Bindable_Resources // texts
 //    {
 //        public string  { get; set; }
 //        public string  { get; set; }

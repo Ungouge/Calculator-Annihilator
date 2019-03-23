@@ -4,13 +4,13 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    partial class Bindable_Resources
+    partial class Bindable_Resources //Buttons on the bottom.
     {
         public string Apply_All_Windows { get; set; }
         public string Ok { get; set; }
         public string Cancel { get; set; }
         public string Apply { get; set; }
-
+        
         private void Set_Buttons_Texts(IStandard_Messages_Translate standard_Messages)
         {
             Apply_All_Windows = standard_Messages.Translate("Apply_All_Windows");
