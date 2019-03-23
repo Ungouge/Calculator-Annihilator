@@ -12,7 +12,7 @@ namespace Options_Window_Library
 
         private IStandard_Messages_Translate Standard_Messages;
 
-        public Commas_Type_Item_Factory(Bindable_Resources _Bindable_Resources, IStandard_Messages_Translate _Standard_Messages)
+        internal Commas_Type_Item_Factory(Bindable_Resources _Bindable_Resources, IStandard_Messages_Translate _Standard_Messages)
         {
             Bindable_Resources = _Bindable_Resources;
 

@@ -9,9 +9,9 @@ namespace Options_Window_Library
     /// </summary>
     public partial class Comma_Type_List_Context
     {
-        IOptionsWindow_Parameters OptionsWindow;
+        private IOptionsWindow_Parameters OptionsWindow;
 
-        Commas_Type_Item_Factory Factory;
+        private Commas_Type_Item_Factory Factory;
 
         private string[] Commas_Type;
 

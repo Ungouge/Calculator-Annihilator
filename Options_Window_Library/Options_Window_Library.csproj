@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Comma_Type_List_Context\Comma_Type_List_Context.cs" />
     <Compile Include="Comma_Type_List_Context\On_Property_Change.cs" />
+    <Compile Include="Comma_Type_List_Context\Return_Current_Comma_Type_Item.cs" />
     <Compile Include="Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
     <Compile Include="Fonst_Size_List_Context\Font_Size_List_Context.cs" />
     <Compile Include="Fonst_Size_List_Context\Font_Size_List_Item\Font_Size_List_Item.cs" />
