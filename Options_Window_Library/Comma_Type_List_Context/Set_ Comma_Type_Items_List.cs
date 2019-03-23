@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Options_Window_Library
 {
     partial class Comma_Type_List_Context
     {
+        /// <summary>
+        /// Sets list of Comma_Type_List_Content.
+        /// </summary>
         private List<Comma_Type_List_Content> Set_Comma_Type_Items_List()
         {
             List<Comma_Type_List_Content> Output_List = new List<Comma_Type_List_Content>();
