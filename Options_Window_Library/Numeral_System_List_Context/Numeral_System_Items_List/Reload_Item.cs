@@ -11,7 +11,7 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
-            internal void Reload_Item(sbyte numeral_System_Code)
+            internal void Reload_Item(Numeral_System_List_Context Numeral_System_List_Context,sbyte numeral_System_Code)
             {
                 foreach (Numeral_System_List_Content item in Items_List)
                 {
@@ -19,7 +19,7 @@ namespace Options_Window_Library
                     {
                         if (item_Control.Numeral_System_Code == numeral_System_Code)
                         {
-                            Items_List[Items_List.IndexOf(item_Control)] = Factory.Get_Item(numeral_System_Code);
+                            Items_List[Items_List.IndexOf(item_Control)] = Factory.Get_Item(Numeral_System_List_Context, numeral_System_Code);
 
                             return;
                         }

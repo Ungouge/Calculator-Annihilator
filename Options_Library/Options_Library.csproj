@@ -49,6 +49,7 @@
     <Compile Include="IChange_Option_Command\Change_Numeral_System_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\IChange_Option_Command.cs" />
     <Compile Include="IGet_MainWindow_Options.cs" />
+    <Compile Include="IOptions.cs" />
     <Compile Include="IOptions_Provider.cs" />
     <Compile Include="ISet_Options.cs" />
     <Compile Include="Options_Storage\Options_Storage.cs" />

@@ -1,13 +1,12 @@
 ﻿using Common_Library;
 using System;
-using IOptions_Window;
 
 namespace Options_Window_Library
 {
     /// <summary>
     /// Interaction logic for Item_Numeral_System_List_Control.xaml
     /// </summary>
-    internal partial class Item_Numeral_System_List_Control : Numeral_System_List_Item
+    public partial class Item_Numeral_System_List_Control : Numeral_System_List_Item
     {
         protected Numeral_System_List_Context Numeral_System_List_Context;
 

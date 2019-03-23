@@ -5,7 +5,7 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    internal partial class Numeral_System_List_Context
+    public partial class Numeral_System_List_Context
     {
         internal IStandard_Messages_Translate Standard_Messages;
 
@@ -25,7 +25,7 @@ namespace Options_Window_Library
         {
             Standard_Messages = _Standard_Messages;
 
-            _Numeral_System_List_Items_List = new Numeral_System_Items_List(Bindable_Resources, Standard_Messages);
+            _Numeral_System_List_Items_List = new Numeral_System_Items_List(this, Bindable_Resources, Standard_Messages);
 
             Numeral_System_List_ComboBox_SelectedItem =
                  Set_Numeral_System_List_ComboBox_SelectedItem(numeral_System_Code);

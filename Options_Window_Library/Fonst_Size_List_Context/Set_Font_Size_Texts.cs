@@ -5,7 +5,7 @@ namespace Options_Window_Library
 {
     partial class Font_Size_List_Context
     {
-        internal void Set_Font_Size_Texts(IStandard_Messages_Translate Standard_Messages)
+        public void Set_Font_Size_Texts(IStandard_Messages_Translate Standard_Messages)
         {
             foreach (Font_Size_List_Item list_Item in Font_Size_List_Items_List)
             {

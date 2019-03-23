@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using Options_Library;
+using Options_Window_Library;
 
 namespace Options_Window
 {
@@ -8,7 +9,7 @@ namespace Options_Window
     {
         private void Comma_Type_List_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(Comma_Type_List_ComboBox.SelectedItem is  Comma_Type_List_Content selected_Content)
+            if(Comma_Type_List_ComboBox.SelectedItem is Comma_Type_List_Content selected_Content)
             {
                 Remove_Obsolete_Command<Change_Font_Size_Option_Command>();
 

@@ -5,7 +5,7 @@ namespace Options_Window_Library
 {
     partial class Numeral_System_List_Context
     {
-        internal void Set_Numeral_System_Texts(Standard_Messages standard_Messages)
+        public void Set_Numeral_System_Texts(Standard_Messages standard_Messages)
         {
             foreach (Numeral_System_List_Item list_Item in Numeral_System_List_Items_List)
             {

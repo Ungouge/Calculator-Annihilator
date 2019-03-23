@@ -6,7 +6,7 @@ namespace Options_Window
 {
     partial class OWXYZ
     {
-        internal void Add_New_Comma_Type_Option_Command(string[] Comma_Types)
+        public void Add_New_Comma_Type_Option_Command(string[] Comma_Types)
         {
             Remove_Obsolete_Command<Add_New_Comma_Type_Option_Command>();
 

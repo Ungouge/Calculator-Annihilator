@@ -10,7 +10,7 @@ namespace Options_Window
     {
         private void Apply_In_All_Buton_Click(object sender, RoutedEventArgs e)
         {
-            foreach (IGet_MainWindow_Options mainWindow in Windows_Manager.Get_MainWindows_List)
+            foreach (IGet_MainWindow_Parameters mainWindow in Windows_Manager.Get_MainWindows_List)
             {
                 Apply_Option_Change(mainWindow.Get_Options);
             }

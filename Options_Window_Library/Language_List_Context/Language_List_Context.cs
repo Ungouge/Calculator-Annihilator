@@ -4,7 +4,7 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    internal partial class Langauge_List_Context
+    public partial class Langauge_List_Context
     {
         private IStandard_Messages_Translate Standard_Messages;
 

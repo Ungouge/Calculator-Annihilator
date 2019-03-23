@@ -1,10 +1,11 @@
 ﻿using System;
+using Common_Library;
 
 namespace Common_Library
 {
     partial class Numeral_System
     {
-        public static string Numeral_System_Dictionary_Name(sbyte numeral_System_Code, Standard_Messages standard_Messages)
+        public static string Numeral_System_Dictionary_Name(sbyte numeral_System_Code, IStandard_Messages_Translate standard_Messages)
         {
             if (numeral_System_Code > 0 && numeral_System_Code < 65)
             {

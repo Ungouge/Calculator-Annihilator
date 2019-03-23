@@ -11,9 +11,9 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
-            internal void Add_Pinned_Item(sbyte numeral_System_Code)
+            internal void Add_Pinned_Item(Numeral_System_List_Context Numeral_System_List_Context,sbyte numeral_System_Code)
             {
-                Item_Numeral_System_List_Control New_Item = Factory.Get_Item(numeral_System_Code);
+                Item_Numeral_System_List_Control New_Item = Factory.Get_Item(Numeral_System_List_Context, numeral_System_Code);
 
                 if (Pinned_Items_List.Count > 0)
                 {

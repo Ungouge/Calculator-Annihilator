@@ -5,7 +5,7 @@ using IOptions_Window;
 
 namespace Options_Window_Library
 {
-    internal partial class Number_Notation_List_Context
+    public partial class Number_Notation_List_Context
     {
         private IStandard_Messages_Translate Standard_Messages;
 

@@ -8,7 +8,7 @@ namespace Calculator_Annihilator
 	{
         internal Options Options;
 
-        public IOptions_Provider Get_Options
+        public IOptions Get_Options
         {
             get
             {

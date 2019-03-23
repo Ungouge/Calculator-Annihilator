@@ -5,7 +5,7 @@ namespace Options_Window_Library
 {
     partial class Number_Notation_List_Context
     {
-        internal void Set_Number_Notation_Texts(IStandard_Messages_Translate standard_Messages)
+        public void Set_Number_Notation_Texts(IStandard_Messages_Translate standard_Messages)
         {
             foreach (Number_Notation_List_Item list_Item in Number_Notation_List_Items_List)
             {

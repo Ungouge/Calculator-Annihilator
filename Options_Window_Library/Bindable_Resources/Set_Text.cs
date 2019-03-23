@@ -5,7 +5,7 @@ namespace Options_Window_Library
 {
     partial class Bindable_Resources
     {
-        internal void Set_Text(IStandard_Messages_Translate standard_Messages)
+        public void Set_Text(IStandard_Messages_Translate standard_Messages)
         {
             Set_Tab_Item_Texts(standard_Messages);
 

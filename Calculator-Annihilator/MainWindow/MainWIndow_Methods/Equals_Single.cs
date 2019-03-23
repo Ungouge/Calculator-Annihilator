@@ -32,7 +32,7 @@ namespace Calculator_Annihilator
 			{
                 new_ResultSpace_Text = "Dividing by zero is not allowed";
             }
-			catch(Exception e)
+			catch(Exception)
 			{
                 new_ResultSpace_Text = "Unknown error occur";
 			}
