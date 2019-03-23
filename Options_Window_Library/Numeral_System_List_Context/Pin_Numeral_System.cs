@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Controls;
 using Options_Library;
 
 namespace Options_Window_Library

@@ -1,5 +1,4 @@
 ﻿using System;
-using IOptions_Window;
 
 namespace Options_Window_Library
 {
@@ -9,13 +8,16 @@ namespace Options_Window_Library
         {
             partial class Numeral_System_List_Content_Factory
             {
+                /// <summary>
+                /// Gets label for pinned numeral systems.
+                /// </summary>
                 internal Label_Numeral_System_List_Control Get_Pinned_Systems_Label_Control
                 {
                     get
                     {
                         return new Label_Numeral_System_List_Control(
                             Bindable_Resources.ComboBox_Element_Width,
-                            Standard_Messages.Translate("Pinned_Numeral_System"));
+                            Standard_Messages.Translate("Pinned_Numeral_Systems"));
                     }
                 }
             }

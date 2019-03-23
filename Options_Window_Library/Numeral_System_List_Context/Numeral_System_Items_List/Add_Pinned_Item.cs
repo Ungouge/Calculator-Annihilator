@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Options_Library;
 
 namespace Options_Window_Library
 {
@@ -11,6 +7,9 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
+            /// <summary>
+            /// Adds given numeral system to Pinned_Items_List.
+            /// </summary>
             internal void Add_Pinned_Item(Numeral_System_List_Context Numeral_System_List_Context,sbyte numeral_System_Code)
             {
                 Item_Numeral_System_List_Control New_Item = Factory.Get_Item(Numeral_System_List_Context, numeral_System_Code);

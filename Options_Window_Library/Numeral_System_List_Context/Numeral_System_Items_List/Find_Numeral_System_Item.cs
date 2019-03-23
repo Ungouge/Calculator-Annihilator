@@ -7,6 +7,9 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
+            /// <summary>
+            /// Finds and returns item with given numeral system code.
+            /// </summary>
             internal Item_Numeral_System_List_Control Find_Numeral_System_Item(sbyte numeral_System_Code)
             {
                 foreach (Numeral_System_List_Content content in Items_List)

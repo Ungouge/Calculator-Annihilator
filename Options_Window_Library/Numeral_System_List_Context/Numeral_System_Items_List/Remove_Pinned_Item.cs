@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Options_Library;
 
 namespace Options_Window_Library
 {
@@ -11,6 +6,10 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
+            /// <summary>
+            /// Removes given numeral system off Pinned_Items_List.
+            /// </summary>
+            /// <param name="numeral_System_Code"></param>
             internal void Remove_Pinned_Item(sbyte numeral_System_Code)
             {
                 foreach (Numeral_System_List_Content item in Pinned_Items_List)
@@ -21,7 +20,7 @@ namespace Options_Window_Library
                         {
                             Pinned_Items_List.Remove(item_Control);
 
-                            break;
+                            return;
                         }
                     }
                 }

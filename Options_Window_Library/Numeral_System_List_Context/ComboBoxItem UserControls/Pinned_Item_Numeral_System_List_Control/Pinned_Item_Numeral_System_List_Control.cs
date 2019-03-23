@@ -1,5 +1,4 @@
-﻿using Common_Library;
-using System;
+﻿using System;
 
 namespace Options_Window_Library
 {

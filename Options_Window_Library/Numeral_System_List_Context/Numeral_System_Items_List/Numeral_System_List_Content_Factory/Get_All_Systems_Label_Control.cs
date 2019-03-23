@@ -1,5 +1,4 @@
 ﻿using System;
-using IOptions_Window;
 
 namespace Options_Window_Library
 {
@@ -9,6 +8,9 @@ namespace Options_Window_Library
         {
             partial class Numeral_System_List_Content_Factory
             {
+                /// <summary>
+                /// Gets label for all numeral systems.
+                /// </summary>
                 internal Label_Numeral_System_List_Control Get_All_Systems_Label_Control
                 {
                     get

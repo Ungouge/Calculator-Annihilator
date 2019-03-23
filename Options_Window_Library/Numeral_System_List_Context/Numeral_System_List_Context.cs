@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using IOptions_Window;
 using Common_Library;
 
 namespace Options_Window_Library
 {
+    /// <summary>
+    /// Provides data context for Numeral_System_List_CombBox.
+    /// </summary>
     public partial class Numeral_System_List_Context
     {
         internal IStandard_Messages_Translate Standard_Messages;
@@ -21,6 +23,9 @@ namespace Options_Window_Library
 
         public Numeral_System_List_Item Numeral_System_List_ComboBox_SelectedItem { get; set; }
 
+        /// <summary>
+        /// Constructs new Numeral_System_List_Context for given OptionsWindow.
+        /// </summary>
         public Numeral_System_List_Context(Bindable_Resources Bindable_Resources, IStandard_Messages_Translate _Standard_Messages, sbyte numeral_System_Code)
         {
             Standard_Messages = _Standard_Messages;

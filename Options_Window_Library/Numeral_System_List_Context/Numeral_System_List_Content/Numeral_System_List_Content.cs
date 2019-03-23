@@ -1,8 +1,12 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 
 namespace Options_Window_Library
 {
-    public partial class Numeral_System_List_Content : UserControl
+    /// <summary>
+    /// Abstract item UserControl class with resources for Numeral_System_List_ComboBox.
+    /// </summary>
+    public abstract partial class Numeral_System_List_Content : UserControl
     {
         public string Content_Text { get; internal set; }
 

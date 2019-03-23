@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Options_Library;
 
 namespace Options_Window_Library
 {
@@ -11,6 +6,9 @@ namespace Options_Window_Library
     {
         partial class Numeral_System_Items_List
         {
+            /// <summary>
+            /// Reinitialises item in Items_List with given numerals sytem to current pinned/unpinned item control.
+            /// </summary>
             internal void Reload_Item(Numeral_System_List_Context Numeral_System_List_Context,sbyte numeral_System_Code)
             {
                 foreach (Numeral_System_List_Content item in Items_List)
