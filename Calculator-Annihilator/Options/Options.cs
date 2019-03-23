@@ -3,7 +3,7 @@ using Options_Library;
 
 namespace Calculator_Annihilator
 {
-    internal partial class Options : Options_Storage, ISet_Options
+    internal partial class Options : Options_Storage, IOptions
     {
         /// <summary>
         /// Constructs new Options class reading and setting resorcess for MainWindow .
