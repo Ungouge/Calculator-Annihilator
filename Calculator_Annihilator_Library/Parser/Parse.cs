@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows;
 using Common_Library;
+using Message_Popupper;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
-	internal partial class Parser
+	partial class Parser
 	{
 		/// <summary>
 		/// Converts the string representation of a number in given numeral system to its
@@ -33,8 +33,13 @@ namespace Calculator_Annihilator
 				catch (Exception ex)
 				{
 					parsed_Output = parsed_Output * Math.Pow(Numeral_System.System_Type, i - comma_Position);
+
                     parsed_Output = Recognize_Negative_Sign(parsed_Output, is_Negative);
-                    MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+
+                    IMessage_Box Message_Box = Factory.Get_Message_Box;
+
+                    Message_Box.Pop_Up(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+
 					return new Number( parsed_Output);
 				}
 			}
@@ -50,7 +55,11 @@ namespace Calculator_Annihilator
 				catch (Exception ex)
                 {
                     parsed_Output = Recognize_Negative_Sign(parsed_Output, is_Negative);
-                    MessageBox.Show(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+
+                    IMessage_Box Message_Box = Factory.Get_Message_Box;
+
+                    Message_Box.Pop_Up(ex.Message + $", {work_Text} parsed as {parsed_Output}.");
+
                     return new Number(parsed_Output);
                 }
 			}
@@ -95,14 +104,7 @@ namespace Calculator_Annihilator
         /// </summary>
         private double Recognize_Negative_Sign(double parsed_Output, bool isNegative)
         {
-            if ( isNegative == false)
-            {
-                return parsed_Output;
-            }
-            else // ( isNegative == true)
-            {
-                return parsed_Output * -1e0;
-            }
+            return isNegative ? parsed_Output * -1e0 : parsed_Output;
         }
 
 		/// <summary>
