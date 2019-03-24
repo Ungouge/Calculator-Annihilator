@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common_Library;
-using IOptions_Window;
 
 namespace Options_Window_Library
 {
@@ -16,6 +15,9 @@ namespace Options_Window_Library
 
         public Number_Notation_List_Item Number_Notation_List_ComboBox_SelectedItem { get; set; }
 
+        /// <summary>
+        /// Constructs new Number_Notation_List_Context for given OptionsWindow.
+        /// </summary>
         public Number_Notation_List_Context(IStandard_Messages_Translate _Standard_Messages, Number_Notation Number_Notation)
         {
             Standard_Messages = _Standard_Messages;

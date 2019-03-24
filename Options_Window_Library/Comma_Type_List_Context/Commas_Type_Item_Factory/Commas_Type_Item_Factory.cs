@@ -4,7 +4,7 @@ using Common_Library;
 namespace Options_Window_Library
 {
     /// <summary>
-    /// Instantiates Comma_Type_List_Content objects.
+    /// Factory for Comma_Type_List_Content objects.
     /// </summary>
     internal partial class Commas_Type_Item_Factory
     {

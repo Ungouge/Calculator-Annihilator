@@ -3,13 +3,10 @@ using Common_Library;
 
 namespace Options_Window_Library
 {
-    /// <summary>
-    /// Item with resources for Language_List_ComboBox.
-    /// </summary>
     partial class Langauge_List_Context
     {
         /// <summary>
-        /// Constructs item for given Language.
+        /// Item with resources for Language_List_ComboBox.
         /// </summary>
         public class Langauge_List_Items
         {
@@ -19,6 +16,9 @@ namespace Options_Window_Library
 
             internal Languages Language;
 
+            /// <summary>
+            /// Constructs item for given Language.
+            /// </summary>
             internal Langauge_List_Items(IStandard_Messages_Translate Standard_Messages, Languages _Language)
             {
                 Language = _Language;
