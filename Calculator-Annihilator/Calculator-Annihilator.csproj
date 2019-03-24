@@ -16,6 +16,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Kamil\Desktop\Calculator-Annihilator_PublishTest\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +52,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Calculator_Annihilator.App</StartupObject>
@@ -59,6 +77,18 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>CppCoreCheckDeclRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2E4F8669FF32C776D985B757D365EF4AAA4DC093</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Calculator-Annihilator_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,6 +114,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Calculate_Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Cut_Off_Floating_Point_Migrants.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Divide_By_Two_ methods.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\getters for IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Muliply_By_Two.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Numeral_System_Precition.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Set_Divide_By_Two_Method.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Mantisa_To_Coefficients_Digit_List.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Normalize.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Shift_Comma_Point.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Smooth_To.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\values.cs" />
+    <Compile Include="Back_Parser_Fascede\Balanced_Ternary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Parse_Binary_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Check_For_Extreme_Values.cs" />
+    <Compile Include="Back_Parser_Fascede\Negabinary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Numeral_System_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Positional_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Back_Parser_Fascede.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Digit_List_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Binary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Decompose.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Double_Precition_Decomposer.cs" />
+    <Compile Include="Back_Parser_Fascede\IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Parse_Back.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Engineering_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Comma_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Exponent_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Normal_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Scientific_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Scienfic_Normalized_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Scientific_Exponent.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_Notation_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Set_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
+    <Compile Include="Elements\Number.cs" />
     <Compile Include="Elements\Bracket_Pair.cs" />
     <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
     <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
@@ -92,59 +166,93 @@
     <Compile Include="Elements\Interfaces\IOperand_ToString.cs" />
     <Compile Include="Elements\Operands.cs" />
     <Compile Include="Equation\Equation_Solving\Inner_Brackets_Solver.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Equation.cs" />
+    <Compile Include="Equation\Equation constructor\Equation.cs" />
     <Compile Include="Equation\Equation_Elements.cs" />
     <Compile Include="Elements\Interfaces\IOperand.cs" />
     <Compile Include="Equation\Equation_Solving\Solver.cs" />
     <Compile Include="Equation\Equation_Solving\Exchange_Solved_Range_to_Calculated_Value.cs" />
     <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Check_Integrity_Of_Current_Element.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Integrity_Check\Integrity_Check.cs" />
-    <Compile Include="Equation\Is_Equation_Single_byte_Long.cs" />
+    <Compile Include="Equation\Equation constructor\Integrity_Check\Check_Integrity_Of_Current_Element.cs" />
+    <Compile Include="Equation\Equation constructor\Integrity_Check\Integrity_Check.cs" />
     <Compile Include="Equation\Values.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Exceptions\Equation_Exceptions.cs" />
-    <Compile Include="internal enums lib.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Method.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Values.cs" />
-    <Compile Include="MainWindow\Static_Resources\Static_Resources.cs" />
-    <Compile Include="MainWindow\Static_Resources\On_Property_Change.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Complex_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Button_Click events\Insert_Text_Button_Action.cs" />
+    <Compile Include="MainWindow\Get_Standard_Messages.cs" />
+    <Compile Include="Options\Add_New_Comma_Type.cs" />
+    <Compile Include="Options\Set_Language.cs" />
+    <Compile Include="Order_Of_Operations.cs" />
+    <Compile Include="Options\Set_Font_Size_Type.cs" />
+    <Compile Include="Options\Set_Number_Notation_Type.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Intialize_MainWindow_Size.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\On_Properties_Change.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Set_X_Text\Set_Calculator_annihilator_Text.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Set_X_Text\Set_Main_Menu_Text.cs" />
+    <Compile Include="MainWindow\Button_Click events\additional buttons actions.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Convert_To_Single.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\Complex_To_Single_WorkSpace_Converter.cs" />
+    <Compile Include="MainWindow\Button_Click events\Complex_To_Single_WorkSpace_Converter\convert methods.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\Close_WindowButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\New_WindowButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\File\OptionsButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\View\Scientific_MenuButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\Menu_Bar_Buttons\View\Standard_MenuButton_Click.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Set_Specialized_Buttons.cs" />
+    <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\Basic_Operations_Less_Than_Decimal_System.xaml.cs">
+      <DependentUpon>Basic_Operations_Less_Than_Decimal_System.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
+    <Compile Include="MainWindow\GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
+    <Compile Include="MainWindow\GUI_Models\IButton_Changer.cs" />
+    <Compile Include="MainWindow\Set_Texts_Turntable\Set_Texts_Turntable.cs" />
+    <Compile Include="Options\Generate_Options_Storage.cs" />
+    <Compile Include="Options\Options.cs" />
+    <Compile Include="Options\values.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Values.cs" />
+    <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\buttons Basic_Operations_Less_Than_Decimal_System.cs" />
+    <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\Basic_Operations_Less_Than_Hexadecimal_System.xaml.cs">
+      <DependentUpon>Basic_Operations_Less_Than_Hexadecimal_System.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\buttons Basic_Operations_Less_Than_Hexadecimal_System.cs" />
+    <Compile Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Decimal_System\butons Less_Than_Decimal_System.cs" />
+    <Compile Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Hexadecimal_System\butons Less_Than_Hexadecimal_System.cs" />
+    <Compile Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Decimal_System\Less_Than_Decimal_System.xaml.cs">
+      <DependentUpon>Less_Than_Decimal_System.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Hexadecimal_System\Less_Than_Hexadecimal_System.xaml.cs">
+      <DependentUpon>Less_Than_Hexadecimal_System.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\MainWindow_Methods\Calculator_Buttons_Panel_Setter.cs" />
+    <Compile Include="Options\Set_Comma_Type.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Complex_Calculations_Button_Checked.cs" />
     <Compile Include="MainWindow\changed events.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Operation_Actions.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Element_Selector.cs" />
-    <Compile Include="Equation\Equaton_Constructor\Bracket_Pairer.cs" />
+    <Compile Include="Equation\Equation constructor\Element_Selector.cs" />
+    <Compile Include="Equation\Equation constructor\Bracket_Pairer.cs" />
     <Compile Include="Equation\Recreate_Equation.cs" />
     <Compile Include="Elements\Interfaces\IElement.cs" />
     <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
-    <Compile Include="Elements\Element.cs" />
-    <Compile Include="Calc\Basic_Operations_Sack.cs" />
-    <Compile Include="MainWindow\MainWindow_Methods\Set_Current_Numerical_System.cs" />
+    <Compile Include="Elements\Bracket.cs" />
+    <Compile Include="Calculator\operations methods.cs" />
+    <Compile Include="Options\Set_Numerical_System.cs" />
     <Compile Include="MainWindow\Parse_WorkSpace.cs" />
     <Compile Include="MainWindow\ResultSpace_Actions.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Single_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Button_Click events\switching calculation method\Single_Calculations_Button_Checked.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Set_Texts.cs" />
     <Compile Include="MainWindow\Values.cs" />
     <Compile Include="MainWindow\WorkSpace_Actions.cs" />
-    <Compile Include="Settings_File_Reader\settings getters.cs" />
-    <Compile Include="Settings_File_Reader\Push_Dynamic_Settings.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Settings_File_Reader\Options_Generator.cs" />
     <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
-    <Compile Include="Settings_File_Reader\Push_Static_Settings.cs" />
-    <Compile Include="Settings_File_Reader\Values.cs" />
-    <Compile Include="Signs_Lib\Signs_Lib.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Button_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Calculation_Type_Radio_Buttons_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Font_To_TextBox_Macher.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\Dynamic_Parameters.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Push_Recalculations.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\ResultSpace_FontSize.cs" />
-    <Compile Include="MainWindow\Dymanic_Parameters\WorkSpace_FontSize.cs" />
-    <Compile Include="Window_Dynamic_Parameters\On_Property_Change.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Values.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Window_Dynamic_Parameters.cs" />
-    <Compile Include="Window_Dynamic_Parameters\Window_Size_Catchers.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Button_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Font_To_TextBox_Macher.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Bindable_Resources.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Push_Recalculations.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\ResultSpace_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\WorkSpace_FontSize.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\On_Property_Change.cs" />
+    <Compile Include="MainWindow\Bindable_Resources\Window_Size_Catchers.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -158,13 +266,36 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\Basic_Operations_Less_Than_Decimal_System.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow\GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Hexadecimal_System\Basic_Operations_Less_Than_Hexadecimal_System.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Decimal_System\Less_Than_Decimal_System.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow\GUI_Models\NumberKeys\Less_Than_Hexadecimal_System\Less_Than_Hexadecimal_System.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF_Styles\Calculator_Buttons_Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF_Styles\MenuSwitcherDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow\Button_Click_Events\Operation_Buttons.cs" />
-    <Compile Include="MainWindow\Button_Click_Events\Number_Buttons.cs" />
-    <Compile Include="Numerical_System_Signs\Numerical_System.cs" />
-    <Compile Include="Parser\Parser.cs" />
-    <Compile Include="Calc\Operand_Selector.cs" />
+    <Compile Include="MainWindow\Button_Click events\operation buttons actions.cs" />
+    <Compile Include="MainWindow\Button_Click events\Number_Button_Action.cs" />
+    <Compile Include="Parser\Parse.cs" />
+    <Compile Include="Calculator\Operand_Selector.cs" />
     <Compile Include="MainWindow\MainWindow_Methods\Equals_Complex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -183,7 +314,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,6 +322,42 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainWindow\GUI_Models\Advanced_Operations_Keys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+      <Project>{4C4BCAA4-3E53-462E-B03B-8D2EC2212C0D}</Project>
+      <Name>IOptions_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Window\Options_Window.csproj">
+      <Project>{51f187c6-ba14-446c-bb1f-3025a74ed593}</Project>
+      <Name>Options_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows_Structure\Windows_Structure.csproj">
+      <Project>{d7996eaf-8f5b-426e-adc6-c333c69a2047}</Project>
+      <Name>Windows_Structure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

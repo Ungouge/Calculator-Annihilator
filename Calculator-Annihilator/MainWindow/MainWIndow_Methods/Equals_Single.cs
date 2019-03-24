@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -12,26 +8,42 @@ namespace Calculator_Annihilator
 		/// Controlls action after pressing equals button when option for single calculations is on.
 		/// </summary>
 		private void Equals_Single( )
-		{
-			try
-			{
-				Number calculation_Result = calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-				Reset_ResultSpace_Text(calculation_Result.ToString());
-			}
+        {
+            string new_ResultSpace_Text;
+
+            try
+            {
+                Number calculation_Result;
+
+                if (no_First_Number_In_Equation_Single == true)
+                {
+
+
+                    return;
+                }
+
+                calculation_Result = _Calculator.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+
+                new_ResultSpace_Text = Back_Parser.Parse_Back(calculation_Result);
+                
+                First_Number_In_Equation_Single = calculation_Result;
+            }
 			catch (DivideByZeroException)
 			{
-				Reset_ResultSpace_Text("Dividing by zero is not allowed");
-			}
-			catch
+                new_ResultSpace_Text = "Dividing by zero is not allowed";
+            }
+			catch(Exception)
 			{
-				Reset_ResultSpace_Text(default(string));
+                new_ResultSpace_Text = "Unknown error occur";
 			}
 			finally
 			{
-				no_operand_Sign_Single = true;
-				no_First_Number_In_Equation_Single = true;
+                no_operand_Sign_Single = true;
+				//no_First_Number_In_Equation_Single = true;
 				Clear_WorkSpace();
 			}
+
+            Reset_ResultSpace_Text(new_ResultSpace_Text);
 		}
 	}
 }

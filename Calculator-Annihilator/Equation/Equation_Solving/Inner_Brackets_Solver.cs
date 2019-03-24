@@ -15,9 +15,9 @@ namespace Calculator_Annihilator
 		{
 			foreach (Bracket_Pair Inner_Bracket_pair in Current_Bracket_Pair.Inner_Brackets)
 			{
-				int Index_Of_Open_Bracket = elements.IndexOf(Inner_Bracket_pair._Open_Bracket);
+				int Index_Of_Open_Bracket = elements.IndexOf(Inner_Bracket_pair.Open_Bracket);
 				int Lenght_Of_Current_Bracket =
-					elements.IndexOf(Inner_Bracket_pair._Close_Bracket) - Index_Of_Open_Bracket + 1;
+					elements.IndexOf(Inner_Bracket_pair.Close_Bracket) - Index_Of_Open_Bracket + 1;
 
 				Number Solved_Inner_Bracket = Inner_Brackets_Solver(
                     new Equation_Elements(elements.GetRange(Index_Of_Open_Bracket + 1, Lenght_Of_Current_Bracket - 2)),

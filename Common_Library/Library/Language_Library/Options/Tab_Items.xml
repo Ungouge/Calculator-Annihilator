@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Tab_Items and Title-->
+<root>
+  <Options>
+    <English>Options</English>
+    <Polski>Opcje</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Options>
+  <General_Options>
+    <English>General</English>
+    <Polski>Główne</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </General_Options>
+  <Calculator_Options>
+    <English>Calculator</English>
+    <Polski>Kalkulator</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Calculator_Options>
+</root>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Buttons in Options Window-->
+<root>
+  <Apply>
+    <English>Apply</English>
+    <Polski>Zatwierdź</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Apply>
+  <Cancel>
+    <English>Cancel</English>
+    <Polski>Odrzuć</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Cancel>
+  <Apply_All_Windows>
+    <English>Apply (everywhere)</English>
+    <Polski>Zatwierdź (wszędzie)</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </Apply_All_Windows>
+</root>

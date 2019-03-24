@@ -106,7 +106,7 @@ namespace Calculator_Annihilator
             /// <summary>
             /// Recreats string of equation from current element coletion.
             /// </summary>
-            public string Recreate_Equation()
+            internal string Recreate_Equation()
             {
                 string recreated_Equation = "";
 

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Font sizes names in Options-->
+<root>
+  <Small_Font_Size>
+    <English>Small</English>
+    <Polski>Mała</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Small_Font_Size>
+  <Normal_Font_Size>
+    <English>Medium</English>
+    <Polski>Średnia</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Normal_Font_Size>
+  <Big_Font_Size>
+    <English>Big</English>
+    <Polski>Duża</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </Big_Font_Size>
+  <Hight_Contrast_Font_Size>
+    <English>Hight Contrast</English>
+    <Polski>Wysoki kontrast</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chung</Zhongguo>
+  </Hight_Contrast_Font_Size>
+
+
+
+</root>

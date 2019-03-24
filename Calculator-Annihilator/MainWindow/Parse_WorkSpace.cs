@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Annihilator
 {
@@ -11,10 +7,12 @@ namespace Calculator_Annihilator
 		/// <summary>
 		/// Parses current Text in workspace to number according to current numerical system. 
 		/// </summary>
-
 		private Number Parse_WorkSpace()
 		{
-			return parser.Parse(WorkSpace.Text, Current_Numeral_System);
+            //if (String.IsNullOrEmpty(WorkSpace.Text)) // xyz: fix errors when empty work space like this or by implementin no actions when ws empty
+            //    return new Number(0);
+            //else
+                return Parser.Parse(WorkSpace.Text);
 		}
 	}
 }

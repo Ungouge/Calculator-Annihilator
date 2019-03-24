@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Number notation names in Options-->
+<root>
+  <Normal_Notation>
+    <English>Normal</English>
+    <Polski>Zwykła</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Normal_Notation>
+  <Scienfic_Normalized_Notation>
+    <English>Scienfic normalized</English>
+    <Polski>Naukowa (znormalizowana)</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Scienfic_Normalized_Notation>
+  <Force_Radix_Base_Notation>
+    <English>Scienfic normalized</English>
+    <Polski>Naukowa</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </Force_Radix_Base_Notation>
+  <Force_Exponent_Notation>
+    <English>Force exponent</English>
+    <Polski>Zawsze eksponencjalna</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Force_Exponent_Notation>
+  <Force_Scientific_Notation>
+    <English>Force scientific</English>
+    <Polski>Zawsze naukowa</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Force_Scientific_Notation>
+  <Engineering_Notation>
+    <English>Engineering notation</English>
+    <Polski>Inżynierska</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chong</Zhongguo>
+  </Engineering_Notation>
+</root>

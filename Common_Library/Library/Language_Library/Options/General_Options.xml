@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Options Window General Tab-->
+<root>
+  <Language>
+    <English>Language</English>
+    <Polski>Język</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Ching</Zhongguo>
+  </Language>
+  <Font_Size_Type>
+    <English>Font Size</English>
+    <Polski>Rozmiar Czcionki</Polski>
+    <Deutsch></Deutsch>
+    <Latin></Latin>
+    <Zhongguo>Chang</Zhongguo>
+  </Font_Size_Type>
+</root>

@@ -1,0 +1,118 @@
+﻿using System;
+using System.Windows;
+
+namespace Calculator_Annihilator
+{
+    partial class Less_Than_Hexadecimal_System
+    {
+        private void Button_0_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('0');
+        }
+
+        private void Button_1_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('1');
+        }
+
+        private void Button_2_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('2');
+        }
+
+        private void Button_3_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('3');
+        }
+
+        private void Button_4_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('4');
+        }
+
+        private void Button_5_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('5');
+        }
+
+        private void Button_6_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('6');
+        }
+
+        private void Button_7_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('7');
+        }
+
+        private void Button_8_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('8');
+        }
+
+        private void Button_9_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('9');
+        }
+
+        private void Button_A_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('A');
+        }
+
+        private void Button_B_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('B');
+        }
+
+        private void Button_C_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('C');
+        }
+
+        private void Button_D_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('D');
+        }
+
+        private void Button_E_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('E');
+        }
+
+        private void Button_F_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('F');
+        }
+
+        void IButton_Changer.Button_Change_Sign_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_Change_Sign_Action();
+        }
+
+        void IButton_Changer.Button_Close_Bracket_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action(')');
+        }
+
+        void IButton_Changer.Button_Invert_Number_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_Invert_Number_Action();
+        }
+
+        void IButton_Changer.Button_Open_Bracket_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Number_Button_Action('(');
+        }
+
+        private void Button_BackSpace_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_BackSpace_Action();
+        }
+
+        private void Button_CE_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Button_CE_Action();
+        }
+    }
+}

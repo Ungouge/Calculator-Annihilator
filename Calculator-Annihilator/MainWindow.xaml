@@ -6,9 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:b="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Calculator_Annihilator"
-        xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties" 
+        xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="{Binding Title, Mode=OneWay, FallbackValue=Calculator-Annihilator}"
         SizeChanged="Window_Size_Changed"
         StateChanged="Window_State_Changed"
         Activated="Window_Activated"
@@ -19,13 +19,14 @@
         Width="{Binding Window_Width, Mode=TwoWay, FallbackValue=480}">
 
     <Window.Resources >
-        <Style x:Name="Generic_Button_Style" TargetType="{x:Type Button}" >
-            <Setter Property="Margin" Value="1,1,1,1" />
-            <Setter Property="FontSize" Value="{Binding Button_FontSize, Mode=OneWay, FallbackValue=16}" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-            <Setter Property="FontFamily" Value="Consolas" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="WPF_Styles/MenuSwitcherDictionary.xaml"/>
+                <ResourceDictionary Source="WPF_Styles/Calculator_Buttons_Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
+
     <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -33,50 +34,82 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
-        <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" >
-            <MenuItem Header="View" >
+        <Menu x:Name="Toolbar" Grid.Row="0" Grid.IsSharedSizeScope="True" IsMainMenu="True">
+
+            <MenuItem Header="{Binding File, Mode=OneWay, FallbackValue=File}">
+
+                <MenuItem x:Name="New_WindowButton" Header="{Binding New_Window, Mode=OneWay, FallbackValue=New_Window}"
+                          Click="New_WindowButton_Click"/>
+
+                <MenuItem x:Name="OptionsButton" Header="{Binding Options, Mode=OneWay, FallbackValue=Options}"
+                          Click="OptionsButton_Click"/>
+
+                <Separator/>
+
+                <MenuItem x:Name="Close_WindowButton" Header="{Binding Close_Window, Mode=OneWay, FallbackValue=Close_Window}"
+                          Click="Close_WindowButton_Click"/>
 
             </MenuItem>
-            <MenuItem Header="Edit" >
+
+            <MenuItem Header="{Binding Edit, Mode=OneWay, FallbackValue=Edit}"
+                      ItemContainerStyle="{StaticResource ItemcontainerStyle}" >
+
+                <MenuItem x:Name="Standard_MenuButton" Header="{Binding Standard , Mode=OneWay, FallbackValue=Standard}"
+                          Grid.Column="1" IsCheckable="True" Click="Standard_MenuButton_Click"/>
+
+                <MenuItem x:Name="Scientific_MenuButton" Header="{Binding Standard, Mode=OneWay, FallbackValue= Standard}"
+                          Grid.Column="1" IsCheckable="True" Click="Scientific_MenuButton_Click"/>
 
             </MenuItem>
-            <MenuItem Header="Help" >
+
+            <MenuItem Header="{Binding Edit , Mode=OneWay, FallbackValue=Edit}" >
+
+            </MenuItem>
+
+            <MenuItem Header="{Binding Help, Mode=OneWay, FallbackValue=Help}" >
 
             </MenuItem>
 
         </Menu>
+
         <Grid x:Name="WorkGrid" Grid.Row="1">
+
             <Grid.RowDefinitions>
                 <RowDefinition SharedSizeGroup="A"/>
                 <RowDefinition SharedSizeGroup="A"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="79*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,1,5,1" HorizontalAlignment="Stretch"
+            <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="3" Margin="5,1,4.6,0.8" HorizontalAlignment="Stretch"
                      Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay, FallbackValue=30}"
                      Padding="0,-2,0,-2" VerticalContentAlignment="Center"
                      Cursor="IBeam" AcceptsReturn="false" TextChanged="WorkSpace_TextChanged"
                      VerticalScrollBarVisibility="Auto"/>
 
-            <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="1" Margin="5,1,5,1"
+            <TextBox x:Name="ResultSpace" Grid.Row="1" Grid.Column="2" Margin="5.2,1.2,4.6,0.4"
                      Height="Auto" FontSize="{Binding ResultSpace_FontSize, Mode=OneWay, FallbackValue=30}" Padding="0,-2,0,-2" 
                      VerticalContentAlignment="Center"
                      Cursor="IBeam" IsReadOnly="True" TextChanged="ResultSpace_TextChanged" />
 
-            <Grid Name="CalculationTypeSwitcher_Grid"  Grid.Row="1" Grid.Column="0" Margin="1,1,1,1">
+            <Grid Name="CalculationTypeSwitcher_Grid" Grid.Row="1" Grid.Column="0" Margin="1,1.2,0.8,1.4" Grid.ColumnSpan="2">
+
                 <Grid.Resources>
                     <Style TargetType="RadioButton">
                         <Setter Property="VerticalAlignment" Value="Center"/>
-                    </Style>
-                    <Style TargetType="TextBlock">
-                        <Setter Property="FontSize" Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay, FallbackValue=15}"/>
-                        <Setter Property="Margin" Value="5,1,5,1"/>
+                        <Style.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="FontSize"
+                                        Value="{Binding Calculation_Type_Radio_Buttons_FontSize, Mode=OneWay, FallbackValue=15}"/>
+                                <Setter Property="Margin" Value="5,1,5,1"/>
+                            </Style>
+                        </Style.Resources>
                     </Style>
                 </Grid.Resources>
-                
+
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -84,153 +117,33 @@
 
                 <RadioButton GroupName="CalculationTypeSwitcher"  Name="SingleCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="0" Checked="Single_Calculations_Button_Checked">
-                    <TextBlock Name="SingleCalculations_RadioButton_TextBlock">
-                        Single Calculations
-                    </TextBlock>
-                    
+                    <TextBlock Name="SingleCalculations_RadioButton_TextBlock" Text="{Binding Single_Calculations, Mode=OneWay}"/>
+
                 </RadioButton>
                 <RadioButton GroupName="CalculationTypeSwitcher" Name="ComplexCalculations" HorizontalAlignment="Left" 
                              Margin="15,1,1,1" Grid.Row="1" Checked="Complex_Calculations_Button_Checked">
-                    <TextBlock Name="ComplexCalculations_RadioButton_TextBlock">
-                        Complex Calculations
-                    </TextBlock>
+                    <TextBlock Name="ComplexCalculations_RadioButton_TextBlock" Text="{Binding Complex_Calculations, Mode=OneWay}"/>
                 </RadioButton>
+
             </Grid>
         </Grid>
+        <Grid x:Name="ButtonsGrid" Grid.Row="2">
 
-
-        <Grid x:Name="ButtonGrid" Grid.Row="2" >
-            <Grid.RowDefinitions>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-                <RowDefinition SharedSizeGroup="A"/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="Button_Open_Bracket" Content="(" Grid.Row="0" Grid.Column="0" 
-                    Click="Button_Open_Bracket_Click" />
-            <Button x:Name="Button_Close_Bracket" Content=")" Grid.Row="0" Grid.Column="1" 
-                    Click="Button_Close_Bracket_Click" />
-            <Button x:Name="Button_BackSpace" Content="CE" Grid.Row="0" Grid.Column="2"
-                    Click="Button_CE_Click" />
-            <Button x:Name="Button_Clear" Content="C" Grid.Row="0" Grid.Column="3" 
-                    Click="Button_Clear_Click" />
+            <Grid.Resources>
+                <Style TargetType="ContentControl" BasedOn="{StaticResource Calculator_Buttons_Style}"/>
+            </Grid.Resources>
 
-            <Button x:Name="Button_7" Content="7" Grid.Row="1" Grid.Column="0"
-                    Click="Button_7_Click" />
-            <Button x:Name="Button_8" Content="8" Grid.Row="1" Grid.Column="1"
-                    Click="Button_8_Click" />
-            <Button x:Name="Button_9" Content="9" Grid.Row="1" Grid.Column="2"
-                    Click="Button_9_Click" />
-            <Button x:Name="Button_PlusSign" Content="+" Grid.Row="1" Grid.Column="3"
-                    Click="Button_PlusSign_Click" />
-
-            <Button x:Name="Button_6" Content="6" Grid.Row="2" Grid.Column="2"
-                    Click="Button_6_Click" />
-            <Button x:Name="Button_5" Content="5" Grid.Row="2" Grid.Column="1"
-                    Click="Button_5_Click" />
-            <Button x:Name="Button_4" Content="4" Grid.Row="2"
-                    Click="Button_4_Click" />
-            <Button x:Name="Button_MinuSing" Content="-" Grid.Row="2" Grid.Column="3"
-                    Click="Button_MinuSing_Click" />
-
-            <Button x:Name="Button_1" Content="1" Grid.Row="3" Grid.Column="0"
-                    Click="Button_1_Click" />
-            <Button x:Name="Button_2" Content="2" Grid.Row="3" Grid.Column="1"
-                    Click="Button_2_Click" />
-            <Button x:Name="Button_3" Content="3" Grid.Row="3" Grid.Column="2"
-                    Click="Button_3_Click" />
-            <Button x:Name="Button_MultiplicationSing" Content="*" Grid.Row="3" Grid.Column="3"
-                    Click="Button_MultiplicationSing_Click" />
-
-            <Button x:Name="Button_Comma" Content="," Grid.Row="4" Grid.Column="0"
-                    Click="Button_Comma_Click" />
-            <Button x:Name="Button_0" Content="0" Grid.Row="54" Grid.Column="1"
-                    Click="Button_0_Click" />
-            <Button x:Name="Button_Equals" Content="=" Grid.Row="4" Grid.Column="2"
-                    Click="Button_Equals_Click" />
-            <Button x:Name="Button_DivisionSign" Content="/" Grid.Row="4" Grid.Column="3"
-                    Click="Button_DivisionSign_Click" />
+            <ContentControl x:Name="NumberKeys_ContextControl" Grid.Column="0" Content="{Binding}"/>
+            <ContentControl x:Name="BasicOperations_ContextControl" Grid.Column="1" Content="{Binding}"/>
+            <ContentControl x:Name="AdvancedOperations_ContextControl" Grid.Column="2" Content="{Binding}"/>
 
         </Grid>
     </Grid>
-</Window>
-<!--<Menu DockPanel.Dock="Top">
-    <MenuItem Header="_File">
-        <MenuItem x:Name="menuNew" Header="_New" InputGestureText="Ctrl+N" Click="MenuNew_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/NewFile_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <MenuItem x:Name="menuOpen" Header="_Open" InputGestureText="Ctrl+O" Click="MenuOpen_Click" >
-            <MenuItem.Icon>
-                <Image Source="./Resources/OpenFile_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem >
-        <MenuItem x:Name="menuSave" Header="_Save" InputGestureText="Ctrl+S" Click="MenuSave_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/Save_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <MenuItem x:Name="menuSaveAs" Header="Save as" Click="MenuSaveAs_Click">
-            --><!--Add Ctrl+Shift+S shortcut
-            <MenuItem.Icon>
-                <Image Source="./Resources/SaveAs_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <Separator/>
-        <MenuItem x:Name="menuExit" Header="Exit" Click="MenuExit_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/Exit_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-    </MenuItem>
-    <MenuItem Header="_Edit">
-        <MenuItem x:Name="menuCopy" Header="_Copy" InputGestureText="Ctrl+C" Command="ApplicationCommands.Copy">
-            <MenuItem.Icon>
-                <Image Source="./Resources/Copy_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <MenuItem x:Name="menuPaste" Header="_Paste" InputGestureText="Ctrl+V" Command="ApplicationCommands.Paste">
-            <MenuItem.Icon>
-                <Image Source="./Resources/Paste_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <MenuItem x:Name="menuCut" Header="Cut" InputGestureText="Ctrl+X" Command="ApplicationCommands.Cut">
-            <MenuItem.Icon>
-                <Image Source="./Resources/Cut_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <Separator/>
-        <MenuItem x:Name="menuWrap" Header="Wrap Text" StaysOpenOnClick="True" Click="MenuWrap_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/WrapPanel_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-        <MenuItem x:Name="menuFont" Header="_Font" InputGestureText="Ctrl+F" IsCheckable="True" Click="MenuFont_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/FontIcon_16x.png"/>
-            </MenuItem.Icon>
-            <MenuItem x:Name="menuFontTimes" Header="Times" IsCheckable="True" IsChecked="True" StaysOpenOnClick="True" Click="MenuFontTimes_Click"/>
-            <MenuItem x:Name="menuFontArial" Header="Arial" IsCheckable="True" StaysOpenOnClick="True" Click="MenuFontArial_Click"/>
-            <MenuItem x:Name="menuFontCourier" Header="Courier" IsCheckable="True" StaysOpenOnClick="True" Click="MenuFontCourier_Click"/>
-        </MenuItem>
-        <Separator/>
-        <MenuItem x:Name="menuTimeDate" Header="TimeDate" InputGestureText="F10" Click="MenuTimeDate_Click">
 
-        </MenuItem>
-    </MenuItem>
-    <MenuItem Header="_About">
-        <MenuItem x:Name="menuAbout" Header="About" Click="MenuAbout_Click">
-            <MenuItem.Icon>
-                <Image Source="./Resources/InformationSymbol_16x.png"/>
-            </MenuItem.Icon>
-        </MenuItem>
-    </MenuItem>-->
+</Window>

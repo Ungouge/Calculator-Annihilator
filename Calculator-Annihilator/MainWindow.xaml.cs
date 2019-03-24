@@ -12,38 +12,57 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Common_Library;
+using Windows_Structure;
+using Options_Library;
 
 namespace Calculator_Annihilator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window //Initialize Part
+    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters //Initialize Part
     {
         public MainWindow()
         {
-            // Preinitialization
+            try
+            {
+                // Preinitialization
+                Windows_Manager.Add_MainWindow(this);
 
-            Settings_File_Reader _Settings_File_Reader  = new Settings_File_Reader();
-            _Static_Resources = new Static_Resources(_Settings_File_Reader);
-            GUI_Dynamic_Parameters = new Dynamic_Parameters(_Settings_File_Reader);
+                Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
+                
+                GUI_Bindable_Resources = new Bindable_Resources(this);
 
-            // Initialization
+                Options = _Settings_File_Reader.Options_Generator(this);
 
-            InitializeComponent();
+                GUI_Bindable_Resources.Intialize_MainWindow_Size();
+                
+                Back_Parser = new Back_Parser_Fascede(this);
 
-            // Postinitialization
-            
-            this.DataContext = GUI_Dynamic_Parameters;
+                // Initialization
 
-            GUI_Dynamic_Parameters.Calculation_Method = _Settings_File_Reader.Initial_Calculation_Method;
+                InitializeComponent();
 
-            if (GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single)
-                this.SingleCalculations.IsChecked = true;
-            else // calculation_Method == Calculation_Method.Complex
-                this.ComplexCalculations.IsChecked = true;
+                // Postinitialization
 
-            Current_Numeral_System = new Numeral_System(_Settings_File_Reader.Initial_Numeral_System);
+                this.DataContext = GUI_Bindable_Resources;
+
+                ComplexCalculations.DataContext = GUI_Bindable_Resources;
+                Calculator_Buttons_Panel_Setter();
+
+
+                if (Options.Calculation_Method == Calculation_Method.Single)
+                    this.SingleCalculations.IsChecked = true;
+                else // calculation_Method == Calculation_Method.Complex
+                    this.ComplexCalculations.IsChecked = true;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
     }
 }

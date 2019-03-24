@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
@@ -14,56 +11,71 @@ namespace Calculator_Annihilator
 		/// <param name="_Operand"></param>
 		private void Operation_Button(IOperand _Operand)
 		{
-			if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Single))
+			if (Convert.ToBoolean(Options.Calculation_Method == Calculation_Method.Single))
 				Basic_Calculation_Single(_Operand);
-			else if (Convert.ToBoolean(GUI_Dynamic_Parameters.Calculation_Method == Calculation_Method.Complex))
+			else if (Convert.ToBoolean(Options.Calculation_Method == Calculation_Method.Complex))
 				Insert_To_WorkSpace(_Operand.ToString());
 		}
 
 		/// <summary>
 		/// Controls proper perfoming of operation button according to whether some operation were perfomed ealier.
 		/// </summary>
-		/// <param name="symbol"></param>
 		private void Basic_Calculation_Single(IOperand symbol)
 		{
+            // To rebuild after rebuilding exceptions thrown by Parser.
+
+            string new_ResultSpace_Text;
+
 			if (no_operand_Sign_Single == true)
 			{
                 if(no_First_Number_In_Equation_Single == true)
                 {
 			        First_Number_In_Equation_Single = Parse_WorkSpace();
-			        Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
+
+                    new_ResultSpace_Text =
+                        Back_Parser.Parse_Back(first_Number_In_Equation_Single) + symbol.ToString();
                 }
                 else
                 {
-                    Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString() + symbol.ToString());
+                    new_ResultSpace_Text = 
+                        Back_Parser.Parse_Back(first_Number_In_Equation_Single) + symbol.ToString();
                 }
 			}
-			else if (WorkSpace.Text != default(string) || WorkSpace.Text != "")
-			{
+			else if ( (String.IsNullOrEmpty(WorkSpace.Text)
+                || String.IsNullOrWhiteSpace(WorkSpace.Text)) == true )
+            {
 				try
 				{
 					first_Number_In_Equation_Single = 
-						calc.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
-					Reset_ResultSpace_Text(first_Number_In_Equation_Single.ToString());
+						_Calculator.Operand_Selector(Operand_Sign_Single, first_Number_In_Equation_Single, Parse_WorkSpace());
+
+                    new_ResultSpace_Text = 
+                        Back_Parser.Parse_Back(first_Number_In_Equation_Single);
 				}
 				catch (DivideByZeroException)
 				{
-					Reset_ResultSpace_Text("Dividing by zero is not allowed");
+                    new_ResultSpace_Text = "Dividing by zero is not allowed";
+
 					no_operand_Sign_Single = true;
+
 					no_First_Number_In_Equation_Single = true;
 				}
 				catch
 				{
-					Reset_ResultSpace_Text(default(string));
-					symbol = default(IOperand);
-				}
-				finally
-				{
-					Clear_WorkSpace();
+                    new_ResultSpace_Text = ResultSpace.Text;
+
+					symbol = Operand_Sign_Single;
 				}
 			}
+            else
+            {
+                new_ResultSpace_Text = ResultSpace.Text;
+            }
 
-			Operand_Sign_Single = symbol;
+            Reset_ResultSpace_Text(new_ResultSpace_Text);
+
+            Operand_Sign_Single = symbol;
+
 			Clear_WorkSpace();
 		}
 	}

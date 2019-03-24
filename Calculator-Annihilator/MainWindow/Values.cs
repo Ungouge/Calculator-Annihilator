@@ -1,50 +1,85 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Common_Library;
+using Options_Library;
 
 namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
-		private Parser parser = new Parser();
-		private Calc calc = new Calc();
+        internal Options Options;
 
-		private Equation Equation;
+        public IOptions Get_Options
+        {
+            get
+            {
+                return Options;
+            }
+        }
+        
+        private Calculator _Calculator = new Calculator();
 
-		private Numeral_System Current_Numeral_System;
+        private Equation Equation;
 
-        internal Dynamic_Parameters GUI_Dynamic_Parameters;
+        internal Bindable_Resources GUI_Bindable_Resources;
+        
+        private Back_Parser_Fascede Back_Parser;
 
-        internal Static_Resources _Static_Resources;
+        private Parser Parser
+        {
+            get
+            {
+                return Options.Parser;
+            }
+        }
 
-		public sbyte Numeral_System //check class Numerical_System for description of exotic numeral system
+        protected internal Numeral_System Current_Numeral_System
+        {
+            get
+            {
+                return Options.Current_Numeral_System;
+            }
+        }
+
+        public sbyte Numeral_System_Type //check class Numerical_System for description of exotic numeral system
 		{
 			get
 			{
-				return Current_Numeral_System.System_Type;
+				return Options.Current_Numeral_System.System_Type;
 			}
+            private set
+            {
+                Options.Set_Numeral_System(value);
+            }
 		}
 
 		public char[] Numerical_System_Signs
 		{
 			get
 			{
-				return Current_Numeral_System.System_Digits;
+				return Options.Current_Numeral_System.System_Digits;
 			}
-		}
+        }
+        
+        internal Languages Current_Language
+        {
+            get
+            {
+                return Options.Current_Language;
+            }
+            set
+            {
+                Options.Set_Language(value);
+            }
+        }
+        internal Standard_Messages Standard_Messages
+        {
+            get
+            {
+                return Options.Standard_Messages;
+            }
+        }
 
-		private INumber first_Number_In_Equation_Single; //Psedonullable double container for single
+        private INumber first_Number_In_Equation_Single; //Psedonullable double container for single
 		private INumber First_Number_In_Equation_Single
 		{
 			get
