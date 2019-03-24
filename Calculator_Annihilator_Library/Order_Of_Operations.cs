@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
     /// <summary>
     /// Static libraries of components for calculation.
@@ -10,7 +10,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Jagged array of operand classes on order of operatin.
         /// </summary>
-        public static readonly IOperand[][] Operands = new IOperand[][]
+        internal static readonly IOperand[][] Operands = new IOperand[][]
         {
             new IOperand [] { new Expontent() },
             new IOperand [] { new Division(), new Multiplication() },
@@ -22,7 +22,7 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Jagged array of operand characters on order of operatin.
         /// </summary>
-        public static readonly char[][] operand_Sings = new char[][]
+        internal static readonly char[][] operand_Sings = new char[][]
         {
             new char [] { '^' },
             new char [] { '/', '*' },
