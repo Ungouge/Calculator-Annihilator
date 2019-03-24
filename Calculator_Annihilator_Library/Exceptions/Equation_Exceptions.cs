@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// The exception that is thrown when unknow error occurs durring solving an equation.
