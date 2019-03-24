@@ -1,4 +1,4 @@
-﻿namespace Calculator_Annihilator
+﻿namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Interface for elements that is not correct to place by outside of the bracket.

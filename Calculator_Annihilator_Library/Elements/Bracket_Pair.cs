@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Pairs up two brackets with in the Equation, should pairs matching bbrackets insted it may give bad result or errors.

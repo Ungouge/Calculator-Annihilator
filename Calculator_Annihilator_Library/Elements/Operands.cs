@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Class containg type of operation in equation. Containg Sings should match up with "Signs_Lib.operand_Sings".

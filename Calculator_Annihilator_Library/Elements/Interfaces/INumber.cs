@@ -1,4 +1,4 @@
-﻿namespace Calculator_Annihilator
+﻿namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Interface for getting number value.

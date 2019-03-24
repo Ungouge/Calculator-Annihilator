@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Base Class for Open_Bracket and Close_bracket.
