@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows;
+﻿using Message_Popupper;
+using System;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	partial class Equation
 	{
@@ -36,14 +36,18 @@ namespace Calculator_Annihilator
             }
             catch (EquationIsEmptyException)
             {
-                MessageBox.Show($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
+                IMessage_Box Message_Box = Factory.Get_Message_Box;
+
+                Message_Box.Pop_Up($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
                     $"had been solved improperly so \"0\" been pushed as result of shown equation.{Environment.NewLine}" +
                     "If there is an error in input eqution correct or try write write equation in other way");
                 Result_Of_Current_Bracket = new Number(0);
             }
             catch (EquationNotSolvedProperlyException e)
             {
-                MessageBox.Show($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
+                IMessage_Box Message_Box = Factory.Get_Message_Box;
+
+                Message_Box.Pop_Up($"Something went wrong equation or part of eqaution: {elements.Recreate_Equation()} " +
                     $"had been solved as \"{e.Message}\" so \"0\" been pushed as result of shown equation.{Environment.NewLine}" +
                     "If there is an error in input eqution correct or try write write equation in other way");
                 Result_Of_Current_Bracket = new Number(0); ;

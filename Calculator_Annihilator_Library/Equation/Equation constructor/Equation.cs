@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Windows;
 using Common_Library;
+using Message_Popupper;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
     /// <summary>
     /// Class to solving given text string parsing to equation elements list, with built in default fixes of mistekes.
@@ -28,8 +28,10 @@ namespace Calculator_Annihilator
 				Integrity_Check();
 			}
 			catch (EquationIsEmptyException)
-			{
-                MessageBox.Show("Given equation to solve is empty or correction of incorrectly written equation " +
+            {
+                IMessage_Box Message_Box = Factory.Get_Message_Box;
+
+                Message_Box.Pop_Up("Given equation to solve is empty or correction of incorrectly written equation " +
                     "text left no elements in the equation.");
                 Element_Colection = new Equation_Elements { new Number(0) };
 			}
