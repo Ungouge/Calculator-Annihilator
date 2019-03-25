@@ -1,6 +1,4 @@
 ﻿using System;
-using Calculator_Annihilator_Library;
-using Xunit;
 
 namespace Calculator_Annihilator_Library.Tests
 {
