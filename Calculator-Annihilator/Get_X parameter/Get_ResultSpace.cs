@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Controls;
-using IMain_Window;
+using IMainWindow_Parameters;
 
 namespace Calculator_Annihilator
 {

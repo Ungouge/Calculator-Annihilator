@@ -1,7 +1,7 @@
 ﻿using System;
 using Common_Library;
 
-namespace IMain_Window
+namespace IMainWindow_Parameters
 {
     public interface IMainWindow_Set_Texts_Turntable
     {

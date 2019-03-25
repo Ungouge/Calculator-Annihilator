@@ -155,9 +155,9 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IMainWindow_Parameters\IMain_Window.csproj">
+    <ProjectReference Include="..\IMainWindow_Parameters\IMainWindow_Parameters.csproj">
       <Project>{f2989619-b3e5-4409-8747-e72a909eac82}</Project>
-      <Name>IMain_Window</Name>
+      <Name>IMainWindow_Parameters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Message_Popupper\Message_Popupper.csproj">
       <Project>{9a005499-0201-4b00-8e1d-611ed8d70b74}</Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 
-namespace IMain_Window
+namespace IMainWindow_Parameters
 {
     public interface IMainWindow_Get_WorkSpace
     {

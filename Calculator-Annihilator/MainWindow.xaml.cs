@@ -16,7 +16,7 @@ using Common_Library;
 using Windows_Structure;
 using Options_Library;
 using Calculator_Annihilator_Library;
-using IMain_Window;
+using IMainWindow_Parameters;
 
 namespace Calculator_Annihilator
 {

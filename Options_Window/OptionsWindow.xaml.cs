@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using Common_Library;
 using Options_Library;
-using IOptions_Window;
+using IOptionsWindow_Parameters;
 using Windows_Structure;
 using Options_Window_Library;
 
@@ -12,7 +12,7 @@ namespace Options_Window
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
     /// </summary>
-    public partial class OptionsWindow : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_Parameters
+    public partial class OptionsWindow : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_For_Comma_Type_List_Context
     {
         public OptionsWindow(IGet_MainWindow_Parameters mainWindow)
         {

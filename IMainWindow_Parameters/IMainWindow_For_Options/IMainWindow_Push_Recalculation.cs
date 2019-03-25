@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMain_Window
+namespace IMainWindow_Parameters
 {
     public interface IMainWindow_Push_Recalculation
     {

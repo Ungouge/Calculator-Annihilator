@@ -7,8 +7,8 @@
     <ProjectGuid>{F2989619-B3E5-4409-8747-E72A909EAC82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IMain_Window</RootNamespace>
-    <AssemblyName>IMain_Window</AssemblyName>
+    <RootNamespace>IMainWindow_Parameters</RootNamespace>
+    <AssemblyName>IMainWindow_Parameters</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

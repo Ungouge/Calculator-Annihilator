@@ -1,5 +1,5 @@
 ﻿using System;
-using IMain_Window;
+using IMainWindow_Parameters;
 using Options_Library;
 
 namespace Calculator_Annihilator_Library

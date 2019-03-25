@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Controls;
 using Common_Library;
-using IMain_Window;
+using IMainWindow_Parameters;
 
 namespace Calculator_Annihilator_Library
 {

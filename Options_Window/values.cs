@@ -27,21 +27,13 @@ namespace Options_Window
 
         public IOptions_Provider Options { get; private set; }
 
-        public IOptions_Storage Get_Options_Provider
-        {
-            get
-            {
-                return Options;
-            }
-        }
-
-        internal ISet_Options Get_Options_Set
-        {
-            get
-            {
-                return Options;
-            }
-        }
+        //internal ISet_Options Get_Options_Set
+        //{
+        //    get
+        //    {
+        //        return Options;
+        //    }
+        //}
 
         internal List<IChange_Option_Command> Option_Change_Command_List;
     }

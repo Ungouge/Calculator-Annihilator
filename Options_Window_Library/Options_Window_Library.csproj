@@ -128,9 +128,9 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+    <ProjectReference Include="..\IOptions_Window\IOptionsWindow_Parameters.csproj">
       <Project>{4c4bcaa4-3e53-462e-b03b-8d2ec2212c0d}</Project>
-      <Name>IOptions_Window</Name>
+      <Name>IOptionsWindow_Parameters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>

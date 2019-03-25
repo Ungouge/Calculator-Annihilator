@@ -1,6 +1,6 @@
 ﻿using System;
 using Options_Library;
-using IMain_Window;
+using IMainWindow_Parameters;
 
 namespace Calculator_Annihilator_Library
 {

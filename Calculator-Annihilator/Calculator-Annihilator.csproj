@@ -254,13 +254,13 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IMainWindow_Parameters\IMain_Window.csproj">
+    <ProjectReference Include="..\IMainWindow_Parameters\IMainWindow_Parameters.csproj">
       <Project>{f2989619-b3e5-4409-8747-e72a909eac82}</Project>
-      <Name>IMain_Window</Name>
+      <Name>IMainWindow_Parameters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
+    <ProjectReference Include="..\IOptions_Window\IOptionsWindow_Parameters.csproj">
       <Project>{4C4BCAA4-3E53-462E-B03B-8D2EC2212C0D}</Project>
-      <Name>IOptions_Window</Name>
+      <Name>IOptionsWindow_Parameters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
