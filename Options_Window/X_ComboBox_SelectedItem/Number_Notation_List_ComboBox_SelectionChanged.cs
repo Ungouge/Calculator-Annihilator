@@ -5,7 +5,7 @@ using Options_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         private void Number_Notation_List_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

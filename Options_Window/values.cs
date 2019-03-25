@@ -7,7 +7,7 @@ using Options_Window_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         internal Bindable_Resources _Bindable_Resources;
 
@@ -25,23 +25,15 @@ namespace Options_Window
 
         public IGet_MainWindow_Parameters MainWindow { get; set; }
 
-        public IOptions Options { get; private set; }
+        public IOptions_Provider Options { get; private set; }
 
-        public IOptions_Provider Get_Options_Provider
-        {
-            get
-            {
-                return Options;
-            }
-        }
-
-        internal ISet_Options Get_Options_Set
-        {
-            get
-            {
-                return Options;
-            }
-        }
+        //internal ISet_Options Get_Options_Set
+        //{
+        //    get
+        //    {
+        //        return Options;
+        //    }
+        //}
 
         internal List<IChange_Option_Command> Option_Change_Command_List;
     }

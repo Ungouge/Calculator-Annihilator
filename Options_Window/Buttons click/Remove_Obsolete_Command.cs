@@ -5,7 +5,7 @@ using Options_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         /// <summary>
         /// Removes from command list command in given type.

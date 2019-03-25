@@ -1,4 +1,5 @@
 ﻿using System;
+using Calculator_Annihilator_Library;
 
 namespace Calculator_Annihilator
 {
@@ -7,9 +8,9 @@ namespace Calculator_Annihilator
         /// <summary>
         /// Returns options read from the settings file.
         /// </summary>
-        internal Options Options_Generator(MainWindow mainWindow)
+        internal IOptions Options_Generator(MainWindow mainWindow)
         {
-            return new Options(mainWindow, options);
+            return (new Options_Factory(mainWindow)).Get_Options(options);
         }
     }
 }

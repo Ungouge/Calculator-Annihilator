@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         private void Ok_Buton_Click(object sender, RoutedEventArgs e)
         {

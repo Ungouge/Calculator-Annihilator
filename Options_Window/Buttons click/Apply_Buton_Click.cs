@@ -5,7 +5,7 @@ using Options_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         private void Apply_Buton_Click(object sender, RoutedEventArgs e)
         {

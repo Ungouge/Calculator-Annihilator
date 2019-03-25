@@ -6,7 +6,7 @@ namespace Calculator_Annihilator
 {
     partial class MainWindow
     {
-        internal void Set_Texts_Turntable(Standard_Messages standard_Messages)
+        public void Set_Texts_Turntable(IStandard_Messages_Translate standard_Messages)
         {
             GUI_Bindable_Resources.Set_Texts(standard_Messages);
 

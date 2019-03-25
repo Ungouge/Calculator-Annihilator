@@ -1,5 +1,5 @@
 ﻿using System;
-using IOptions_Window;
+using IOptionsWindow_Parameters;
 
 namespace Options_Window_Library
 {
@@ -11,10 +11,8 @@ namespace Options_Window_Library
         /// <summary>
         /// Constructs new instance of Bindable_Resources for given OptionsWindow.
         /// </summary>
-        public Bindable_Resources(IOptionsWindow_Parameters _OptionsWindow)
+        public Bindable_Resources(IOptionsWindow_Get_Standard_Messages OptionsWindow)
         {
-            OptionsWindow = _OptionsWindow;
-
             Options_Text_FontSize = Set_Options_Text_FontSize();
 
             Set_Text(OptionsWindow.Get_Standard_Messages);

@@ -6,7 +6,7 @@ using Windows_Structure;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         private void Apply_In_All_Buton_Click(object sender, RoutedEventArgs e)
         {

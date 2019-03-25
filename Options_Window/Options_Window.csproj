@@ -61,8 +61,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Get_Standard_Messages.cs" />
-    <Compile Include="Get_X_Element.cs" />
+    <Compile Include="Get_X parameter\Get_Standard_Messages.cs" />
+    <Compile Include="Get_X parameter\Get_Options_Storage.cs" />
+    <Compile Include="Get_X parameter\Get_Numeral_System_List_ComboBox.cs" />
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
@@ -117,9 +118,9 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IOptions_Window\IOptions_Window.csproj">
-      <Project>{4c4bcaa4-3e53-462e-b03b-8d2ec2212c0d}</Project>
-      <Name>IOptions_Window</Name>
+    <ProjectReference Include="..\IOptionsWindow_Parameters\IOptionsWindow_Parameters.csproj">
+      <Project>{85b4a3cf-2e7e-471a-a5c1-7e88d0323d77}</Project>
+      <Name>IOptionsWindow_Parameters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
