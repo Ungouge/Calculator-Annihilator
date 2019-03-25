@@ -1,19 +1,21 @@
 ﻿using System;
-using Xunit;
 using Common_Library;
+using Xunit;
 using Assert = Xunit.Assert;
 
-namespace Calculator_Annihilator.Mock_Tests
+namespace Calculator_Annihilator_Library.Tests
 {
-    public class Back_Parse_Normal_Mock_Tests
+    public class Normal_Notation_Back_Parse_Tests
     {
+        private Back_Parser_Fascede Back_Parser;
+
         /// <summary>
         /// Returns given number in given numeral system as string representation in
         /// normal notation.
         /// </summary>
         public string Back_Parse_Normal_Mock_Test(double number, sbyte numeral_System_Type)
         {
-            Back_Parser_Mocked_Fascede Back_Parser = new Back_Parser_Mocked_Fascede(Number_Notation.Normal, numeral_System_Type, ",");
+            Back_Parser = new Back_Parser_Fascede(Number_Notation.Normal, numeral_System_Type, ",");
 
             // Act
 

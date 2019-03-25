@@ -10,6 +10,8 @@ namespace Calculator_Annihilator_Library
 
         public Parser Parser { get; private set; }
 
+        public Back_Parser_Fascede Back_Parser { get; private set; }
+
         public Numeral_System Current_Numeral_System { get; private set; }
 
         public Standard_Messages Standard_Messages { get; private set; }

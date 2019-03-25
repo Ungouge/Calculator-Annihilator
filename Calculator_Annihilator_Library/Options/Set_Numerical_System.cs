@@ -17,6 +17,8 @@ namespace Calculator_Annihilator_Library
             Current_Numeral_System = new Numeral_System(Numeral_System_Code);
 
             Parser = new Parser(Current_Numeral_System);
-		}
+
+            Back_Parser = new Back_Parser_Fascede(Number_Notation, Numeral_System_Code, Comma_Type);
+        }
 	}
 }

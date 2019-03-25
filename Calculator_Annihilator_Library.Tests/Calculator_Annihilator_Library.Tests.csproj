@@ -58,6 +58,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Back_Parser_Tests\Back_Parser_Factory.cs" />
+    <Compile Include="Back_Parser_Tests\Engineering_Notation_Back_Parse_Tests.cs" />
+    <Compile Include="Back_Parser_Tests\Force_Comma_Notation_Back_Parse_Tests.cs" />
+    <Compile Include="Back_Parser_Tests\Force_Exponent_Notaton_Back_Parse_Tests.cs" />
+    <Compile Include="Back_Parser_Tests\Force_Scientific_Notation_Back_Parse_Tests.cs" />
+    <Compile Include="Back_Parser_Tests\Normal_Notation_Back_Parse_Tests.cs" />
+    <Compile Include="Back_Parser_Tests\Scienfic_Normalized_Notation_Back_Parse_Tests.cs" />
     <Compile Include="Calculator_Tests\Addition_ShouldCaculate.cs" />
     <Compile Include="Calculator_Tests\Calculator_Tests.cs" />
     <Compile Include="Calculator_Tests\Divition_By_Zero_Exception_Sould_Throw_Exception.cs" />
@@ -90,6 +97,7 @@
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

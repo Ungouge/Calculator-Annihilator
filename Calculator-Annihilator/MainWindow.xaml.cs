@@ -40,8 +40,6 @@ namespace Calculator_Annihilator
 
                 GUI_Bindable_Resources.Intialize_MainWindow_Size(Options);
 
-                Back_Parser = new Back_Parser_Fascede(Options);
-
                 // Initialization
 
                 InitializeComponent();

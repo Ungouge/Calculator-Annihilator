@@ -22,14 +22,20 @@ namespace Calculator_Annihilator
         private Equation Equation;
 
         internal IBindable_Resources GUI_Bindable_Resources;
-        
-        private Back_Parser_Fascede Back_Parser;
 
         private Parser Parser
         {
             get
             {
                 return Options.Parser;
+            }
+        }
+
+        private Back_Parser_Fascede Back_Parser
+        {
+            get
+            {
+                return Options.Back_Parser;
             }
         }
 

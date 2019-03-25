@@ -113,13 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Back_Parser_Mocked_Fascede.cs" />
-    <Compile Include="Back_Parse_Engineering_Mock_Tests.cs" />
-    <Compile Include="Back_Parse_Force_Comma_Mock_Tests.cs" />
-    <Compile Include="Back_Parse_Force_Exponent_Mock_Tests.cs" />
-    <Compile Include="Back_Parse_Force_Scientific_Mock_Tests.cs" />
-    <Compile Include="Back_Parse_Normal_Mock_Tests.cs" />
-    <Compile Include="Back_Parse_Scienfic_Normalized_Mock_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,20 +1,21 @@
 ﻿using System;
-using Xunit;
 using Common_Library;
+using Xunit;
 using Assert = Xunit.Assert;
 
-namespace Calculator_Annihilator.Mock_Tests
+namespace Calculator_Annihilator_Library.Tests
 {
-    public class Back_Parse_Force_Exponent_Mock_Tests
+    public class Force_Exponent_Notaton_Back_Parse_Tests
     {
+        private Back_Parser_Fascede Back_Parser;
+
         /// <summary>
         /// Returns given number in given numeral system as string representation in
         /// exponent notation.
         /// </summary>
         public string Back_Parse_Force_Exponent_Mock_Test(double number, sbyte numeral_System_Type)
         {
-            Back_Parser_Mocked_Fascede Back_Parser =
-                new Back_Parser_Mocked_Fascede(Number_Notation.Force_Exponent, numeral_System_Type, ",");
+            Back_Parser = new Back_Parser_Fascede(Number_Notation.Force_Exponent, numeral_System_Type, ",");
 
             // Act
 
@@ -31,7 +32,7 @@ namespace Calculator_Annihilator.Mock_Tests
         [InlineData(9E-11, "9E-11")]
         [InlineData(1e1, "1E1")]
         [InlineData(1e-1, "1E-1")]
-        [InlineData(1e0/3e0, "3,3333333333334E-1")]
+        [InlineData(1e0 / 3e0, "3,3333333333334E-1")]
         [InlineData(987654321e20, "9,87654321E28")]
         [InlineData(987654321e-5, "9,87654321E3")]
         [InlineData(-987654321e-3, "-9,87654321E5")]
@@ -82,7 +83,7 @@ namespace Calculator_Annihilator.Mock_Tests
             // Arrange & Act
 
             string output = Back_Parse_Force_Exponent_Mock_Test(number, 3);
-            
+
             // Assert
 
             Assert.Equal(expected_Output, output);
