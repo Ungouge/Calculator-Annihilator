@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E6559D0-343F-4CB1-B77A-9AF4832CCE70}</ProjectGuid>
+    <ProjectGuid>{84024CA9-2553-4124-8735-B2B2960BFDFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Calculator_Annihilator_Library.Tests</RootNamespace>
