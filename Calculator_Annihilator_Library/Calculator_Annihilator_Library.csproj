@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DF25EEF-B26B-4E0B-8F23-6EAA575754BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calculator_Annihilator_Library</RootNamespace>
+    <AssemblyName>Calculator_Annihilator_Library</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Calculate_Arbitrary_Digits.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Cut_Off_Floating_Point_Migrants.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Divide_By_Two_ methods.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\getters for IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Mantisa_To_Coefficients_Digit_List.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Muliply_By_Two.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Normalize.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Numeral_System_Precition.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Set_Divide_By_Two_Method.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Shift_Comma_Point.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\Smooth_To.cs" />
+    <Compile Include="Back_Parser_Fascede\Arbitrary_Digits\values.cs" />
+    <Compile Include="Back_Parser_Fascede\Back_Parser_Fascede.cs" />
+    <Compile Include="Back_Parser_Fascede\Balanced_Ternary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Binary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Binary_Back_Parser\Parse_Binary_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Check_For_Extreme_Values.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Decompose.cs" />
+    <Compile Include="Back_Parser_Fascede\Double_Precition_Decomposer\Double_Precition_Decomposer.cs" />
+    <Compile Include="Back_Parser_Fascede\IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Negabinary_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Numeral_System_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Parse_Back.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Digit_List_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Exponent_In_Numeral_System_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\getters IBack_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Back_Parser\Positional_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Positional_Numeral_System.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Engineering_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Comma_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Exponent_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Force_Scientific_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Normal_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Return_Scienfic_Normalized_Notation.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_In_X_Notations methods\Scientific_Exponent.cs" />
+    <Compile Include="Back_Parser_Fascede\Return_Notation_Selector.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Set_Number_To_String.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
+    <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
+    <Compile Include="Bindable_Resources\Bindable_Resources.cs" />
+    <Compile Include="Bindable_Resources\Bindable_Resources_Factory.cs" />
+    <Compile Include="Bindable_Resources\Button_FontSize.cs" />
+    <Compile Include="Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
+    <Compile Include="Bindable_Resources\Font_To_TextBox_Macher.cs" />
+    <Compile Include="Bindable_Resources\IBindable_Resources.cs" />
+    <Compile Include="Bindable_Resources\Intialize_MainWindow_Size.cs" />
+    <Compile Include="Bindable_Resources\On_Properties_Change.cs" />
+    <Compile Include="Bindable_Resources\On_Property_Change.cs" />
+    <Compile Include="Bindable_Resources\Push_Recalculations.cs" />
+    <Compile Include="Bindable_Resources\Recalculate_Property.cs" />
+    <Compile Include="Bindable_Resources\ResultSpace_FontSize.cs" />
+    <Compile Include="Bindable_Resources\Set_Texts.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text\Set_Calculator_annihilator_Text.cs" />
+    <Compile Include="Bindable_Resources\Set_X_Text\Set_Main_Menu_Text.cs" />
+    <Compile Include="Bindable_Resources\Window_Size_Catchers.cs" />
+    <Compile Include="Bindable_Resources\WorkSpace_FontSize.cs" />
+    <Compile Include="Calculator\Operand_Selector.cs" />
+    <Compile Include="Calculator\operations methods.cs" />
+    <Compile Include="Elements\Bracket.cs" />
+    <Compile Include="Elements\Bracket_Pair.cs" />
+    <Compile Include="Elements\Interfaces\IElement.cs" />
+    <Compile Include="Elements\Interfaces\IElement_ToString.cs" />
+    <Compile Include="Elements\Interfaces\INot_At_The_Beging.cs" />
+    <Compile Include="Elements\Interfaces\INot_Inside_Bracket.cs" />
+    <Compile Include="Elements\Interfaces\INot_Outside_The_Bracket.cs" />
+    <Compile Include="Elements\Interfaces\INumber.cs" />
+    <Compile Include="Elements\Interfaces\IOperand.cs" />
+    <Compile Include="Elements\Interfaces\IOperand_ToString.cs" />
+    <Compile Include="Elements\Number.cs" />
+    <Compile Include="Elements\Operands.cs" />
+    <Compile Include="Equation\Equation constructor\Bracket_Pairer.cs" />
+    <Compile Include="Equation\Equation constructor\Element_Selector.cs" />
+    <Compile Include="Equation\Equation constructor\Equation.cs" />
+    <Compile Include="Equation\Equation constructor\Integrity_Check\Check_Integrity_Of_Current_Element.cs" />
+    <Compile Include="Equation\Equation constructor\Integrity_Check\Integrity_Check.cs" />
+    <Compile Include="Equation\Equation_Elements.cs" />
+    <Compile Include="Equation\Equation_Solving\Exchange_Solved_Range_to_Calculated_Value.cs" />
+    <Compile Include="Equation\Equation_Solving\Inner_Brackets_Solver.cs" />
+    <Compile Include="Equation\Equation_Solving\No_Bracket_Solving.cs" />
+    <Compile Include="Equation\Equation_Solving\Solver.cs" />
+    <Compile Include="Equation\Recreate_Equation.cs" />
+    <Compile Include="Equation\Values.cs" />
+    <Compile Include="Exceptions\Equation_Exceptions.cs" />
+    <Compile Include="Exceptions\Exceptions.cs" />
+    <Compile Include="Options\Add_New_comma_Type.cs" />
+    <Compile Include="Options\Generate_Options_Storage.cs" />
+    <Compile Include="Options\IOptions.cs" />
+    <Compile Include="Options\Options.cs" />
+    <Compile Include="Options\Options_Factory.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Calculation_Method.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Calculator_Mode.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Comma_Type.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Font_Size_Type.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Language.cs" />
+    <Compile Include="Options\Set_X parameter\Set_Number_Notation_Type.cs" />
+    <Compile Include="Options\Set_Numerical_System.cs" />
+    <Compile Include="Options\values.cs" />
+    <Compile Include="Order_Of_Operations.cs" />
+    <Compile Include="Parser\Parse.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMainWindow_Parameters\IMain_Window.csproj">
+      <Project>{f2989619-b3e5-4409-8747-e72a909eac82}</Project>
+      <Name>IMain_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Message_Popupper\Message_Popupper.csproj">
+      <Project>{9a005499-0201-4b00-8e1d-611ed8d70b74}</Project>
+      <Name>Message_Popupper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
