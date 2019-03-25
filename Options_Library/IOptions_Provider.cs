@@ -2,7 +2,7 @@
 
 namespace Options_Library
 {
-    public interface IOptions_Provider
+    public interface IOptions_Storage
     {
         Calculator_Mode Calculator_Mode { get; }
 

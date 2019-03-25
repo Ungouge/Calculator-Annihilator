@@ -1,7 +1,8 @@
 ﻿using System;
+using Calculator_Annihilator_Library;
 using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	partial class Options
 	{

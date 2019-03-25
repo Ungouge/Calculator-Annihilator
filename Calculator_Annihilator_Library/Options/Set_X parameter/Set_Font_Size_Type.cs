@@ -1,7 +1,7 @@
 ﻿using System;
 using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
     partial class Options
     {
@@ -9,7 +9,7 @@ namespace Calculator_Annihilator
         {
             Font_Size_Type = new_Font_Size_Type;
 
-            Current_MainWindow.GUI_Bindable_Resources.Push_Recalculations();
+            MainWindow.Push_GUI_Recalculation();
         }
     }
 }

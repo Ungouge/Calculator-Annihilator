@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
     partial class Options
     {

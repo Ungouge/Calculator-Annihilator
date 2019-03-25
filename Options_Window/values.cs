@@ -25,9 +25,9 @@ namespace Options_Window
 
         public IGet_MainWindow_Parameters MainWindow { get; set; }
 
-        public IOptions Options { get; private set; }
+        public IOptions_Provider Options { get; private set; }
 
-        public IOptions_Provider Get_Options_Provider
+        public IOptions_Storage Get_Options_Provider
         {
             get
             {

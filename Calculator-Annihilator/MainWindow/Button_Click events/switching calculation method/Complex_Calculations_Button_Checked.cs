@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Complex_Calculations_Button_Checked(object sender, RoutedEventArgs e)
 		{
-            Options.Calculation_Method = Calculation_Method.Complex;
+            Options.Set_Calculation_Method(Calculation_Method.Complex);
 
 			string newWorkSpaceText = "";
 

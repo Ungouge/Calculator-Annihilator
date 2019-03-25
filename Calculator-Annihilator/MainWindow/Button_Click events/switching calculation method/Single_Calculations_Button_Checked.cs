@@ -11,7 +11,7 @@ namespace Calculator_Annihilator
 		/// </summary>
 		private void Single_Calculations_Button_Checked(object sender, RoutedEventArgs e)
         {
-            Options.Calculation_Method = Calculation_Method.Single;
+            Options.Set_Calculation_Method(Calculation_Method.Single);
 
             Complex_To_Single();
 

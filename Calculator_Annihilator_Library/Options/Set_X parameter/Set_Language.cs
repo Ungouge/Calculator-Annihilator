@@ -1,7 +1,7 @@
 ﻿using System;
 using Common_Library;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
     partial class Options
     {
@@ -12,9 +12,9 @@ namespace Calculator_Annihilator
             Standard_Messages = new Standard_Messages(Current_Language,
                 AppDomain.CurrentDomain.BaseDirectory + @"Library\Language_Library");
 
-            Current_MainWindow.Set_Texts_Turntable(Standard_Messages);
+            MainWindow.Set_Texts_Turntable(Standard_Messages);
 
-            Current_MainWindow.GUI_Bindable_Resources.Push_Recalculations();
+            MainWindow.Push_GUI_Recalculation();
         }
     }
 }
