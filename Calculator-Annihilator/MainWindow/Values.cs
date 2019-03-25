@@ -1,14 +1,15 @@
 ﻿using System;
-using Common_Library;
+using Calculator_Annihilator_Library;
 using Options_Library;
+using Common_Library;
 
 namespace Calculator_Annihilator
 {
 	partial class MainWindow
 	{
-        internal Options Options;
+        internal IOptions Options;
 
-        public IOptions Get_Options
+        public IOptions_Provider Get_Options
         {
             get
             {
@@ -20,7 +21,7 @@ namespace Calculator_Annihilator
 
         private Equation Equation;
 
-        internal Bindable_Resources GUI_Bindable_Resources;
+        internal IBindable_Resources GUI_Bindable_Resources;
         
         private Back_Parser_Fascede Back_Parser;
 

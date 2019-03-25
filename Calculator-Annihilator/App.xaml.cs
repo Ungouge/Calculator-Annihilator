@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Calculator_Annihilator
+namespace Calculator_Annihilator_Library
 {
 	/// <summary>
 	/// Interaction logic for App.xaml
