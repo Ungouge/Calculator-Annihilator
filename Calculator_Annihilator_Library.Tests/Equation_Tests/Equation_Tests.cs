@@ -1,7 +1,4 @@
 ﻿using System;
-using Xunit;
-using Calculator_Annihilator_Library;
-using Common_Library;
 
 namespace Calculator_Annihilator_Library.Tests
 {
@@ -12,10 +9,5 @@ namespace Calculator_Annihilator_Library.Tests
     public partial class Equation_Tests
     {
         private Equation _equation;
-
-        public Equation_Tests()
-        {
-            _equation = null;
-        }
     }
 }

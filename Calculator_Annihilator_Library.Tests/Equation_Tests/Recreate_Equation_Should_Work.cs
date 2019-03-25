@@ -1,6 +1,5 @@
 ﻿using System;
 using Xunit;
-using Calculator_Annihilator_Library;
 using Common_Library;
 
 namespace Calculator_Annihilator_Library.Tests
