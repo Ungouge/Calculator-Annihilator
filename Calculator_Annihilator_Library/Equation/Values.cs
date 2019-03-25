@@ -19,7 +19,7 @@ namespace Calculator_Annihilator_Library
 
         private bool is_Solved = false;
 
-        private Number _Solved_Value;
+        private Number _Solved_Number;
 
         public Number Solved_Number
         {
@@ -27,7 +27,11 @@ namespace Calculator_Annihilator_Library
             {
                 Solve();
 
-                return _Solved_Value;
+                return _Solved_Number;
+            }
+            set
+            {
+                _Solved_Number = value;
             }
         }
 
@@ -35,13 +39,13 @@ namespace Calculator_Annihilator_Library
         {
             get
             {
-                return _Solved_Value.Value;
+                return Solved_Number.Value;
             }
         }
 
         public override string ToString()
         {
-            return _Solved_Value.ToString();
+            return _Solved_Number.ToString();
         }
     }
 }

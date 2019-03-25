@@ -65,6 +65,9 @@
     <Compile Include="Calculator_Tests\Exponentation_SouldCaculate.cs" />
     <Compile Include="Calculator_Tests\Multiplication_SouldCaculate.cs" />
     <Compile Include="Calculator_Tests\Subtraction_SouldCaculate.cs" />
+    <Compile Include="Equation_Solving_Tests\Equation_Solving_Test.cs" />
+    <Compile Include="Equation_Solving_Tests\No_Bracket_Solving_Should_Work.cs" />
+    <Compile Include="Equation_Solving_Tests\With_Bracket_Solving_Should_Work.cs" />
     <Compile Include="Equation_Tests\Equation_Tests.cs" />
     <Compile Include="Equation_Tests\Recreate_Equation_Should_Integrity_Check_Work.cs" />
     <Compile Include="Equation_Tests\Recreate_Equation_Should_Restore_Missing_Brackets.cs" />

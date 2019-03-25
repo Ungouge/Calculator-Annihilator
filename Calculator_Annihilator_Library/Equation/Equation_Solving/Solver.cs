@@ -17,7 +17,7 @@ namespace Calculator_Annihilator_Library
 
                 is_Solved = true;
 
-                _Solved_Value = Result_Number;
+                Solved_Number = Result_Number;
             }
         }
     }
