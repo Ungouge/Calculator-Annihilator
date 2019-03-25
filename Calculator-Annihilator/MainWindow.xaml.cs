@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 using Common_Library;
 using Windows_Structure;
 using Options_Library;
+using Calculator_Annihilator_Library;
+using IMain_Window;
 
 namespace Calculator_Annihilator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters //Initialize Part
+    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters, IMainWindow_For_Bindable_Resources
     {
         public MainWindow()
         {
@@ -32,13 +34,13 @@ namespace Calculator_Annihilator
 
                 Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
                 
-                GUI_Bindable_Resources = new Bindable_Resources(this);
+                GUI_Bindable_Resources = new Bindable_Resources_Factory(this).Get_Bindable_Resources;
 
                 Options = _Settings_File_Reader.Options_Generator(this);
 
-                GUI_Bindable_Resources.Intialize_MainWindow_Size();
-                
-                Back_Parser = new Back_Parser_Fascede(this);
+                GUI_Bindable_Resources.Intialize_MainWindow_Size(Options);
+
+                Back_Parser = new Back_Parser_Fascede(Options);
 
                 // Initialization
 
