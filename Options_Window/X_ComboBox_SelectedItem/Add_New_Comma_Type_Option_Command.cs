@@ -4,7 +4,7 @@ using Options_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         public void Add_New_Comma_Type_Option_Command(string[] Comma_Types)
         {

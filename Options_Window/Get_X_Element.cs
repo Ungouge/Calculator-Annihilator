@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         public ComboBox Get_Numeral_System_List_ComboBox
         {

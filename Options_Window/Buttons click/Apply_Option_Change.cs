@@ -3,7 +3,7 @@ using Options_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         /// <summary>
         /// Executes every change option command enlisten in command list in given options class.

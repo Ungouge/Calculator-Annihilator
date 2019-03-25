@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         internal void Set_Text(Standard_Messages standard_Messages)
         {

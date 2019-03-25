@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         public IStandard_Messages_Translate Get_Standard_Messages
         {

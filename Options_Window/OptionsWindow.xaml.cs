@@ -12,9 +12,9 @@ namespace Options_Window
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
     /// </summary>
-    public partial class OWXYZ : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_Parameters
+    public partial class OptionsWindow : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_Parameters
     {
-        public OWXYZ(IGet_MainWindow_Parameters mainWindow)
+        public OptionsWindow(IGet_MainWindow_Parameters mainWindow)
         {
             // Preinitialization
 

@@ -7,7 +7,7 @@ using Options_Window_Library;
 
 namespace Options_Window
 {
-    partial class OWXYZ
+    partial class OptionsWindow
     {
         internal Bindable_Resources _Bindable_Resources;
 
