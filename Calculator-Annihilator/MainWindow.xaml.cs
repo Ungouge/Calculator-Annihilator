@@ -25,18 +25,16 @@ namespace Calculator_Annihilator
     /// </summary>
     public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters, IMainWindow_For_Bindable_Resources
     {
-        public MainWindow()
+        public MainWindow(IOptions_Storage _Options)
         {
             try
             {
                 // Preinitialization
                 Windows_Manager.Add_MainWindow(this);
-
-                Settings_File_Reader _Settings_File_Reader = new Settings_File_Reader();
                 
                 GUI_Bindable_Resources = new Bindable_Resources_Factory(this).Get_Bindable_Resources;
 
-                Options = _Settings_File_Reader.Options_Generator(this);
+                Options = (new Options_Factory(this)).Get_Options(_Options);
 
                 GUI_Bindable_Resources.Intialize_MainWindow_Size(Options);
 
