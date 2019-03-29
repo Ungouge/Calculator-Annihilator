@@ -13,7 +13,7 @@ namespace Calculator_Annihilator_Library
             MainWindow = _MainWindow;
         }
 
-        public IOptions Get_Options(Options_Storage _Options)
+        public IOptions Get_Options(IOptions_Storage _Options)
         {
             return new Options(MainWindow, _Options);
         }

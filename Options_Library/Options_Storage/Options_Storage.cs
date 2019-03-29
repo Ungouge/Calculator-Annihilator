@@ -6,7 +6,7 @@ namespace Options_Library
     public partial class Options_Storage: IOptions_Storage
     {
         /// <summary>
-        /// Constructs new Otpions class reading and setting resorcess for MainWindow .
+        /// Constructs new Options class reading and setting resorcess for MainWindow .
         /// </summary>
         public Options_Storage(Calculator_Mode calculator_Mode, Calculation_Method calculation_Method,
             double intitial_Height, double intial_Width, Number_Notation number_Notation, string comma_Type,

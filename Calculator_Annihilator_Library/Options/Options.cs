@@ -9,7 +9,7 @@ namespace Calculator_Annihilator_Library
         /// <summary>
         /// Constructs new Options class reading and setting resorcess for MainWindow .
         /// </summary>
-        internal Options(IMainWindow_For_Options mainWindow , Options_Storage options) : base(options.Calculator_Mode,
+        internal Options(IMainWindow_For_Options mainWindow , IOptions_Storage options) : base(options.Calculator_Mode,
             options.Calculation_Method, options.Initial_Height, options.Initial_Width,
             options.Number_Notation, options.Font_Size_Type)
         {
