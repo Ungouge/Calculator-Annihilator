@@ -3,7 +3,7 @@ using Options_Library;
 
 namespace Starter_Library
 {
-    internal partial class Start_Up_Window_Setter
+    public partial class Start_Up_Window_Setter
     {
         private readonly IOptions_Storage Options;
 

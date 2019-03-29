@@ -4,9 +4,9 @@ using Common_Library;
 
 namespace Starter_Library
 {
-    partial class Start_Up_Window_Setter
+    partial class Start_Up_Window_Setter : IStart_Up_Window_Setter
     {
-        private IStart_Up_Window Set_Start_Up_Window(bool Do_load_Hello_Window)
+        public IStart_Up_Window Set_Start_Up_Window(bool Do_load_Hello_Window)
         {
             IStart_Up_Window Window_To_Load;
 
