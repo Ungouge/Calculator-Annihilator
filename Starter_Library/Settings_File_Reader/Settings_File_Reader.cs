@@ -10,7 +10,7 @@ namespace Starter_Library
     /// <summary>
     /// Class to read options file or generate new if there is non.
     /// </summary>
-    public partial class Settings_File_Reader
+    public partial class Settings_File_Reader : ISettings_File_Reader
     {
         Options_Storage Options;
 
