@@ -8,7 +8,26 @@ namespace Options_Library
 {
     public static class Pinned_Numeral_Systems
     {
-        private static List<sbyte> Numeral_Systems_Codes_List = new List<sbyte>();
+        private static bool is_Setted = false;
+
+        private static List<sbyte> _Numeral_Systems_Codes_List;
+
+        private static List<sbyte> Numeral_Systems_Codes_List
+        {
+            get
+            {
+                if (is_Setted)
+                    _Numeral_Systems_Codes_List = Get_Defualt_Pinned_Numeral_Systems;
+
+                return _Numeral_Systems_Codes_List;
+            }
+            set
+            {
+                is_Setted = true;
+
+                _Numeral_Systems_Codes_List = value;
+            }
+        }
 
         public static sbyte[] Get_Numeral_Systems_Codes
         {
@@ -49,5 +68,17 @@ namespace Options_Library
 
             return false;
         }
+
+        private static List<sbyte> Get_Defualt_Pinned_Numeral_Systems
+        {
+            get
+            {
+                is_Setted = true;
+
+                return new List<sbyte>(){ 2,8,10,12,16,60};
+            }
+        }
+
+
     }
 }
