@@ -1,5 +1,4 @@
-﻿<Window
-        x:Class="Calculator_Annihilator.MainWindow"
+﻿<Window x:Class="Calculator_Annihilator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -17,7 +16,6 @@
         MinWidth="320"
         Height="{Binding Window_Height, Mode=TwoWay, FallbackValue=510}"
         Width="{Binding Window_Width, Mode=TwoWay, FallbackValue=480}">
-
     <Window.Resources >
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
