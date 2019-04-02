@@ -137,6 +137,8 @@
     <Compile Include="GUI_Models\exchangable buttons\Close_Bracket_Or_Invert_Number_Exchanger.cs" />
     <Compile Include="GUI_Models\exchangable buttons\Open_Bracket_Or_Change_Sign_Exchanger.cs" />
     <Compile Include="GUI_Models\IButton_Changer.cs" />
+    <Compile Include="MainWindow_Factory\Get_MainWindow.cs" />
+    <Compile Include="MainWindow_Factory\MainWindow_Factory.cs" />
     <Compile Include="Push_GUI_Recalculations.cs" />
     <Compile Include="Set_Texts_Turntable\Set_Texts_Turntable.cs" />
     <Compile Include="GUI_Models\Basic_Operations_Keys\Basic_Operations_Less_Than_Decimal_System\buttons Basic_Operations_Less_Than_Decimal_System.cs" />
@@ -240,6 +242,10 @@
     <Folder Include="GUI_Models\Advanced_Operations_Keys\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnnihilatorWindowBase\AnnihilatorWindowBase.csproj">
+      <Project>{0d6d4fdc-b7ec-4981-b138-6634c1789a07}</Project>
+      <Name>AnnihilatorWindowBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Calculator_Annihilator_Library\Calculator_Annihilator_Library.csproj">
       <Project>{5df25eef-b26b-4e0b-8f23-6eaa575754bc}</Project>
       <Name>Calculator_Annihilator_Library</Name>
@@ -263,6 +269,10 @@
     <ProjectReference Include="..\Options_Window\Options_Window.csproj">
       <Project>{51f187c6-ba14-446c-bb1f-3025a74ed593}</Project>
       <Name>Options_Window</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StartUpWindowBase\StartUpWindowBase.csproj">
+      <Project>{74d1a9be-cfad-4917-92c9-2ddd9aee6248}</Project>
+      <Name>StartUpWindowBase</Name>
     </ProjectReference>
     <ProjectReference Include="..\Windows_Structure\Windows_Structure.csproj">
       <Project>{d7996eaf-8f5b-426e-adc6-c333c69a2047}</Project>

@@ -3,7 +3,7 @@ using Common_Library;
 
 namespace Options_Library
 {
-    public partial class Options_Storage
+    partial class Options_Storage
     {
         public static IOptions_Storage Get_Default_Options_Storage
         {
