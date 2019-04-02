@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Configuration;
 using Common_Library;
 using Options_Library;
 
@@ -12,25 +10,39 @@ namespace Starter_Library
     /// </summary>
     public partial class Settings_File_Reader : ISettings_File_Reader
     {
-        Options_Storage Options;
-
-        ISettings_Adapter Settings;
-
         public Settings_File_Reader(ISettings_Adapter _Settings)
         {
             Settings = _Settings;
 
+            Calculator_Mode = (Calculator_Mode)Settings["Calculator_Mode"];
+
+            Calculation_Method = (Calculation_Method)Settings["Calculation_Method"];
+
+            initial_Height = (double)Settings["initial_Height"];
+
+            initial_Width = (double)Settings["initial_Width"];
+
+            Number_Notation = (Number_Notation)Settings["Number_Notation"];
+
+            comma_Type = (string)Settings["comma_Type"];
+
+            Font_Size_Type = (Font_Size_Type)Settings["Font_Size_Type"];
+
+            numeral_System = (sbyte)Settings["numeral_System"];
+
+            Language = (Languages)Settings["Language"];
+
             Options = new Options_Storage
             (
-                (Calculator_Mode)(sbyte)Settings["Calculator_Mode"],
-                (Calculation_Method)(sbyte)Settings["Calculation_Method"],
-                (double)Settings["initial_Height"],
-                (double)Settings["initial_Width"],
-                (Number_Notation)(sbyte)Settings["Number_Notation"],
-                (string)Settings["comma_Type"],
-                (Font_Size_Type)(sbyte)Settings["Font_Size_Type"],
-                (sbyte)Settings["numeral_System"],
-                (Languages)(byte)Settings["Language"]
+                Calculator_Mode,
+                Calculation_Method,
+                initial_Height,
+                initial_Width,
+                Number_Notation,
+                comma_Type,
+                Font_Size_Type,
+                numeral_System,
+                Language
             );
 
             Pinned_Numeral_Systems.Set_Numeral_Systems_Codes = Read_Pinnend_Numeral_Systems;
@@ -59,4 +71,3 @@ namespace Starter_Library
         }
     }
 }
-;
