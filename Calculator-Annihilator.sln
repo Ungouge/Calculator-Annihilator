@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase", "An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUpWindowBase", "StartUpWindowBase\StartUpWindowBase.csproj", "{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWindow", "HelloWindow", "{F81429E8-1FE4-4B6D-BD3E-3E022026884C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Window", "Hello_Window\Hello_Window.csproj", "{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,6 +173,14 @@ Global
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.UnitTests|Any CPU.Build.0 = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.MockingTests|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.MockingTests|Any CPU.Build.0 = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.UnitTests|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,6 +195,7 @@ Global
 		{85B4A3CF-2E7E-471A-A5C1-7E88D0323D77} = {B7306AA5-9C7A-4B8A-BBF2-2404C99F125A}
 		{262A8A1C-7430-40E5-ABA4-E1E5ED1CDF92} = {7D9C3680-69A9-4382-8F20-D49E2D34E6FD}
 		{0169C276-4CD5-42F7-81D3-79D5AD91D87F} = {7D9C3680-69A9-4382-8F20-D49E2D34E6FD}
+		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58} = {F81429E8-1FE4-4B6D-BD3E-3E022026884C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D30C9D93-A112-4620-AAE9-9FD8BD2B96D2}
