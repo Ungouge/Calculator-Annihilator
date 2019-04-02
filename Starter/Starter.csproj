@@ -54,6 +54,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="values.cs" />
     <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,13 +91,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnnihilatorWindowBase\AnnihilatorWindowBase.csproj">
+      <Project>{0D6D4FDC-B7EC-4981-B138-6634C1789A07}</Project>
+      <Name>AnnihilatorWindowBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Calculator-Annihilator\Calculator-Annihilator.csproj">
       <Project>{37e4b73c-6cd4-4528-8a86-759b643dfe76}</Project>
       <Name>Calculator-Annihilator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{EAC99763-1AAA-445D-8E4B-068AE08DEECA}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Starter_Library\Starter_Library.csproj">
       <Project>{0169c276-4cd5-42f7-81d3-79d5ad91d87f}</Project>
       <Name>Starter_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StartUpWindowBase\StartUpWindowBase.csproj">
+      <Project>{74d1a9be-cfad-4917-92c9-2ddd9aee6248}</Project>
+      <Name>StartUpWindowBase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

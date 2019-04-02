@@ -5,6 +5,11 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Starter.Properties;
+using Common_Library;
+using Options_Library;
+using Starter_Library;
+using StartUpWindowBase;
 
 namespace Starter
 {
@@ -16,22 +21,17 @@ namespace Starter
         [STAThread]
         public static void Main(string[] args)
         {
-            bool Do_load_Hello_Window = false;
+            Settings_File_Reader = new Settings_File_Reader(new Settings_Adapter(Settings.Default));
 
-            Window Window_To_Load;
+            Settings_File_Reader.Set_Do_Load_Hello_Window_Next_Run();
 
-            if (Do_load_Hello_Window == false)
-            {
-                Window_To_Load = new Calculator_Annihilator.MainWindow();
-            }
-            else
-            {
-                Window_To_Load = null; // Hello_Window();
-            }
+            IOptions_Storage Options = Settings_File_Reader.Get_Options_Storage;
+
+            Start_Up_Window_Base Start_Up_Window = new Start_Up_Window_Setter(Options).Get_Start_Up_Window;
 
             Application Annihilation_Application = new Application();
 
-            Annihilation_Application.Run(Window_To_Load);
+            Annihilation_Application.Run(Start_Up_Window);
         }
     }
 }
