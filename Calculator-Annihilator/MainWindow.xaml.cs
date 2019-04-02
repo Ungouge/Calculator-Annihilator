@@ -12,18 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using Common_Library;
 using Windows_Structure;
 using Options_Library;
 using Calculator_Annihilator_Library;
 using IMainWindow_Parameters;
+using StartUpWindowBase;
 
 namespace Calculator_Annihilator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IMainWindow, IGet_MainWindow_Parameters, IMainWindow_For_Bindable_Resources
+    public partial class MainWindow : Start_Up_Window_Base, IMainWindow, IGet_MainWindow_Parameters, IMainWindow_For_Bindable_Resources
     {
         public MainWindow(IOptions_Storage _Options)
         {
