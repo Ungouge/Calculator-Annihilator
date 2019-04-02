@@ -51,6 +51,10 @@
     <Compile Include="IMainWindow.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="IOptionsWindow_Show.cs" />
+    <Compile Include="Load_Hello_Window_Next_Run\Dont_Load_Hello_Window.cs" />
+    <Compile Include="Load_Hello_Window_Next_Run\Load_Hello_Window_Next_Run.cs" />
+    <Compile Include="Load_Hello_Window_Next_Run\Load_Hello_Window_Only_Next_Run.cs" />
+    <Compile Include="Load_Hello_Window_Next_Run\Pernamently_Load_Hello_Window.cs" />
     <Compile Include="Numeral_System\Numeral_System.cs" />
     <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
