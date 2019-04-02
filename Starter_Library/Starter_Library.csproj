@@ -41,7 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Do_Load_Hello_Window_Setter\Do_Load_Hello_Window_Setter.cs" />
+    <Compile Include="Do_Load_Hello_Window_Setter\Get_Do_Load_Hello_Window.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings_Adapter\ISettings_Adapter.cs" />
+    <Compile Include="Settings_Adapter\Settings_Adapter.cs" />
+    <Compile Include="Settings_File_Reader\Get_Options_Storage.cs" />
+    <Compile Include="Settings_File_Reader\ISettings_File_Reader.cs" />
+    <Compile Include="Settings_File_Reader\Settings_File_Reader.cs" />
+    <Compile Include="Settings_File_Reader\Set_Do_Load_Hello_Window_Next_Run.cs" />
+    <Compile Include="Settings_File_Reader\values.cs" />
+    <Compile Include="Start_Up_Window_Setter\IStart_Up_Window_Setter.cs" />
+    <Compile Include="Start_Up_Window_Setter\Set_Start_Up_Window.cs" />
+    <Compile Include="Start_Up_Window_Setter\Start_Up_Window_Setter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator-Annihilator\Calculator-Annihilator.csproj">
+      <Project>{37E4B73C-6CD4-4528-8A86-759B643DFE76}</Project>
+      <Name>Calculator-Annihilator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StartUpWindowBase\StartUpWindowBase.csproj">
+      <Project>{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}</Project>
+      <Name>StartUpWindowBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
