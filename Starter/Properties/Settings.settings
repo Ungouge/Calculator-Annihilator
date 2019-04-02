@@ -2,11 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Starter.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Calculator_Mode" Type="System.SByte" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Calculator_Mode" Type="Common_Library.Calculator_Mode" Scope="User">
+      <Value Profile="(Default)">Standard</Value>
     </Setting>
-    <Setting Name="Calculation_Method" Type="System.SByte" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Calculation_Method" Type="Common_Library.Calculation_Method" Scope="User">
+      <Value Profile="(Default)">Single</Value>
     </Setting>
     <Setting Name="initial_Height" Type="System.Double" Scope="User">
       <Value Profile="(Default)">510</Value>
@@ -17,20 +17,26 @@
     <Setting Name="numeral_System" Type="System.SByte" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
-    <Setting Name="Number_Notation" Type="System.SByte" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Number_Notation" Type="Common_Library.Number_Notation" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
     </Setting>
     <Setting Name="comma_Type" Type="System.String" Scope="User">
       <Value Profile="(Default)">,</Value>
     </Setting>
-    <Setting Name="Language" Type="System.Byte" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Language" Type="Common_Library.Languages" Scope="User">
+      <Value Profile="(Default)">English</Value>
     </Setting>
-    <Setting Name="Font_Size_Type" Type="System.SByte" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Font_Size_Type" Type="Common_Library.Font_Size_Type" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
     </Setting>
     <Setting Name="Pined_Numeral_Systems" Type="System.String" Scope="User">
       <Value Profile="(Default)">2,8,10,12,16,60</Value>
+    </Setting>
+    <Setting Name="Load_Hello_Window_Pernamently" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Load_Hello_Window_Next_Run" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

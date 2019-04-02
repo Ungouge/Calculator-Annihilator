@@ -25,10 +25,10 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public sbyte Calculator_Mode {
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard")]
+        public global::Common_Library.Calculator_Mode Calculator_Mode {
             get {
-                return ((sbyte)(this["Calculator_Mode"]));
+                return ((global::Common_Library.Calculator_Mode)(this["Calculator_Mode"]));
             }
             set {
                 this["Calculator_Mode"] = value;
@@ -37,10 +37,10 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public sbyte Calculation_Method {
+        [global::System.Configuration.DefaultSettingValueAttribute("Single")]
+        public global::Common_Library.Calculation_Method Calculation_Method {
             get {
-                return ((sbyte)(this["Calculation_Method"]));
+                return ((global::Common_Library.Calculation_Method)(this["Calculation_Method"]));
             }
             set {
                 this["Calculation_Method"] = value;
@@ -85,10 +85,10 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public sbyte Number_Notation {
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::Common_Library.Number_Notation Number_Notation {
             get {
-                return ((sbyte)(this["Number_Notation"]));
+                return ((global::Common_Library.Number_Notation)(this["Number_Notation"]));
             }
             set {
                 this["Number_Notation"] = value;
@@ -109,10 +109,10 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public byte Language {
+        [global::System.Configuration.DefaultSettingValueAttribute("English")]
+        public global::Common_Library.Languages Language {
             get {
-                return ((byte)(this["Language"]));
+                return ((global::Common_Library.Languages)(this["Language"]));
             }
             set {
                 this["Language"] = value;
@@ -121,10 +121,10 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public sbyte Font_Size_Type {
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::Common_Library.Font_Size_Type Font_Size_Type {
             get {
-                return ((sbyte)(this["Font_Size_Type"]));
+                return ((global::Common_Library.Font_Size_Type)(this["Font_Size_Type"]));
             }
             set {
                 this["Font_Size_Type"] = value;
@@ -140,6 +140,30 @@ namespace Starter.Properties {
             }
             set {
                 this["Pined_Numeral_Systems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Load_Hello_Window_Pernamently {
+            get {
+                return ((bool)(this["Load_Hello_Window_Pernamently"]));
+            }
+            set {
+                this["Load_Hello_Window_Pernamently"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Load_Hello_Window_Next_Run {
+            get {
+                return ((bool)(this["Load_Hello_Window_Next_Run"]));
+            }
+            set {
+                this["Load_Hello_Window_Next_Run"] = value;
             }
         }
     }
