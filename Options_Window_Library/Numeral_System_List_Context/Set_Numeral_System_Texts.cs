@@ -10,12 +10,15 @@ namespace Options_Window_Library
         /// </summary>
         public void Set_Numeral_System_Texts(Standard_Messages standard_Messages)
         {
-            foreach (Numeral_System_List_Item list_Item in Numeral_System_List_Items_List)
+            foreach (Numeral_System_List_Content list_Content in Numeral_System_List_Items_List)
             {
-                string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
-                    list_Item.Numeral_System_Code, standard_Messages);
+                if (list_Content is Numeral_System_List_Item list_Item)
+                {
+                    string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
+                        list_Item.Numeral_System_Code, standard_Messages);
 
-                list_Item.Set_Numeral_System_Name(new_Numeral_System_Name);
+                    list_Item.Set_Numeral_System_Name(new_Numeral_System_Name);
+                }
             }
         }
     }
