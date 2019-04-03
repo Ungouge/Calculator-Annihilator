@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Do_Load_Hello_Window_Setter\Do_Load_Hello_Window_Setter.cs" />
-    <Compile Include="Do_Load_Hello_Window_Setter\Get_Do_Load_Hello_Window.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings_Adapter\ISettings_Adapter.cs" />
     <Compile Include="Settings_Adapter\Settings_Adapter.cs" />
