@@ -10,7 +10,7 @@ namespace Starter_Library
     {
         public void Set_Do_Load_Hello_Window_Next_Run()
         {
-            bool Do_Load_Hello_Window_Pernamently = (bool)Settings["Do_Load_Hello_Window_Pernamently"];
+            bool Do_Load_Hello_Window_Pernamently = (bool)Settings["Load_Hello_Window_Pernamently"];
 
             if (Do_Load_Hello_Window_Pernamently == true)
             {
