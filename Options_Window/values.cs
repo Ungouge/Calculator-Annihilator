@@ -23,17 +23,7 @@ namespace Options_Window
 
         public IMainWindow Parent_MainWindow { get; private set; }
 
-        public IGet_MainWindow_Parameters MainWindow { get; set; }
-
         public IOptions_Provider Options { get; private set; }
-
-        //internal ISet_Options Get_Options_Set
-        //{
-        //    get
-        //    {
-        //        return Options;
-        //    }
-        //}
 
         internal List<IChange_Option_Command> Option_Change_Command_List;
     }

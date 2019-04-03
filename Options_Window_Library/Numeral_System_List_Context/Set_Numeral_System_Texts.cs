@@ -8,7 +8,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets texts for list_Item in Numeral_System_Items_List.
         /// </summary>
-        public void Set_Numeral_System_Texts(Standard_Messages standard_Messages)
+        public void Set_Numeral_System_Texts(IStandard_Messages_Translate standard_Messages)
         {
             foreach (Numeral_System_List_Content list_Content in Numeral_System_List_Items_List)
             {

@@ -134,6 +134,7 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Options\Add_New_comma_Type.cs" />
     <Compile Include="Options\Generate_Options_Storage.cs" />
+    <Compile Include="Options\Get_Standard_Messages_Translate.cs" />
     <Compile Include="Options\IOptions.cs" />
     <Compile Include="Options\Options.cs" />
     <Compile Include="Options\Options_Factory.cs" />

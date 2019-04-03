@@ -9,7 +9,7 @@ namespace Options_Window
         {
             get
             {
-                return MainWindow.Get_Standard_Messages;
+                return Options.Get_Standard_Messages_Translate;
             }
         }
     }
