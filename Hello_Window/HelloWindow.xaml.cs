@@ -11,14 +11,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Options_Library;
+using StartUpWindowBase;
 
 namespace Hello_Window
 {
     /// <summary>
     /// Interaction logic for HelloWindow.xaml
     /// </summary>
-    public partial class HelloWindow : Window
+    public partial class HelloWindow : Start_Up_Window_Base
     {
+        public IOptions_Provider Startup_Options;
+
         public HelloWindow()
         {
             InitializeComponent();

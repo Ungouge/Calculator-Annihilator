@@ -95,5 +95,23 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnnihilatorWindowBase\AnnihilatorWindowBase.csproj">
+      <Project>{0d6d4fdc-b7ec-4981-b138-6634c1789a07}</Project>
+      <Name>AnnihilatorWindowBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common_Library\Common_Library.csproj">
+      <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
+      <Name>Common_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StartUpWindowBase\StartUpWindowBase.csproj">
+      <Project>{74d1a9be-cfad-4917-92c9-2ddd9aee6248}</Project>
+      <Name>StartUpWindowBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
