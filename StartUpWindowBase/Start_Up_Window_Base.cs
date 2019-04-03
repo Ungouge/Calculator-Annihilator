@@ -10,6 +10,6 @@ namespace StartUpWindowBase
 {
     abstract public class Start_Up_Window_Base: Annihilator_Window_Base
     {
-        public Options_Storage Startup_Options { get; set; }
+
     }
 }
