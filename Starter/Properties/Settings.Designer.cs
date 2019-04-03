@@ -145,7 +145,7 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool Load_Hello_Window_Pernamently {
             get {
                 return ((bool)(this["Load_Hello_Window_Pernamently"]));
@@ -157,7 +157,7 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool Load_Hello_Window_Next_Run {
             get {
                 return ((bool)(this["Load_Hello_Window_Next_Run"]));

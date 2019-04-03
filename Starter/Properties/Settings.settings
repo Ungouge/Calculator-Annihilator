@@ -33,10 +33,10 @@
       <Value Profile="(Default)">2,8,10,12,16,60</Value>
     </Setting>
     <Setting Name="Load_Hello_Window_Pernamently" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Load_Hello_Window_Next_Run" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
