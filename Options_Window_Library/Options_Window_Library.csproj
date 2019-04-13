@@ -49,8 +49,8 @@
     <Compile Include="Bindable_Resources\On_Properties_Change.cs" />
     <Compile Include="Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
-    <Compile Include="Bindable_Resources\Set_Options_Text_FontSize.cs" />
     <Compile Include="Bindable_Resources\Set_Text.cs" />
+    <Compile Include="Bindable_Resources\Set_Window_Size.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Calculator_Options_Text.cs" />
     <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Width.cs" />
@@ -124,6 +124,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnnihilatorWindowBase\AnnihilatorWindowBase.csproj">
+      <Project>{0d6d4fdc-b7ec-4981-b138-6634c1789a07}</Project>
+      <Name>AnnihilatorWindowBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common_Library\Common_Library.csproj">
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
