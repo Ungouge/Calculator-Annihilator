@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AnnihilatorWindowBase_CustomControl">
+
+    <SolidColorBrush x:Key="foreground_Colour" Color="{Binding Foreground_Colour, Mode=OneWay, FallbackValue= Black}"/>
+
+    <SolidColorBrush x:Key="background_Colour" Color="{Binding Background_Colour, Mode=OneWay, FallbackValue= White}"/>
+
+    <SolidColorBrush x:Key="borderBrush_Colour" Color="{Binding Control_Border_Colour, Mode=OneWay, FallbackValue= Black}"/>
+
+    <SolidColorBrush x:Key="control_Background_Colour" Color="{Binding Control_Background_Colour, Mode=OneWay, FallbackValue= White}"/>
+
+</ResourceDictionary>
