@@ -24,7 +24,7 @@ namespace Options_Window
 
             Options = _MainWindow.Get_Options;
 
-            _Bindable_Resources = new Bindable_Resources(this);
+            _Bindable_Resources = new Bindable_Resources(this, Options.Font_Size_Type);
 
             Option_Change_Command_List = new List<IChange_Option_Command>();
             

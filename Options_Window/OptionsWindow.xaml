@@ -6,22 +6,31 @@
         xmlns:local="clr-namespace:Options_Window"
         mc:Ignorable="d"
         Title="{Binding Options, Mode=OneWay, FallbackValue= Options}"
-        Height="424"
-        Width="436">
+        Background="Turquoise"
+        Height="{Binding Window_Height, Mode=OneWay}"
+        Width="{Binding Window_Width, Mode=OneWay}">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <DockPanel Margin="10,10,10,10">
+
         <TabControl HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
                     DockPanel.Dock="Top">
             <TabControl.Resources>
-                <Style TargetType="TabItem">
-                    <Setter Property="Width" Value="{Binding TabItem_Width, Mode=OneWay, FallbackValue= 70}"/>
-                </Style>
-                <Style TargetType="TextBlock">
-                    <Setter Property="FontSize"
-                            Value="{Binding Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
                 <Style TargetType="ComboBox">
                     <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="HorizontalAlignment" Value="Right"/>
                     <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue=36}"/>
                     <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Width, Mode=OneWay, FallbackValue=200}"/>
                 </Style>
@@ -39,42 +48,48 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-
                     <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay, FallbackValue= Language}"
-                               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,35,0,34.6"/>
+                               Style="{StaticResource TextBlock_Style}"
+                               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
 
                     <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" 
                               SelectionChanged="Language_List_ComboBox_SelectionChanged"
-                              Grid.Column="2" Grid.Row="0" Margin="0,29,0,28.6">
+                              Grid.Column="2" Grid.Row="0" >
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Width="200"
+                                <StackPanel Name="Language_List_ComboBox_StackPanel" Orientation="Horizontal" Width="200"
                                             Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
                                     <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"
                                            Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-                                    <TextBlock Text="{Binding Language_Name, Mode=OneWay}" VerticalAlignment="Center"
-                                               FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+                                    <TextBlock 
+                                        Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay, FallbackValue=Language_Name}"
+                                        VerticalAlignment="Center"
+                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+                                        Style="{StaticResource TextBlock_Style}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size_Type, Mode=OneWay, FallbackValue= Font_Size}"
-                               Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,35.2,0,34.4"/>
+                               Style="{StaticResource TextBlock_Style}"
+                               Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
 
                     <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}"
                               SelectionChanged="Font_Size_List_ComboBox_SelectionChanged"
-                              Grid.Column="2" Grid.Row="2" Margin="0,29.2,0,28.4">
+                              Grid.Column="2" Grid.Row="2">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Width="200"
+                                <StackPanel Name="Font_Size_List_ComboBox_StackPanel" Orientation="Horizontal" Width="200"
                                             Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
                                     <Image Source="{Binding Font_Size_Symbol_Uri, Mode=OneWay}"  VerticalAlignment="Center"
                                            Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-                                    <TextBlock Text="{Binding Font_Size_Name, Mode=OneWay}" VerticalAlignment="Center"
-                                               FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+                                    <TextBlock Text="{Binding ElementName=Font_Size_List_ComboBox_StackPanel, Path=DataContext.Font_Size_Name, Mode=OneWay, FallbackValue=Font_Size_Name}" 
+                                               VerticalAlignment="Center"
+                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+                                        Style="{StaticResource TextBlock_Style}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
@@ -102,6 +117,7 @@
 
                     <TextBlock Name="Number_Notation_List_TextBlock" 
                                Text="{Binding Number_Notation_Type, Mode=OneWay, FallbackValue= Number_Notation_Type}"
+                               Style="{StaticResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0"/>
 
                     <ComboBox Name="Number_Notation_List_ComboBox" ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
@@ -112,13 +128,14 @@
                             <DataTemplate>
                                 <TextBlock Text="{Binding Number_Notation_Name, Mode=OneWay}" Width="200"
                                            Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue= 18}"
-                                           FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+                                           FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBlock Name="Numeral_System_List_TextBlock" 
                                Text="{Binding Numeral_System_Type, Mode=OneWay, FallbackValue= Numeral_System_Type}"
+                               Style="{StaticResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="2"/>
 
                     <ComboBox Name="Numeral_System_List_ComboBox"
@@ -141,6 +158,7 @@
 
                     <TextBlock Name="Comma_Symbol_TextBlock" 
                                Text="{Binding Comma_Symbol, Mode=OneWay, FallbackValue= Comma_Symbol}"
+                               Style="{StaticResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="4"/>
 
                     <ComboBox Name="Comma_Type_List_ComboBox" ItemsSource="{Binding Comma_Type_Items_List, Mode=OneWay}"
@@ -164,15 +182,16 @@
 
                     <TextBlock Name="Mode_Calculator_TextBlock" 
                                Text="{Binding Mode_Calculator, Mode=OneWay, FallbackValue= Mode_Calculator}"
+                               Style="{StaticResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="6"/>
 
                     <TextBlock Name="Method_Calculation_TextBlock" 
                                Text="{Binding Method_Calculation, Mode=OneWay, FallbackValue= Method_Calculation}"
-                              Grid.Column="0" Grid.Row="8"/>
+                               Style="{StaticResource TextBlock_Style}"
+                               Grid.Column="0" Grid.Row="8"/>
                 </Grid>
             </TabItem>
         </TabControl>
-
 
         <Grid Height="{Binding ComboBox_List_Image_Height, Mode= OneWay, FallbackValue= 24}"
               HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
@@ -188,21 +207,23 @@
             </Grid.ColumnDefinitions>
 
             <Button Name="Apply_In_All_Buton" Content="{Binding Apply_All_Windows, Mode=OneWay,FallbackValue=Apply_All_Windows}"
-                                FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                                Style="{StaticResource Button_Style}"
                                 Click="Apply_In_All_Buton_Click"
                                 Grid.Column="0"/>
             <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay ,FallbackValue= Ok}"
-                                FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                                Style="{StaticResource Button_Style}"
                                 Click="Ok_Buton_Click"
-                                Grid.Column="2"/>
+                                Grid.Column="2" Margin="0.4,0" VerticalAlignment="Top"/>
             <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay ,FallbackValue= Cancel}"
-                                FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                                Style="{StaticResource Button_Style}"
                                 Click="Cancel_Buton_Click"
                                 Grid.Column="4"/>
             <Button Name="Apply_Buton" Content="{Binding Apply, Mode=OneWay, FallbackValue= Apply}"
-                                FontSize="{Binding Options_Text_FontSize, Mode=OneWay}"
+                                Style="{StaticResource Button_Style}"
                                 Click="Apply_Buton_Click"
                                 Grid.Column="6"/>
         </Grid>
+        
     </DockPanel>
+    
 </Window>
