@@ -13,7 +13,7 @@ namespace Options_Window_Library
         {
             Formatted_Text_Getter formatted_Text =
                 new Formatted_Text_Getter(new TextBlock() { Text = "Xyz" },
-                Options_Text_FontSize);
+                Text_FontSize);
 
             return formatted_Text.Get_Text_Height;
         }

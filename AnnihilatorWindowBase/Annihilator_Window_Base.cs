@@ -10,6 +10,5 @@ namespace AnnihilatorWindowBase
 {
     abstract public class Annihilator_Window_Base: Window
     {
-        //public Brush Background_Colour { get; set; }
     }
 }

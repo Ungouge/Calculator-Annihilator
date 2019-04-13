@@ -12,7 +12,7 @@
         
         <TextBlock Text="{Binding Content_Text, Mode=OneWay}" VerticalAlignment="Center" d:DesignHeight="24"
                    FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window},
-                              Path=DataContext.Options_Text_FontSize, Mode=OneWay, FallbackValue= 18}"
+                              Path=DataContext.Text_FontSize, Mode=OneWay, FallbackValue= 18}"
                    Width="{Binding Text_Width, Mode=OneWay, FallbackValue=102}"/>
         
         <Button Name="Pin_Numeral_System" Click="Pin_Numeral_System_Click" Margin="0,0,0,0">
