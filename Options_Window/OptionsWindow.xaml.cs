@@ -6,13 +6,14 @@ using Options_Library;
 using IOptionsWindow_Parameters;
 using Windows_Structure;
 using Options_Window_Library;
+using AnnihilatorWindowBase;
 
 namespace Options_Window
 {
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
     /// </summary>
-    public partial class OptionsWindow : Window, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_For_Comma_Type_List_Context
+    public partial class OptionsWindow : Annihilator_Window_Base, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_For_Comma_Type_List_Context
     {
         public OptionsWindow(IGet_MainWindow_Parameters _MainWindow)
         {

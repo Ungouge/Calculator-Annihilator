@@ -37,13 +37,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starter", "Starter\Starter.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starter_Library", "Starter_Library\Starter_Library.csproj", "{0169C276-4CD5-42F7-81D3-79D5AD91D87F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase", "AnnihilatorWindowBase\AnnihilatorWindowBase.csproj", "{0D6D4FDC-B7EC-4981-B138-6634C1789A07}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUpWindowBase", "StartUpWindowBase\StartUpWindowBase.csproj", "{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWindow", "HelloWindow", "{F81429E8-1FE4-4B6D-BD3E-3E022026884C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Window", "Hello_Window\Hello_Window.csproj", "{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase_CustomControl", "AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_CustomControl.csproj", "{ADE7A734-6985-4337-B211-49505B37811D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase", "AnnihilatorWindowBase\AnnihilatorWindowBase.csproj", "{0D6D4FDC-B7EC-4981-B138-6634C1789A07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,14 +159,6 @@ Global
 		{0169C276-4CD5-42F7-81D3-79D5AD91D87F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0169C276-4CD5-42F7-81D3-79D5AD91D87F}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
 		{0169C276-4CD5-42F7-81D3-79D5AD91D87F}.UnitTests|Any CPU.Build.0 = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.MockingTests|Any CPU.ActiveCfg = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.MockingTests|Any CPU.Build.0 = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
-		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.UnitTests|Any CPU.Build.0 = Release|Any CPU
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74D1A9BE-CFAD-4917-92C9-2DDD9AEE6248}.MockingTests|Any CPU.ActiveCfg = Release|Any CPU
@@ -181,6 +175,22 @@ Global
 		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
 		{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}.UnitTests|Any CPU.Build.0 = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.MockingTests|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.MockingTests|Any CPU.Build.0 = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE7A734-6985-4337-B211-49505B37811D}.UnitTests|Any CPU.Build.0 = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.MockingTests|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.MockingTests|Any CPU.Build.0 = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.UnitTests|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6D4FDC-B7EC-4981-B138-6634C1789A07}.UnitTests|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
