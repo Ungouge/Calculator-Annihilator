@@ -8,7 +8,11 @@ namespace AnnihilatorWindowBase
         private void Set_High_Contrast_Font_Size_Type()
         {
             Text_FontSize = 48;
-            
+
+            Corner_Radius = 0;
+
+            Border_Thickness = 4;
+
             Background_Colour = Get_High_Contrast_WindowBrush;
 
             Foreground_Colour = Get_High_Contrast_WindowTextBrush;

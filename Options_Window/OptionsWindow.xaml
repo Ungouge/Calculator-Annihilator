@@ -1,14 +1,15 @@
-﻿<Window x:Class="Options_Window.OptionsWindow"
+﻿<base:Annihilator_Window_Base x:Class="Options_Window.OptionsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Options_Window"
+        xmlns:base="clr-namespace:AnnihilatorWindowBase;assembly=AnnihilatorWindowBase"
         mc:Ignorable="d"
         Title="{Binding Options, Mode=OneWay, FallbackValue= Options}"
         Background="Turquoise"
-        Height="{Binding Window_Height, Mode=OneWay}"
-        Width="{Binding Window_Width, Mode=OneWay}">
+        Height="{Binding Window_Height, Mode=OneWay, FallbackValue= 500}"
+        Width="{Binding Window_Width, Mode=OneWay, FallbackValue= 800}">
     
     <Window.Resources>
         <ResourceDictionary>
@@ -18,7 +19,7 @@
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Style.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Style.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Style.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -199,6 +200,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="3*"/>
@@ -207,23 +209,24 @@
             </Grid.ColumnDefinitions>
 
             <Button Name="Apply_In_All_Buton" Content="{Binding Apply_All_Windows, Mode=OneWay,FallbackValue=Apply_All_Windows}"
-                                Style="{StaticResource Button_Style}"
+                                Style="{DynamicResource Button_Style}"
                                 Click="Apply_In_All_Buton_Click"
                                 Grid.Column="0"/>
             <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay ,FallbackValue= Ok}"
-                                Style="{StaticResource Button_Style}"
+                                Style="{DynamicResource Button_Style}"
                                 Click="Ok_Buton_Click"
-                                Grid.Column="2" Margin="0.4,0" VerticalAlignment="Top"/>
+                                Grid.Column="2"
+                                />
             <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay ,FallbackValue= Cancel}"
-                                Style="{StaticResource Button_Style}"
+                                Style="{DynamicResource Button_Style}"
                                 Click="Cancel_Buton_Click"
                                 Grid.Column="4"/>
             <Button Name="Apply_Buton" Content="{Binding Apply, Mode=OneWay, FallbackValue= Apply}"
-                                Style="{StaticResource Button_Style}"
+                                Style="{DynamicResource Button_Style}"
                                 Click="Apply_Buton_Click"
                                 Grid.Column="6"/>
         </Grid>
         
     </DockPanel>
     
-</Window>
+</base:Annihilator_Window_Base>

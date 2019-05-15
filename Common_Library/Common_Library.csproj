@@ -48,6 +48,7 @@
     <Compile Include="Formatted_Text_Getter\Default_Formatted_Text_Getter.cs" />
     <Compile Include="Formatted_Text_Getter\Get_Text_Height.cs" />
     <Compile Include="Formatted_Text_Getter\Get_Text_Width.cs" />
+    <Compile Include="IGet_Standard_Messages.cs" />
     <Compile Include="IMainWindow.cs" />
     <Compile Include="IMainWindow_Children.cs" />
     <Compile Include="IOptionsWindow_Show.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Numeral_System\Numeral_System_Dictionary_Code.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="public enums lib.cs" />
+    <Compile Include="Set_Element_Style_Delegate.cs" />
     <Compile Include="Standard_Messages\Add_To_Dictionary.cs" />
     <Compile Include="Standard_Messages\Find_Language_Libraries.cs" />
     <Compile Include="Standard_Messages\IStandard_Messages_Translate.cs" />

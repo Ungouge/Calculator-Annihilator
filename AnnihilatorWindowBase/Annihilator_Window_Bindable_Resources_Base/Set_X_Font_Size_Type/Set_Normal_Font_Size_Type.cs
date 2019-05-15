@@ -9,6 +9,10 @@ namespace AnnihilatorWindowBase
         {
             Text_FontSize = 18;
 
+            Corner_Radius = 2;
+
+            Border_Thickness = 4;
+
             Set_Default_Colours();
         }
     }
