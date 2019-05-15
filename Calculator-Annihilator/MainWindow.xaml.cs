@@ -49,6 +49,7 @@ namespace Calculator_Annihilator
                 this.DataContext = GUI_Bindable_Resources;
 
                 ComplexCalculations.DataContext = GUI_Bindable_Resources;
+
                 Calculator_Buttons_Panel_Setter();
 
 
