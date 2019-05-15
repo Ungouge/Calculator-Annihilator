@@ -49,6 +49,7 @@
     <Compile Include="Bindable_Resources\On_Properties_Change.cs" />
     <Compile Include="Bindable_Resources\On_Property_Change.cs" />
     <Compile Include="Bindable_Resources\Set_ComboBox_List_Image_Height.cs" />
+    <Compile Include="Bindable_Resources\Set_Styles.cs" />
     <Compile Include="Bindable_Resources\Set_Text.cs" />
     <Compile Include="Bindable_Resources\Set_Window_Size.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Buttons_Texts.cs" />

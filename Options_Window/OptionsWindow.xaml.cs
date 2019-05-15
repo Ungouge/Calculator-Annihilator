@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows;
 using Common_Library;
 using Options_Library;
 using IOptionsWindow_Parameters;
@@ -25,7 +24,7 @@ namespace Options_Window
 
             Options = _MainWindow.Get_Options;
 
-            _Bindable_Resources = new Bindable_Resources(this, Options.Font_Size_Type);
+            _Bindable_Resources = new Bindable_Resources(this, Set_Element_Style, Options.Font_Size_Type);
 
             Option_Change_Command_List = new List<IChange_Option_Command>();
             
@@ -38,13 +37,13 @@ namespace Options_Window
             _Font_Size_List_Context = new Font_Size_List_Context(Options.Get_Standard_Messages_Translate, Options.Font_Size_Type);
 
             _Comma_Type_List_Content = new Comma_Type_List_Context(this, _Bindable_Resources);
-            
+
             this.DataContext = _Bindable_Resources;
 
             // Initialization
 
             InitializeComponent();
-
+            
             // Postinitialization
 
             Number_Notation_List_ComboBox.DataContext = _Number_Notation_List_Context;
@@ -56,6 +55,8 @@ namespace Options_Window
             Numeral_System_List_ComboBox.DataContext = _Numeral_System_List_Context;
 
             Comma_Type_List_ComboBox.DataContext = _Comma_Type_List_Content;
+
+            _Bindable_Resources.Set_Styles();
         }
     }
 }

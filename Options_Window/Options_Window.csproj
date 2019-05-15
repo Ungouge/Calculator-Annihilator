@@ -74,6 +74,7 @@
     <Compile Include="Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Buttons click\Remove_Obsolete_Command.cs" />
     <Compile Include="Push_Set_Text.cs" />
+    <Compile Include="Set_Element_Style.cs" />
     <Compile Include="Set_Texts.cs" />
     <Compile Include="values.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Add_New_Comma_Type_Option_Command.cs" />

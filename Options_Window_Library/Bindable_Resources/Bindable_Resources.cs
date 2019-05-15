@@ -1,7 +1,5 @@
 ﻿using System;
 using AnnihilatorWindowBase;
-using Options_Library;
-using IOptionsWindow_Parameters;
 using Common_Library;
 
 namespace Options_Window_Library
@@ -14,9 +12,11 @@ namespace Options_Window_Library
         /// <summary>
         /// Constructs new instance of Bindable_Resources for given OptionsWindow.
         /// </summary>
-        public Bindable_Resources(IOptionsWindow_Get_Standard_Messages OptionsWindow, Font_Size_Type _Font_Size_Type) : base(_Font_Size_Type)
+        public Bindable_Resources(IGet_Standard_Messages _OptionsWindow, Set_Element_Style_Delegate _Set_Element_Style_Delegate_Method, Font_Size_Type _Font_Size_Type) : base(_Font_Size_Type)
         {
-            Set_Text(OptionsWindow.Get_Standard_Messages);
+            Set_Element_Style_Delegate_Method = _Set_Element_Style_Delegate_Method;
+
+            Set_Text(_OptionsWindow.Get_Standard_Messages);
 
             ComboBox_List_Image_Height = Set_ComboBox_List_Image_Height();
 
@@ -26,6 +26,5 @@ namespace Options_Window_Library
 
             Set_Window_Size();
         }
-        
     }
 }
