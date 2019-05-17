@@ -4,9 +4,8 @@
     <Style TargetType="Button" x:Key="Button_Style"/>
 
     <Style TargetType="Button" x:Key="Base_Button_Style" >
-        <Setter Property="OverridesDefaultStyle" Value="False"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="False"/>
         <Setter Property="FontSize" Value="{Binding Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
-        <Setter Property="Foreground" Value="Green"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
@@ -17,16 +16,43 @@
             <ResourceDictionary Source="colours.Xaml"/>
         </Style.Resources>
 
-        <Setter Property="BorderThickness" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource foreground_Colour}"/>
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="{Binding Corner_Radius }" BorderThickness="{Binding Border_Thickness}" x:Name="Button_Border">
+                    <Border  x:Name="Button_Border"
+                             CornerRadius="{Binding Corner_Radius,Mode=OneWay, FallbackValue=2}"
+                             BorderThickness="{Binding Border_Thickness, Mode=OneWay, FallbackValue=4}"
+                             Background="{StaticResource control_Background_Colour}"
+                             BorderBrush="{StaticResource borderBrush_Colour}">
                         <ContentPresenter  Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
+            
         </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="DarkBlue"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                              Background="White"
+                              BorderBrush="Yellow">
+                                <ContentPresenter  Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            
+        </Style.Triggers>
+        
     </Style>
 </ResourceDictionary>

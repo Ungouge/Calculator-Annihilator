@@ -14,11 +14,15 @@ namespace Options_Window_Library
         {
             Set_Element_Style_Delegate_Method("Button");
 
-            //Set_Element_Style_Delegate_Method("DockPanel");
+            Set_Element_Style_Delegate_Method("DockPanel");
 
-            //Set_Element_Style_Delegate_Method("Grid");
+            Set_Element_Style_Delegate_Method("Grid");
 
-            //Set_Element_Style_Delegate_Method("TabControl");
+            Set_Element_Style_Delegate_Method("TabControl");
+
+            Set_Element_Style_Delegate_Method("TabItem");
+
+            Set_Element_Style_Delegate_Method("TextBlock");
         }
     }
 }

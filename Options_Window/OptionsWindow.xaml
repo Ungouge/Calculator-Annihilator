@@ -7,37 +7,46 @@
         xmlns:base="clr-namespace:AnnihilatorWindowBase;assembly=AnnihilatorWindowBase"
         mc:Ignorable="d"
         Title="{Binding Options, Mode=OneWay, FallbackValue= Options}"
-        Background="Turquoise"
         Height="{Binding Window_Height, Mode=OneWay, FallbackValue= 500}"
-        Width="{Binding Window_Width, Mode=OneWay, FallbackValue= 800}">
+        Width="{Binding Window_Width, Mode=OneWay, FallbackValue= 800}"
+                              OverridesDefaultStyle="False">
     
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Style.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Style.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Style.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Style.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabItem_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
     
-    <DockPanel Margin="10,10,10,10">
+    <DockPanel Margin="10,10,10,10"
+               Style="{DynamicResource DockPanel_Style}">
 
         <TabControl HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
-                    DockPanel.Dock="Top">
+                    DockPanel.Dock="Top"
+                    Style="{DynamicResource TabControl_Style}">
             <TabControl.Resources>
+                
                 <Style TargetType="ComboBox">
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="HorizontalAlignment" Value="Right"/>
                     <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue=36}"/>
                     <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Width, Mode=OneWay, FallbackValue=200}"/>
                 </Style>
+                
             </TabControl.Resources>
-            <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}">
-                <Grid Height="{Binding General_Options_Grid_Height, Mode= OneWay, FallbackValue= 250}">
+            <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}"
+                     Style="{DynamicResource TabItem_Style}">
+                
+                <Grid Height="{Binding General_Options_Grid_Height, Mode= OneWay, FallbackValue= 250}"
+                      Style="{DynamicResource Grid_Style}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="2*"/>
@@ -50,7 +59,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay, FallbackValue= Language}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
 
                     <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
@@ -67,14 +76,14 @@
                                         Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay, FallbackValue=Language_Name}"
                                         VerticalAlignment="Center"
                                         DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                                        Style="{StaticResource TextBlock_Style}"/>
+                                        Style="{DynamicResource TextBlock_Style}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size_Type, Mode=OneWay, FallbackValue= Font_Size}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
 
                     <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_Items_List, Mode=OneWay}"
@@ -90,15 +99,18 @@
                                     <TextBlock Text="{Binding ElementName=Font_Size_List_ComboBox_StackPanel, Path=DataContext.Font_Size_Name, Mode=OneWay, FallbackValue=Font_Size_Name}" 
                                                VerticalAlignment="Center"
                                         DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                                        Style="{StaticResource TextBlock_Style}"/>
+                                        Style="{DynamicResource TextBlock_Style}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}">
-                <Grid Height="{Binding TabItem_Grid_Height, Mode= OneWay, FallbackValue= 250}">
+            <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}"
+                     Style="{DynamicResource TabItem_Style}">
+                
+                <Grid Height="{Binding TabItem_Grid_Height, Mode= OneWay, FallbackValue= 250}"
+                      Style="{DynamicResource Grid_Style}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -118,7 +130,7 @@
 
                     <TextBlock Name="Number_Notation_List_TextBlock" 
                                Text="{Binding Number_Notation_Type, Mode=OneWay, FallbackValue= Number_Notation_Type}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0"/>
 
                     <ComboBox Name="Number_Notation_List_ComboBox" ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
@@ -136,7 +148,7 @@
 
                     <TextBlock Name="Numeral_System_List_TextBlock" 
                                Text="{Binding Numeral_System_Type, Mode=OneWay, FallbackValue= Numeral_System_Type}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="2"/>
 
                     <ComboBox Name="Numeral_System_List_ComboBox"
@@ -159,7 +171,7 @@
 
                     <TextBlock Name="Comma_Symbol_TextBlock" 
                                Text="{Binding Comma_Symbol, Mode=OneWay, FallbackValue= Comma_Symbol}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="4"/>
 
                     <ComboBox Name="Comma_Type_List_ComboBox" ItemsSource="{Binding Comma_Type_Items_List, Mode=OneWay}"
@@ -183,12 +195,12 @@
 
                     <TextBlock Name="Mode_Calculator_TextBlock" 
                                Text="{Binding Mode_Calculator, Mode=OneWay, FallbackValue= Mode_Calculator}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="6"/>
 
                     <TextBlock Name="Method_Calculation_TextBlock" 
                                Text="{Binding Method_Calculation, Mode=OneWay, FallbackValue= Method_Calculation}"
-                               Style="{StaticResource TextBlock_Style}"
+                               Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="8"/>
                 </Grid>
             </TabItem>
@@ -196,7 +208,8 @@
 
         <Grid Height="{Binding ComboBox_List_Image_Height, Mode= OneWay, FallbackValue= 24}"
               HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
-              DockPanel.Dock="Bottom">
+              DockPanel.Dock="Bottom"
+              Style="{DynamicResource Grid_Style}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
