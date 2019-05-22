@@ -8,7 +8,10 @@ using System.Windows.Media;
 
 namespace AnnihilatorWindowBase
 {
-    abstract public class Annihilator_Window_Base: Window
+    abstract public class Annihilator_Window_Base : Window
     {
+        protected abstract void Set_Element_Style(string element_Name);
+
+        protected abstract void Set_Styles();
     }
 }
