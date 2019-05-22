@@ -16,7 +16,9 @@ namespace Options_Library
         public Number_Notation Number_Notation { get; set; }
         
         public Font_Size_Type Font_Size_Type { get; set; }
-        
+
+        public Colour_Palette_Type Colour_Palette_Type { get; set; }
+
         public sbyte Numeral_System_Code { get; protected set; }
         
         public Languages Current_Language { get; protected set; }

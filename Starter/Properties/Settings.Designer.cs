@@ -166,5 +166,14 @@ namespace Starter.Properties {
                 this["Load_Hello_Window_Next_Run"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Defalut")]
+        public global::Common_Library.Colour_Palette_Type Colour_Palette_Type {
+            get {
+                return ((global::Common_Library.Colour_Palette_Type)(this["Colour_Palette_Type"]));
+            }
+        }
     }
 }

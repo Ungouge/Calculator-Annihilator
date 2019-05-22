@@ -11,7 +11,7 @@ namespace Calculator_Annihilator_Library
         /// </summary>
         internal Options(IMainWindow_For_Options mainWindow , IOptions_Storage options) : base(options.Calculator_Mode,
             options.Calculation_Method, options.Initial_Height, options.Initial_Width,
-            options.Number_Notation, options.Font_Size_Type)
+            options.Number_Notation, options.Font_Size_Type, options.Colour_Palette_Type)
         {
             MainWindow = mainWindow;
             Set_Comma_Type(options.Comma_Type);

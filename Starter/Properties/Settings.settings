@@ -38,5 +38,8 @@
     <Setting Name="Load_Hello_Window_Next_Run" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="Colour_Palette_Type" Type="Common_Library.Colour_Palette_Type" Scope="Application">
+      <Value Profile="(Default)">Defalut</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

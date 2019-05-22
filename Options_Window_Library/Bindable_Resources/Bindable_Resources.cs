@@ -12,7 +12,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Constructs new instance of Bindable_Resources for given OptionsWindow.
         /// </summary>
-        public Bindable_Resources(IGet_Standard_Messages _OptionsWindow, Set_Element_Style_Delegate _Set_Element_Style_Delegate_Method, Font_Size_Type _Font_Size_Type) : base(_Font_Size_Type)
+        public Bindable_Resources(IGet_Standard_Messages _OptionsWindow, Set_Element_Style_Delegate _Set_Element_Style_Delegate_Method, Font_Size_Type _Font_Size_Type, Colour_Palette_Type _Colour_Palette_Type) : base(_Font_Size_Type, _Colour_Palette_Type )
         {
             Set_Element_Style_Delegate_Method = _Set_Element_Style_Delegate_Method;
 

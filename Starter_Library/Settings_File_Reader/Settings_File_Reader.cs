@@ -28,6 +28,8 @@ namespace Starter_Library
 
             Font_Size_Type = (Font_Size_Type)Settings["Font_Size_Type"];
 
+            Colour_Palette_Type = (Colour_Palette_Type)Settings["Colour_Palette_Type"];
+
             numeral_System = (sbyte)Settings["numeral_System"];
 
             Language = (Languages)Settings["Language"];
@@ -41,6 +43,7 @@ namespace Starter_Library
                 Number_Notation,
                 comma_Type,
                 Font_Size_Type,
+                Colour_Palette_Type,
                 numeral_System,
                 Language
             );

@@ -16,6 +16,8 @@ namespace Options_Library
 
         Font_Size_Type Font_Size_Type { get;  }
 
+        Colour_Palette_Type Colour_Palette_Type { get; }
+
         sbyte Numeral_System_Code { get;  }
 
         Languages Current_Language { get; }

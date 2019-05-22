@@ -35,6 +35,11 @@ namespace Options_Library
             get { throw new ArgumentNullException(); }
         }
 
+        public Colour_Palette_Type Colour_Palette_Type
+        {
+            get { throw new ArgumentNullException(); }
+        }
+
         public sbyte Numeral_System_Code
         {
             get { throw new ArgumentNullException(); }

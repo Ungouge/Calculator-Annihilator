@@ -24,6 +24,8 @@ namespace Starter_Library
 
         private Font_Size_Type Font_Size_Type;
 
+        private Colour_Palette_Type Colour_Palette_Type;
+
         private sbyte numeral_System;
 
         private Languages Language;

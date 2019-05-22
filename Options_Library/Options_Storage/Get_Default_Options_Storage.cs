@@ -17,6 +17,7 @@ namespace Options_Library
                     Number_Notation.Normal,
                     System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator,
                     Font_Size_Type.Normal,
+                    Colour_Palette_Type.Defalut,
                     10,
                     Languages.English
                 );
