@@ -36,7 +36,5 @@ namespace AnnihilatorWindowBase
         public double Highlighted_Corner_Radius { get; protected set; }
 
         public double Highlighted_Border_Thickness { get; protected set; }
-
-        protected Set_Element_Style_Delegate Set_Element_Style_Delegate_Method;
     }
 }

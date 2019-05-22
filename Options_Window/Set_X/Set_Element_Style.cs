@@ -5,7 +5,7 @@ namespace Options_Window
 {
     partial class OptionsWindow
     {
-        public void Set_Element_Style(string element_Name)
+        protected override void Set_Element_Style(string element_Name)
         {
             element_Name += "_Style";
 

@@ -24,7 +24,7 @@ namespace Options_Window
 
             Options = _MainWindow.Get_Options;
 
-            _Bindable_Resources = new Bindable_Resources(this, Set_Element_Style, Options.Font_Size_Type, Options.Colour_Palette_Type);
+            _Bindable_Resources = new Bindable_Resources(this, Options.Font_Size_Type, Options.Colour_Palette_Type);
 
             Option_Change_Command_List = new List<IChange_Option_Command>();
             
@@ -56,7 +56,7 @@ namespace Options_Window
 
             Comma_Type_List_ComboBox.DataContext = _Comma_Type_List_Content;
 
-            _Bindable_Resources.Set_Styles();
+            Set_Styles();
         }
     }
 }

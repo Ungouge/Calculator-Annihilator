@@ -65,5 +65,8 @@ namespace Calculator_Annihilator
             }
 
         }
+
+        protected override void Set_Element_Style(string element_Name) { }
+        protected override void Set_Styles() { }
     }
 }
