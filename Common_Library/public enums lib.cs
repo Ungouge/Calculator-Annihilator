@@ -38,4 +38,12 @@
         Big,
         Hight_Contrast
     }
+
+    public enum Colour_Palette_Type
+    {
+        Defalut,
+        System,
+        High_Contrast,
+        Colour_Blind
+    }
 }
