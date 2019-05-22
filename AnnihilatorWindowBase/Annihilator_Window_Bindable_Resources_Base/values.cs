@@ -9,26 +9,34 @@ namespace AnnihilatorWindowBase
     {
         protected readonly Font_Size_Type Font_Size_Type;
 
-        public Color Background_Colour { get; set; }
+        protected readonly Colour_Palette_Type Colour_Palette_Type;
 
-        public Color Foreground_Colour { get; set; }
+        public Color Background_Colour { get; protected set; }
 
-        public Color Control_Background_Colour { get; set; }
-
-        public Color Highlighted_Control_Background_Colour { get; set; }
-
-        public Color Control_Border_Colour { get; set; }
-
-        public double Text_FontSize { get; set; }
-
-        public double Window_Height { get; set; }
-
-        public double Window_Width { get; set; }
-
-        public double Corner_Radius { get; set; }
-
-        public double Border_Thickness { get; set; }
+        public Color Foreground_Colour { get; protected set; }
         
+        public Color Control_Background_Colour { get; protected set; }
+
+        public Color Control_Border_Colour { get; protected set; }
+
+        public Color Highlighted_Control_Background_Colour { get; protected set; }
+
+        public Color Highlighted_Control_Border_Colour { get; protected set; }
+
+        public double Text_FontSize { get; protected set; }
+
+        public double Window_Height { get; protected set; }
+
+        public double Window_Width { get; protected set; }
+
+        public double Corner_Radius { get; protected set; }
+
+        public double Border_Thickness { get; protected set; }
+
+        public double Highlighted_Corner_Radius { get; protected set; }
+
+        public double Highlighted_Border_Thickness { get; protected set; }
+
         protected Set_Element_Style_Delegate Set_Element_Style_Delegate_Method;
     }
 }
