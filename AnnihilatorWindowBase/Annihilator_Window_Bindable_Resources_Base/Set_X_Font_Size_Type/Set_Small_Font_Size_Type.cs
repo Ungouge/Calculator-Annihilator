@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows;
+using Common_Library;
 
 namespace AnnihilatorWindowBase
 {
@@ -9,7 +9,15 @@ namespace AnnihilatorWindowBase
         {
             Text_FontSize = 12;
 
-            Set_Default_Colours();
+            Corner_Radius = 1;
+
+            Border_Thickness = 2;
+
+            Highlighted_Corner_Radius = Corner_Radius;
+
+            Highlighted_Border_Thickness = Corner_Radius;
+
+            Set_Colour_Palette();
         }
     }
 }

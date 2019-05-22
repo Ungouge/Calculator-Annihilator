@@ -9,11 +9,15 @@ namespace AnnihilatorWindowBase
         {
             Text_FontSize = 18;
 
-            Corner_Radius = 2;
+            Corner_Radius = 15e-1;
 
-            Border_Thickness = 4;
+            Border_Thickness = 3;
 
-            Set_Default_Colours();
+            Highlighted_Corner_Radius = Corner_Radius;
+
+            Highlighted_Border_Thickness = Corner_Radius;
+
+            Set_Colour_Palette();
         }
     }
 }

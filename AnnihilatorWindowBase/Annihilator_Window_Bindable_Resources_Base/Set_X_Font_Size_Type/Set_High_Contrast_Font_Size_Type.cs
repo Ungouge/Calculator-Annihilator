@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows;
+using Common_Library;
 
 namespace AnnihilatorWindowBase
 {
@@ -9,17 +9,18 @@ namespace AnnihilatorWindowBase
         {
             Text_FontSize = 48;
 
-            Corner_Radius = 0;
+            Corner_Radius = 2;
 
             Border_Thickness = 4;
 
-            Background_Colour = Get_High_Contrast_WindowBrush;
+            Highlighted_Corner_Radius = Corner_Radius;
 
-            Foreground_Colour = Get_High_Contrast_WindowTextBrush;
+            Highlighted_Border_Thickness = Corner_Radius;
 
-            Control_Background_Colour = Get_High_Contrast_ControlBrush;
-
-            Control_Border_Colour = Get_High_Contrast_ActiveBorderBrush;
+            if (Colour_Palette_Type is Colour_Palette_Type.Colour_Blind)
+                Set_Colour_Blind_Colours();
+            else
+                Set_High_Contrast_Colours();
         }
     }
 }
