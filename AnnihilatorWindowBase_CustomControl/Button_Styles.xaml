@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <Style TargetType="Button" x:Key="Button_Style"/>
 
     <Style TargetType="Button" x:Key="Base_Button_Style" >
@@ -22,15 +22,24 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border  x:Name="Button_Border"
-                             CornerRadius="{Binding Corner_Radius,Mode=OneWay, FallbackValue=2}"
-                             BorderThickness="{Binding Border_Thickness, Mode=OneWay, FallbackValue=4}"
+                             OverridesDefaultStyle="False"
+                             BorderThickness="{Binding Border_Thickness, Mode=OneWay, FallbackValue=3}"
+                             CornerRadius="{Binding Corner_Radius,Mode=OneWay, FallbackValue=1.5}"
                              Background="{StaticResource control_Background_Colour}"
-                             BorderBrush="{StaticResource borderBrush_Colour}">
+                             BorderBrush="{StaticResource border_Colour}">
                         <ContentPresenter  Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Button_Border" Property="BorderThickness" Value="{Binding Highlighted_Border_Thickness, Mode=OneWay, FallbackValue=3}" />
+                            <Setter TargetName="Button_Border" Property="CornerRadius" Value="{Binding Highlighted_Corner_Radius,Mode=OneWay, FallbackValue=1.5}" />
+                            <Setter TargetName="Button_Border" Property="Background" Value="{StaticResource highlighted_Control_Background_Colour }" />
+                            <Setter TargetName="Button_Border" Property="BorderBrush" Value="{StaticResource highlighted_Control_Border_Colour }" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
-            
+
         </Setter>
 
         <Style.Triggers>
@@ -39,20 +48,11 @@
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="Foreground" Value="DarkBlue"/>
 
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border 
-                              Background="White"
-                              BorderBrush="Yellow">
-                                <ContentPresenter  Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
             </Trigger>
-            
         </Style.Triggers>
-        
+
+
+
+
     </Style>
 </ResourceDictionary>
