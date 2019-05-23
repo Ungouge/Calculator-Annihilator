@@ -27,7 +27,10 @@ namespace Hello_Window
         {
             InitializeComponent();
         }
-        protected override void Set_Element_Style(string element_Name) { }
+
+        protected override string[] Styled_Elements_List { get; } = new string[] { };
+        protected override void Set_Element_Base_Style(){}
+        protected override void Set_Element_Default_Style() { }
         protected override void Set_Styles() { }
     }
 }

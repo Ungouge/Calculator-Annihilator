@@ -7,19 +7,38 @@ namespace Options_Window
 {
     partial class OptionsWindow
     {
+        protected override string[] Styled_Elements_List { get; } = new string[] { "Button", "DockPanel", "Grid", "TabControl", "TabItem", "TextBlock" };
+
         protected override void Set_Styles()
         {
-            Set_Element_Style("Button");
+            if ( Options.Colour_Palette_Type == Colour_Palette_Type.Defalut && Options.Font_Size_Type != Font_Size_Type.Hight_Contrast)
+                Set_Element_Base_Style();
+            else
+                Set_Element_Default_Style();
+        }
 
-            Set_Element_Style("DockPanel");
+        protected override void Set_Element_Base_Style()
+        {
+            foreach (string element in Styled_Elements_List)
+            {
+                string element_Name = element + "_Style";
 
-            Set_Element_Style("Grid");
+                string resource_Name = "Base_" + element_Name;
 
-            Set_Element_Style("TabControl");
+                Resources[element_Name] = Resources[resource_Name];
+            }
+        }
 
-            Set_Element_Style("TabItem");
+        protected override void Set_Element_Default_Style()
+        {
+            foreach (string element in Styled_Elements_List)
+            {
+                string element_Name = element + "_Style";
 
-            Set_Element_Style("TextBlock");
+                string resource_Name = "Default_" + element_Name;
+
+                Resources[element_Name] = Resources[resource_Name];
+            }
         }
     }
 }

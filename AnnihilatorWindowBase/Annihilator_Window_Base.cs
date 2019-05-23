@@ -10,7 +10,11 @@ namespace AnnihilatorWindowBase
 {
     abstract public class Annihilator_Window_Base : Window
     {
-        protected abstract void Set_Element_Style(string element_Name);
+        protected abstract string[] Styled_Elements_List { get; }
+
+        protected abstract void Set_Element_Base_Style();
+
+        protected abstract void Set_Element_Default_Style();
 
         protected abstract void Set_Styles();
     }
