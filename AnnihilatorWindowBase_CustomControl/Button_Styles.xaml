@@ -26,7 +26,8 @@
                              BorderThickness="{Binding Border_Thickness, Mode=OneWay, FallbackValue=3}"
                              CornerRadius="{Binding Corner_Radius,Mode=OneWay, FallbackValue=1.5}"
                              Background="{StaticResource control_Background_Colour}"
-                             BorderBrush="{StaticResource border_Colour}">
+                             BorderBrush="{StaticResource border_Colour}"
+                             RenderTransformOrigin="0.45,0.45">
                         <ContentPresenter  Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -35,7 +36,28 @@
                             <Setter TargetName="Button_Border" Property="CornerRadius" Value="{Binding Highlighted_Corner_Radius,Mode=OneWay, FallbackValue=1.5}" />
                             <Setter TargetName="Button_Border" Property="Background" Value="{StaticResource highlighted_Control_Background_Colour }" />
                             <Setter TargetName="Button_Border" Property="BorderBrush" Value="{StaticResource highlighted_Control_Border_Colour }" />
+                            <!--<Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="MouseOver">
+                                        <ColorAnimation
+                                            Storyboard.TargetName="Button_Border"
+                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                            To="Red"
+                                            Duration="0:0:0.4"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>-->
                         </Trigger>
+                        <Trigger Property ="IsPressed" Value ="True">
+                            <Setter TargetName="Button_Border" Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform 
+                                        ScaleX="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.95}"
+                                        ScaleY="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.95}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -50,9 +72,6 @@
 
             </Trigger>
         </Style.Triggers>
-
-
-
-
+        
     </Style>
 </ResourceDictionary>

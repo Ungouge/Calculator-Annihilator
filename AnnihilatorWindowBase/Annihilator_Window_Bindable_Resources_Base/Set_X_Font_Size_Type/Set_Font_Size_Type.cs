@@ -7,6 +7,8 @@ namespace AnnihilatorWindowBase
     {
         public void Set_Font_Size_Type()
         {
+            Pressed_Scale_Factor = 9e-1;
+
             switch (Font_Size_Type)
             {
                 case Font_Size_Type.Small:

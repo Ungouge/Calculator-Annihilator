@@ -13,6 +13,8 @@ namespace AnnihilatorWindowBase
 
             Border_Thickness = 4;
 
+            Pressed_Scale_Factor = 1;
+
             Highlighted_Corner_Radius = Corner_Radius;
 
             Highlighted_Border_Thickness = Corner_Radius;
