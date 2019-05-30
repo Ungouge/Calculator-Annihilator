@@ -11,5 +11,7 @@ namespace Options_Window_Library
         public double ComboBox_Element_Width { get; set; }
 
         public double ComboBox_List_Image_Height { get; set; }
+
+        public Thickness TabItem_Margin_Thickness { get; private set; }
     }
 }

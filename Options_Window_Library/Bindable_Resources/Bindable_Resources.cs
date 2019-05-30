@@ -22,6 +22,8 @@ namespace Options_Window_Library
 
             ComboBox_Element_Width = Set_ComboBox_List_Image_Width();
 
+            TabItem_Margin_Thickness = new System.Windows.Thickness(Border_Thickness, Border_Thickness, Border_Thickness, 0);
+
             Set_Window_Size();
         }
     }
