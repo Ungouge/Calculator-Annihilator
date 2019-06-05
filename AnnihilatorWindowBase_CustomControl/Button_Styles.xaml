@@ -52,8 +52,8 @@
                             <Setter TargetName="Button_Border" Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform 
-                                        ScaleX="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.95}"
-                                        ScaleY="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.95}"/>
+                                        ScaleX="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.9}"
+                                        ScaleY="{Binding Pressed_Scale_Factor, Mode=OneWay, FallbackValue=0.9}"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>

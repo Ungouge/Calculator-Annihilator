@@ -7,7 +7,7 @@ namespace Options_Window
 {
     partial class OptionsWindow
     {
-        protected override string[] Styled_Elements_List { get; } = new string[] { "Button", "DockPanel", "Grid", "TabControl", "TabItem", "TextBlock" };
+        protected override string[] Styled_Elements_List { get; } = new string[] { "Button", "ComboBox", "DockPanel", "Grid", "TabControl", "TabItem", "TextBlock" };
 
         protected override void Set_Styles()
         {

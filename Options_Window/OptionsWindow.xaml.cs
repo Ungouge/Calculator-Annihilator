@@ -46,6 +46,8 @@ namespace Options_Window
             
             // Postinitialization
 
+            Set_Styles();
+
             Number_Notation_List_ComboBox.DataContext = _Number_Notation_List_Context;
 
             Language_List_ComboBox.DataContext = _Langauge_List_Context;
@@ -56,7 +58,6 @@ namespace Options_Window
 
             Comma_Type_List_ComboBox.DataContext = _Comma_Type_List_Content;
 
-            Set_Styles();
         }
     }
 }
