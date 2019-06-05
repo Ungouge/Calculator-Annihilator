@@ -9,44 +9,42 @@
         Title="{Binding Options, Mode=OneWay, FallbackValue= Options}"
         Height="{Binding Window_Height, Mode=OneWay, FallbackValue= 500}"
         Width="{Binding Window_Width, Mode=OneWay, FallbackValue= 800}"
-                              OverridesDefaultStyle="False">
+        OverridesDefaultStyle="False">
     
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/ComboBox_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabItem_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Numeral_System_List/Numeral_System_ComboBox_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Number_Notation_List/Number_Notation_ComboBox_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Language_List/Language_ComboBox_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Font_Size_List/Font_Size_ComboBox_ItemTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
 
-    
+
     <DockPanel Margin="10,10,10,10"
                Style="{DynamicResource DockPanel_Style}">
 
-        <TabControl HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
+        <TabControl HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
                     DockPanel.Dock="Top"
                     Style="{DynamicResource TabControl_Style}">
-            <TabControl.Resources>
-                
-                <Style TargetType="ComboBox">
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                    <Setter Property="HorizontalAlignment" Value="Right"/>
-                    <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue=36}"/>
-                    <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Width, Mode=OneWay, FallbackValue=200}"/>
-                </Style>
-                
-            </TabControl.Resources>
+            
             <TabItem Header="{Binding General_Options, Mode=OneWay, FallbackValue= General}"
                      Style="{DynamicResource TabItem_Style}">
                 
                 <Grid Height="{Binding General_Options_Grid_Height, Mode= OneWay, FallbackValue= 250}"
                       Style="{DynamicResource Grid_Style}">
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="2*"/>
@@ -58,6 +56,7 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
+                    
                     <TextBlock Name="Language_List_TextBlock" Text="{Binding Language, Mode=OneWay, FallbackValue= Language}"
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
@@ -65,22 +64,9 @@
                     <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" 
                               SelectionChanged="Language_List_ComboBox_SelectionChanged"
-                              Grid.Column="2" Grid.Row="0" >
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Name="Language_List_ComboBox_StackPanel" Orientation="Horizontal" Width="200"
-                                            Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
-                                    <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"  VerticalAlignment="Center"
-                                           Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-                                    <TextBlock 
-                                        Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay, FallbackValue=Language_Name}"
-                                        VerticalAlignment="Center"
-                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                                        Style="{DynamicResource TextBlock_Style}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
+                              Style="{DynamicResource ComboBox_Style}"
+                              ItemTemplate="{StaticResource Language_ComboBox_ItemTemplate}"
+                              Grid.Column="2" Grid.Row="0"/>
 
                     <TextBlock Name="Font_Size_List_TextBlock" Text="{Binding Font_Size_Type, Mode=OneWay, FallbackValue= Font_Size}"
                                Style="{DynamicResource TextBlock_Style}"
@@ -89,23 +75,12 @@
                     <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}"
                               SelectionChanged="Font_Size_List_ComboBox_SelectionChanged"
-                              Grid.Column="2" Grid.Row="2">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Name="Font_Size_List_ComboBox_StackPanel" Orientation="Horizontal" Width="200"
-                                            Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
-                                    <Image Source="{Binding Font_Size_Symbol_Uri, Mode=OneWay}"  VerticalAlignment="Center"
-                                           Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-                                    <TextBlock Text="{Binding ElementName=Font_Size_List_ComboBox_StackPanel, Path=DataContext.Font_Size_Name, Mode=OneWay, FallbackValue=Font_Size_Name}" 
-                                               VerticalAlignment="Center"
-                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                                        Style="{DynamicResource TextBlock_Style}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
+                              Style="{DynamicResource ComboBox_Style}"
+                              ItemTemplate="{StaticResource Font_Size_ComboBox_ItemTemplate}"
+                              Grid.Column="2" Grid.Row="2"/>
                 </Grid>
             </TabItem>
+            
             <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}"
                      Style="{DynamicResource TabItem_Style}">
                 
@@ -133,18 +108,13 @@
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0"/>
 
-                    <ComboBox Name="Number_Notation_List_ComboBox" ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
+                    <ComboBox Name="Number_Notation_List_ComboBox"
+                              ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Number_Notation_List_ComboBox_SelectedItem}"
                               SelectionChanged="Number_Notation_List_ComboBox_SelectionChanged"
-                              Grid.Column="1" Grid.Row="0">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Number_Notation_Name, Mode=OneWay}" Width="200"
-                                           Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue= 18}"
-                                           FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
+                              Style="{DynamicResource ComboBox_Style}"
+                              ItemTemplate="{StaticResource Number_Notation_ComboBox_ItemTemplate}"
+                              Grid.Column="1" Grid.Row="0"/>
 
                     <TextBlock Name="Numeral_System_List_TextBlock" 
                                Text="{Binding Numeral_System_Type, Mode=OneWay, FallbackValue= Numeral_System_Type}"
@@ -155,18 +125,14 @@
                               ItemsSource="{Binding Numeral_System_List_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Numeral_System_List_ComboBox_SelectedItem}"
                               SelectionChanged="Numeral_System_List_ComboBox_SelectionChanged"
+                              Style="{DynamicResource Numeral_System_List_ComboBox_Style}"
+                              ItemTemplate="{Binding}"
                               Grid.Column="1" Grid.Row="2">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
                                 <Setter Property="IsEnabled" Value="{Binding Is_Enabled, Mode=OneWay, FallbackValue=True}"/>
                             </Style>
                         </ComboBox.ItemContainerStyle>
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <ContentControl x:Name="Numeral_System_List_ComboBox_ContentControl"
-                                                Content="{Binding }"/>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBlock Name="Comma_Symbol_TextBlock" 
@@ -177,6 +143,7 @@
                     <ComboBox Name="Comma_Type_List_ComboBox" ItemsSource="{Binding Comma_Type_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Comma_Type_List_ComboBox_SelectedItem}"
                               SelectionChanged="Comma_Type_List_ComboBox_SelectionChanged"
+                              Style="{DynamicResource ComboBox_Style}"
                               Grid.Column="1" Grid.Row="4">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
@@ -185,12 +152,6 @@
                                 <Setter Property="Selector.IsManipulationEnabled" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
                             </Style>
                         </ComboBox.ItemContainerStyle>
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <ContentControl x:Name="Comma_Type_List_ComboBox_ContentControl"
-                                                Content="{Binding }"/>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBlock Name="Mode_Calculator_TextBlock" 
@@ -228,8 +189,7 @@
             <Button Name="Ok_Buton" Content="{Binding Ok, Mode=OneWay ,FallbackValue= Ok}"
                                 Style="{DynamicResource Button_Style}"
                                 Click="Ok_Buton_Click"
-                                Grid.Column="2"
-                                />
+                                Grid.Column="2"/>
             <Button Name="Cancel_Buton" Content="{Binding Cancel, Mode=OneWay ,FallbackValue= Cancel}"
                                 Style="{DynamicResource Button_Style}"
                                 Click="Cancel_Buton_Click"
