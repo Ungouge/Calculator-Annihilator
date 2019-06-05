@@ -7,11 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="24" d:DesignWidth="128">
 
-    <DockPanel>
-
-        <DockPanel.Background>
-            <SolidColorBrush Color="Gray"/>
-        </DockPanel.Background>
+    <DockPanel Background="{Binding RelativeSource={RelativeSource  Mode=TemplatedParent}}">
 
         <TextBlock Text="{Binding Content_Text, Mode=OneWay}" Width="{Binding Text_Width, Mode=OneWay}"
                    FontSize="{Binding RelativeSource={RelativeSource AncestorType=Window},
