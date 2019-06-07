@@ -3,6 +3,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Styles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate x:Key="Language_ComboBox_ItemTemplate">
@@ -11,15 +12,16 @@
                     Orientation="Horizontal"
                     Width="200"
                     Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
-            
-            <Image Source="{Binding Language_Flag_Uri, Mode=OneWay}"
+
+            <Image Source="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Flag_Uri, Mode=OneWay}"
                    VerticalAlignment="Center"
+                   DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
                    Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-            
-            <TextBlock Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay, FallbackValue=Language_Name}"
+
+            <TextBlock Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay}"
                        VerticalAlignment="Center"
                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                       Style="{DynamicResource TextBlock_Style}"/>
+                       Style="{DynamicResource TextBlock_Style }"/>
             
         </StackPanel>
         
