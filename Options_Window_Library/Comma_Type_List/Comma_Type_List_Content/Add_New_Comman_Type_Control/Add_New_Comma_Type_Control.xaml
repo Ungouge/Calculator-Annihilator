@@ -16,7 +16,7 @@
         <Button Name="Add_New_Comma" Click="Add_New_Comma_Click"   Margin="0,0,0,0">
             <TextBlock Text="{Binding Content_Text, Mode=OneWay}" VerticalAlignment="Center"
                    Height="{Binding RelativeSource={RelativeSource AncestorType=Window},
-                            Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay, FallbackValue=13.5}"
+                            Path=DataContext.ComboBox_List_Image_Size, Mode=OneWay, FallbackValue=13.5}"
                    Width="{Binding Button_Width, Mode=OneWay, FallbackValue=13.5}"/>
         </Button>
     </StackPanel>

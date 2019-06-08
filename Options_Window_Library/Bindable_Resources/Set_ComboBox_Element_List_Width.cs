@@ -7,7 +7,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets with of comboboxes according to currently setted font size.
         /// </summary>
-        private double Set_ComboBox_List_Image_Width()
+        private double Set_ComboBox_Element_List_Width()
         {
             return 200; // xyz
         }

@@ -9,7 +9,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets size of images in comboboxes according to currently setted font size.
         /// </summary>
-        private double Set_ComboBox_List_Image_Height()
+        private double Set_ComboBox_List_Image_Size()
         {
             Formatted_Text_Getter formatted_Text =
                 new Formatted_Text_Getter(new TextBlock() { Text = "Xyz" },

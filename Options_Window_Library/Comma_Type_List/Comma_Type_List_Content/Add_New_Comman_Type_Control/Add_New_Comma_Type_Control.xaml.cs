@@ -22,7 +22,7 @@ namespace Options_Window_Library
 
             Content_Text = Standard_Messages.Translate("Add_New_Comma");
 
-            Image_Width = Bindable_Resources.ComboBox_List_Image_Height;
+            Image_Width = Bindable_Resources.ComboBox_List_Image_Size;
 
             Text_Width = Bindable_Resources.ComboBox_Element_Width - Image_Width;
 

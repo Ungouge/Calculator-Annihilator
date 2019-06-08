@@ -15,11 +15,11 @@
 
             <Image Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Font_Size_Symbol_Uri, Mode=OneWay}"
                    VerticalAlignment="Center"
-                   Height="{Binding ComboBox_List_Image_Height, Mode=OneWay}"/>
+                   Height="{Binding ComboBox_List_Image_Size, Mode=OneWay}"/>
 
             <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Font_Size_Name, Mode=OneWay}"
                        VerticalAlignment="Center"
-                       Height="{Binding ComboBox_List_Image_Height, Mode=OneWay}"
+                       Height="{Binding ComboBox_List_Image_Size, Mode=OneWay}"
                        Style="{DynamicResource TextBlock_Style}"/>
             </StackPanel>
             
