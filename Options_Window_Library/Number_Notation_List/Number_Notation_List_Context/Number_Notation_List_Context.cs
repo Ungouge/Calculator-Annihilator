@@ -7,11 +7,11 @@ namespace Options_Window_Library
     /// <summary>
     /// Provides data context for Number_Notation_List_CombBox.
     /// </summary>
-    public partial class Number_Notation_List_Context
+    internal partial class Number_Notation_List_Context : INumber_Notation_List_Context
     {
         private IStandard_Messages_Translate Standard_Messages;
 
-        public List<Number_Notation_List_Item> Number_Notation_List_Items_List { get; set; }
+        public List<Number_Notation_List_Item> Number_Notation_List_Items_List { get; private set; }
 
         public Number_Notation_List_Item Number_Notation_List_ComboBox_SelectedItem { get; set; }
 

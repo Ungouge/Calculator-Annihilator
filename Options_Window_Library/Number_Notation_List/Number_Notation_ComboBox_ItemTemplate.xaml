@@ -5,10 +5,14 @@
         <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-    <DataTemplate x:Key="Number_Notation_ComboBox_ItemTemplate">
-        <TextBlock Text="{Binding Number_Notation_Name, Mode=OneWay}" Width="200"
-                   Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay, FallbackValue= 18}"
-                   FontSize="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.Text_FontSize, Mode=OneWay, FallbackValue= 18}"/>
+    <DataTemplate x:Key="Number_Notation_ComboBox_ItemTemplate" x:Name="XYZ">
+        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Number_Notation_Name, Mode=OneWay}"
+                   DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+                   Width="200"
+                   Height="{Binding ComboBox_Element_Height, Mode=OneWay, FallbackValue= 18}"
+                   FontSize="{Binding Text_FontSize, Mode=OneWay, FallbackValue= 18}"
+                   Style="{DynamicResource TextBlock_Style}"/>
+        
     </DataTemplate>
 
 </ResourceDictionary>
