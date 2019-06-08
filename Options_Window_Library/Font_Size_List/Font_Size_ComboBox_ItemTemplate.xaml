@@ -6,16 +6,22 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate x:Key="Font_Size_ComboBox_ItemTemplate">
-        <StackPanel Name="Font_Size_List_ComboBox_StackPanel" Orientation="Horizontal"
-                    Width="200"
-                    Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
-            <Image Source="{Binding Font_Size_Symbol_Uri, Mode=OneWay}"  VerticalAlignment="Center"
-                   Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
-            <TextBlock Text="{Binding ElementName=Font_Size_List_ComboBox_StackPanel, Path=DataContext.Font_Size_Name, Mode=OneWay, FallbackValue=Font_Size_Name}"
+        <DockPanel Name="Font_Size_List_ComboBox_DockPanel">
+            
+            <StackPanel Name="Font_Size_List_ComboBox_StackPanel" Orientation="Horizontal"
+                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+                        Width="200"
+                        Height="{Binding ComboBox_Element_Height, Mode=OneWay}"
+                        Background="{StaticResource background_Colour}">
+                <Image Source="{Binding Font_Size_Symbol_Uri, Mode=OneWay}"
                        VerticalAlignment="Center"
-                       DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                       Style="{DynamicResource TextBlock_Style}"/>
-        </StackPanel>
+                       Height="{Binding ComboBox_List_Image_Height, Mode=OneWay}"/>
+                <TextBlock Text="{Binding ElementName=Font_Size_List_ComboBox_DockPanel, Path=DataContext.Font_Size_Name, Mode=OneWay}"
+                           VerticalAlignment="Center"
+                           Style="{DynamicResource TextBlock_Style}"/>
+            </StackPanel>
+            
+        </DockPanel>
     </DataTemplate>
 
 </ResourceDictionary>
