@@ -7,11 +7,11 @@ namespace Options_Window_Library
     /// <summary>
     /// Provides data context for Language_List_CombBox.
     /// </summary>
-    public partial class Langauge_List_Context
+    internal partial class Langauge_List_Context : ILangauge_List_Context
     {
         private IStandard_Messages_Translate Standard_Messages;
 
-        public List<Langauge_List_Items> Langauge_List_Items_List { get; set; }
+        public List<Langauge_List_Items> Langauge_List_Items_List { get; private set; }
 
         public Langauge_List_Items Language_List_ComboBox_SelectedItem { get; set; }
 

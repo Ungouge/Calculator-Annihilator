@@ -7,24 +7,28 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate x:Key="Language_ComboBox_ItemTemplate">
-        
-        <StackPanel Name="Language_List_ComboBox_StackPanel"
-                    Orientation="Horizontal"
-                    Width="200"
-                    Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_Element_Height, Mode=OneWay}">
+        <DockPanel Name="Language_List_ComboBox_DockPanel">
 
-            <Image Source="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Flag_Uri, Mode=OneWay}"
-                   VerticalAlignment="Center"
-                   DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                   Height="{Binding RelativeSource={RelativeSource AncestorType={ x:Type Window}}, Path=DataContext.ComboBox_List_Image_Height, Mode=OneWay}"/>
+            <StackPanel Name="Language_List_ComboBox_StackPanel"
+                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+                        Orientation="Horizontal"
+                        Background="{StaticResource background_Colour}"
+                        Width="200"
+                        Height="{Binding ComboBox_Element_Height, Mode=OneWay}">
 
-            <TextBlock Text="{Binding ElementName=Language_List_ComboBox_StackPanel, Path=DataContext.Language_Name, Mode=OneWay}"
+                <Image Source="{Binding ElementName=Language_List_ComboBox_DockPanel, Path=DataContext.Language_Flag_Uri, Mode=OneWay}"
                        VerticalAlignment="Center"
-                       DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
-                       Style="{DynamicResource TextBlock_Style }"/>
-            
-        </StackPanel>
-        
+                       Height="{Binding ComboBox_List_Image_Height, Mode=OneWay}"/>
+
+                <TextBlock Text="{Binding ElementName=Language_List_ComboBox_DockPanel, Path=DataContext.Language_Name, Mode=OneWay}"
+                           VerticalAlignment="Center"
+                           Height="{Binding ComboBox_List_Image_Height, Mode=OneWay}"
+                           Style="{DynamicResource TextBlock_Style }"/>
+
+            </StackPanel>
+
+        </DockPanel>
+
     </DataTemplate>
 
 </ResourceDictionary>
