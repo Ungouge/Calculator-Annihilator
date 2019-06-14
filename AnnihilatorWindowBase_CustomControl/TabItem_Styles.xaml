@@ -13,11 +13,7 @@
 
     <Style TargetType="TabItem" x:Key="Default_TabItem_Style" BasedOn="{StaticResource Base_TabItem_Style}">
 
-        <Style.Resources>
-            <ResourceDictionary Source="colours.Xaml"/>
-        </Style.Resources>
-
-        <Setter Property="Foreground" Value="{StaticResource foreground_Colour}"/>
+        <Setter Property="Foreground" Value="{Binding Foreground_Colour, Mode=OneWay, FallbackValue= Black}"/>
         <Setter Property="FontWeight" Value="Normal"/>
 
         <Setter Property="Template">
@@ -30,8 +26,8 @@
                             Margin="{Binding TabItem_Margin_Thickness, Mode=OneWay, FallbackValue='3,3,3,0'}"
                             BorderThickness="{Binding Border_Thickness, Mode=OneWay, FallbackValue=3}"
                             CornerRadius="{Binding Corner_Radius,Mode=OneWay, FallbackValue=1.5}"
-                            Background="{StaticResource control_Background_Colour}"
-                            BorderBrush="{StaticResource border_Colour}"
+                            Background="{Binding Control_Background_Colour, Mode=OneWay, FallbackValue= LightGray}"
+                            BorderBrush="{Binding Control_Border_Colour, Mode=OneWay, FallbackValue= Black}"
                             RenderTransformOrigin="0.5,1">
                             <ContentPresenter  x:Name="TabItem_ContentPresenter" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" ContentSource="Header"/>
 
@@ -64,8 +60,8 @@
                             <Setter Property="Foreground" Value="DarkBlue"/>
                             <Setter TargetName="TabItem_Border" Property="BorderThickness" Value="{Binding Highlighted_Border_Thickness, Mode=OneWay, FallbackValue=3}" />
                             <Setter TargetName="TabItem_Border" Property="CornerRadius" Value="{Binding Highlighted_Corner_Radius,Mode=OneWay, FallbackValue=1.5}" />
-                            <Setter TargetName="TabItem_Border" Property="Background" Value="{StaticResource highlighted_Control_Background_Colour }" />
-                            <Setter TargetName="TabItem_Border" Property="BorderBrush" Value="{StaticResource highlighted_Control_Border_Colour }" />
+                            <Setter TargetName="TabItem_Border" Property="Background" Value="{Binding Highlighted_Control_Background_Colour, Mode=OneWay, FallbackValue=PowderBlue}" />
+                            <Setter TargetName="TabItem_Border" Property="BorderBrush" Value="{Binding Highlighted_Control_Border_Colour, Mode=OneWay, FallbackValue=red}" />
                             <Setter TargetName="TabItem_Border" Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform
@@ -95,7 +91,7 @@
                                 <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                             </MultiDataTrigger.Conditions>
 
-                            <Setter TargetName="TabItem_Border" Property="BorderBrush" Value="{StaticResource highlighted_Control_Border_Colour }" />
+                            <Setter TargetName="TabItem_Border" Property="BorderBrush" Value="{Binding Highlighted_Control_Border_Colour, Mode=OneWay, FallbackValue=red}" />
 
                         </MultiDataTrigger>
 

@@ -12,13 +12,9 @@
 
     <Style TargetType="TabControl" x:Key="Default_TabControl_Style" BasedOn="{StaticResource Base_TabControl_Style}">
 
-        <Style.Resources>
-            <ResourceDictionary Source="colours.Xaml"/>
-        </Style.Resources>
-
         <Setter Property="OverridesDefaultStyle" Value="False"/>
-        <Setter Property="Background" Value="{StaticResource background_Colour}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource border_Colour}"/>
+        <Setter Property="Background" Value="{Binding Background_Colour, Mode=OneWay, FallbackValue= White}"/>
+        <Setter Property="BorderBrush" Value="{Binding Control_Border_Colour, Mode=OneWay, FallbackValue= Black}"/>
         <Setter Property="BorderThickness" Value="{Binding Border_Thickness, Mode=OneWay, FallbackValue=2}"/>
         
     </Style>

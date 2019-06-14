@@ -14,13 +14,9 @@
     </Style>
 
     <Style TargetType="ComboBox" x:Key="Default_ComboBox_Style" BasedOn="{StaticResource Base_ComboBox_Style}">
-
-        <Style.Resources>
-            <ResourceDictionary Source="colours.Xaml"/>
-        </Style.Resources>
-
-        <Setter Property="Background" Value="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}"/>
-        <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
+<!--XYZ-->
+        <Setter Property="Background" Value="Bisque"/>
+        <Setter Property="Foreground" Value="Azure"/>
 
         <Setter Property="OverridesDefaultStyle" Value="false"/>
 
