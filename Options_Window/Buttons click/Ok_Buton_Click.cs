@@ -7,7 +7,7 @@ namespace Options_Window
     {
         private void Ok_Buton_Click(object sender, RoutedEventArgs e)
         {
-            Apply_Option_Change(Options);
+            Apply_Option_Change(Options_Provider);
 
             this.Close();
         }

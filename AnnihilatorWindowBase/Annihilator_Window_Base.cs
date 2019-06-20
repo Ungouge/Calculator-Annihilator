@@ -1,21 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media;
+using Common_Library;
+using Options_Library;
 
 namespace AnnihilatorWindowBase
 {
-    abstract public class Annihilator_Window_Base : Window
+    abstract public partial class Annihilator_Window_Base : Window
     {
-        protected abstract string[] Styled_Elements_List { get; }
+        protected virtual IOptions_Provider Options_Provider { get; set; }
 
-        protected abstract void Set_Element_Base_Style();
+        public IOptions_Storage Get_Options_Storage
+        {
+            get
+            {
+                return Options_Provider;
+            }
+        }
 
-        protected abstract void Set_Element_Default_Style();
-
-        protected abstract void Set_Styles();
+        public ISet_Options Get_Set_Options
+        {
+            get
+            {
+                return Options_Provider;
+            }
+        }
     }
 }

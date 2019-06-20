@@ -9,14 +9,14 @@ namespace Calculator_Annihilator
 	{
         internal IOptions Options;
 
-        public IOptions_Provider Get_Options
+        protected override IOptions_Provider Options_Provider
         {
             get
             {
                 return Options;
             }
         }
-        
+
         private Calculator _Calculator = new Calculator();
 
         private Equation Equation;
