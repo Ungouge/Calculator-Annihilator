@@ -11,17 +11,19 @@ namespace AnnihilatorWindowBase
 
         protected readonly Colour_Palette_Type Colour_Palette_Type;
 
-        public Color Background_Colour { get; protected set; }
+        public SolidColorBrush Background_Colour { get; protected set; }
 
-        public Color Foreground_Colour { get; protected set; }
+        public SolidColorBrush Foreground_Colour { get; protected set; }
         
-        public Color Control_Background_Colour { get; protected set; }
+        public SolidColorBrush Control_Background_Colour { get; protected set; }
 
-        public Color Control_Border_Colour { get; protected set; }
+        public SolidColorBrush Control_Border_Colour { get; protected set; }
 
-        public Color Highlighted_Control_Background_Colour { get; protected set; }
+        public SolidColorBrush Highlighted_Foreground_Colour { get; protected set; }
 
-        public Color Highlighted_Control_Border_Colour { get; protected set; }
+        public SolidColorBrush Highlighted_Control_Background_Colour { get; protected set; }
+
+        public SolidColorBrush Highlighted_Control_Border_Colour { get; protected set; }
 
         public double Text_FontSize { get; protected set; }
 

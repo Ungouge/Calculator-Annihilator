@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 
 namespace AnnihilatorWindowBase
 {
@@ -7,17 +8,19 @@ namespace AnnihilatorWindowBase
     {
         private void Set_System_Colours()
         {
-            Background_Colour = SystemColors.WindowColor;
+            Background_Colour = new SolidColorBrush(SystemColors.WindowColor);
 
-            Foreground_Colour = SystemColors.WindowTextColor;
+            Foreground_Colour = new SolidColorBrush(SystemColors.WindowTextColor);
 
-            Control_Background_Colour = SystemColors.ControlColor;
+            Control_Background_Colour = new SolidColorBrush(SystemColors.ControlColor);
 
-            Control_Border_Colour = SystemColors.ActiveBorderColor;
+            Control_Border_Colour = new SolidColorBrush(SystemColors.ActiveBorderColor);
 
-            Highlighted_Control_Background_Colour = SystemColors.HighlightColor + SystemColors.ControlColor;
+            Highlighted_Foreground_Colour = new SolidColorBrush(SystemColors.WindowTextColor);
 
-            Highlighted_Control_Border_Colour = SystemColors.ActiveBorderColor;
+            Highlighted_Control_Background_Colour = new SolidColorBrush(SystemColors.HighlightColor + SystemColors.ControlColor);
+
+            Highlighted_Control_Border_Colour = new SolidColorBrush(SystemColors.ActiveBorderColor);
         }
     }
 }

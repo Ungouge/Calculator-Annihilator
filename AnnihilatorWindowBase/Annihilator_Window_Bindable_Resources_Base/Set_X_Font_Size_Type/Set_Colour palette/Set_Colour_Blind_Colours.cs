@@ -5,17 +5,19 @@ namespace AnnihilatorWindowBase
 {
     partial class Annihilator_Window_Bindable_Resources_Base
     {
-        private readonly Color Colour_Blind_WindowColour = Brushes.Orange.Color;
+        private readonly SolidColorBrush Colour_Blind_WindowColour = Brushes.Orange;
 
-        private readonly Color Colour_Blind_WindowTextColour = Brushes.Blue.Color;
+        private readonly SolidColorBrush Colour_Blind_WindowTextColour = Brushes.Blue;
 
-        private readonly Color Colour_Blind_ActiveBorderColour = Brushes.Green.Color;
+        private readonly SolidColorBrush Colour_Blind_ActiveBorderColour = Brushes.Green;
 
-        private readonly Color Colour_Blind_ControlColour = Brushes.Red.Color;
+        private readonly SolidColorBrush Colour_Blind_ControlColour = Brushes.Red;
 
-        private readonly Color Colour_Blind_Highlighted_Background_Colour = Brushes.Yellow.Color;
+        private readonly SolidColorBrush Colour_Blind_Highlighted_Foreground_Colour = Brushes.PapayaWhip;
 
-        private readonly Color Colour_Blind_Highlighted_Border_Colour = Brushes.White.Color;
+        private readonly SolidColorBrush Colour_Blind_Highlighted_Background_Colour = Brushes.Yellow;
+
+        private readonly SolidColorBrush Colour_Blind_Highlighted_Border_Colour = Brushes.White;
 
         private void Set_Colour_Blind_Colours()
         {
@@ -26,6 +28,8 @@ namespace AnnihilatorWindowBase
             Control_Background_Colour = Colour_Blind_ControlColour;
 
             Control_Border_Colour = Colour_Blind_ActiveBorderColour;
+
+            Highlighted_Foreground_Colour = Colour_Blind_Highlighted_Foreground_Colour;
 
             Highlighted_Control_Background_Colour = Colour_Blind_Highlighted_Background_Colour;
 
