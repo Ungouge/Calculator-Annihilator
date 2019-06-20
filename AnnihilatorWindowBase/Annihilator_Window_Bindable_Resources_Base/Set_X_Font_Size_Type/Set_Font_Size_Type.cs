@@ -5,7 +5,7 @@ namespace AnnihilatorWindowBase
 {
     partial class Annihilator_Window_Bindable_Resources_Base
     {
-        public void Set_Font_Size_Type()
+        private void Set_Font_Size_Type()
         {
             Pressed_Scale_Factor = 9e-1;
 

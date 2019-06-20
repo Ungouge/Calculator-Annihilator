@@ -25,7 +25,7 @@ namespace Calculator_Annihilator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Start_Up_Window_Base, IMainWindow, IGet_MainWindow_Parameters, IMainWindow_For_Bindable_Resources
+    public partial class MainWindow : Start_Up_Window_Base, IMainWindow, IMainWindow_For_Bindable_Resources
     {
         public MainWindow(IOptions_Storage _Options)
         {
@@ -66,9 +66,9 @@ namespace Calculator_Annihilator
 
         }
 
-        protected override string[] Styled_Elements_List { get; } = new string[] { };
-        protected override void Set_Element_Base_Style() { }
-        protected override void Set_Element_Default_Style() { }
-        protected override void Set_Styles() { }
+        //protected override string[] Styled_Elements_List { get; } = new string[] { };
+        //protected override void Set_Element_Base_Style() { }
+        //protected override void Set_Element_Default_Style() { }
+        //protected override void Set_Styles() { }
     }
 }

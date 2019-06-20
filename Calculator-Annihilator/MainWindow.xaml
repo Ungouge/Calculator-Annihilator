@@ -7,7 +7,6 @@
         xmlns:b="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Calculator_Annihilator"
         xmlns:base="clr-namespace:StartUpWindowBase;assembly=StartUpWindowBase"
-        xmlns:Properties="clr-namespace:Calculator_Annihilator.Properties"
         mc:Ignorable="d"
         Title="{Binding Title, Mode=OneWay, FallbackValue=Calculator-Annihilator}"
         SizeChanged="Window_Size_Changed"
