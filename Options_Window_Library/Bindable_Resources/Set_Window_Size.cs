@@ -13,21 +13,33 @@ namespace Options_Window_Library
                     Window_Height = 424;
 
                     Window_Width = 436;
+
+                    ComboBox_ToggleButton_Arrow_Width = 12;
+
                     break;
                 case Font_Size_Type.Normal:
                     Window_Height = 424;
 
                     Window_Width = 436;
+
+                    ComboBox_ToggleButton_Arrow_Width = 18;
+
                     break;
                 case Font_Size_Type.Big:
                     Window_Height = 424;
 
                     Window_Width = 436;
+
+                    ComboBox_ToggleButton_Arrow_Width = 24;
+
                     break;
                 case Font_Size_Type.Hight_Contrast:
-                    Window_Height = 480;
+                    Window_Height = 600;
 
-                    Window_Width = 640;
+                    Window_Width = 800;
+
+                    ComboBox_ToggleButton_Arrow_Width = 48;
+
                     break;
                 default:
                     goto case Font_Size_Type.Normal;

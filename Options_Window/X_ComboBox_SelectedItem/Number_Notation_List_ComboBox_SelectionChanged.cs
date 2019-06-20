@@ -13,7 +13,7 @@ namespace Options_Window
 
             Number_Notation New_Number_Notation = (Number_Notation)Number_Notation_List_ComboBox.SelectedIndex;
 
-            if (New_Number_Notation != Options.Number_Notation)
+            if (New_Number_Notation != Options_Provider.Number_Notation)
                 Option_Change_Command_List.Add(new Change_Number_Notation_Option_Command(New_Number_Notation));
         }
     }

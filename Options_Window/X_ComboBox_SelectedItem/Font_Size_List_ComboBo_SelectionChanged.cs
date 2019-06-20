@@ -13,7 +13,7 @@ namespace Options_Window
 
             Font_Size_Type New_Font = (Font_Size_Type)Font_Size_List_ComboBox.SelectedIndex;
 
-            if (New_Font != Options.Font_Size_Type)
+            if (New_Font != Options_Provider.Font_Size_Type)
                 Option_Change_Command_List.Add(new Change_Font_Size_Option_Command(New_Font));
         }
     }

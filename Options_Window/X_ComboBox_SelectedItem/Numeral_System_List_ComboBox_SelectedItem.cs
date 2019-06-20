@@ -15,7 +15,7 @@ namespace Options_Window
             {
                 sbyte New_Numeral_System = List_Item.Numeral_System_Code;
 
-                if (New_Numeral_System != Options.Numeral_System_Code)
+                if (New_Numeral_System != Options_Provider.Numeral_System_Code)
                     Option_Change_Command_List.Add(new Change_Numeral_System_Option_Command(New_Numeral_System));
             }
         }
