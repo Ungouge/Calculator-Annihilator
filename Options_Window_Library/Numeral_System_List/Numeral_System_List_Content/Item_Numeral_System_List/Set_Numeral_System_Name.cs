@@ -2,7 +2,7 @@
 
 namespace Options_Window_Library
 {
-    partial class Numeral_System_List_Item
+    partial class Item_Numeral_System_List
     {
         /// <summary>
         /// Sets Numeral_System_Name.
@@ -11,7 +11,7 @@ namespace Options_Window_Library
         {
             Content_Text = new_Numeral_System_Name;
 
-            On_Property_Change("Numeral_System_List_Item_Text");
+            On_Property_Change("Content_Text");
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase;component/Annihilator_Window_Base_ResourceDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="Label_Numeral_System_List_DataTemplate">
+
+        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Content_Text, Mode=OneWay}"
+                   DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext, Mode=OneWay}"
+                   Width="{Binding ComboBox_Element_Width, Mode=OneWay}"/>
+
+    </DataTemplate>
+
+</ResourceDictionary>
