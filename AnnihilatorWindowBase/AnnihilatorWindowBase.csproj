@@ -58,12 +58,27 @@
     <Compile Include="Annihilator_Window_Bindable_Resources_Base\Set_X_Font_Size_Type\Set_Small_Font_Size_Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Annihilator_Window_Bindable_Resources_Base\values.cs" />
+    <Compile Include="Set_Styles.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_ResourceDictionaries.csproj">
+      <Project>{ade7a734-6985-4337-b211-49505b37811d}</Project>
+      <Name>AnnihilatorWindowBase_ResourceDictionaries</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common_Library\Common_Library.csproj">
       <Project>{9152A06F-69F4-423E-9263-885545E6504E}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Options_Library\Options_Library.csproj">
+      <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
+      <Name>Options_Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Annihilator_Window_Base_ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
