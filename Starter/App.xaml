@@ -5,14 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/ComboBox_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabItem_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase;component/Annihilator_Window_Base_ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

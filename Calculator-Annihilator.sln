@@ -43,7 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWindow", "HelloWindow"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Window", "Hello_Window\Hello_Window.csproj", "{5D6099D8-B0D6-4CA6-AFFE-D381885D0B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase_CustomControl", "AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_CustomControl.csproj", "{ADE7A734-6985-4337-B211-49505B37811D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase_ResourceDictionaries", "AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_ResourceDictionaries.csproj", "{ADE7A734-6985-4337-B211-49505B37811D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnihilatorWindowBase", "AnnihilatorWindowBase\AnnihilatorWindowBase.csproj", "{0D6D4FDC-B7EC-4981-B138-6634C1789A07}"
 EndProject
