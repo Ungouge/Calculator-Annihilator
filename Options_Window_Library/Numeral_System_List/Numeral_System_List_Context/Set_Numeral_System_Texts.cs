@@ -12,7 +12,7 @@ namespace Options_Window_Library
         {
             foreach (Numeral_System_List_Content list_Content in Numeral_System_List_Items_List)
             {
-                if (list_Content is Numeral_System_List_Item list_Item)
+                if (list_Content is Item_Numeral_System_List list_Item)
                 {
                     string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
                         list_Item.Numeral_System_Code, standard_Messages);
