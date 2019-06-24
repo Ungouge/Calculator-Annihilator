@@ -32,7 +32,7 @@ namespace Options_Window_Library
 
             Comma_Type_List_Context = new Comma_Type_List_Context(this, OptionsWindow_For_Comma_Type_List_Context);
 
-            Numeral_System_List_Context = new Numeral_System_List_Context(this, Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
+            Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
 
             Number_Notation_List_Context = new Number_Notation_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Number_Notation);
 

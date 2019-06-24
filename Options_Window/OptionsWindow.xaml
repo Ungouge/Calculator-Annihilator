@@ -10,26 +10,10 @@
         Height="{Binding Window_Height, Mode=OneWay, FallbackValue= 500}"
         Width="{Binding Window_Width, Mode=OneWay, FallbackValue= 800}"
         OverridesDefaultStyle="False">
-    
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Button_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/ComboBox_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/DockPanel_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/Grid_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabControl_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TabItem_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/TextBlock_Styles.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Numeral_System_List/Numeral_System_ComboBox_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Number_Notation_List/Number_Notation_ComboBox_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Language_List/Language_ComboBox_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Font_Size_List/Font_Size_ComboBox_ItemTemplate.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
 
+    <Window.Resources>
+        <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/Annihilator_Window_Base_ResourceDictionary.xaml"/>
+    </Window.Resources>
 
     <DockPanel Margin="10,10,10,10"
                Style="{DynamicResource DockPanel_Style}">
@@ -61,8 +45,9 @@
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-                    <ComboBox Name="Language_List_ComboBox" ItemsSource="{Binding Langauge_List_Items_List, Mode=OneWay}"
-                              SelectedItem="{Binding Language_List_ComboBox_SelectedItem}" 
+                    <ComboBox Name="Language_List_ComboBox"
+                              ItemsSource="{Binding Langauge_List_Context.Langauge_List_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Langauge_List_Context.Language_List_ComboBox_SelectedItem}" 
                               SelectionChanged="Language_List_ComboBox_SelectionChanged"
                               Style="{DynamicResource ComboBox_Style}"
                               ItemTemplate="{StaticResource Language_ComboBox_ItemTemplate}"
@@ -72,8 +57,9 @@
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
 
-                    <ComboBox Name="Font_Size_List_ComboBox" ItemsSource="{Binding Font_Size_Items_List, Mode=OneWay}"
-                              SelectedItem="{Binding Font_Size_List_ComboBox_SelectedItem}"
+                    <ComboBox Name="Font_Size_List_ComboBox"
+                              ItemsSource="{Binding Font_Size_List_Context.Font_Size_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Font_Size_List_Context.Font_Size_List_ComboBox_SelectedItem}"
                               SelectionChanged="Font_Size_List_ComboBox_SelectionChanged"
                               Style="{DynamicResource ComboBox_Style}"
                               ItemTemplate="{StaticResource Font_Size_ComboBox_ItemTemplate}"
@@ -84,7 +70,7 @@
             <TabItem Header="{Binding Calculator_Options, Mode=OneWay, FallbackValue= Calculator}"
                      Style="{DynamicResource TabItem_Style}">
                 
-                <Grid Height="{Binding TabItem_Grid_Height, Mode= OneWay, FallbackValue= 250}"
+                <Grid Height="{Binding TabItem_Grid_Height, Mode= OneWay, FallbackValue= 135}"
                       Style="{DynamicResource Grid_Style}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -109,8 +95,8 @@
                                Grid.Column="0" Grid.Row="0"/>
 
                     <ComboBox Name="Number_Notation_List_ComboBox"
-                              ItemsSource="{Binding Number_Notation_List_Items_List, Mode=OneWay}"
-                              SelectedItem="{Binding Number_Notation_List_ComboBox_SelectedItem}"
+                              ItemsSource="{Binding Number_Notation_List_Context.Number_Notation_List_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Number_Notation_List_Context.Number_Notation_List_ComboBox_SelectedItem}"
                               SelectionChanged="Number_Notation_List_ComboBox_SelectionChanged"
                               Style="{DynamicResource ComboBox_Style}"
                               ItemTemplate="{StaticResource Number_Notation_ComboBox_ItemTemplate}"
@@ -122,14 +108,15 @@
                                Grid.Column="0" Grid.Row="2"/>
 
                     <ComboBox Name="Numeral_System_List_ComboBox"
-                              ItemsSource="{Binding Numeral_System_List_Items_List, Mode=OneWay}"
-                              SelectedItem="{Binding Numeral_System_List_ComboBox_SelectedItem}"
+                              ItemsSource="{Binding Numeral_System_List_Context.Numeral_System_List_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Numeral_System_List_Context.Numeral_System_List_ComboBox_SelectedItem}"
                               SelectionChanged="Numeral_System_List_ComboBox_SelectionChanged"
-                              Style="{DynamicResource Numeral_System_List_ComboBox_Style}"
-                              ItemTemplate="{Binding}"
+                              ItemTemplateSelector="{StaticResource Numeral_System_List_ItemTemplate_Selector}"
+                              Style="{DynamicResource ComboBox_Style}"
                               Grid.Column="1" Grid.Row="2">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
+                                <!--<Setter Property="OverridesDefaultStyle" Value="False" ??? do remove/>-->
                                 <Setter Property="IsEnabled" Value="{Binding Is_Enabled, Mode=OneWay, FallbackValue=True}"/>
                             </Style>
                         </ComboBox.ItemContainerStyle>
@@ -140,8 +127,9 @@
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="4"/>
 
-                    <ComboBox Name="Comma_Type_List_ComboBox" ItemsSource="{Binding Comma_Type_Items_List, Mode=OneWay}"
-                              SelectedItem="{Binding Comma_Type_List_ComboBox_SelectedItem}"
+                    <ComboBox Name="Comma_Type_List_ComboBox"
+                              ItemsSource="{Binding Comma_Type_List_Context.Comma_Type_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Comma_Type_List_Context.Comma_Type_List_ComboBox_SelectedItem}"
                               SelectionChanged="Comma_Type_List_ComboBox_SelectionChanged"
                               Style="{DynamicResource ComboBox_Style}"
                               Grid.Column="1" Grid.Row="4">
@@ -167,7 +155,7 @@
             </TabItem>
         </TabControl>
 
-        <Grid Height="{Binding ComboBox_List_Image_Height, Mode= OneWay, FallbackValue= 24}"
+        <Grid Height="{Binding ComboBox_List_Image_Size, Mode= OneWay, FallbackValue= 24}"
               HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
               DockPanel.Dock="Bottom"
               Style="{DynamicResource Grid_Style}">

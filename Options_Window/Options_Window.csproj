@@ -74,7 +74,6 @@
     <Compile Include="Buttons click\Ok_Buton_Click.cs" />
     <Compile Include="Buttons click\Remove_Obsolete_Command.cs" />
     <Compile Include="Push_Set_Text.cs" />
-    <Compile Include="Set_X\Set_Styles.cs" />
     <Compile Include="Set_X\Set_Texts.cs" />
     <Compile Include="values.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Add_New_Comma_Type_Option_Command.cs" />
@@ -119,9 +118,9 @@
       <Project>{0D6D4FDC-B7EC-4981-B138-6634C1789A07}</Project>
       <Name>AnnihilatorWindowBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_CustomControl.csproj">
+    <ProjectReference Include="..\AnnihilatorWindowBase_CustomControl\AnnihilatorWindowBase_ResourceDictionaries.csproj">
       <Project>{ade7a734-6985-4337-b211-49505b37811d}</Project>
-      <Name>AnnihilatorWindowBase_CustomControl</Name>
+      <Name>AnnihilatorWindowBase_ResourceDictionaries</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common_Library\Common_Library.csproj">
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>

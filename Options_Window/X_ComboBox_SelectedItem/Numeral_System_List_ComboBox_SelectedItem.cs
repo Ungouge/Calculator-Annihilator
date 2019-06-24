@@ -11,7 +11,7 @@ namespace Options_Window
         {
             Remove_Obsolete_Command<Change_Numeral_System_Option_Command>();
 
-            if (Numeral_System_List_ComboBox.SelectedItem is Numeral_System_List_Item List_Item)
+            if (Numeral_System_List_ComboBox.SelectedItem is IItem_Numeral_System_List List_Item)
             {
                 sbyte New_Numeral_System = List_Item.Numeral_System_Code;
 
