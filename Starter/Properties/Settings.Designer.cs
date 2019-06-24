@@ -121,7 +121,7 @@ namespace Starter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Hight_Contrast")]
         public global::Common_Library.Font_Size_Type Font_Size_Type {
             get {
                 return ((global::Common_Library.Font_Size_Type)(this["Font_Size_Type"]));
@@ -167,12 +167,15 @@ namespace Starter.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Defalut")]
+        [global::System.Configuration.DefaultSettingValueAttribute("High_Contrast")]
         public global::Common_Library.Colour_Palette_Type Colour_Palette_Type {
             get {
                 return ((global::Common_Library.Colour_Palette_Type)(this["Colour_Palette_Type"]));
+            }
+            set {
+                this["Colour_Palette_Type"] = value;
             }
         }
     }
