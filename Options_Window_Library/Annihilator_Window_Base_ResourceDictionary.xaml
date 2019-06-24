@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase;component/Annihilator_Window_Base_ResourceDictionary.xaml"/>
+        <ResourceDictionary Source="Numeral_System_List\Numeral_System_List_ItemTemplate_Selector.xaml"/>
+        <ResourceDictionary Source="Number_Notation_List/Number_Notation_ComboBox_ItemTemplate.xaml"/>
+        <ResourceDictionary Source="Language_List/Language_ComboBox_ItemTemplate.xaml"/>
+        <ResourceDictionary Source="Font_Size_List/Font_Size_ComboBox_ItemTemplate.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>
