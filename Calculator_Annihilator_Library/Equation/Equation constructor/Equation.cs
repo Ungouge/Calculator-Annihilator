@@ -14,12 +14,13 @@ namespace Calculator_Annihilator_Library
 		/// </summary>
 		/// <param name="eq">String that will be convert to equation elements list.</param>
 		/// <param name="ns">Numeral system </param>
-		public Equation ( string eq, Numeral_System ns )
+		public Equation ( string eq, Numeral_System ns, string[] Commas_Type)
 		{
 			the_Equation = eq;
+
 			_Numerical_System = ns;
 
-            _Parser = new Parser(_Numerical_System);
+            _Parser = new Parser(_Numerical_System, Commas_Type);
 
             Element_Selector();
 

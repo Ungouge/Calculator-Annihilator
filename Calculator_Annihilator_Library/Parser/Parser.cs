@@ -8,11 +8,15 @@ namespace Calculator_Annihilator_Library
     /// </summary>
     public partial class Parser
     {
-        Numeral_System Numeral_System;
+        private Numeral_System Numeral_System;
 
-        public Parser(Numeral_System numeral_System)
+        private string[] Commas_Type;
+
+        public Parser(Numeral_System numeral_System, string[] _Commas_Type)
         {
             Numeral_System = numeral_System;
+
+            Commas_Type = _Commas_Type;
         }
     }
 }

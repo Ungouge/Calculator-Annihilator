@@ -73,11 +73,11 @@ namespace Calculator_Annihilator_Library
 		/// Cheks does comma ocurs in converting string, returns its position (if there is none in string return length
 		/// of string that corresponds to dummy position of comma in number).
 		/// </summary>
-		private static int Comma_Position(string work_Text)
+		private int Comma_Position(string work_Text)
 		{
             for (int i = 0; i < work_Text.Length; i++)
             {
-                foreach (string comma in Commas.Commas_Type)
+                foreach (string comma in Commas_Type)
                 {
                     int j = i;
 
