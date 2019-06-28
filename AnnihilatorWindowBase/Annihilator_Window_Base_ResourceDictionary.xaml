@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_ResourceDictionaries;component/TabControl_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_ResourceDictionaries;component/TabItem_Styles.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_ResourceDictionaries;component/TextBlock_Styles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_ResourceDictionaries;component/TextBox_Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
