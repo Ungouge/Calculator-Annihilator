@@ -2,15 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase_CustomControl;component/colours.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AnnihilatorWindowBase;component/Annihilator_Window_Base_ResourceDictionary.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate x:Key="Language_ComboBox_ItemTemplate">
 
-        <StackPanel Name="Language_List_ComboBox_StackPanel"
-                    DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
+        <StackPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}},Path=DataContext}"
                     Orientation="Horizontal"
-                    Background="{StaticResource background_Colour}"
+                    Background="{Binding Background_Colour, Mode=OneWay, FallbackValue= White}"
                     Width="200"
                     Height="{Binding ComboBox_Element_Height, Mode=OneWay}">
 
@@ -21,7 +20,7 @@
             <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Language_Name, Mode=OneWay}"
                        VerticalAlignment="Center"
                        Height="{Binding ComboBox_List_Image_Size, Mode=OneWay}"
-                       Style="{DynamicResource TextBlock_Style }"/>
+                       Style="{DynamicResource Highlightable_TextBlock_Style }"/>
 
         </StackPanel>
 
