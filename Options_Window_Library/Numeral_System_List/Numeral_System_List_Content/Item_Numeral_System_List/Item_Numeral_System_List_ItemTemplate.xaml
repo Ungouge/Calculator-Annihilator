@@ -7,8 +7,7 @@
 
     <DataTemplate x:Key="Item_Numeral_System_List_DataTemplate">
 
-        <StackPanel Name="Item_Numeral_System_List_Control_StackPanel"
-                    Orientation="Horizontal"
+        <StackPanel Orientation="Horizontal"
                     DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext, Mode=OneWay}"
                     Height="{Binding ComboBox_Element_Height, Mode=OneWay}">
 
@@ -17,8 +16,7 @@
                        Width="{Binding Text_Width, Mode=OneWay}"
                        Style="{DynamicResource Highlightable_TextBlock_Style}"/>
 
-            <Button Name="Numeral_System_Item_Button"
-                    Margin="0,0,0,0"
+            <Button Margin="0,0,0,0"
                     Style="{DynamicResource Button_Style}"
                     Command="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Numeral_System_Item_Button_Click}">
                 <Image Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.Pin_Image_Uri, Mode=OneWay}"

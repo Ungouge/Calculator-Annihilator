@@ -58,23 +58,21 @@
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Bindable_Resources\values.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_Item.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_Button_Command.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\IComma_Type_List_Item.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Add_New_Comma_Type.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Commas_Type_Item_Factory.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Add_New_Comma_Type.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Click.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Type_Control.xaml.cs">
-      <DependentUpon>Add_New_Comma_Type_Control.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Content.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Item_Comma_Type_Control\Item_Comma_Type_Control.xaml.cs">
-      <DependentUpon>Item_Comma_Type_Control.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Comma_Type_List_Context.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\On_Property_Change.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Return_Current_Comma_Type_Item.cs" />
     <Compile Include="Comma_Type_List\Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
-    <Compile Include="Comma_Type_List\IComma_Type_List_Context.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_Item.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Context\IComma_Type_List_Context.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Set_Comma_Type_List_ComboBox_SelectedItem.cs" />
+    <Compile Include="Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.cs" />
     <Compile Include="Font_Size_List\Font_Size_List_Context\Font_Size_List_Context.cs" />
     <Compile Include="Font_Size_List\Font_Size_List_Item\Font_Size_List_Item.cs" />
     <Compile Include="Font_Size_List\Font_Size_List_Item\On_Property_Change.cs" />
@@ -105,7 +103,6 @@
     <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\Pinned_Item_Numeral_System_List.cs" />
     <Compile Include="Numeral_System_List\Numeral_System_List_Context\INumeral_System_List_Context.cs" />
     <Compile Include="Numeral_System_List\Numeral_System_List_Context\Item_List methods\Add_Pinned_Item.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Item_List methods\Find_Numeral_System_Item.cs" />
     <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_All_Systems_Label_Control.cs" />
     <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Item.cs" />
     <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Pinned_Systems_Label_Control.cs" />
@@ -138,10 +135,6 @@
       <Project>{9152a06f-69f4-423e-9263-885545e6504e}</Project>
       <Name>Common_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IOptionsWindow_Parameters\IOptionsWindow_Parameters.csproj">
-      <Project>{85b4a3cf-2e7e-471a-a5c1-7e88d0323d77}</Project>
-      <Name>IOptionsWindow_Parameters</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
       <Name>Options_Library</Name>
@@ -149,6 +142,22 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Annihilator_Window_Base_ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_ItemTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_ItemTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Comma_Type_List\ContentSite_Comma_Type_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -172,14 +181,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Comma_Type_List\Comma_Type_List_Content\Add_New_Comman_Type_Control\Add_New_Comma_Type_Control.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Comma_Type_List\Comma_Type_List_Content\Item_Comma_Type_Control\Item_Comma_Type_Control.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Numeral_System_List\ContentSite_Numeral_System_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -189,5 +190,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

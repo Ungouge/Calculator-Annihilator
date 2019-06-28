@@ -22,13 +22,6 @@ namespace Options_Window_Library
                         Output_Items_List.Add(Pinned_Item);
                     }
                 }
-                //foreach (sbyte numeral_System in Pinned_Numeral_Systems.Get_Numeral_Systems_Codes)
-                //{
-                //    IItem_Numeral_System_List item = Factory.Get_Item( numeral_System);
-
-                //    if (item is Pinned_Item_Numeral_System_List pinned_Item)
-                //        Output_Items_List.Add(pinned_Item);
-                //}
             }
 
             return Output_Items_List;
