@@ -1,36 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using IOptionsWindow_Parameters;
+using Common_Library;
+using Options_Library;
 
 namespace Options_Window_Library
 {
     /// <summary>
     /// Provides data context for Comma_Type_List_CombBox.
     /// </summary>
-    public partial class Comma_Type_List_Context
+    internal partial class Comma_Type_List_Context: IComma_Type_List_Context
     {
-        private IOptionsWindow_For_Comma_Type_List_Context OptionsWindow;
+        private IOptions_Provider Options_Provider;
+
+        private IStandard_Messages_Translate Standard_Messages;
 
         private Commas_Type_Item_Factory Factory;
 
-        private string[] Commas_Type;
+        internal string[] Commas_Type;
 
-        public Comma_Type_List_Content Comma_Type_List_ComboBox_SelectedItem { get; set; }
+        public IComma_Type_List_Item Comma_Type_List_ComboBox_SelectedItem { get; set; }
 
-        public List<Comma_Type_List_Content> Comma_Type_Items_List { get; private set; }
+        public List<IComma_Type_List_Item> Comma_Type_Items_List { get; private set; }
 
         /// <summary>
         /// Constructs new Comma_Type_List_Context for given OptionsWindow.
         /// </summary>
-        public Comma_Type_List_Context(IOptionsWindow_For_Comma_Type_List_Context _OptionsWindow, Bindable_Resources _Bindable_Resources)
+        public Comma_Type_List_Context(IStandard_Messages_Translate _Standard_Messages, IOptions_Provider _Options_Provider)
         {
-            OptionsWindow = _OptionsWindow;
+            Options_Provider = _Options_Provider;
 
-            Commas_Type = OptionsWindow.Get_Options_Storage.Commas_Type_Array;
+            Standard_Messages = _Standard_Messages;
 
-            Factory = new Commas_Type_Item_Factory(_Bindable_Resources, OptionsWindow.Get_Standard_Messages);
+            Commas_Type = Options_Provider.Commas_Type_Array;
+
+            Factory = new Commas_Type_Item_Factory(this, Standard_Messages);
 
             Comma_Type_Items_List = Set_Comma_Type_Items_List();
+
+            Comma_Type_List_ComboBox_SelectedItem = Set_Comma_Type_List_ComboBox_SelectedItem();
         } 
-    }
+    } 
 }

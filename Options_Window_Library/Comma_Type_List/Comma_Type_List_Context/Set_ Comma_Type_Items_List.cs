@@ -8,16 +8,16 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets list of Comma_Type_List_Content.
         /// </summary>
-        private List<Comma_Type_List_Content> Set_Comma_Type_Items_List()
+        private List<IComma_Type_List_Item> Set_Comma_Type_Items_List()
         {
-            List<Comma_Type_List_Content> Output_List = new List<Comma_Type_List_Content>();
+            List<IComma_Type_List_Item> Output_List = new List<IComma_Type_List_Item>();
 
             foreach (string comma_Type in Commas_Type)
             {
                 Output_List.Add(Factory.Get_Item(comma_Type));
             }
 
-            Output_List.Add(Factory.Get_Add_New_Comma_Type(this));
+            Output_List.Add(Factory.Get_Add_New_Comma_Type());
 
             return Output_List;
         }

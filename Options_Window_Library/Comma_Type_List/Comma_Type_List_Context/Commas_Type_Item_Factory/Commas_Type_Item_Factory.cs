@@ -8,13 +8,13 @@ namespace Options_Window_Library
     /// </summary>
     internal partial class Commas_Type_Item_Factory
     {
-        private Bindable_Resources Bindable_Resources;
+        private Comma_Type_List_Context Comma_Type_List_Context;
 
         private IStandard_Messages_Translate Standard_Messages;
 
-        internal Commas_Type_Item_Factory(Bindable_Resources _Bindable_Resources, IStandard_Messages_Translate _Standard_Messages)
+        internal Commas_Type_Item_Factory(Comma_Type_List_Context _Comma_Type_List_Context, IStandard_Messages_Translate _Standard_Messages)
         {
-            Bindable_Resources = _Bindable_Resources;
+            Comma_Type_List_Context = _Comma_Type_List_Context;
 
             Standard_Messages = _Standard_Messages;
         }

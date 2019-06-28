@@ -7,9 +7,9 @@ namespace Options_Window_Library
         /// <summary>
         /// Gets instatiated Item_Comma_Type_Control.
         /// </summary>
-        internal Item_Comma_Type_Control Get_Item(string comma)
+        internal Comma_Type_List_Item Get_Item(string comma)
         {
-            return new Item_Comma_Type_Control(Bindable_Resources, comma);
+            return new Comma_Type_List_Item(comma);
         }
     }
 }

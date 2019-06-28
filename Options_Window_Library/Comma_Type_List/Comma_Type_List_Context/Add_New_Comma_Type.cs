@@ -14,8 +14,6 @@ namespace Options_Window_Library
 
             Comma_Type_Items_List = Set_Comma_Type_Items_List();
 
-            OptionsWindow.Add_New_Comma_Type_Option_Command(Commas_Type);
-
             On_Property_Change("Comma_Type_Items_List");
         }
     }

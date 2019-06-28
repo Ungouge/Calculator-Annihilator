@@ -7,9 +7,9 @@ namespace Options_Window_Library
         /// <summary>
         /// Gets instatiated Add_New_Comma_Type_Control.
         /// </summary>
-        internal Add_New_Comma_Type_Control Get_Add_New_Comma_Type(Comma_Type_List_Context Comma_Type_List_Context)
+        internal Add_New_Comma_Type_List_Item Get_Add_New_Comma_Type()
         {
-            return new Add_New_Comma_Type_Control(Comma_Type_List_Context, Bindable_Resources, Standard_Messages);
+            return new Add_New_Comma_Type_List_Item(Standard_Messages.Translate("Add_New_Comma"), Comma_Type_List_Context);
         }
     }
 }

@@ -8,14 +8,13 @@ namespace Options_Window_Library
         /// <summary>
         /// Returns cuurently selected item in Comma_Type_list_ComboBox.
         /// </summary>
-        /// <returns></returns>
-        public Item_Comma_Type_Control Return_Current_Comma_Type_Item()
+        public IComma_Type_List_Item Return_Current_Comma_Type_Item()
         {
-            foreach (Comma_Type_List_Content item_Content in Comma_Type_Items_List)
+            foreach (IComma_Type_List_Item item_Content in Comma_Type_Items_List)
             {
-                if (item_Content is Item_Comma_Type_Control item_Control)
+                if (item_Content is IComma_Type_List_Item Item)
                 {
-                    return item_Control;
+                    return Item;
                 }
             }
 
