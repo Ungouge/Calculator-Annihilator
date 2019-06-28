@@ -116,7 +116,6 @@
                               Grid.Column="1" Grid.Row="2">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
-                                <!--<Setter Property="OverridesDefaultStyle" Value="False" ??? do remove/>-->
                                 <Setter Property="IsEnabled" Value="{Binding Is_Enabled, Mode=OneWay, FallbackValue=True}"/>
                             </Style>
                         </ComboBox.ItemContainerStyle>
@@ -131,10 +130,12 @@
                               ItemsSource="{Binding Comma_Type_List_Context.Comma_Type_Items_List, Mode=OneWay}"
                               SelectedItem="{Binding Comma_Type_List_Context.Comma_Type_List_ComboBox_SelectedItem}"
                               SelectionChanged="Comma_Type_List_ComboBox_SelectionChanged"
+                              ItemTemplateSelector="{StaticResource Comma_Type_List_ItemTemplate_Selector}"
                               Style="{DynamicResource ComboBox_Style}"
                               Grid.Column="1" Grid.Row="4">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
+                                <Setter Property="OverridesDefaultStyle" Value="False"/>
                                 <Setter Property="IsSelected" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
                                 <Setter Property="Focusable" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>
                                 <Setter Property="Selector.IsManipulationEnabled" Value="{Binding Is_Selectable, Mode=OneWay, FallbackValue=True}"/>

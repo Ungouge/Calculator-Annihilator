@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Common_Library;
 using Options_Library;
-using IOptionsWindow_Parameters;
 using Windows_Structure;
 using Options_Window_Library;
 using AnnihilatorWindowBase;
@@ -12,7 +11,7 @@ namespace Options_Window
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
     /// </summary>
-    public partial class OptionsWindow : Annihilator_Window_Base, IMainWindow_Children, IOptionsWindow_Show, IOptionsWindow_For_Comma_Type_List_Context
+    public partial class OptionsWindow : Annihilator_Window_Base, IMainWindow_Children, IOptionsWindow_Show
     {
         public OptionsWindow(IMainWindow _MainWindow, IOptions_Provider _Options_Provider)
         {
@@ -24,7 +23,7 @@ namespace Options_Window
 
             Options_Provider = _Options_Provider;
 
-            _Bindable_Resources = new Bindable_Resources(this, this, Options_Provider);
+            _Bindable_Resources = new Bindable_Resources( Options_Provider);
 
             this.DataContext = _Bindable_Resources;
 

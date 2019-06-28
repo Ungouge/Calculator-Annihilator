@@ -62,8 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Get_X parameter\Get_Standard_Messages.cs" />
-    <Compile Include="Get_X parameter\Get_Options_Storage.cs" />
-    <Compile Include="Get_X parameter\Get_Numeral_System_List_ComboBox.cs" />
     <Compile Include="OptionsWindow.xaml.cs">
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
