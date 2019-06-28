@@ -10,12 +10,14 @@ namespace Options_Window_Library
 
         public double ComboBox_Element_Width { get; set; }
 
+        public double ComboBox_Text_Width { get; set; }
+
         public double ComboBox_List_Image_Size { get; private set; }
 
         public double ComboBox_ToggleButton_Arrow_Width { get; private set; }
 
         public double TabItem_Grid_Height { get; private set; }
-        
+
         public IComma_Type_List_Context Comma_Type_List_Context { get; private set; }
 
         public INumber_Notation_List_Context Number_Notation_List_Context { get; private set; }

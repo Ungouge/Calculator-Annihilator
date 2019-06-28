@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows;
 using AnnihilatorWindowBase;
-using Common_Library;
-using IOptionsWindow_Parameters;
 using Options_Library;
 
 namespace Options_Window_Library
@@ -15,8 +13,8 @@ namespace Options_Window_Library
         /// <summary>
         /// Constructs new instance of Bindable_Resources for given OptionsWindow.
         /// </summary>
-        public Bindable_Resources(IGet_Standard_Messages _OptionsWindow, IOptionsWindow_For_Comma_Type_List_Context OptionsWindow_For_Comma_Type_List_Context,
-            IOptions_Provider Options_Provider) : base(Options_Provider.Font_Size_Type, Options_Provider.Colour_Palette_Type)
+        public Bindable_Resources(  IOptions_Provider Options_Provider)
+            : base(Options_Provider.Font_Size_Type, Options_Provider.Colour_Palette_Type)
         {
             Set_Elements_Sizes();
 
@@ -24,13 +22,15 @@ namespace Options_Window_Library
 
             ComboBox_Element_Height = ComboBox_List_Image_Size + 12; // xyz
 
+            ComboBox_Text_Width = ComboBox_Element_Width - ComboBox_List_Image_Size;
+
             TabItem_Margin_Thickness = new Thickness(Border_Thickness, Border_Thickness, Border_Thickness, 0);
 
             ComboBox_ToggleButton_Border_CornerRadius = new CornerRadius(Corner_Radius, 0, 0, Corner_Radius);
 
             ComboBox_ContentSite_Margin = new Thickness(Border_Thickness, Border_Thickness, Border_Thickness + ComboBox_ToggleButton_Arrow_Width, Border_Thickness);
 
-            Comma_Type_List_Context = new Comma_Type_List_Context(this, OptionsWindow_For_Comma_Type_List_Context);
+            Comma_Type_List_Context = new Comma_Type_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider);
 
             Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
 
@@ -40,7 +40,7 @@ namespace Options_Window_Library
 
             Font_Size_List_Context = new Font_Size_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Font_Size_Type);
 
-            Set_Text(_OptionsWindow.Get_Standard_Messages);
+            Set_Text(Options_Provider.Get_Standard_Messages_Translate);
 
             Set_Window_Size();
         }
