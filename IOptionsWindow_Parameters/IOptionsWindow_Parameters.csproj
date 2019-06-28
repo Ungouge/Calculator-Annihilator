@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOptionsWindow_Add_New_Comma_Type_Option_Command.cs" />
     <Compile Include="IOptionsWindow_For_Comma_Type_List_Context.cs" />
     <Compile Include="IOptionsWindow_Get_Options_Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

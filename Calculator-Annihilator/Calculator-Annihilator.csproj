@@ -258,10 +258,6 @@
       <Project>{f2989619-b3e5-4409-8747-e72a909eac82}</Project>
       <Name>IMainWindow_Parameters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IOptionsWindow_Parameters\IOptionsWindow_Parameters.csproj">
-      <Project>{85B4A3CF-2E7E-471A-A5C1-7E88D0323D77}</Project>
-      <Name>IOptionsWindow_Parameters</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Options_Library\Options_Library.csproj">
       <Project>{eac99763-1aaa-445d-8e4b-068ae08deeca}</Project>
       <Name>Options_Library</Name>
