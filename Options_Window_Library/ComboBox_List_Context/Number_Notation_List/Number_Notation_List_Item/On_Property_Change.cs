@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Options_Window_Library
 {
-    partial class Comma_Type_List_Context : INotifyPropertyChanged
+    partial class Number_Notation_List_Item : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

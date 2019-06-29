@@ -58,72 +58,78 @@
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Bindable_Resources\values.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_Button_Command.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\IComma_Type_List_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Add_New_Comma_Type.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Commas_Type_Item_Factory.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Add_New_Comma_Type.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Comma_Type_List_Context.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\On_Property_Change.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Return_Current_Comma_Type_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_Item.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\IComma_Type_List_Context.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_Context\Set_Comma_Type_List_ComboBox_SelectedItem.cs" />
-    <Compile Include="Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Context\Font_Size_List_Context.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Item\Font_Size_List_Item.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Item\On_Property_Change.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Item\Set_Font_Size_Name.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Context\Set_Font_Size_List_Items.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Context\Set_Font_Size_Texts.cs" />
-    <Compile Include="Font_Size_List\Font_Size_List_Context\IFont_Size_List_Context.cs" />
-    <Compile Include="Language_List\ILangauge_List_Context.cs" />
-    <Compile Include="Language_List\Langauge_List_Items.cs" />
-    <Compile Include="Language_List\Language_List_Context.cs" />
-    <Compile Include="Language_List\Set_Current_Language_In_ComboBox.cs" />
-    <Compile Include="Language_List\Set_Languge_List_Items.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Context\INumber_Notation_List_Context.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Context\Number_Notation_List_Context.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Item\Number_Notation_List_Item.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Item\On_Property_Change.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Item\Set_Number_Notation_Name.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Context\Set_Current_Number_Notation_In_ComboBox.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Context\Set_Number_Notation_List_Items.cs" />
-    <Compile Include="Number_Notation_List\Number_Notation_List_Context\Set_Number_Notation_Texts.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\IItem_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_Button_Command.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Numeral_System_Item_Button_Action.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\IPinned_Item_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\Numeral_System_Item_Button_Action.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\Pinned_Item_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\INumeral_System_List_Context.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Item_List methods\Add_Pinned_Item.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_All_Systems_Label_Control.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Item.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Pinned_Systems_Label_Control.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Numeral_System_List_Content_Factory.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Items_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Set_Pinned_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Item_List methods\Reload_Item.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\INumeral_System_List_Content.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Numeral_System_List_Content.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\ILabel_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\Label_Numeral_System_List.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\On_Property_Change.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Set_Numeral_System_Name.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Context.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\On_Property_Change.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Pin_Numeral_System.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_List_ComboBox_SelectedItem.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_Context\Unpin_Numeral_System.cs" />
-    <Compile Include="Numeral_System_List\Numeral_System_List_ItemTemplate_Selector.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_Button_Command.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\IComma_Type_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Add_New_Comma_Type.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Commas_Type_Item_Factory.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Add_New_Comma_Type.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Commas_Type_Item_Factory\Get_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Comma_Type_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\On_Property_Change.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Return_Current_Comma_Type_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Set_ Comma_Type_Items_List.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\IComma_Type_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Set_Comma_Type_List_ComboBox_SelectedItem.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Context\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\Font_Size_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Item\Font_Size_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Item\On_Property_Change.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Item\Set_Font_Size_Name.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\Set_Current_Font_Size_In_ComboBox.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\Set_Font_Size_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\Set_Font_Size_Texts.cs" />
+    <Compile Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Context\IFont_Size_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\ComboBox_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\ILangauge_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\Langauge_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\Language_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\Set_Current_Language_In_ComboBox.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\Language_List\Set_Languge_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\INumber_Notation_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\Number_Notation_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Item\Number_Notation_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Item\On_Property_Change.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Item\Set_Number_Notation_Name.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\Set_Current_Number_Notation_In_ComboBox.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\Set_Number_Notation_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Context\Set_Number_Notation_Texts.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\IItem_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_Button_Command.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Numeral_System_Item_Button_Action.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\IPinned_Item_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\Numeral_System_Item_Button_Action.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Pinned_Item_Numeral_System_List\Pinned_Item_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\INumeral_System_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Item_List methods\Add_Pinned_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_All_Systems_Label_Control.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Get_Pinned_Systems_Label_Control.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Content_Factory\Numeral_System_List_Content_Factory.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Items_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Set_Pinned_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Item_List methods\Reload_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\INumeral_System_List_Content.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Numeral_System_List_Content.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\ILabel_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\Label_Numeral_System_List.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\On_Property_Change.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Set_Numeral_System_Name.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Numeral_System_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\On_Property_Change.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Pin_Numeral_System.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_List_ComboBox_SelectedItem.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Set_Numeral_System_Texts.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Context\Unpin_Numeral_System.cs" />
+    <Compile Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_ItemTemplate_Selector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,47 +151,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Content\Comma_Type_List_Item\Comma_Type_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.xaml">
+    <Page Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_ItemTemplate_Selector.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Comma_Type_List\ContentSite_Comma_Type_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Comma_Type_List\ContentSite_Comma_Type_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Font_Size_List\Font_Size_List_Item\Font_Size_ComboBox_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Font_Size_List\Font_Size_List_Item\Font_Size_ComboBox_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Item_Numeral_System_List\Item_Numeral_System_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\Label_Numeral_System_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_Content\Label_Numeral_System_List\Label_Numeral_System_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Language_List\Language_ComboBox_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Language_List\Language_ComboBox_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Number_Notation_List\Number_Notation_List_Item\Number_Notation_ComboBox_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Number_Notation_List\Number_Notation_List_Item\Number_Notation_ComboBox_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Numeral_System_List\ContentSite_Numeral_System_List_ItemTemplate.xaml">
+    <Page Include="ComboBox_List_Context\Numeral_System_List\ContentSite_Numeral_System_List_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Numeral_System_List\Numeral_System_List_ItemTemplate_Selector.xaml">
+    <Page Include="ComboBox_List_Context\Numeral_System_List\Numeral_System_List_ItemTemplate_Selector.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
