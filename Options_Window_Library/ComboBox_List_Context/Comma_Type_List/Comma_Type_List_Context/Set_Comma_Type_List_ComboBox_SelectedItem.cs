@@ -1,4 +1,5 @@
 ﻿using System;
+using Options_Library;
 
 namespace Options_Window_Library
 {
@@ -7,7 +8,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Returns curently selected item in Comma_Type_List_ComboBox.
         /// </summary>
-        public IComma_Type_List_Item Set_Comma_Type_List_ComboBox_SelectedItem()
+        public IComma_Type_List_Item Set_Comma_Type_List_ComboBox_SelectedItem(IOptions_Provider Options_Provider)
         {
             foreach (IComma_Type_List_Item item_Content in Comma_Type_Items_List)
                 if (item_Content is Comma_Type_List_Item Item)

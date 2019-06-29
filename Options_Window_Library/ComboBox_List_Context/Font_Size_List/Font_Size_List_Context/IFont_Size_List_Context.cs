@@ -9,7 +9,5 @@ namespace Options_Window_Library
         List<Font_Size_List_Item> Font_Size_Items_List { get; }
 
         Font_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
-
-        void Set_Font_Size_Texts(IStandard_Messages_Translate Standard_Messages);
     }
 }

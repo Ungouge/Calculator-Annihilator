@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Options_Window_Library
 {
-    internal interface IComma_Type_List_Context
+    public interface IComma_Type_List_Context
     {
         IComma_Type_List_Item Comma_Type_List_ComboBox_SelectedItem { get; set; }
 

@@ -8,12 +8,8 @@ namespace Options_Window_Library
     /// <summary>
     /// Provides data context for Comma_Type_List_CombBox.
     /// </summary>
-    internal partial class Comma_Type_List_Context: IComma_Type_List_Context
+    internal partial class Comma_Type_List_Context: ComboBox_List_Context, IComma_Type_List_Context
     {
-        private IOptions_Provider Options_Provider;
-
-        private IStandard_Messages_Translate Standard_Messages;
-
         private Commas_Type_Item_Factory Factory;
 
         internal string[] Commas_Type;
@@ -25,19 +21,15 @@ namespace Options_Window_Library
         /// <summary>
         /// Constructs new Comma_Type_List_Context for given OptionsWindow.
         /// </summary>
-        public Comma_Type_List_Context(IStandard_Messages_Translate _Standard_Messages, IOptions_Provider _Options_Provider)
+        internal Comma_Type_List_Context(IStandard_Messages_Translate Standard_Messages, IOptions_Provider Options_Provider)
         {
-            Options_Provider = _Options_Provider;
-
-            Standard_Messages = _Standard_Messages;
-
             Commas_Type = Options_Provider.Commas_Type_Array;
 
             Factory = new Commas_Type_Item_Factory(this, Standard_Messages);
 
             Comma_Type_Items_List = Set_Comma_Type_Items_List();
 
-            Comma_Type_List_ComboBox_SelectedItem = Set_Comma_Type_List_ComboBox_SelectedItem();
+            Comma_Type_List_ComboBox_SelectedItem = Set_Comma_Type_List_ComboBox_SelectedItem(Options_Provider);
         } 
     } 
 }

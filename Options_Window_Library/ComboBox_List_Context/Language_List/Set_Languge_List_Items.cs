@@ -9,7 +9,7 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets list of Language_List_Content.
         /// </summary>
-        private List<Langauge_List_Items> Set_Languge_List_Items()
+        private List<Langauge_List_Items> Set_Languge_List_Items(IStandard_Messages_Translate Standard_Messages)
         {
             List<Langauge_List_Items> Output_Items_List = new List<Langauge_List_Items>();
 

@@ -1,11 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common_Library;
 
+namespace Options_Window_Library
 {
-    class Set_Item_Text
+    partial class Numeral_System_List_Context
     {
+        internal override void Set_Item_Text(IStandard_Messages_Translate Standard_Messages)
+        {
+
+        }
+
+        /// <summary>
+        /// Sets texts for list_Item in Numeral_System_Items_List.
+        /// </summary>
+        public void Set_Numeral_System_Texts(IStandard_Messages_Translate standard_Messages)
+        {
+            foreach (Numeral_System_List_Content list_Content in Numeral_System_List_Items_List)
+            {
+                if (list_Content is Item_Numeral_System_List list_Item)
+                {
+                    string new_Numeral_System_Name = Numeral_System.Numeral_System_Dictionary_Name(
+                        list_Item.Numeral_System_Code, standard_Messages);
+
+                    list_Item.Set_Numeral_System_Name(new_Numeral_System_Name);
+                }
+            }
+        }
     }
 }
