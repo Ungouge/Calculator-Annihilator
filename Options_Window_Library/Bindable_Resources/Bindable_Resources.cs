@@ -30,15 +30,15 @@ namespace Options_Window_Library
 
             ComboBox_ContentSite_Margin = new Thickness(Border_Thickness, Border_Thickness, Border_Thickness + ComboBox_ToggleButton_Arrow_Width, Border_Thickness);
 
-            Comma_Type_List_Context = new Comma_Type_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider);
+            _Comma_Type_List_Context = new Comma_Type_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider);
 
-            Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
+            _Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
 
-            Number_Notation_List_Context = new Number_Notation_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Number_Notation);
+            _Number_Notation_List_Context = new Number_Notation_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Number_Notation);
 
-            Langauge_List_Context = new Langauge_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Current_Language);
+            _Langauge_List_Context = new Langauge_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Current_Language);
 
-            Font_Size_List_Context = new Font_Size_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Font_Size_Type);
+            _Font_Size_List_Context = new Font_Size_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Font_Size_Type);
 
             Set_Text(Options_Provider.Get_Standard_Messages_Translate);
 
