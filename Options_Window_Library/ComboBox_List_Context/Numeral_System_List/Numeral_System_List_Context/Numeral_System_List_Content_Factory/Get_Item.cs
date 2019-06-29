@@ -13,9 +13,9 @@ namespace Options_Window_Library
             internal Item_Numeral_System_List Get_Item(sbyte numeral_System_Code)
             {
                 if (Pinned_Numeral_Systems.Is_Numeral_System_Pinned(numeral_System_Code) == false)
-                    return new Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code);
+                    return new Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code, Standard_Messages);
 
-                return new Pinned_Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code);
+                return new Pinned_Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code, Standard_Messages);
             }
 
             /// <summary>

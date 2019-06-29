@@ -10,13 +10,13 @@ namespace Options_Window_Library
 
         protected readonly Numeral_System_List_Context Numeral_System_List_Context;
 
-        internal Item_Numeral_System_List(Numeral_System_List_Context _Numeral_System_List_Context, sbyte numeral_System_Code)
+        internal Item_Numeral_System_List(Numeral_System_List_Context _Numeral_System_List_Context, sbyte numeral_System_Code, IStandard_Messages_Translate Standard_Messages)
         {
             Numeral_System_List_Context = _Numeral_System_List_Context;
 
             Numeral_System_Code = numeral_System_Code;
 
-            Content_Text = Numeral_System.Numeral_System_Dictionary_Name(Numeral_System_Code, Numeral_System_List_Context.Standard_Messages);
+            Content_Text = Numeral_System.Numeral_System_Dictionary_Name(Numeral_System_Code, Standard_Messages);
         }
 
         public ICommand Numeral_System_Item_Button_Click
