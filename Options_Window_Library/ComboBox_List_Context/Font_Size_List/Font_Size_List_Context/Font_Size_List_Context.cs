@@ -11,9 +11,9 @@ namespace Options_Window_Library
     /// </summary>
     internal partial class Font_Size_List_Context : ComboBox_List_Context, IFont_Size_List_Context
     {
-        public List<Font_Size_List_Item> Font_Size_Items_List { get; private set; }
+        public List<IFont_Size_List_Item> Font_Size_Items_List { get; private set; }
 
-        public Font_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
+        public IFont_Size_List_Item Font_Size_List_ComboBox_SelectedItem { get; set; }
 
         /// <summary>
         /// Constructs new Font_Size_List_Context for given OptionsWindow.

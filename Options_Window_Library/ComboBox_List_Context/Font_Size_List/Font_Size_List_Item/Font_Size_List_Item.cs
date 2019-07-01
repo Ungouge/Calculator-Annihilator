@@ -6,7 +6,7 @@ namespace Options_Window_Library
     /// <summary>
     /// Item with resources for Font_Size_List_ComboBox.
     /// </summary>
-    public partial class Font_Size_List_Item
+    internal partial class Font_Size_List_Item : IFont_Size_List_Item
     {
         public string Font_Size_Name { get; private set; }
 

@@ -9,9 +9,9 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets list of Font_Size_List_Content.
         /// </summary>
-        private List<Font_Size_List_Item> Set_Font_Size_List_Items(IStandard_Messages_Translate Standard_Messages)
+        private List<IFont_Size_List_Item> Set_Font_Size_List_Items(IStandard_Messages_Translate Standard_Messages)
         {
-            List<Font_Size_List_Item> Output_Items_List = new List<Font_Size_List_Item>();
+            List<IFont_Size_List_Item> Output_Items_List = new List<IFont_Size_List_Item>();
 
             foreach (Font_Size_Type font_Size in (Font_Size_Type[])Enum.GetValues(typeof(Font_Size_Type)))
             {
