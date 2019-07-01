@@ -138,6 +138,14 @@
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="6"/>
 
+                    <ComboBox Name="Calculator_Mode_List_ComboBox"
+                              ItemsSource="{Binding Calculator_Mode_List_Context.Calculator_Mode_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Calculator_Mode_List_Context.Calculator_Mode_ComboBox_List_SelectedItem}"
+                              SelectionChanged="Calculator_Mode_List_ComboBox_SelectionChanged"
+                              Style="{DynamicResource ComboBox_Style}"
+                              ItemTemplate="{StaticResource Calculator_Mode_List_ComboBox_ItemTemplate}"
+                              Grid.Column="1" Grid.Row="6"/>
+
                     <TextBlock Name="Method_Calculation_TextBlock" 
                                Text="{Binding Method_Calculation, Mode=OneWay, FallbackValue= Method_Calculation}"
                                Style="{DynamicResource TextBlock_Style}"

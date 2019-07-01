@@ -75,6 +75,7 @@
     <Compile Include="Set_X\Set_Texts.cs" />
     <Compile Include="values.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Add_New_Comma_Type_Option_Command.cs" />
+    <Compile Include="X_ComboBox_SelectedItem\Calculator_Mode_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Comma_Type_List_ComboBox_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Font_Size_List_ComboBo_SelectionChanged.cs" />
     <Compile Include="X_ComboBox_SelectedItem\Language_List_ComboBox_SelectionChanged.cs" />
