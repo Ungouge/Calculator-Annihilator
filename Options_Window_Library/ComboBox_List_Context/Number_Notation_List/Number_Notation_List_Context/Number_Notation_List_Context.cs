@@ -9,9 +9,9 @@ namespace Options_Window_Library
     /// </summary>
     internal partial class Number_Notation_List_Context : ComboBox_List_Context, INumber_Notation_List_Context
     {
-        public List<Number_Notation_List_Item> Number_Notation_List_Items_List { get; private set; }
+        public List<INumber_Notation_List_Item> Number_Notation_List_Items_List { get; private set; }
 
-        public Number_Notation_List_Item Number_Notation_List_ComboBox_SelectedItem { get; set; }
+        public INumber_Notation_List_Item Number_Notation_List_ComboBox_SelectedItem { get; set; }
 
         /// <summary>
         /// Constructs new Number_Notation_List_Context for given OptionsWindow.

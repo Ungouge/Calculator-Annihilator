@@ -6,9 +6,9 @@ namespace Options_Window_Library
     /// <summary>
     /// Item with resources for Number_Notation_List_ComboBox.
     /// </summary>
-    public partial class Number_Notation_List_Item
+    internal partial class Number_Notation_List_Item : INumber_Notation_List_Item
     {
-        public string Number_Notation_Name { get; set; }
+        public string Number_Notation_Name { get; private set; }
 
         internal Number_Notation Number_Notation;
 

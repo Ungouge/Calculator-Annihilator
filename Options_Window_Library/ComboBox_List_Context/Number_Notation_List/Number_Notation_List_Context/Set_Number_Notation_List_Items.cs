@@ -9,9 +9,9 @@ namespace Options_Window_Library
         /// <summary>
         /// Sets list of Number_Notation_List_Content.
         /// </summary>
-        private List<Number_Notation_List_Item> Set_Number_Notation_List_Items(IStandard_Messages_Translate Standard_Messages)
+        private List<INumber_Notation_List_Item> Set_Number_Notation_List_Items(IStandard_Messages_Translate Standard_Messages)
         {
-            List<Number_Notation_List_Item> Output_Items_List = new List<Number_Notation_List_Item>();
+            List<INumber_Notation_List_Item> Output_Items_List = new List<INumber_Notation_List_Item>();
 
             foreach (Number_Notation number_Notation in (Number_Notation[])Enum.GetValues(typeof(Number_Notation)))
             {
