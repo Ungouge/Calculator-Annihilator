@@ -45,5 +45,14 @@ namespace Options_Window_Library
                 return _Numeral_System_List_Context;
             }
         }
+
+
+        public ICalculator_Mode_List_Context Calculator_Mode_List_Context
+        {
+            get
+            {
+                return _Calculator_Mode_List_Context;
+            }
+        }
     }
 }

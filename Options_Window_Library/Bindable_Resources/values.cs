@@ -18,15 +18,17 @@ namespace Options_Window_Library
 
         public double TabItem_Grid_Height { get; private set; }
 
-        private Comma_Type_List_Context _Comma_Type_List_Context { get; set; }
+        private Comma_Type_List_Context _Comma_Type_List_Context;
 
-        private Number_Notation_List_Context _Number_Notation_List_Context { get; set; }
+        private Number_Notation_List_Context _Number_Notation_List_Context;
 
-        private Langauge_List_Context _Langauge_List_Context { get; set; }
+        private Langauge_List_Context _Langauge_List_Context;
 
-        private Font_Size_List_Context _Font_Size_List_Context { get; set; }
+        private Font_Size_List_Context _Font_Size_List_Context;
 
-        private Numeral_System_List_Context _Numeral_System_List_Context { get; set; }
+        private Numeral_System_List_Context _Numeral_System_List_Context;
+
+        private Calculator_Mode_List_Context _Calculator_Mode_List_Context;
 
         public Thickness TabItem_Margin_Thickness { get; private set; }
 

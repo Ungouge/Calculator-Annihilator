@@ -59,7 +59,14 @@
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Bindable_Resources\values.cs" />
-    <Compile Include="ComboBox_List_Context\ComboBox_Item_Base.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Calculator_Mode_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Calculator_Mode_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\ICalculator_Mode_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\ICalculator_Mode_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Set_Calculator_Mode_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Set_Current_Calculator_Mode_In_ComboBox.cs" />
+    <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Set_Item_Text.cs" />
+    <Compile Include="ComboBox_List_Context\IComboBox_Item_Base.cs" />
     <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_List_Item.cs" />
     <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Item\Add_New_Comma_Type_List_Item\Add_New_Comma_Type_Button_Command.cs" />
     <Compile Include="ComboBox_List_Context\Comma_Type_List\Comma_Type_List_Item\IComma_Type_List_Item.cs" />
@@ -150,6 +157,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Annihilator_Window_Base_ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboBox_List_Context\Calculator_Mode_List\Calculator_Mode_List_ComboBox_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

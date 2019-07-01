@@ -30,6 +30,8 @@ namespace Options_Window_Library
 
             ComboBox_ContentSite_Margin = new Thickness(Border_Thickness, Border_Thickness, Border_Thickness + ComboBox_ToggleButton_Arrow_Width, Border_Thickness);
 
+            _Calculator_Mode_List_Context = new Calculator_Mode_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Calculator_Mode);
+
             _Comma_Type_List_Context = new Comma_Type_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider);
 
             _Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);
