@@ -5,9 +5,9 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Options_Window_Library;component/Comma_Type_List/Comma_Type_List_Content/Comma_Type_List_Item/Comma_Type_List_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="/Options_Window_Library;component/Comma_Type_List/Comma_Type_List_Content/Comma_Type_List_Item/Add_New_Comma_Type_List_Item/Add_New_Comma_Type_List_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="/Options_Window_Library;component/Comma_Type_List/ContentSite_Comma_Type_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Comma_Type_List/Comma_Type_List_Item/Comma_Type_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Comma_Type_List/Comma_Type_List_Item/Add_New_Comma_Type_List_Item/Add_New_Comma_Type_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Comma_Type_List/ContentSite_Comma_Type_List_ItemTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>

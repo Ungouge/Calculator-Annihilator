@@ -12,8 +12,6 @@ namespace Options_Window_Library
 
         public DataTemplate ContentSiteTemplate { get; set; }
 
-        
-
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
             if (container != null)

@@ -5,9 +5,9 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Options_Window_Library;component/Numeral_System_List/Numeral_System_List_Content/Item_Numeral_System_List/Item_Numeral_System_List_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="/Options_Window_Library;component/Numeral_System_List/Numeral_System_List_Content/Label_Numeral_System_List/Label_Numeral_System_List_ItemTemplate.xaml"/>
-                <ResourceDictionary Source="/Options_Window_Library;component/Numeral_System_List/ContentSite_Numeral_System_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Numeral_System_List/Numeral_System_List_Content/Item_Numeral_System_List/Item_Numeral_System_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Numeral_System_List/Numeral_System_List_Content/Label_Numeral_System_List/Label_Numeral_System_List_ItemTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Options_Window_Library;component/ComboBox_List_Context/Numeral_System_List/ContentSite_Numeral_System_List_ItemTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>

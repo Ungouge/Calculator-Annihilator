@@ -26,7 +26,7 @@ namespace Options_Window_Library
                 if (Pinned_Numeral_Systems.Is_Numeral_System_Pinned(numeral_System_Code) == false)
                     return null;
 
-                return new Pinned_Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code);
+                return new Pinned_Item_Numeral_System_List(Numeral_System_List_Context, numeral_System_Code, Standard_Messages);
             }
         }
     }
