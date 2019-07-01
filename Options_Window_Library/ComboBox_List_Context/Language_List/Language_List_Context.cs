@@ -9,9 +9,9 @@ namespace Options_Window_Library
     /// </summary>
     internal partial class Langauge_List_Context : ComboBox_List_Context, ILangauge_List_Context
     {
-        public List<Langauge_List_Items> Langauge_List_Items_List { get; private set; }
+        public List<ILangauge_List_Items> Langauge_List_Items_List { get; private set; }
 
-        public Langauge_List_Items Language_List_ComboBox_SelectedItem { get; set; }
+        public ILangauge_List_Items Language_List_ComboBox_SelectedItem { get; set; }
 
         /// <summary>
         /// Constructs new Font_Size_List_Context for given OptionsWindow.

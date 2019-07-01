@@ -6,7 +6,7 @@ namespace Options_Window_Library
     /// <summary>
     /// Item with resources for Language_List_ComboBox.
     /// </summary>
-    public class Langauge_List_Items
+    internal class Langauge_List_Items : ILangauge_List_Items
     {
         public string Language_Name { get; private set; }
 
