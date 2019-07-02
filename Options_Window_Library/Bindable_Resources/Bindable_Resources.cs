@@ -32,6 +32,8 @@ namespace Options_Window_Library
 
             _Calculator_Mode_List_Context = new Calculator_Mode_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Calculator_Mode);
 
+            _Calculation_Method_List_Context = new Calculation_Method_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Calculation_Method);
+
             _Comma_Type_List_Context = new Comma_Type_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider);
 
             _Numeral_System_List_Context = new Numeral_System_List_Context(Options_Provider.Get_Standard_Messages_Translate, Options_Provider.Numeral_System_Code);

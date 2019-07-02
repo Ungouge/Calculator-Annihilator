@@ -30,6 +30,8 @@ namespace Options_Window_Library
 
         private Calculator_Mode_List_Context _Calculator_Mode_List_Context;
 
+        private Calculation_Method_List_Context _Calculation_Method_List_Context;
+
         public Thickness TabItem_Margin_Thickness { get; private set; }
 
         public Thickness ComboBox_ContentSite_Margin { get; private set; }

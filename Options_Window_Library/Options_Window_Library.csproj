@@ -59,6 +59,13 @@
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_Tab_Item_Texts.cs" />
     <Compile Include="Bindable_Resources\Set_X_Text methods\Set_X_Template_Text.cs" />
     <Compile Include="Bindable_Resources\values.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\Calculation_Method_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\Calculation_Method_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\ICalculation_Method_List_Context.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\ICalculation_Method_List_Item.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\Set_Calculation_Method_List_Items.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\Set_Current_Calculation_Method_In_ComboBox.cs" />
+    <Compile Include="ComboBox_List_Context\Calculation_Method_List\Set_Item_Text.cs" />
     <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Calculator_Mode_List_Context.cs" />
     <Compile Include="ComboBox_List_Context\Calculator_Mode_List\Calculator_Mode_List_Item.cs" />
     <Compile Include="ComboBox_List_Context\Calculator_Mode_List\ICalculator_Mode_List_Context.cs" />
@@ -157,6 +164,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Annihilator_Window_Base_ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboBox_List_Context\Calculation_Method_List\Calculation_Method_List_ComboBox_ItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

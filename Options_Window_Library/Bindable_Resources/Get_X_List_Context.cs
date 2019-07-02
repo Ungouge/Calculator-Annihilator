@@ -46,12 +46,19 @@ namespace Options_Window_Library
             }
         }
 
-
         public ICalculator_Mode_List_Context Calculator_Mode_List_Context
         {
             get
             {
                 return _Calculator_Mode_List_Context;
+            }
+        }
+
+        public ICalculation_Method_List_Context Calculation_Method_List_Context
+        {
+            get
+            {
+                return _Calculation_Method_List_Context;
             }
         }
     }
