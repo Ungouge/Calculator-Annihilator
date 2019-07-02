@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChange_Option_Command\Add_New_Comma_Type_Option_Command.cs" />
+    <Compile Include="IChange_Option_Command\Change_Calculator_Mode_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Comma_Type_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Font_Size_Option_Command.cs" />
     <Compile Include="IChange_Option_Command\Change_Language_Option_Command.cs" />

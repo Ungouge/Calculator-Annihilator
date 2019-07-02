@@ -6,16 +6,16 @@ namespace Options_Library
     /// <summary>
     /// Changes font size type in Options class.
     /// </summary>
-    public class Change_Font_Size_Option_Command : IChange_Option_Command
+    public class Change_Calculator_Mode_Option_Command : IChange_Option_Command
     {
-        private readonly Font_Size_Type Font_Size_To_Change;
+        private readonly Calculator_Mode Calculator_Mode_To_Change;
 
         /// <summary>
         /// Constructs new command for changing font size type in Options class.
         /// </summary>
-        public Change_Font_Size_Option_Command(Font_Size_Type _Font_Size_To_Change)
+        public Change_Calculator_Mode_Option_Command(Calculator_Mode _Calculator_Mode_To_Change)
         {
-            Font_Size_To_Change = _Font_Size_To_Change;
+            Calculator_Mode_To_Change = _Calculator_Mode_To_Change;
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace Options_Library
         /// </summary>
         public void Change_Option(ISet_Options options)
         {
-            options.Set_Font_Size_Type(Font_Size_To_Change);
+            options.Set_Calculator_Mode(Calculator_Mode_To_Change);
         }
     }
 }

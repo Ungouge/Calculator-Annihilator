@@ -7,6 +7,8 @@ namespace Options_Library
     {
         void Add_New_Comma_Type(string[] Comma_Types);
 
+        void Set_Calculator_Mode(Calculator_Mode _Calculator_Mode);
+
         void Set_Comma_Type(string new_Comma_Type);
 
         void Set_Font_Size_Type(Font_Size_Type new_Font_Size_Type);
