@@ -25,6 +25,7 @@ namespace Calculator_Annihilator
         {
             Complex_To_Single_WorkSpace_Converter _Converter =
                 new Complex_To_Single_WorkSpace_Converter(WorkSpace.Text, Current_Numeral_System, Options.Commas_Type_Array, this);
+
             _Converter.Convert_To_Single();
         }
 	}

@@ -83,6 +83,8 @@
                 <ColumnDefinition Width="79*"/>
             </Grid.ColumnDefinitions>
 
+            <!--Make Result space and workspace a bomdable text values-->
+            
             <TextBox x:Name="WorkSpace" Grid.Row="0" Grid.ColumnSpan="3" Margin="5,1,4.6,0.8" HorizontalAlignment="Stretch"
                      Height="Auto"  FontSize="{Binding WorkSpace_FontSize, Mode=OneWay, FallbackValue=30}"
                      Padding="0,-2,0,-2" VerticalContentAlignment="Center"
