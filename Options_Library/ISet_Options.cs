@@ -9,6 +9,8 @@ namespace Options_Library
 
         void Set_Calculator_Mode(Calculator_Mode _Calculator_Mode);
 
+        void Set_Calculation_Method(Calculation_Method _Calculation_Method);
+
         void Set_Comma_Type(string new_Comma_Type);
 
         void Set_Font_Size_Type(Font_Size_Type new_Font_Size_Type);
