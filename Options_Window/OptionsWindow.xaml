@@ -150,6 +150,14 @@
                                Text="{Binding Method_Calculation, Mode=OneWay, FallbackValue= Method_Calculation}"
                                Style="{DynamicResource TextBlock_Style}"
                                Grid.Column="0" Grid.Row="8"/>
+
+                    <ComboBox Name="Calculation_Method_List_ComboBox"
+                              ItemsSource="{Binding Calculation_Method_List_Context.Calculation_Method_Items_List, Mode=OneWay}"
+                              SelectedItem="{Binding Calculation_Method_List_Context.Calculation_Method_ComboBox_List_SelectedItem}"
+                              SelectionChanged="Calculation_Method_List_ComboBox_SelectionChanged"
+                              Style="{DynamicResource ComboBox_Style}"
+                              ItemTemplate="{StaticResource Calculation_Method_List_ComboBox_ItemTemplate}"
+                              Grid.Column="1" Grid.Row="8"/>
                 </Grid>
             </TabItem>
         </TabControl>
