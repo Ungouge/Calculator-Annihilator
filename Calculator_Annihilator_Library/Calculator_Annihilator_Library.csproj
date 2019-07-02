@@ -88,7 +88,7 @@
     <Compile Include="Back_Parser_Fascede\Unary_Back_Parser\Unary_Back_Parser.cs" />
     <Compile Include="Back_Parser_Fascede\Unary_Numeral_System.cs" />
     <Compile Include="Bindable_Resources\Bindable_Resources.cs" />
-    <Compile Include="Bindable_Resources\Bindable_Resources_Factory.cs" />
+    <Compile Include="Bindable_Resources\Bindable_Resources_Factory\Bindable_Resources_Factory.cs" />
     <Compile Include="Bindable_Resources\Button_FontSize.cs" />
     <Compile Include="Bindable_Resources\Calculation_Type_Radio_Buttons_FontSize.cs" />
     <Compile Include="Bindable_Resources\Font_To_TextBox_Macher.cs" />
